@@ -1,0 +1,19 @@
+/* **************** PAGE LAYOUT ***************** */
+/* ====== Page Head, Body, and Foot ====== */
+#bd{overflow:hidden; _overflow:visible; zoom:1;}
+#page{margin: 0 auto; width: 950px;} /* wraps entire page */
+/* 
+"old school" and "liquid" extend #main to allow for different page widths
+(important is required so a class can overwrite an ID)
+*/
+.oldSchool{width:750px !important;}
+.liquid{width: auto !important;margin:0;}
+/* ====== Columns ====== */
+.main{overflow:hidden; _overflow:visible; zoom:1;}
+.leftCol{float:left; width:250px;}
+.rightCol{float:right; width: 300px;}
+/* extend columns to allow for common column widths */
+.gMail{width:160px;}
+.gCal{width:180px;}
+.yahoo{width:240px;}
+.myYahoo{width:300px;}

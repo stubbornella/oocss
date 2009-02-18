@@ -1,9 +1,7 @@
 /* **************** CONTENT OBJECTS ***************** */
 /* ====== Default spacing ====== */
-h1, h2, h3, h4, h5, h6, ul, ol,dl {padding:20px 20px 0 20px;}
-p{padding: 0 20px 20px 20px;} /* makes paragraphs stick to headings above, in cases where more space is desired, spacing classes should be used. 
-Never location dependant styling */
-pre{margin: 20px;}
+h1, h2, h3, h4, h5, h6, ul, ol,dl, p {padding:10px;}
+pre{margin: 10px;}
 table h1,table h2,table h3, table h4, table h5, table h6, table p, table ul, table ol, table dl {padding:0;}
 /* ====== Elements ====== */
 em{font-style: italic;}
@@ -15,9 +13,9 @@ code{color:#0B8C8F;}
 h1, .h1{font-size:196%;  font-weight:normal; font-style: normal; color:#DF2B72;}
 h2, .h2{font-size:167%; font-weight:normal; font-style: normal; color:#AE0345;}
 h3, .h3{font-size:146.5%; font-weight:normal; font-style: normal; color:#DF2B72;}
-h4, .h4{font-size:108%; font-weight:normal; font-style: normal; color:#036;}
-h5, .h5{font-size:123.1%; font-weight:normal; font-style: normal; color:#993300;}
-h6, .h6{font-size:108%; font-weight:normal;  font-style: italic; color:#404040;}
+h4, .h4{font-size:123.1%; font-weight:normal; font-style: normal; color: #333;}
+h5, .h5{font-size:108%; font-weight:bold; font-style: normal; color:#AE0345;}
+h6, .h6{font-size:108%; font-weight:normal;  font-style: italic; color:#333;}
 /* if additional headings are needed they should be created via additional classes, never via location dependant styling */
 .category{font-size:108%; font-weight:normal; font-style: normal; text-transform:uppercase; color: #333;}
 .category a{color: #333;}
