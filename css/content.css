@@ -60,10 +60,6 @@ th, td{vertical-align:top;border:1px solid #AE0345;}
 .txtB, .data .txtB td, .data .txtB th{vertical-align:bottom;}
 .txtM, .data .txtM td, .data .txtM th{vertical-align:middle;}
 .data th,.data td{padding:3px 20px}
-/*.data .lastColumn{}
-.data .lastRow td{}
-.data .even{background-color:#fff;}
-.data .odd{background-color: #D0E3FE;}*/
 .data thead tr{background-color: #fff0f8;}
 .data th{color: #000; font-weight:bold}
 /* specification table - extends data table */
