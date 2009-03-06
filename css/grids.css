@@ -1,14 +1,14 @@
 /* **************** GRIDS ***************** */
-.line, .lastUnit {overflow: hidden; _overflow: visible; zoom:1;width:auto !important;}
-.unit{float:left;zoom:1;}
+.line, .lastUnit {overflow: hidden;_overflow:visible;_zoom:1; }
+.unit{float:left;_zoom:1;}
 .size1of1{float:none;}
-.size1of2{width:50%;_width:49.9% !important;}
-.size1of3{width:33.33333%;_width:33.25% !important;}
-.size2of3{width:66.66666%;_width:66.65% !important;}
-.size1of4{width:25%;_width:24.95% !important;}
-.size3of4{width:75%;_width:74.95% !important;}
-.size1of5{width:20%;_width:19.95% !important;}
-.size2of5{width:40%;_width:39.95% !important;}
-.size3of5{width:60%;_width:59.95% !important;}
-.size4of5{width:80%;_width:79.95% !important;}
-.lastUnit {float:none;_float:right;}
+.size1of2{width:50%;}
+.size1of3{width:33.33333%;}
+.size2of3{width:66.66666%;}
+.size1of4{width:25%;}
+.size3of4{width:75%;}
+.size1of5{width:20%;}
+.size2of5{width:40%;}
+.size3of5{width:60%;}
+.size4of5{width:80%;}
+.lastUnit {float:none;_position:relative; _left:-3px; _margin-right: -3px;width:auto;}
