@@ -1,0 +1,29 @@
+/*
+Copyright (c) 2009, Nicole Sullivan. All rights reserved.
+Code licensed under the BSD License:
+version: 0.2
+*/
+/* **************** BLOCK STRUCTURES ***************** */
+/* mod */
+.mod{margin:10px;}
+.hd,.bd,.ft{overflow:hidden; _overflow:visible; zoom:1;}
+.inner{position:relative;_zoom:1;}
+b{display:block;background-repeat:no-repeat;font-size:1%;position:relative;clear:both;float:left;z-index:10;}
+.tl, .tr, .bl, .br{height:7px; width:7px;}
+.top, .bottom{float:none;width:auto;}
+.tl{background-position: left top;margin-bottom:-7px;}
+.tr{background-position: right top;float:right;margin-bottom:-7px;}
+.bl{background-position: left bottom;margin-top:-7px;} 
+.br{background-position: right bottom; float:right;margin-top:-7px;}
+/* AG is a structural obj that extends mod to allow for full image borders */
+.AG{overflow:hidden;_overflow:visible;zoom:1;}
+.AG .tl, .AG .tr{height:32000px; margin-bottom:-32000px;width:10px;}
+.AG .top{background-position:center top;height:1px;}/* can't stay like this */
+.AG .bottom{background-position:center bottom;height:7px;}
+.AG .bl, .AG .br{margin-top:-7px;clear:none;height:14px; width:14px;}
+/*.pop - a structural object originally coded by Leslie Sommers that extends mod to allow transparent outside corners. Use for popups. */
+.pop{overflow:visible;margin: 0 7px 7px 0; background-position:left top;}
+.pop .inner{right:-7px; bottom:-7px; background-position:right bottom;padding:0 7px 7px 0;}
+.pop .tl, .pop .br{display:none;}
+.pop .bl{bottom:-7px;}
+.pop .tr{right:-7px;}
