@@ -4,19 +4,23 @@
 /*.me b{background-image:url(skin/mod/author.png);}*/
 /* ----- .excerpt (extends AG) ----- */
 .excerpt b{background-image:url(skin/mod/excerpt.png);}
+.excerpt .top{height:1px;}
 /* ----- simple extends the mod ----- */
-.simple .inner {border:1px solid #D7D7D7;-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px;}
-.simple b{*background-image:url(skin/mod/simple_corners.png);}/* reomove this line to default to square corners for IE */
+.simple .inner {border:1px solid #D7D7D7;/*-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px;*/}
+.simple b{background-image:url(skin/mod/simple_corners.png);}/* reomove this line to default to square corners for IE */
+/* ----- basic extends the mod ----- */
+.basic .inner {/*-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px;*/}
+.basic b{background-image:url(skin/mod/round.png);}/* reomove this line to default to square corners for IE */
 /* ----- simpleExt (extends mod) ----- */
-.simpleExt,.simpleExt .inner{border:1px solid #c7c7c7;-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px;}
+.simpleExt,.simpleExt .inner{border:1px solid #c7c7c7;/*-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px;*/}
 .simpleExt .inner{border-color:#fff; border-width:4px; background-color:#e2e2e2;}
-.simpleExt b{*background-image:url(skin/mod/simple_extended.png);}/* reomove this line to default to square corners for IE */
+.simpleExt b{background-image:url(skin/mod/simple_extended.png);}/* reomove this line to default to square corners for IE */
 .simpleExt .tl{left:-1px;top:-1px;}/* values for top, right, bottom, and left are equal to border thickness on mod */
 .simpleExt .tr{right:-1px;top:-1px;}
 .simpleExt .bl{left:-1px;bottom:-1px;} 
 .simpleExt .br{right:-1px;bottom:-1px;}
 /* ----- me (extends mod) use for my comments ----- */
-.me,.me .inner{border:1px solid #909090;-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px;}
+.me,.me .inner{border:1px solid #909090;/*-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;*/}
 .me .inner{border-color:#d76a84;}
 .me b{background-image:url(skin/mod/me.png);}/* remove this line to default to square corners for IE */
 .me .tl{left:-1px;top:-1px;}/* values for top, right, bottom, and left are equal to border thickness on mod */
@@ -24,26 +28,32 @@
 .me .bl{left:-1px;bottom:-1px;} 
 .me .br{right:-1px;bottom:-1px;}
 /* ----- noted (extends mod) ----- */
-.noted,.noted .inner{border:1px solid #c2c2c2;background-color:#eded68;-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px;}
-.noted .inner{border-color:#eded68;background-color:#fff;}
-.noted b{*background-image:url(skin/mod/noted.png);}/* remove this line to default to square corners for IE */
+.noted,.noted .inner{border:1px solid #c2c2c2;/*-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;*/}
+.noted .inner{border-color:#eded68;}
+.noted b{background-image:url(skin/mod/noted.png);}/* remove this line to default to square corners for IE */
 .noted .tl{left:-1px;top:-1px;}/* values for top, right, bottom, and left are equal to border thickness on mod */
 .noted .tr{right:-1px;top:-1px;}
 .noted .bl{left:-1px;bottom:-1px;} 
 .noted .br{right:-1px;bottom:-1px;}
+/* ----- grab (extends mod) ----- looks stupid, border radius fail */
+.grab .inner{border-color:#00477a; border-style:solid; border-width:3px 3px 10px 3px;}
+.grab b{background-image:url(skin/mod/grab.png);}
+.grab .tl, .grab .tr{height:10px; width:10px;}
+.grab .bl, .grab .br{height:16px;margin-top:-16px;}
 /* ----- talk (extends mod) ----- */
-.talk,.talk .inner{border:1px solid #c7c7c7;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
+.talk,.talk .inner{border:1px solid #c7c7c7;/*-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;*/}
 .talk .inner{border-color:#ededed;}
-.talk b{*background-image:url(skin/mod/talk.png);}/* remove this line to default to square corners for IE */
+.talk b{background-image:url(skin/mod/talk.png);}/* remove this line to default to square corners for IE */
 .talk .tl{left:-1px;top:-1px;}/* values for top, right, bottom, and left are equal to border thickness on mod */
 .talk .tr{right:-1px;top:-1px;}
 .talk .bl{left:-1px;bottom:-1px;} 
 .talk .br{right:-1px;bottom:-1px;}
 /* ----- photo (extends AG) ----- */
-.photo .inner{border:solid 10px #fff;margin:10px;}
+.photo .inner{border:solid 10px #fff;margin:4px 4px 0 4px;}
 .photo b{background-image:url(skin/mod/photo.png);}
-.photo .tr, .photo .tl{width:10px;}
-.photo .top, .photo .bottom{height:10px;}
+.photo .tr, .photo .tl{width:20px;}
+.photo .top, .photo .bottom{height:4px;} 
+.photo .bl, .photo .br{height:16px;margin-top: -12px;}
 /* ----- even (extends AG) ----- */
 .flow b{background-image:url(skin/mod/even.png);}
 /* ----- sommers extends.pop ----- */
@@ -53,7 +63,11 @@
 /* ====== Background blocks ====== */
 .sale .inner{background-color:red;}
 .nicole .inner{background-color:#c01c41; color:#fff;}
-.highlight .inner{background-color:#e2e22e;}
+.nicole *, .login *{ color:#fff;}
+.highlight .inner{background-color:#e3e36f;/* previously #e2e22e*/}
+.universe .inner{background:url(skin/mod/universe.png) repeat left top;}
+.foo .inner{background: url(skin/mod/universe_gray.png) repeat left top;}
+.login .inner{background: url(skin/mod/universe_login.png) repeat left top;}
 .comment .inner{background-color:#e2e2e2;}
 /* ====== Block headers and footers ====== */
 .section{background: #e9e9e9 url(skin/mod/header.png) repeat-x left bottom; color:#de2c72;font-size:120%;padding:5px 10px;}
@@ -61,3 +75,6 @@
 .act{background-color:#e9e9e9;}
 .topper{background: #fff url(skin/mod/header_gradient_light.png) repeat-x left bottom;color: #4D4D4D;font-size:120%;padding:5px 10px;}
 .topper h1,.topper h2,.topper h3,.topper h4,.topper h5,.topper h6{font-size:100%;color:#4D4D4D;padding:0;}
+.bam{background: #00477a url(skin/mod/header_glossy.png) repeat-x left top;color: #fff;font-size:120%;padding:5px 10px;}
+.bam h1,.bam h2,.bam h3,.bam h4,.bam h5,.bam h6{font-size:100%;color:#fff;padding:0;}
+.note{font-family:"Comic Sans MS", "Comic Sans MS5", cursive;color:#000669;font-size: 120%; text-align:center;}
