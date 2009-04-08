@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Standard Module Format</title>
+<link rel="stylesheet" type="text/css" media="all"  href="css/libraries.css" />
+<link rel="stylesheet" type="text/css" media="all"  href="css/template.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/grids.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/content.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/mod.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/mod_skins.css" />
+<!--<link rel="stylesheet" type="text/css" media="all" href="css/mod_debug.css" />
+-->
+</head>
+<body>
+<div class="page">
+	<h1>Modules</h1>
+	<h2>Block Structures</h2>
+	<p>There are three basic block structures that you can build from. Examine how the structures work in Firebug, Dragonfly, or by applying the stylesheet mod_debug.css</p>
+	<div class="line">
+		<div class="unit size1of3">
+			<div class="mod"> 
+				<div class="inner">
+					<div class="hd">
+						<h3>mod </h3>
+					</div>
+					<div class="bd">
+						<p>Mod is the basic container, all other containers inherit from this one. This is the high performance container that should be used unless you specifically need another type of container.</p>
+					</div>
+				</div>
+				<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+			</div>
+		</div>
+		<div class="unit size1of3">
+			<div class="mod AG"> 
+				<div class="inner">
+					<div class="hd">
+						<h3>AG</h3>
+					</div>
+					<div class="bd">
+						<p>AG should be used in cases where you require images for borders because borders or drop shadows are too complex to be simulated via borders on mod and/or inner. </p>
+					</div>
+				</div>
+				<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+			</div>
+		</div>
+		<div class="unit size1of3 lastUnit">
+			<div class="mod pop"> 
+				<div class="inner">
+					<div class="hd">
+						<h3>pop </h3>
+					</div>
+					<div class="bd">
+						<p>Body - use for popups and other containers that need outside transparency.</p>
+					</div>
+				</div>
+				<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+			</div>
+		</div>
+	</div>
+	<h2>Block Skins</h2>
+	<h3>Contour</h3>
+	<div class="line">
+		<div class=" unit size1of3">
+			<div class="mod AG excerpt">
+				<div class="inner">
+					<div class="hd section">
+						<h3>excerpt</h3>
+					</div>
+					<div class="bd">
+						<p>Body</p>
+					</div>
+					<div class="ft act">
+						<p>Foot</p>
+					</div>
+				</div>
+				<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+			</div>
+			<div class="mod AG flow"> 
+				<div class="inner">
+					<div class="hd">
+						<h3>talk</h3>
+					</div>
+					<div class="bd">
+						<p>Body</p>
+					</div>
+				</div>
+				<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+			</div>
+			<div class="mod grab"> 
+				<div class="inner">
+					<div class="hd">
+						<h3>talk</h3>
+					</div>
+					<div class="bd">
+						<p>Body</p>
+					</div>
+				</div>
+				<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+			</div>
+		</div>
+		<div class=" unit size1of3">
+			<div class="mod simpleExt"> 
+				<div class="inner">
+					<div class="hd">
+						<h3>simpleExt</h3>
+					</div>
+					<div class="bd">
+						<p>Body</p>
+					</div>
+				</div>
+				<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+			</div>
+			<div class="mod simple"> 
+				<div class="inner">
+					<div class="hd">
+						<h3>simple</h3>
+					</div>
+					<div class="bd">
+						<p>Body</p>
+					</div>
+				</div>
+				<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+			</div>
+			<div class="mod noted"> 
+				<div class="inner">
+					<div class="hd">
+						<h3>noted</h3>
+					</div>
+					<div class="bd">
+						<p>Body</p>
+					</div>
+				</div>
+				<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+			</div>
+			<div class="mod AG photo"> 
+				<div class="inner">
+					<div class="bd">
+						<img src="img/kakapo.png" alt="boo" />
+					</div>
+				</div>
+				<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+			</div>
+		</div>
+		<div class=" unit size1of3 lastUnit">
+			<div class="mod talk"> 
+				<div class="inner">
+					<div class="hd">
+						<h3>talk</h3>
+					</div>
+					<div class="bd">
+						<p>Body</p>
+					</div>
+				</div>
+				<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+			</div>
+			<div class="mod pop sommers"> 
+				<div class="inner">
+					<div class="hd">
+						<h3>sommers</h3>
+					</div>
+					<div class="bd">
+						<p>Body</p>
+					</div>
+				</div>
+				<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+			</div>
+			<div class="mod me"> 
+				<div class="inner">
+					<div class="hd">
+						<h3>me</h3>
+					</div>
+					<div class="bd">
+						<p>Body</p>
+					</div>
+				</div>
+				<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+			</div>
+			<div class="mod basic nicole"> 
+				<div class="inner">
+					<div class="hd">
+						<h3>basic</h3>
+					</div>
+					<div class="bd">
+						<p>Must be combined with a background color or content, adds rounded corners.</p>
+					</div>
+				</div>
+				<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+			</div>
+		</div>
+	</div>
+	<h2>Background Objects</h2>
+	<div class="line">
+		<div class="unit size1of3">
+			<div class="mod highlight"> 
+				<div class="inner">
+					<div class="hd">
+						<h3>highlight</h3>
+					</div>
+					<div class="bd">
+						<p>Body</p>
+					</div>
+				</div>
+				<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+			</div>
+			<div class="mod universe"> 
+				<div class="inner">
+					<div class="hd">
+						<h3>universe</h3>
+					</div>
+					<div class="bd">
+						<p>Body</p>
+					</div>
+				</div>
+				<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+			</div>
+		</div>
+		<div class="unit size1of3">
+			<div class="mod comment"> 
+				<div class="inner">
+					<div class="hd">
+						<h3>comment</h3>
+					</div>
+					<div class="bd">
+						<p>Body</p>
+					</div>
+				</div>
+				<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+			</div>
+			<div class="mod foo"> 
+				<div class="inner">
+					<div class="hd">
+						<h3>foo</h3>
+					</div>
+					<div class="bd">
+						<p>Body</p>
+					</div>
+				</div>
+				<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+			</div>
+		</div>
+		<div class="unit size1of3">
+			<div class="mod nicole"> 
+				<div class="inner">
+					<div class="hd">
+						<h3>nicole</h3>
+					</div>
+					<div class="bd">
+						<p>Body</p>
+					</div>
+				</div>
+				<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+			</div>
+			<div class="mod login"> 
+				<div class="inner">
+					<div class="hd">
+						<h3>login</h3>
+					</div>
+					<div class="bd">
+						<p>Body</p>
+					</div>
+				</div>
+				<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+			</div>
+		</div>
+	
+	</div>
+	<h2>Block Headers</h2>
+	<h3 class="bam">Bam</h3>
+	<br />
+	<h3 class="topper">Topper</h3>
+	<br />
+	<h3 class="section">Section</h3>
+	<h2>Block Footers</h2>
+	<div class="ft act">button here</div>
+	
+</div>
+</body>
+</html>
