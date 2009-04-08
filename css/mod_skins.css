@@ -1,7 +1,5 @@
 /* **************** BLOCK SKINS ***************** */
 /* ====== Contour blocks ====== */
-/* ----- .author (extends AG) ----- */
-/*.me b{background-image:url(skin/mod/author.png);}*/
 /* ----- .excerpt (extends AG) ----- */
 .excerpt b{background-image:url(skin/mod/excerpt.png);}
 .excerpt .top{height:1px;}
@@ -35,7 +33,7 @@
 .noted .tr{right:-1px;top:-1px;}
 .noted .bl{left:-1px;bottom:-1px;} 
 .noted .br{right:-1px;bottom:-1px;}
-/* ----- grab (extends mod) ----- looks stupid, border radius fail */
+/* ----- grab (extends mod) ----- */
 .grab .inner{border-color:#00477a; border-style:solid; border-width:3px 3px 10px 3px;}
 .grab b{background-image:url(skin/mod/grab.png);}
 .grab .tl, .grab .tr{height:10px; width:10px;}
@@ -56,7 +54,7 @@
 .photo .bl, .photo .br{height:16px;margin-top: -12px;}
 /* ----- even (extends AG) ----- */
 .flow b{background-image:url(skin/mod/even.png);}
-/* ----- sommers extends.pop ----- */
+/* ----- sommers (extends pop) ----- */
 .sommers, 
 .sommers .inner, 
 .sommers b{background-image:url(skin/mod/glow_7px.png);}
