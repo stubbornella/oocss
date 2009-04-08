@@ -16,12 +16,12 @@ b{display:block;background-repeat:no-repeat;font-size:1%;position:relative;float
 .tr{background-position: right top;float:right;margin-bottom:-7px;}
 .bl{background-position: left bottom;margin-top:-7px;} 
 .br{background-position: right bottom; float:right;margin-top:-7px;}
-/* AG is a structural obj that extends mod to allow for full image borders */
-.AG{overflow:hidden;_overflow:visible;zoom:1;position:relative;}
-.AG .tl, .AG .tr{height:32000px; margin-bottom:-32000px;width:10px;}
-.AG .top{background-position:center top;height:5px;}/* can't stay like this */
-.AG .bottom{background-position:center bottom;height:7px;}
-.AG .bl, .AG .br{margin-top:-7px;clear:none;height:14px; width:14px;}
+/* complex is a structural obj that extends mod to allow for full image borders */
+.complex{overflow:hidden;_overflow:visible;zoom:1;position:relative;}
+.complex .tl, .complex .tr{height:32000px; margin-bottom:-32000px;width:10px;}
+.complex .top{background-position:center top;height:5px;}/* can't stay like this */
+.complex .bottom{background-position:center bottom;height:7px;}
+.complex .bl, .complex .br{margin-top:-7px;clear:none;height:14px; width:14px;}
 /*.pop - a structural object originally coded by Leslie Sommers that extends mod to allow transparent outside corners. Use for popups. */
 .pop{overflow:visible;margin: 10px 17px 17px 10px; background-position:left top;}
 .pop .inner{right:-7px; bottom:-7px; background-position:right bottom;padding:0 7px 7px 0;}

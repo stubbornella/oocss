@@ -1,6 +1,6 @@
 /* **************** BLOCK SKINS ***************** */
 /* ====== Contour blocks ====== */
-/* ----- .excerpt (extends AG) ----- */
+/* ----- .excerpt (extends complex) ----- */
 .excerpt b{background-image:url(skin/mod/excerpt.png);}
 .excerpt .top{height:1px;}
 /* ----- simple extends the mod ----- */
@@ -46,13 +46,13 @@
 .talk .tr{right:-1px;top:-1px;}
 .talk .bl{left:-1px;bottom:-1px;} 
 .talk .br{right:-1px;bottom:-1px;}
-/* ----- photo (extends AG) ----- */
+/* ----- photo (extends complex) ----- */
 .photo .inner{border:solid 10px #fff;margin:4px 4px 0 4px;}
 .photo b{background-image:url(skin/mod/photo.png);}
 .photo .tr, .photo .tl{width:20px;}
 .photo .top, .photo .bottom{height:4px;} 
 .photo .bl, .photo .br{height:16px;margin-top: -12px;}
-/* ----- even (extends AG) ----- */
+/* ----- even (extends complex) ----- */
 .flow b{background-image:url(skin/mod/even.png);}
 /* ----- sommers (extends pop) ----- */
 .sommers, 
