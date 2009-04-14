@@ -26,6 +26,12 @@
 					</div>
 					<div class="bd">
 						<p>Mod is the basic container, all other containers inherit from this one. This is the high performance container that should be used unless you specifically need another type of container.</p>
+						<ul class="simpleList">
+							<li>One tiny image</li>
+							<li>Expands to any height or width</li>
+							<li>Compatible with any content</li>
+							<li>Choose for any container object that doesn't require outside transparency or complex borders.</li>
+						</ul>
 					</div>
 				</div>
 				<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 
@@ -39,6 +45,13 @@
 					</div>
 					<div class="bd">
 						<p>complex should be used in cases where you require images for borders because borders or drop shadows are too complex to be simulated via borders on mod and/or inner. </p>
+						<ul class="simpleList">
+							<li>One image</li>
+							<li>Height and width only limited by image size</li>
+							<li>Compatible with any content</li>
+							<li>Choose when you require complex borders which cannot be simulated via css borders on mod and inner.</li>
+						</ul>
+						<p>Inspired by a conversation with Arnaud.</p>
 					</div>
 				</div>
 				<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 
@@ -51,7 +64,14 @@
 						<h3>pop </h3>
 					</div>
 					<div class="bd">
-						<p>Body - use for popups and other containers that need outside transparency.</p>
+						<p>Use for popups and other containers that need outside transparency.</p>
+						<ul class="simpleList">
+							<li>One image</li>
+							<li>Height and width only limited by image size</li>
+							<li>Compatible with any container, but not any content</li>
+							<li>Choose when you require outside transparency which cannot be simulated. (do i need to make this work with clip rather than bkg position?)</li>
+						</ul>
+						<p>Inspired by Leslie Sommers mojo blocks.</p>
 					</div>
 				</div>
 				<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 
@@ -62,35 +82,11 @@
 	<h3>Contour</h3>
 	<div class="line">
 		<div class=" unit size1of3">
-			<div class="mod complex excerpt">
-				<div class="inner">
-					<div class="hd section">
-						<h3>excerpt</h3>
-					</div>
-					<div class="bd">
-						<p>Body</p>
-					</div>
-					<div class="ft act">
-						<p>Foot</p>
-					</div>
-				</div>
-				<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 
-			</div>
-			<div class="mod complex flow"> 
-				<div class="inner">
-					<div class="hd">
-						<h3>talk</h3>
-					</div>
-					<div class="bd">
-						<p>Body</p>
-					</div>
-				</div>
-				<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 
-			</div>
+			<h4>Extends mod only</h4>
 			<div class="mod grab"> 
 				<div class="inner">
 					<div class="hd">
-						<h3>talk</h3>
+						<h3>grab</h3>
 					</div>
 					<div class="bd">
 						<p>Body</p>
@@ -98,8 +94,6 @@
 				</div>
 				<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 
 			</div>
-		</div>
-		<div class=" unit size1of3">
 			<div class="mod simpleExt"> 
 				<div class="inner">
 					<div class="hd">
@@ -133,31 +127,10 @@
 				</div>
 				<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 
 			</div>
-			<div class="mod complex photo"> 
-				<div class="inner">
-					<div class="bd">
-						<img src="img/kakapo.png" alt="boo" />
-					</div>
-				</div>
-				<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 
-			</div>
-		</div>
-		<div class=" unit size1of3 lastUnit">
 			<div class="mod talk"> 
 				<div class="inner">
 					<div class="hd">
 						<h3>talk</h3>
-					</div>
-					<div class="bd">
-						<p>Body</p>
-					</div>
-				</div>
-				<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 
-			</div>
-			<div class="mod pop sommers"> 
-				<div class="inner">
-					<div class="hd">
-						<h3>sommers</h3>
 					</div>
 					<div class="bd">
 						<p>Body</p>
@@ -183,6 +156,56 @@
 					</div>
 					<div class="bd">
 						<p>Must be combined with a background color or content, adds rounded corners.</p>
+					</div>
+				</div>
+				<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+			</div>
+		</div>
+		<div class=" unit size1of3">
+			<h4>Extends complex</h4>
+			<div class="mod complex excerpt">
+				<div class="inner">
+					<div class="hd section">
+						<h3>excerpt</h3>
+					</div>
+					<div class="bd">
+						<p>Body</p>
+					</div>
+					<div class="ft act">
+						<p>Foot</p>
+					</div>
+				</div>
+				<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+			</div>
+			<div class="mod complex flow"> 
+				<div class="inner">
+					<div class="hd">
+						<h3>talk</h3>
+					</div>
+					<div class="bd">
+						<p>Body</p>
+					</div>
+				</div>
+				<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+			</div>
+			<div class="mod complex photo"> 
+				<div class="inner">
+					<div class="bd">
+						<img src="img/kakapo.png" alt="boo" />
+					</div>
+				</div>
+				<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+			</div>
+		</div>
+		<div class=" unit size1of3 lastUnit">
+			<h4>Extends pop</h4>
+			<div class="mod pop sommers"> 
+				<div class="inner">
+					<div class="hd">
+						<h3>sommers</h3>
+					</div>
+					<div class="bd">
+						<p>Body</p>
 					</div>
 				</div>
 				<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 

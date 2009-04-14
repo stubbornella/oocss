@@ -4,21 +4,21 @@
 .excerpt b{background-image:url(skin/mod/excerpt.png);}
 .excerpt .top{height:1px;}
 /* ----- simple extends the mod ----- */
-.simple .inner {border:1px solid #D7D7D7;/*-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px;*/}
-.simple b{background-image:url(skin/mod/simple_corners.png);}/* reomove this line to default to square corners for IE */
+.simple .inner {border:1px solid #D7D7D7;-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px;}
+.simple b{*background-image:url(skin/mod/simple_corners.png);}/* remove this line to default to square corners for IE */
 /* ----- basic extends the mod ----- */
-.basic .inner {/*-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px;*/}
-.basic b{background-image:url(skin/mod/round.png);}/* reomove this line to default to square corners for IE */
+.basic .inner {-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px;}
+.basic b{*background-image:url(skin/mod/round.png);}/* remove this line to default to square corners for IE */
 /* ----- simpleExt (extends mod) ----- */
-.simpleExt,.simpleExt .inner{border:1px solid #c7c7c7;/*-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px;*/}
+.simpleExt,.simpleExt .inner{border:1px solid #c7c7c7;/*-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px; */}
 .simpleExt .inner{border-color:#fff; border-width:4px; background-color:#e2e2e2;}
-.simpleExt b{background-image:url(skin/mod/simple_extended.png);}/* reomove this line to default to square corners for IE */
-.simpleExt .tl{left:-1px;top:-1px;}/* values for top, right, bottom, and left are equal to border thickness on mod */
-.simpleExt .tr{right:-1px;top:-1px;}
-.simpleExt .bl{left:-1px;bottom:-1px;} 
-.simpleExt .br{right:-1px;bottom:-1px;}
+.simpleExt b{background-image:url(skin/mod/simple_extended.png);}/* remove this line to default to square corners for IE */
+.simpleExt .tl{left:-1px;top:-1px;height:12px; width:12px;}/* values for top, right, bottom, and left are equal to border thickness on mod */
+.simpleExt .tr{right:-1px;top:-1px;height:12px; width:12px;}
+.simpleExt .bl{left:-1px;bottom:-1px;height:12px; width:12px;margin-top:-12px;} 
+.simpleExt .br{right:-1px;bottom:-1px;height:12px; width:12px;margin-top:-12px;}
 /* ----- me (extends mod) use for my comments ----- */
-.me,.me .inner{border:1px solid #909090;/*-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;*/}
+.me,.me .inner{border:1px solid #909090;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
 .me .inner{border-color:#d76a84;}
 .me b{background-image:url(skin/mod/me.png);}/* remove this line to default to square corners for IE */
 .me .tl{left:-1px;top:-1px;}/* values for top, right, bottom, and left are equal to border thickness on mod */
@@ -26,7 +26,7 @@
 .me .bl{left:-1px;bottom:-1px;} 
 .me .br{right:-1px;bottom:-1px;}
 /* ----- noted (extends mod) ----- */
-.noted,.noted .inner{border:1px solid #c2c2c2;/*-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;*/}
+.noted,.noted .inner{border:1px solid #c2c2c2;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
 .noted .inner{border-color:#eded68;}
 .noted b{background-image:url(skin/mod/noted.png);}/* remove this line to default to square corners for IE */
 .noted .tl{left:-1px;top:-1px;}/* values for top, right, bottom, and left are equal to border thickness on mod */
@@ -34,12 +34,12 @@
 .noted .bl{left:-1px;bottom:-1px;} 
 .noted .br{right:-1px;bottom:-1px;}
 /* ----- grab (extends mod) ----- */
-.grab .inner{border-color:#00477a; border-style:solid; border-width:3px 3px 10px 3px;}
+.grab .inner{border: 3px solid #00477a; border-bottom-width:10px;}/* can't be done w border radius */
 .grab b{background-image:url(skin/mod/grab.png);}
 .grab .tl, .grab .tr{height:10px; width:10px;}
 .grab .bl, .grab .br{height:16px;margin-top:-16px;}
 /* ----- talk (extends mod) ----- */
-.talk,.talk .inner{border:1px solid #c7c7c7;/*-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;*/}
+.talk,.talk .inner{border:1px solid #c7c7c7;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
 .talk .inner{border-color:#ededed;}
 .talk b{background-image:url(skin/mod/talk.png);}/* remove this line to default to square corners for IE */
 .talk .tl{left:-1px;top:-1px;}/* values for top, right, bottom, and left are equal to border thickness on mod */

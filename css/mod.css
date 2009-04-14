@@ -5,19 +5,19 @@ version: 0.2
 */
 /* **************** BLOCK STRUCTURES ***************** */
 /* mod */
-.mod{margin:10px;position:relative;}
+.mod{margin:10px;position:relative;zoom:1;}
 .hd,.bd,.ft{overflow:hidden; _overflow:visible; zoom:1;}
 .inner{position:relative;_zoom:1;}
 b{display:block;background-repeat:no-repeat;font-size:1%;position:relative;float:left;z-index:10;}
 .tl, .tr, .bl, .br{height:7px; width:7px;}
-.top{position:absolute;top:0; left:0; width:100%;float:none; height:0;}
-.top, .bottom{float:none;/*width:auto;clear:both;*/}
-.tl{background-position: left top;margin-bottom:-7px;}
-.tr{background-position: right top;float:right;margin-bottom:-7px;}
+.top{position:absolute;top:0; left:0; width:100%;}
+.top, .bottom{float:none;/*width:auto;clear:both;*/background-position:-6999px; background-color:magenta;}
+.tl{background-position: left top;margin-bottom:-100px;}/* this margin can be anything as long as it is > height of the corner, bah */
+.tr{background-position: right top;float:right;margin-bottom:-100px;}/* this margin can be anything as long as it is > height of the corner, bah */
 .bl{background-position: left bottom;margin-top:-7px;} 
 .br{background-position: right bottom; float:right;margin-top:-7px;}
 /* complex is a structural obj that extends mod to allow for full image borders */
-.complex{overflow:hidden;_overflow:visible;zoom:1;position:relative;}
+.complex{overflow:hidden;}
 .complex .tl, .complex .tr{height:32000px; margin-bottom:-32000px;width:10px;}
 .complex .top{background-position:center top;height:5px;}/* can't stay like this */
 .complex .bottom{background-position:center bottom;height:7px;}
