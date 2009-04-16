@@ -27,19 +27,19 @@ pre{padding: 20px;background-color: #FCF8BC;overflow:auto;width:auto;}
 	</thead>
 	<tbody>
 	<tr class="odd">
-		<th scope="row"><code>#page</code></th>
+		<th scope="row"><code>page</code></th>
 		<td>Main wraps site content. It can be extended via the classes <code>oldSchool</code> and <code>liquid</code> to provide 750px and full width layouts respectively.</td>
 	</tr>
 	<tr class="even">
-		<th scope="row"><code>#hd</code></th>
+		<th scope="row"><code>head</code></th>
 		<td>Site header, generally contains custom code. (e.g. horizontal navigation, logo, search box)</td>
 	</tr>
 	<tr class="odd">
-		<th scope="row"><code>#bd</code></th>
+		<th scope="row"><code>body</code></th>
 		<td>Main content area, body of the page.</td>
 	</tr>
 	<tr class="even">
-		<th scope="row"><code>#ft<strong></strong></code></th>
+		<th scope="row"><code>foot<strong></strong></code></th>
 		<td>Site footer, generally contains custom code.</td>
 	</tr>
 	<tr class="odd">
@@ -72,33 +72,33 @@ pre{padding: 20px;background-color: #FCF8BC;overflow:auto;width:auto;}
 	</tr>
 	<tr class="odd">
 		<th scope="row"><code>oldSchool</code></th>
-		<td>Extends <code>#main</code> to create a <strong>750px</strong> layout.</td>
+		<td>Extends <code>page</code> to create a <strong>750px</strong> layout.</td>
 	</tr>
 	<tr class="even">
 		<th scope="row"><code>liquid</code></th>
-		<td>Extends <code>#main</code> to create a <strong>full-width</strong> liquid layout.</td>
+		<td>Extends <code>page</code> to create a <strong>full-width</strong> liquid layout.</td>
 	</tr>
 	</tbody>
 </table>
 </div>
 <h2>Basic template</h2>
-<pre>&lt;div id=&quot;main&quot;&gt;<br />	&lt;div id=&quot;hd&quot;&gt;&lt;!-- Head --&gt;&lt;/div&gt;<br />	&lt;div id=&quot;bd&quot;&gt;&lt;!-- Body --&gt;<br />		&lt;div class=&quot;leftCol&quot;&gt;&lt;!-- Left Column (optional region) --&gt;&lt;/div&gt;<br />		&lt;div class=&quot;rightCol&quot;&gt;&lt;!-- Right Column (optional region) --&gt;&lt;/div&gt;<br />		&lt;div class=&quot;main&quot;&gt;&lt;!-- Main Content --&gt;&lt;/div&gt;<br />	&lt;/div&gt;<br />	&lt;div id=&quot;ft&quot;&gt;&lt;!-- Foot --&gt;&lt;/div&gt;	<br />&lt;/div&gt;</pre>
+<pre>&lt;div class=&quot;page&quot;&gt;<br />	&lt;div class=&quot;head&quot;&gt;&lt;!-- Head --&gt;&lt;/div&gt;<br />	&lt;div class=&quot;body&quot;&gt;&lt;!-- Body --&gt;<br />		&lt;div class=&quot;leftCol&quot;&gt;&lt;!-- Left Column (optional region) --&gt;&lt;/div&gt;<br />		&lt;div class=&quot;rightCol&quot;&gt;&lt;!-- Right Column (optional region) --&gt;&lt;/div&gt;<br />		&lt;div class=&quot;main&quot;&gt;&lt;!-- Main Content --&gt;&lt;/div&gt;<br />	&lt;/div&gt;<br />	&lt;div class=&quot;foot&quot;&gt;&lt;!-- Foot --&gt;&lt;/div&gt;	<br />&lt;/div&gt;</pre>
 <h2>Full width template, 2 columns, gmail style (160px left column width)</h2>
-<pre>&lt;div id=&quot;main <strong>liquid</strong>&quot;&gt;<br />	&lt;div id=&quot;hd&quot;&gt;&lt;!-- Head --&gt;&lt;/div&gt;<br />	&lt;div id=&quot;bd&quot;&gt;&lt;!-- Body --&gt;<br />		&lt;div class=&quot;leftCol <strong>gMail</strong>&quot;&gt;&lt;!-- Left Column (optional region) --&gt;&lt;/div&gt;<br />		&lt;div class=&quot;main&quot;&gt;&lt;!-- Main Content --&gt;&lt;/div&gt;
-		<strong>&lt;!-- note: right column has been removed --&gt;</strong><br />	&lt;/div&gt;<br />	&lt;div id=&quot;ft&quot;&gt;&lt;!-- Foot --&gt;&lt;/div&gt;	<br />&lt;/div&gt;</pre>
+<pre>&lt;div class=&quot;page <strong>liquid</strong>&quot;&gt;<br />	&lt;div class=&quot;head&quot;&gt;&lt;!-- Head --&gt;&lt;/div&gt;<br />	&lt;div class=&quot;body&quot;&gt;&lt;!-- Body --&gt;<br />		&lt;div class=&quot;leftCol <strong>gMail</strong>&quot;&gt;&lt;!-- Left Column (optional region) --&gt;&lt;/div&gt;
+		<strong>&lt;!-- note: right column has been removed --&gt;</strong><br />		&lt;div class=&quot;main&quot;&gt;&lt;!-- Main Content --&gt;&lt;/div&gt;<br />	&lt;/div&gt;<br />	&lt;div class=&quot;foot&quot;&gt;&lt;!-- Foot --&gt;&lt;/div&gt;	<br />&lt;/div&gt;</pre>
 <h2>Goals</h2>
 <p>In object oriented CSS the most important goal is to have a single template from which all pages are built.  This eases CMS development because by having a single starting point all pages can be made into any other page. Users of the CMS do not have traps in which a page they have built cannot be morphed into a different page type.  Another goal of and OO template is to have each section (column, header, etc) control it's own destiny.  Practically, that means that if you want to add a left column to the template, the only required action should be actually adding the column to the HTML.  You never want to write CSS in such a way that changes are required higher in the DOM tree in order to make child elements behave properly.  Looping through the dom is costly for CMS development. Similarly, if you want to have a different left column width, it should be accomplished by <em>extending the left column object</em> by adding an additional class.   </p>
 <h3>Extending an object</h3>
 <pre>&lt;div class=&quot;leftCol <strong>gMail</strong>&quot;&gt; ... &lt;/div&gt;</pre>
 
 <h2>Customizing the template</h2>
-<p>You may not find the default and extended widths of columns or pages match your site. In this case you can extend the column or #main objects to allow custom widths. For performance reasons, you should avoid customizing templates whenever possible.</p>
+<p>You may not find the default and extended widths of columns or pages match your site. In this case you can extend the column or page objects to allow custom widths. For performance reasons, you should avoid customizing templates whenever possible.</p>
 <h3>Columns</h3>
 <p><code>myColumn</code> extends column objects to allow for custom column widths.</p>
 <pre>.myColumn{width:400px;}</pre>
 <h3>Main page</h3>
-<p><code>myPage</code> extends <code>#main</code>. <code>!important</code> is required so a class can overwrite an ID.</p>
-<pre>.myPage{width:1050px !important;}</pre>
+<p><code>myPage</code> extends <code>page</code>.</p>
+<pre>.myPage{width:1050px;}</pre>
 <h2>Known Issues</h2>
 <ul>
 	<li><strong>Source order</strong> - the right column is before the main content in the source order. This choice was made in order to allow the columns to be completely independent objects and to have one unique template rather than multiple starting points for a site. This speeds and simplifies CMS development and enhances usability for those creating pages within the CMS. Skip to content links and navigational items marked up as lists are strongly encouraged.</li>
