@@ -6,7 +6,7 @@ version: 0.2
 /* **************** BLOCK STRUCTURES ***************** */
 /* mod */
 .mod{margin:10px;}
-.hd,.bd,.ft,{overflow:hidden;_overflow:visible; zoom:1;}
+.hd,.bd,.ft,{overflow:hidden;_overflow:visible; _zoom:1;}
 .inner{position:relative;}
 b{display:block;background-repeat:no-repeat;font-size:1%;position:relative;z-index:10;}
 .tl, .tr, .bl, .br{height:10px; width:10px;float:left;}
@@ -17,7 +17,7 @@ b{display:block;background-repeat:no-repeat;font-size:1%;position:relative;z-ind
 .br,.tr{float:right;}
 .bl,.br{margin-top:-10px;}
 .top{background-position:center top;}
-.bottom{background-position:center bottom;}
+.bottom{background-position:center bottom;_zoom:1;}/* this zoom required for IE5.5 only*/
 /* complex */
 .complex{overflow:hidden;_position:relative;_zoom:1;}
 .complex .tl, .complex .tr{height:32000px; margin-bottom:-32000px;width:10px;overflow:hidden;}
