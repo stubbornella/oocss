@@ -19,7 +19,7 @@ b{display:block;background-repeat:no-repeat;font-size:1%;position:relative;z-ind
 .top{background-position:center top;}
 .bottom{background-position:center bottom;_zoom:1;}/* this zoom required for IE5.5 only*/
 /* complex */
-.complex{overflow:hidden;_position:relative;_zoom:1;}
+.complex{overflow:hidden;*position:relative;*zoom:1;}/* position/zoom required for IE7, 6, 5.5 */
 .complex .tl, .complex .tr{height:32000px; margin-bottom:-32000px;width:10px;overflow:hidden;}
 .complex .bl, .complex .br{/*margin-top:0;*/}
 .complex .top{height:5px;}

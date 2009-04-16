@@ -1,6 +1,7 @@
 /* **************** GRIDS ***************** */
 .line, .lastUnit {overflow: hidden;_overflow:visible;_zoom:1; }
 .unit{float:left;_zoom:1;}
+.unitExt{float:right;}
 .size1of1{float:none;}
 .size1of2{width:50%;}
 .size1of3{width:33.33333%;}
@@ -12,3 +13,5 @@
 .size3of5{width:60%;}
 .size4of5{width:80%;}
 .lastUnit {float:none;_position:relative; _left:-3px; _margin-right: -3px;width:auto;}
+/* extending grids to allow a unit that takes the width of its content */
+.media{width:auto;}
