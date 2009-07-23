@@ -6,7 +6,8 @@ version: 0.2
 /* **************** BLOCK STRUCTURES ***************** */
 /* mod */
 .mod{margin:10px;}
-.hd,.bd,.ft,{overflow:hidden;_overflow:visible; _zoom:1;}
+.mod .inner{background: url(skin/transparent.png) repeat left top;}
+.hd,.bd,.ft{overflow:hidden;_overflow:visible; _zoom:1;}
 .inner{position:relative;}
 b{display:block;background-repeat:no-repeat;font-size:1%;position:relative;z-index:10;}
 .tl, .tr, .bl, .br{height:10px; width:10px;float:left;}
@@ -15,12 +16,13 @@ b{display:block;background-repeat:no-repeat;font-size:1%;position:relative;z-ind
 .bl{background-position: left bottom;} 
 .br{background-position: right bottom;}
 .br,.tr{float:right;}
+.tr, .tl{overflow:hidden;margin-bottom:-32000px;}/* margin bottom needs to be < -9px */
 .bl,.br{margin-top:-10px;}
 .top{background-position:center top;}
 .bottom{background-position:center bottom;_zoom:1;}/* this zoom required for IE5.5 only*/
 /* complex */
 .complex{overflow:hidden;*position:relative;*zoom:1;}/* position/zoom required for IE7, 6, 5.5 */
-.complex .tl, .complex .tr{height:32000px; margin-bottom:-32000px;width:10px;overflow:hidden;}
+.complex .tl, .complex .tr{height:32000px; margin-bottom:-32000px;width:10px;}
 .complex .bl, .complex .br{/*margin-top:0;*/}
 .complex .top{height:5px;}
 .complex .bottom{height:5px;/*margin-top:-10px;*/}

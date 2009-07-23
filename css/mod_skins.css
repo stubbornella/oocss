@@ -1,16 +1,16 @@
 /* **************** BLOCK SKINS ***************** */
 /* ====== Contour blocks ====== */
-/* remove *background-image:" to default to square corners for IE */
-/* ----- simple extends the mod ----- */
+/* remove background-image:" to default to square corners for IE */
+/* ----- simple (extends mod) ----- */
 .simple .inner {border:1px solid #D7D7D7;/*-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px;*/}
 .simple b{background-image:url(skin/mod/simple_corners.png);}
-/* ----- basic extends the mod ----- */
+/* ----- basic (extends mod) ----- */
 .basic .inner {/*-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px;*/}
 .basic b{background-image:url(skin/mod/round.png);}
 /* ----- simpleExt (extends mod) ----- */
-.simpleExt,.simpleExt .inner{border:1px solid #c7c7c7;-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px; }
-.simpleExt .inner{border-color:#fff; border-width:4px; background-color:#e2e2e2;}
-.simpleExt b{*background-image:url(skin/mod/simple_extended.png);}
+.simpleExt,.simpleExt .inner{border:1px solid #c7c7c7;/*-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px;*/ }
+.simpleExt .inner{border-color:#fff; border-width:4px; /background-color:#e2e2e2;*/}
+.simpleExt b{background-image:url(skin/mod/simple_extended.png);}
 .simpleExt .tl{left:-1px;top:-1px;height:12px; width:12px;}
 .simpleExt .tr{right:-1px;top:-1px;height:12px; width:12px;}
 .simpleExt .bl{left:-1px;bottom:-1px;height:12px; width:12px;margin-top:-12px;} 
@@ -34,8 +34,20 @@
 /* ----- grab (extends mod) ----- */
 .grab .inner{border: 3px solid #00477a; border-bottom-width:10px;}/* can't be done w border radius */
 .grab b{background-image:url(skin/mod/grab.png);}
-.grab .tl, .grab .tr{height:10px; width:10px;}
+/*.grab .tl, .grab .tr{height:10px; width:10px;}*/
 .grab .bl, .grab .br{height:16px;/*if height is set, margin set*/margin-top:-16px;}
+/* ----- faq (extends mod) ----- */
+.faq .inner{border: 3px solid #b20029; border-bottom-width:10px;}/* can't be done w border radius */
+.faq b{background-image:url(skin/mod/faq.png);}
+.faq .bl, .faq .br{height:16px;/*if height is set, margin set*/margin-top:-16px;}
+/* ----- onlinestore (extends mod) ----- */
+.onlinestore .inner{border: 3px solid #9a9800; border-bottom-width:10px;}/* can't be done w border radius */
+.onlinestore b{background-image:url(skin/mod/store.png);}
+.onlinestore .bl, .onlinestore .br{height:16px;/*if height is set, margin set*/margin-top:-16px;}
+/* ----- about (extends mod) ----- */
+.about .inner{border: 3px solid #494949; border-bottom-width:10px;}/* can't be done w border radius */
+.about b{background-image:url(skin/mod/about.png);}
+.about .bl, .about .br{height:16px;/*if height is set, margin set*/margin-top:-16px;}
 /* ----- talk (extends mod) ----- */
 .talk,.talk .inner{border:1px solid #c7c7c7;/*-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;*/}
 .talk .inner{border-color:#ededed;}
@@ -56,9 +68,9 @@
 .flow .inner{padding:0 4px;}
 .flow .top{height:4px;}
 .flow .bottom{height:4px;margin-top:-4px;}
-.flow .br,.flow .bl{height:10px;margin-top:-6px;}/* margin top = bottom height - corner height */
+.flow .br,.flow .bl{margin-top:-6px;}/* margin top = bottom height - corner height */
 /* ----- shadow test (experimental attempt to match "flow" cross browser w no img)----- */
-.boo{-webkit-box-shadow: 0px 0px 1px rgba(0,0,0,33);-moz-box-shadow: black 2px 2px 2px 2px;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;border:solid 1px #949494;background:#fff;}
+.boo{-webkit-box-shadow: 0px 0px 1px rgba(0,0,0,33);-moz-box-shadow: black 2px 2px 2px 2px;/*-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;*/border:solid 1px #949494;background:#fff;}
 /* ----- .excerpt (extends complex) ----- */
 .excerpt b{background-image:url(skin/mod/excerpt.png);}
 .excerpt .top{height:1px;}
@@ -67,17 +79,20 @@
 /* ----- sommers (extends pop) ----- */
 .sommers .inner{_border:3px solid #D7D7D7;}/*IE6 backup no alpha transparency */
 .sommers,.sommers .inner,.sommers b{background-image:url(skin/mod/glow_7px.png);_background-image:none;}
-.sommers{/*margin:3px 10px 10px 3px;*/}
+.sommers{margin:3px 20px 20px 3px;}
+/* ----- gonzalo ----- */
+.gonzalo, .gonzalo .inner, .gonzalo b{background-image:url(skin/mod/gc.png);}
 /* ====== Background blocks ====== */
-.sale .inner{background-color:red;}
-.nicole .inner{background-color:#c01c41; color:#fff;}
+.sale .inner{background:red none;}
+.nicole .inner{background:#c01c41 none; color:#fff;}
 .nicole *, .login *{ color:#fff;}
-.highlight .inner{background-color:#e3e36f;}
+.highlight .inner{background:#e3e36f none;}
 .universe .inner{background:url(skin/mod/universe.png) repeat left top;}
 .foo .inner{background: url(skin/mod/universe_gray.png) repeat left top;}
 .login .inner{background: url(skin/mod/universe_login.png) repeat left top;}
-.comment .inner{background-color:#e2e2e2;}
+.comment .inner{background:#e2e2e2 none;}
 /* ====== Block headers and footers ====== */
+.hd h1, .hd h2, .hd h3, .hd h4, .hd h5, .hd h6{padding: 5px 10px;}
 .section{background: #e9e9e9 url(skin/mod/header.png) repeat-x left bottom; color:#de2c72;font-size:120%;padding:5px 10px;}
 .section h1,.section h2,.section h3,.section h4,.section h5,.section h6{font-size:100%;color:#de2c72;padding:0;}
 .act{background-color:#e9e9e9;}
@@ -85,3 +100,10 @@
 .topper h1,.topper h2,.topper h3,.topper h4,.topper h5,.topper h6{font-size:100%;color:#4D4D4D;padding:0;}
 .bam{background: #00477a url(skin/mod/header_glossy.png) repeat-x left top;color: #fff;font-size:120%;padding:5px 10px;}
 .bam h1,.bam h2,.bam h3,.bam h4,.bam h5,.bam h6{font-size:100%;color:#fff;padding:0;}
+.gonz{background:url(skin/mod/gc_header.png) no-repeat left top;}/* messed up */
+.online{background: #9a9400 url(skin/mod/online.png) repeat-x left top;color: #000;font-size:120%;padding:5px 10px;}
+.online h1,.online h2,.online h3,.online h4,.online h5,.online h6{font-size:100%;color:#000;padding:0;}
+.help{background: #b20029 url(skin/mod/help.png) repeat-x left top;color: #fff;font-size:120%;padding:5px 10px;}
+.help h1,.help h2,.help h3,.help h4,.help h5,.help h6{font-size:100%;color:#fff;padding:0;}
+.info{background: #636363 url(skin/mod/info.png) repeat-x left top;color: #fff;font-size:120%;padding:5px 10px;}
+.info h1,.info h2,.info h3,.info h4,.info h5,.info h6{font-size:100%;color:#fff;padding:0;}
