@@ -1,6 +1,6 @@
 /* **************** GRIDS ***************** */
-.line, .lastUnit {overflow: auto;_overflow:visible;_zoom:1; }
-.unit{float:left;_zoom:1;}
+.line, .lastUnit {overflow: hidden;_overflow:visible;_zoom:1; }
+.unit{float:left;/*_zoom:1;*/}
 .size1of1{float:none;}
 .size1of2{width:50%;}
 .size1of3{width:33.33333%;}

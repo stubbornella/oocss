@@ -6,7 +6,7 @@ version: 0.2
 /* **************** BLOCK STRUCTURES ***************** */
 /* mod */
 .mod{margin:10px;}
-.mod .inner{background: url(skin/transparent.png) repeat left top;}
+.mod .inner{/*background: url(skin/transparent.png) repeat left top;*/}
 .hd,.bd,.ft{overflow:hidden;_overflow:visible; _zoom:1;}
 .inner{position:relative;}
 b{display:block;background-repeat:no-repeat;font-size:1%;position:relative;z-index:10;}
