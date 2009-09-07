@@ -1,6 +1,6 @@
 /* **************** TALK BUBBLE ***************** */
-.bubble{overflow:hidden;_zoom:1;margin:10px;}
-.bubble b b{position:absolute;height:0;width:0;border: solid 7px transparent;_border: 7px solid #fff;}
+.bubble{overflow:hidden;_overflow:visible;_zoom:1;margin:10px;}
+.bubble b b{position:absolute;height:0;width:0;border: solid 7px transparent;_border: 7px solid #fff /* set color to match background color for IE6 */;}
 .bubble .bottom{visibility:hidden;}
 /* top bubbles */
 .bubbleTop .inner{margin-top:7px;}
