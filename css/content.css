@@ -63,3 +63,10 @@ cite{display:block; text-align:right; padding-top: 10px;}
 1. find a way to capture the width of the caption in the width of the image or flash
 2. Set some default widths, mby use flickr widths?
 */
+/* ====== media ====== */
+.media{overflow:hidden; overflow:visible; zoom:1;margin:10px;}
+.media .img{float:left;margin-right: 10px;}
+.media .img img{display:block;}
+.media .imgExt{float:right; margin-left: 10px;}
+/* ====== special formatting classes ====== */
+.detail{color: #777; font-size:11px;display:block;}
