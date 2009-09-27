@@ -5,7 +5,7 @@
 .discuss .inner{background-color:#CCC;}
 .discuss b b{border-top-color:#CCC;}
 /* lol (extends bubbleLeft) */
-.lol .inner{background-color:#845B4E;}
+.lol .inner{background-color:#845B4E; color:#fff;}
 .lol b b{border-right-color:#845B4E;}
 /* meep (extends bubbleRight) */
 .meep .inner{background-color:#6cc6c6;}
