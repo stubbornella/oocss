@@ -6,7 +6,7 @@ body{/*_text-align:center;*/}/* IE5.5 */
 /* "old school" and "liquid" extend page to allow for different page widths */
 .oldSchool{width:750px;}
 .gs960{width:960px;}
-.liquid{extends:.page; width: auto;margin:0;}
+.liquid{width: auto;margin:0;}
 /* ====== Columns ====== */
 .main{overflow: hidden;_overflow:visible;_zoom:1;}
 .leftCol{float:left; width:250px;_margin-right:-3px;}
