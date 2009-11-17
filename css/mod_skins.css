@@ -9,7 +9,7 @@
 .basic b{background-image:url(skin/mod/round.png);}
 /* ----- simpleExt (extends mod) ----- */
 .simpleExt,.simpleExt .inner{border:1px solid #c7c7c7;/*-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px;*/ }
-.simpleExt .inner{border-color:#fff; border-width:4px; /background-color:#e2e2e2;*/}
+.simpleExt .inner{border-color:#fff; border-width:4px; background-color:#e2e2e2;}
 .simpleExt b{background-image:url(skin/mod/simple_extended.png);}
 .simpleExt .tl{left:-1px;top:-1px;height:12px; width:12px;}
 .simpleExt .tr{right:-1px;top:-1px;height:12px; width:12px;}
