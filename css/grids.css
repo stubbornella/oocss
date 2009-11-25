@@ -1,16 +1,1 @@
-/* **************** GRIDS ***************** */
-.line:after{content: ".";display: block;height: 0;clear: both;visibility: hidden;}
-.lastUnit:after{content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";visibility:hidden; clear:both;height:0 !important;display:block;line-height:0;}
-.line{*zoom:1;}
-.unit{float:left;}
-.size1of1{float:none;}
-.size1of2{width:50%;}
-.size1of3{width:33.33333%;}
-.size2of3{width:66.66666%;}
-.size1of4{width:25%;}
-.size3of4{width:75%;}
-.size1of5{width:20%;}
-.size2of5{width:40%;}
-.size3of5{width:60%;}
-.size4of5{width:80%;}
-.lastUnit {display: table-cell; *display:block;*zoom:1;float:none;_position:relative; _left:-3px; _margin-right: -3px;width:auto;}
+.line:after,.lastUnit:after{content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";visibility:hidden; clear:both;height:0 !important;display:block;line-height:0;font-size: xx-large;overflow: hidden;}.line{*zoom:1;}.unit{float:left;}.size1of1{float:none;}.size1of2{width:50%;}.size1of3{width:33.33333%;}.size2of3{width:66.66666%;}.size1of4{width:25%;}.size3of4{width:75%;}.size1of5{width:20%;}.size2of5{width:40%;}.size3of5{width:60%;}.size4of5{width:80%;}.lastUnit{display: table-cell;*display:block;*zoom:1;float:none;_position:relative;_left:-3px; _margin-right: -3px;width:auto;}
