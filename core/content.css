@@ -13,12 +13,12 @@ hr{border: 5px solid #e2e2e2; border-width: 0 0 5px 0; margin: 20px 10px 10px 10
 code{color:#0B8C8F;}
 /* ====== Headings ====== */
 /* .h1-.h6 classes should be used to maintain the semantically appropriate heading levels - NOT for use on non-headings */
-h1, .h1{font-size:196%;  font-weight:normal; font-style: normal; color:#AE0345;}
+h1, .h1{font-size:196%; font-weight:normal; font-style: normal; color:#AE0345;}
 h2, .h2{font-size:167%; font-weight:normal; font-style: normal; color:#AE0345;}
 h3, .h3{font-size:146.5%; font-weight:normal; font-style: normal; color:#DF2B72;}
 h4, .h4{font-size:123.1%; font-weight:normal; font-style: normal; color: #333;}
 h5, .h5{font-size:108%; font-weight:bold; font-style: normal; color:#AE0345;}
-h6, .h6{font-size:108%; font-weight:normal;  font-style: italic; color:#333;}
+h6, .h6{font-size:108%; font-weight:normal; font-style: italic; color:#333;}
 /* if additional headings are needed they should be created via additional classes, never via location dependant styling */
 .category{font-size:108%; font-weight:normal; font-style: normal; text-transform:uppercase; color: #333;}
 .category a{color: #333;}
@@ -59,7 +59,7 @@ cite{display:block; text-align:right; padding-top: 10px;}
 .callout span.quotLast{vertical-align:middle;}
 /* ====== image treatments (get more from jason santa maria) ====== */
 .caption{font-size:13px; color:#666666; font-style:italic;padding-top:0;}
-/* will need to either 
+/* will need to either
 1. find a way to capture the width of the caption in the width of the image or flash
 2. Set some default widths, mby use flickr widths?
 */

@@ -15,7 +15,7 @@ pre{padding: 20px;background-color: #FCF8BC;overflow:auto;width:auto;}
 </head>
 <body>
 <h1>Template</h1>
-<p>Templates are used to solve common design patterns for page templates. Using these templates you can build pages which have a <strong>header</strong>, <strong>footer</strong>, <strong>left</strong> and <strong>right columns</strong>, and a <strong>main content area</strong>. Any of the sections can be broken up via <a href="grids_docs.html">grids</a>. You can also use grids instead of columns. The main column is fully liquid, taking up all the rest of the space when the left column and right colum have been rendered. </p>
+<p>Templates are used to solve common design patterns for page templates. Using these templates you can build pages which have a <strong>header</strong>, <strong>footer</strong>, <strong>left</strong> and <strong>right columns</strong>, and a <strong>main content area</strong>. Any of the sections can be broken up via <a href="grids_docs.html">grids</a>. You can also use grids instead of columns. The main column is fully liquid, taking up all the rest of the space when the left column and right column have been rendered.</p>
 <h2>Base Classes</h2>
 <div class="data">
 <table>
@@ -44,7 +44,7 @@ pre{padding: 20px;background-color: #FCF8BC;overflow:auto;width:auto;}
 	</tr>
 	<tr class="odd">
 		<th scope="row"><code>main</code></th>
-		<td>Creates a main content area, often the center column. Fully liquid, it takes all remaining space when left and right columns have been rendered.  You may have 1 main columns.</td>
+		<td>Creates a main content area, often the center column. Fully liquid, it takes all remaining space when left and right columns have been rendered. You may have 1 main columns.</td>
 	</tr>
 	<tr class="odd">
 		<th scope="row"><code>leftCol</code></th>
@@ -87,7 +87,7 @@ pre{padding: 20px;background-color: #FCF8BC;overflow:auto;width:auto;}
 <pre>&lt;div class=&quot;page <strong>liquid</strong>&quot;&gt;<br />	&lt;div class=&quot;head&quot;&gt;&lt;!-- Head --&gt;&lt;/div&gt;<br />	&lt;div class=&quot;body&quot;&gt;&lt;!-- Body --&gt;<br />		&lt;div class=&quot;leftCol <strong>gMail</strong>&quot;&gt;&lt;!-- Left Column (optional region) --&gt;&lt;/div&gt;
 		<strong>&lt;!-- note: right column has been removed --&gt;</strong><br />		&lt;div class=&quot;main&quot;&gt;&lt;!-- Main Content --&gt;&lt;/div&gt;<br />	&lt;/div&gt;<br />	&lt;div class=&quot;foot&quot;&gt;&lt;!-- Foot --&gt;&lt;/div&gt;	<br />&lt;/div&gt;</pre>
 <h2>Goals</h2>
-<p>In object oriented CSS the most important goal is to have a single template from which all pages are built.  This eases CMS development because by having a single starting point all pages can be made into any other page. Users of the CMS do not have traps in which a page they have built cannot be morphed into a different page type.  Another goal of and OO template is to have each section (column, header, etc) control it's own destiny.  Practically, that means that if you want to add a left column to the template, the only required action should be actually adding the column to the HTML.  You never want to write CSS in such a way that changes are required higher in the DOM tree in order to make child elements behave properly.  Looping through the dom is costly for CMS development. Similarly, if you want to have a different left column width, it should be accomplished by <em>extending the left column object</em> by adding an additional class.   </p>
+<p>In object oriented CSS the most important goal is to have a single template from which all pages are built. This eases CMS development because by having a single starting point all pages can be made into any other page. Users of the CMS do not have traps in which a page they have built cannot be morphed into a different page type. Another goal of an OO template is to have each section (column, header, etc) control it's own destiny. Practically, that means that if you want to add a left column to the template, the only required action should be actually adding the column to the HTML. You never want to write CSS in such a way that changes are required higher in the DOM tree in order to make child elements behave properly. Looping through the DOM is costly for CMS development. Similarly, if you want to have a different left column width, it should be accomplished by <em>extending the left column object</em> by adding an additional class.</p>
 <h3>Extending an object</h3>
 <pre>&lt;div class=&quot;leftCol <strong>gMail</strong>&quot;&gt; ... &lt;/div&gt;</pre>
 
@@ -102,8 +102,7 @@ pre{padding: 20px;background-color: #FCF8BC;overflow:auto;width:auto;}
 <h2>Known Issues</h2>
 <ul>
 	<li><strong>Source order</strong> - the right column is before the main content in the source order. This choice was made in order to allow the columns to be completely independent objects and to have one unique template rather than multiple starting points for a site. This speeds and simplifies CMS development and enhances usability for those creating pages within the CMS. Skip to content links and navigational items marked up as lists are strongly encouraged.</li>
-	<li><strong>Overflow</strong> - the containing blocks are made to wrap floats using the <em>contexte de formattage</em>; <code>overflow:hidden; _overflow:visible; zoom:1;</code>. This is known to cause printing bugs in older versions of Firefox and can cause absolutely positioned blocks origniating in that container to be cropped. Removing floats and overflow via the print stylesheet is a corrective option.
-	</li>
+	<li><strong>Overflow</strong> - the containing blocks are made to wrap floats using the <em lang="fr" xml:lang="fr">contexte de formattage</em>; <code>overflow:hidden; _overflow:visible; zoom:1;</code>. This is known to cause printing bugs in older versions of Firefox and can cause absolutely positioned blocks originating in that container to be cropped. Removing floats and overflow via the print stylesheet is a corrective option.</li>
 </ul>
 </body>
 </html>

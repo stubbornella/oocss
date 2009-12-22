@@ -13,7 +13,7 @@ b{display:block;background-repeat:no-repeat;font-size:1%;position:relative;z-ind
 .tl, .tr, .bl, .br{height:10px; width:10px;float:left;}
 .tl{background-position: left top;}
 .tr{background-position: right top;}
-.bl{background-position: left bottom;} 
+.bl{background-position: left bottom;}
 .br{background-position: right bottom;}
 .br,.tr{float:right;}
 .tr, .tl{overflow:hidden;margin-bottom:-32000px;}/* margin bottom needs to be < -9px */
@@ -26,7 +26,7 @@ b{display:block;background-repeat:no-repeat;font-size:1%;position:relative;z-ind
 .complex .bl, .complex .br{/*margin-top:0;*/}
 .complex .top{height:5px;}
 .complex .bottom{height:5px;/*margin-top:-10px;*/}
-/* pop  */
+/* pop */
 .pop{overflow:visible;margin: 10px 20px 20px 10px; background-position:left top;}
 .pop .inner{right:-10px; bottom:-10px; background-position:right bottom;padding:0 10px 10px 0;}
 .pop .tl, .pop .br{display:none;}

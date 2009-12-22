@@ -13,7 +13,7 @@
 .simpleExt b{background-image:url(skin/simple_extended.png);}
 .simpleExt .tl{left:-1px;top:-1px;height:12px; width:12px;}
 .simpleExt .tr{right:-1px;top:-1px;height:12px; width:12px;}
-.simpleExt .bl{left:-1px;bottom:-1px;height:12px; width:12px;margin-top:-12px;} 
+.simpleExt .bl{left:-1px;bottom:-1px;height:12px; width:12px;margin-top:-12px;}
 .simpleExt .br{right:-1px;bottom:-1px;height:12px; width:12px;margin-top:-12px;}
 /* ----- me (extends mod) use for my comments ----- */
 .me,.me .inner{border:1px solid #909090;/*-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;*/}
@@ -21,7 +21,7 @@
 .me b{background-image:url(skin/me.png);}
 .me .tl{left:-1px;top:-1px;}
 .me .tr{right:-1px;top:-1px;}
-.me .bl{left:-1px;bottom:-1px;} 
+.me .bl{left:-1px;bottom:-1px;}
 .me .br{right:-1px;bottom:-1px;}
 /* ----- noted (extends mod) ----- */
 .noted,.noted .inner{border:1px solid #c2c2c2;/*-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;*/}
@@ -29,7 +29,7 @@
 .noted b{background-image:url(skin/noted.png);}
 .noted .tl{left:-1px;top:-1px;}
 .noted .tr{right:-1px;top:-1px;}
-.noted .bl{left:-1px;bottom:-1px;} 
+.noted .bl{left:-1px;bottom:-1px;}
 .noted .br{right:-1px;bottom:-1px;}
 /* ----- grab (extends mod) ----- */
 .grab .inner{border: 3px solid #00477a; border-bottom-width:10px;}/* can't be done w border radius */
@@ -54,13 +54,13 @@
 .talk b{*background-image:url(skin/talk.png);}
 .talk .tl{left:-1px;top:-1px;}
 .talk .tr{right:-1px;top:-1px;}
-.talk .bl{left:-1px;bottom:-1px;} 
+.talk .bl{left:-1px;bottom:-1px;}
 .talk .br{right:-1px;bottom:-1px;}
 /* ----- photo (extends complex) ----- */
 .photo .inner{border:solid 10px #fff;margin:0 4px;}/* muck with margins to change how the block will align with other blocks, any value between 0-10px */
 .photo b{background-image:url(skin/photo.png);}
 .photo .tr, .photo .tl{width:20px;}
-.photo .top, .photo .bottom{height:4px;margin-top:0px;} 
+.photo .top, .photo .bottom{height:4px;margin-top:0px;}
 .photo .bl, .photo .br{height:16px;margin-top: -12px;}
 /* ----- flow (extends complex) ----- */
 .flow{margin:6px;}
