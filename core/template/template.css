@@ -2,7 +2,7 @@
 /* ====== Page Head, Body, and Foot ====== */
 body{/*_text-align:center;*/}/* IE5.5 */
 .body, .main{display: table-cell; *display:block;_position:relative; _left:-3px; _margin-right: -3px;width:auto; _zoom:1;}
-.body:after,.main:after{content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";visibility:hidden; clear:both;height:0 !important;display:block;line-height:0;font-size: 36px;}
+.body:after,.main:after{clear:both;display:block;visibility:hidden;overflow:hidden;height:0 !important;line-height:0;font-size:xx-large;content:" x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";}
 .page{margin: 0 auto; width: 950px;/*_text-align:left;*/} /* wraps other template elems to set width */ /* text-align IE5.5 */
 /* "old school" and "liquid" extend page to allow for different page widths */
 .oldSchool{width:750px;}
