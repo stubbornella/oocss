@@ -1,3 +1,10 @@
+/*
+TODO: Allow % widths of tabs
+TODO: Abstract skin from tabs
+TODO: clean up selector structure - too much variation in rule strength
+
+*/
+
 .tabs{}
 .tabs .bd{}
 .tabs .hd ul{padding:0; display:table-row;_zoom:1;}
@@ -21,12 +28,9 @@
 
 .controls{position:absolute; top:0; right: 0; display: none !important; /* this should move to its' own plugin */}
 .controls a{padding: 10px;}
-/*
-TODO: Allow % widths of tabs
-TODO: Position tab control top, right, bottom, left
 
 
-*/.tabPosLeft .hd .tabControl .current {background-image:none; border-bottom:solid 1px #e2e2e2;border-right:none; margin-right:-1px;}
+.tabPosLeft .hd .tabControl .current {background-image:none; border-bottom:solid 1px #e2e2e2;border-right:none; margin-right:-1px;}
 .tabPosLeft .tabControl li{border-right:none;}
 .tabPosLeft .hd{border-right: 1px solid #e2e2e2;margin-right:-1px;}
 .tabPosLeft .bd {border-left: 1px solid #e2e2e2; display: table-cell;}
