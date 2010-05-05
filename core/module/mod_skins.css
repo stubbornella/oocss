@@ -2,31 +2,31 @@
 /* ====== Contour blocks ====== */
 /* remove background-image:" to default to square corners for IE */
 /* ----- simple (extends mod) ----- */
-.simple .inner {border:1px solid #D7D7D7;/*-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px;*/}
-.simple b{background-image:url(skin/simple_corners.png);}
+.simple .inner {border:1px solid #D7D7D7;-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px;}
+.simple b{*background-image:url(skin/simple_corners.png);}
 /* ----- basic (extends mod) ----- */
-.basic .inner {/*-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px;*/}
-.basic b{background-image:url(skin/round.png);}
+.basic .inner {-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px;}
+.basic b{*background-image:url(skin/round.png);}
 /* ----- simpleExt (extends mod) ----- */
-.simpleExt,.simpleExt .inner{border:1px solid #c7c7c7;/*-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px;*/ }
+.simpleExt,.simpleExt .inner{border:1px solid #c7c7c7;-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px; }
 .simpleExt .inner{border-color:#fff; border-width:4px; background-color:#e2e2e2;}
-.simpleExt b{background-image:url(skin/simple_extended.png);}
+.simpleExt b{*background-image:url(skin/simple_extended.png);}
 .simpleExt .tl{left:-1px;top:-1px;height:12px; width:12px;}
 .simpleExt .tr{right:-1px;top:-1px;height:12px; width:12px;}
 .simpleExt .bl{left:-1px;bottom:-1px;height:12px; width:12px;margin-top:-12px;}
 .simpleExt .br{right:-1px;bottom:-1px;height:12px; width:12px;margin-top:-12px;}
 /* ----- me (extends mod) use for my comments ----- */
-.me,.me .inner{border:1px solid #909090;/*-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;*/}
+.me,.me .inner{border:1px solid #909090;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
 .me .inner{border-color:#d76a84;}
-.me b{background-image:url(skin/me.png);}
+.me b{*background-image:url(skin/me.png);}
 .me .tl{left:-1px;top:-1px;}
 .me .tr{right:-1px;top:-1px;}
 .me .bl{left:-1px;bottom:-1px;}
 .me .br{right:-1px;bottom:-1px;}
 /* ----- noted (extends mod) ----- */
-.noted,.noted .inner{border:1px solid #c2c2c2;/*-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;*/}
+.noted,.noted .inner{border:1px solid #c2c2c2;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
 .noted .inner{border-color:#eded68;}
-.noted b{background-image:url(skin/noted.png);}
+.noted b{*background-image:url(skin/noted.png);}
 .noted .tl{left:-1px;top:-1px;}
 .noted .tr{right:-1px;top:-1px;}
 .noted .bl{left:-1px;bottom:-1px;}
@@ -98,6 +98,10 @@
 .act{background-color:#e9e9e9;}
 .topper{background: #fff url(skin/header_gradient_light.png) repeat-x left bottom;color: #4D4D4D;font-size:120%;padding:5px 10px;}
 .topper h1,.topper h2,.topper h3,.topper h4,.topper h5,.topper h6{font-size:100%;color:#4D4D4D;padding:0;}
+.tabPosLeft .topper li,.tabPosRight .topper li{background: #fff url(skin/header_gradient_light.png) repeat-x left bottom;/* belongs in topper */}
+.tabPosBottom .topper{
+  background-image:-webkit-gradient(linear, 0% 0%, 0% 40%, from(#E2E2E2), to(#FFFFFF));
+  background-image:-moz-linear-gradient(0% 8% 270deg, #E2E2E2, #FFFFFF, #FFFFFF 77%);}
 .bam{background: #00477a url(skin/header_glossy.png) repeat-x left top;color: #fff;font-size:120%;padding:5px 10px;}
 .bam h1,.bam h2,.bam h3,.bam h4,.bam h5,.bam h6{font-size:100%;color:#fff;padding:0;}
 .gonz{background:url(skin/gc_header.png) no-repeat left top;}/* messed up */
