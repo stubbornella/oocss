@@ -8,10 +8,10 @@ TODO: clean up selector structure - too much variation in rule strength
 .tabs{}
 .tabs .bd{}
 .tabs .hd ul{padding:0; display:table-row;_zoom:1;}
-.tabs .hd li{display:table-cell;_display:inline;vertical-align:middle;}
+.tabs .hd li{display:table-cell;*display:inline;vertical-align:middle;}
 .tabs .tabControl a{display:inline-block;text-decoration: none;}
 .tabs .tabControl span{display:inline-block; text-align:center; padding: 5px 20px;}
-.tabs .bd li{display:none;}/* BUG - causing all tabs to be invisible */
+.tabs .bd li{display:none;}
 .tabs .bd li.current{display:block;}
 
 .tabs .topper{padding:0;}
