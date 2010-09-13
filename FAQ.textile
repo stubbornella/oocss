@@ -1,5 +1,39 @@
 Whoa, you have lots of questions! I'd better start recording the answers if I want to scale better.
 
+
+<h2 id="whatIsAnObject">What is meant by an "object" in OOCSS?</h2>
+
+In keeping with the OO metaphor, an object is analogous with a class in Java.
+
+A CSS object consists of four things:
+# HTML, which can be one or more nodes of the DOM,
+# CSS declarations about the style of those nodes all of which begin
+with the class name of the wrapper node
+# Components like background images and sprites required for display,
+and
+# JavaScript behaviors, listeners, or methods associated with the
+object.
+
+This can be confusing because each CSS class is not necessarily an
+object in it’s own right, but can be a property of a wrapper class.
+For example:
+
+<pre><code><div class=”mod”>
+        <div class=”inner”>
+                <div class=”hd”>Block Head</div>
+                <div class=”bd”>Block Body</div>
+                <div class=”ft”>Block Foot</div>
+        </div>
+</div></code></pre>
+
+The object is a module, indicated by the class mod. It contains four
+property nodes (which cannot live independently from the module,
+including two required regions, inner and body, and two optional
+regions, head and foot.
+
+
+
+
 <h2 id="idForStyle">Should I use IDs to style my content?</h2>
 
 When you reuse an object in the same page (or on the same site if the cache is working properly), it is a performance "freebie".  Styling using IDs makes it impossible to use the same element twice on the same page. @cgriego (twitter) compared it to singletons, which sounds accurate to me.  There may be cases where you want to style using an ID, like header menus that are very specific, in this case you can use an ID to sandbox the particular element and be sure that the code written for it doesn't impact the rest of the site. Think carefully before you choose an ID over a class, it is <em>really hard to predict</em> what people will do with HTML built from your CSS as the site evolves. If you have a choice, leave things as flexible as possible.
