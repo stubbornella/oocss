@@ -1,3 +1,5 @@
+<a style="float:right;" href="http://www.flickr.com/photos/nicole_hugo/3291743394/" title="Grids possible with OOCSS framework by Stubbornella (aka Nicole), on Flickr"><img src="http://farm4.static.flickr.com/3460/3291743394_4f4041bce5_b.jpg" width="260" height="1024" alt="Grids possible with OOCSS framework" /></a>
+
 h1. Lines & Grids
 
 Grids are used to break any space into fractions, they can be nested. A unit can contain another line or it can contain other objects directly.  The sum of the fractional sizes of all children of one line should be equal to one. Grids control width, content controls height.
