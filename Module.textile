@@ -130,4 +130,4 @@ Inspired by Leslie Sommers mojo blocks.
 <p>Be careful not to choose classes linked to the display of the object (e.g. big blue borders).  The client *will* change their mind, you'll have classes which no longer correlate to actual display.</p>
 
 <h2>Thanks</h2>
-<p>Great feedback, bug reports,etc. Chris Greigo, Jordan LaMons, Arnaud Gueras (as usual), Ryan Grove, Nicholas Zakas, Peter Ellenhauge, Chris Eppstein, Vinod Kerkar, Carsten, Dan H, Cindy Li, etc.</p>
+<p>Great feedback, bug reports,etc. Chris Griego, Jordan LaMons, Arnaud Gueras (as usual), Ryan Grove, Nicholas Zakas, Peter Ellenhauge, Chris Eppstein, Vinod Kerkar, Carsten, Dan H, Cindy Li, etc.</p>
