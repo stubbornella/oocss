@@ -1,1 +1,1 @@
-Welcome to the blocks wiki!
+Welcome to the blocks wiki! It is the online home for Object Oriented CSS.
