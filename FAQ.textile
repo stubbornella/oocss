@@ -51,7 +51,7 @@ I've broken up the CSS files into modules like grids and template. On a real sit
 
 I wouldn't edit grids, template, or libraries.  A lot of testing has gone into getting those just right.  If you want to customize, think about extending the basic objects instead. That's the magic behind OOCSS.  You may well want to edit content.css. If say, pink isn't your color? ;) Go ahead, change colors, font sizes, capitalization.  Just keep in mind that this file is rapidly evolving and I don't have any docs yet to show you how to do it correctly.  I'm working on it, I promise.
 
-<h2>How do I extend an object?</h2>
+<h2 id="extend">How do I extend an object?</h2>
 
 If you want to extend an object, for example a 160px left column, rather than the default, you should add an additional class to the column.
 
@@ -79,7 +79,11 @@ What <strong>not</strong> to do (because it will make it harder for you to upgra
 .leftCol{... custom css here ...}
 </pre>
 
-<h2>Why have a single template?</h2>
+<h2 id="unusedStyles">Unused Styles. My site will never have a 160px gmail-style column, is it ok to remove it?</h2>
+
+Sure.  Removing objects or extensions to those objects is perfectly reasonable. Just keep in mind that it is hard to imagine what HTML someone might build with your CSS when a site is still evolving. Premature optimization a danger. 
+
+<h2 id="singleTemplate">Why have a single template?</h2>
 
 In object oriented CSS, an important goal is to have a single template from which all pages are built.  This eases CMS development because by having a single starting point all pages can be made into any other page. Users of the CMS do not have traps in which a page they have built cannot be morphed into a different page type.  Another goal of and OO template is to have each section (column, header, etc) control it's own destiny.  Practically, that means that if you want to add a left column to the template, the only required action should be actually adding the column to the HTML.  You never want to write CSS in such a way that changes are required higher in the DOM tree in order to make child elements behave properly.  Looping through the dom is costly for CMS development. 
 
