@@ -164,5 +164,5 @@ Nope, luckily screen readers ignore empty b tags. I take advantage of this prese
 
 <h2 id="getInvolved">How can I help?</h2>
 
-The best way to get involved is to start using the code (libraries, grids, fonts) and submit bug reports and feature requests.  I also started a <a href="http://groups.google.com/group/object-oriented-css">OOCSS google group</a> to facilitate discussion that is more complex than 140 twitter chars allows.
+The best way to get involved is to start using the code (libraries, grids, fonts) and <a href="http://stubbornella.lighthouseapp.com/projects/26663-object-oriented-css/tickets">submit bug reports and feature requests</a>.  I also started a <a href="http://groups.google.com/group/object-oriented-css">OOCSS google group</a> to facilitate discussion that is more complex than 140 twitter chars allows.
 
