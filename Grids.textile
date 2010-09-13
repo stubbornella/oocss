@@ -171,7 +171,7 @@
 				<h3>1/2</h3>
 				<p>Lorem ipsum dolor sit amet...</p>
 			</div>
-			<div class="unit size1of2 lastunit">
+			<div class="unit size1of2 lastUnit">
 				<h3>1/2</h3>
 				<p>Lorem ipsum dolor sit amet...</p>
 			</div>
@@ -183,14 +183,14 @@
 				<p>Lorem ipsum dolor sit amet...</p>
                                 <p>Lorem ipsum dolor sit amet...</p>
 			</div>
-			<div class="unit size2of3 lastunit">
+			<div class="unit size2of3 lastUnit">
 				<!-- line -->
 				<div class="line">
 					<div class="unit size1of2">
 						<h3>1/2</h3>
 						<p>Lorem ipsum dolor sit amet...</p>
 					</div>
-					<div class="unit size1of2 lastunit">
+					<div class="unit size1of2 lastUnit">
 						<h3>1/2</h3>
 						<p>Lorem ipsum dolor sit amet...</p>
 					</div>
@@ -205,7 +205,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="unit size1of5 lastunit">
+	<div class="unit size1of5 lastUnit">
 		<h3>1/5</h3>
 		<p>Lorem ipsum dolor sit amet...</p>
 		<p>Lorem ipsum dolor sit amet...</p>
