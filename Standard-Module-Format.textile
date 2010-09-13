@@ -1,6 +1,11 @@
 
 
-
 <pre>
-
-<pre>
+<div class="mod">
+	<div class="inner">
+		<div class="hd">head</div>
+		<div class="bd">body</div>
+		<div class="ft">foot</div>
+	</div>
+</div>
+</pre>
