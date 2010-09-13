@@ -1,4 +1,4 @@
-Outlining how this should work.aaaa
+Outlining how this should work.
 
 * tag - a, button
 * class - btn
