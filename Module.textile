@@ -98,3 +98,6 @@
 <p>The contour and the background can be used to define the intersection of two parameters. For example you cross product status with product type. E.g. <code>sale</code>, <code>normal</code>, and <code>featured</code> backgrounds with <code>motorcycle</code>, <code>helmet</code>, and <code>clothing</code> contours. In so far as possible, keep your classes as abstract as they can reasonably be. For example choose <code>motorcycle</code> over <code>ducati</code>, <code>ducatiMonster</code>, or <code>NicolesDucatiMonster620dark</code> -- unless you really mean to exclude all other uses! </p>
 
 <p>Be careful not to choose classes linked to the display of the object (e.g. big blue borders).  The client *will* change their mind, you'll have classes which no longer correlate to actual display.</p>
+
+<h2>Thanks</h2>
+<p>Great feedback, bug reports,etc. Chris Greigo, Jordan LaMons, Arnaud Gueras (as usual), Ryan Grove, Nicholas Zakas, Peter Ellenhauge, Chris Eppstein, Vinod Kerkar, Carsten, Dan H, Cindy Li, etc.</p>
