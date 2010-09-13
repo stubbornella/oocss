@@ -1,13 +1,13 @@
 <div style="width:350px;text-align:left;float:left;" id="__ss_990405"><object style="margin:0px" width="350" height="300"><param name="movie" value="http://static.slideshare.net/swf/ssplayer2.swf?doc=oocss-1233786987806904-3&stripped_title=object-oriented-css" /><param name="allowFullScreen" value="true"/><param name="allowScriptAccess" value="always"/><embed src="http://static.slideshare.net/swf/ssplayer2.swf?doc=oocss-1233786987806904-3&stripped_title=object-oriented-css" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="350" height="300"></embed></object></div>
-
-How do you scale CSS for millions of visitors or thousands of pages? Nicole first presented Object Oriented CSS at Web Directions North in Denver. Since then, the response has been overwhelming. Object Oriented CSS allows you to write fast, maintainable, standards-based front end code. Adds much needed predictability to CSS so that even beginners can participate in writing beautiful, standards-compliant, fast websites.
+<div style="overflow:hidden; _overflow:visible; zoom:1; padding-left: 20px;">
+How do you scale CSS for millions of visitors or thousands of pages? Nicole first presented Object Oriented CSS at Web Directions North in Denver. Since then, the response has been overwhelming. OOCSS allows you to write fast, maintainable, standards-based front end code. It adds much needed predictability to CSS so that even beginners can participate in writing beautiful websites.
 
 <h3>Two main principles</h3>
 
 # Separate structure and skin 
-# Separate Container and Content 
+# Separate container and content 
 
-
+</div>
 
 <h2>Modules ready for alpha testing</h2>
 
