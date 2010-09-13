@@ -8,7 +8,7 @@ I am considering removing the ids from head, body, and foot in my template. Some
 
 On the other hand, <em>ID hooks are great for linking</em>.  Put them in the HTML, just don't use them for styles.
 
-<h2 id="designersCan">Designers can't do OOCSS, can they?</h2>
+<h2 id="designersCan">Designers can't code OOCSS, can they?</h2>
 
 Yes, designers instinctively understand objects, it is much more concrete than the way most people are currently coding CSS --layers of exceptions (think, there was an old lady who swallowed a fly). In fact, they love OOCSS for two reasons.  
 
