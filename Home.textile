@@ -3,6 +3,7 @@ Welcome to the blocks wiki! It is the online home for Object Oriented CSS.
 <h2>Modules ready for alpha testing</h2>
 
   * Grids
+
   * Page Templates
 
 <h2>Base Libraries</h2>
@@ -12,7 +13,9 @@ Welcome to the blocks wiki! It is the online home for Object Oriented CSS.
 <h2> Upcoming </h2>
 
   * Modules
+
   * Content objects
+
   * etc.
 
 <h2>Learn more about OO CSS</h2>
