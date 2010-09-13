@@ -39,7 +39,7 @@
 
 <pre>
 <div class="line">
-	<div class="==<strong>unit size1of2</strong>==">
+	<div class="unit size1of2">
 		<h3>1/2</h3>
 		<p>Lorem ipsum dolor sit amet...</p>
 	</div>
