@@ -162,6 +162,29 @@ I think my choice helps minimize the total number of hacks, improves performance
 
 Nope, luckily screen readers ignore empty b tags. I take advantage of this presentational fluff tag (b means bold) to apply presentational fluff. This markup should be included via a server-side script so that the day full css borders and drop shadows are supported we can turn off the script and have nice, clean, semantic html.
 
+
+<h2 id="descendentSelectors">The OOCSS approach says avoid location-dependent styles. Does that mean I shouldn't use descendent selectors like .myModule .title?</h2>
+
+No--descendant selectors are not discouraged, but putting them too high in the DOM tree is. Avoid putting a wide-net class or id way up on the body or outermost divs of a page, and then writing lots of styles to generate variants of objects. It's no reusable, and it slows down page rendering. Instead, make a more "local" variant by adding a class directly onto the object (and add descendent styles to its children).
+
+So something like this is bad:
+
+    .BrowseProducts .carousel
+
+where the first class is on the body tag, and "browse products" is a page or area of the site. This makes the browser do a lot of recalculation of "computed values," which slows things down.
+
+But something like:
+
+    .myModule .title
+
+is encouraged, because it's object-based--the ancestor element is presumably close enough to the child to minimize performance impact.
+
+
+
+
+ 
+
+
 <h2 id="getInvolved">How can I help?</h2>
 
 The best way to get involved is to start using the code (libraries, grids, fonts) and <a href="http://stubbornella.lighthouseapp.com/projects/26663-object-oriented-css/tickets">submit bug reports and feature requests</a>.  I also started a <a href="http://groups.google.com/group/object-oriented-css">OOCSS google group</a> to facilitate discussion that is more complex than 140 twitter chars allows.
