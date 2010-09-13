@@ -32,6 +32,15 @@ including two required regions, inner and body, and two optional
 regions, head and foot.
 
 
+<h2 id="howDoesItImprovePerformance">How does OOCSS improve performance?</h2>
+
+The performance benefits of OOCSS are twofold:
+# Heavy reuse of CSS code, so less CSS code needed, which means:
+** Smaller files, hence faster transfers
+** A bigger percentage of the CSS code needed on most pages of your site is likely to be reused and possibly cached by the browser
+# Less repaints and layout calculations on the part of the browser.  
+** On a single page, the more CSS rules are reused, the less time the rendering engine spends calculating "computed values"
+** with the class "extending"  approach to CSS, one tends to end up with less overriding rules, which means again less of a need for the engine to compute with rules to apply.
 
 
 <h2 id="idForStyle">Should I use IDs to style my content?</h2>
@@ -203,13 +212,13 @@ No--descendant selectors are not discouraged, but putting them too high in the D
 
 So something like this is bad:
 
-    .BrowseProducts .carousel
+<code>.BrowseProducts .carousel</code>
 
 where the first class is on the body tag, and "browse products" is a page or area of the site. This makes the browser do a lot of recalculation of "computed values," which slows things down.
 
 But something like:
 
-    .myModule .title
+<code>.myModule .title</code>
 
 is encouraged, because it's object-based--the ancestor element is presumably close enough to the child to minimize performance impact.
 
