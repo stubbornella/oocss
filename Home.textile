@@ -1,3 +1,4 @@
+<h1>Object Oriented CSS</h1>
 <div style="width:350px;text-align:left;float:left;" id="__ss_990405"><object style="margin:0px" width="350" height="300"><param name="movie" value="http://static.slideshare.net/swf/ssplayer2.swf?doc=oocss-1233786987806904-3&stripped_title=object-oriented-css" /><param name="allowFullScreen" value="true"/><param name="allowScriptAccess" value="always"/><embed src="http://static.slideshare.net/swf/ssplayer2.swf?doc=oocss-1233786987806904-3&stripped_title=object-oriented-css" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="350" height="300"></embed></object></div>
 <div style="overflow:hidden; _overflow:visible; zoom:1; padding-left: 20px;">
 How do you scale CSS for millions of visitors or thousands of pages? Nicole first presented Object Oriented CSS at Web Directions North in Denver. Since then, the response has been overwhelming. OOCSS allows you to write fast, maintainable, standards-based front end code. It adds much needed predictability to CSS so that even beginners can participate in writing beautiful websites.
@@ -9,6 +10,14 @@ How do you scale CSS for millions of visitors or thousands of pages? Nicole firs
 
 </div>
 
+<h2>Getting Started</h2>
+
+# Download all the files and set up a local directory
+# Open *template.html* (this is the basic template you will modify to create all other pages).
+# Set your left and right column widths by _extending the column objects_
+# Use *grids* to break the page up further into smaller sections.
+# Test your site functionality by adding content objects from the content.css file. These can also be found in *library.html*.
+
 <h2>Modules ready for alpha testing</h2>
 
 * Grids
@@ -16,6 +25,8 @@ How do you scale CSS for millions of visitors or thousands of pages? Nicole firs
 * Page Templates
 
 <h2>Base Libraries</h2>
+
+OOCSS is built on top of reset and fonts from the YUI libraries.  These libraries provide a common starting point across different navigators.
 
 * Reset and Fonts from YUI are a starting point.
 
@@ -27,4 +38,4 @@ How do you scale CSS for millions of visitors or thousands of pages? Nicole firs
 
 * Content objects
 
-  * etc.
+* Library
