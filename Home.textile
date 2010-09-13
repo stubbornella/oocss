@@ -34,13 +34,9 @@ OOCSS is built on top of reset and fonts from the YUI libraries.  These librarie
 
 <h2> Upcoming </h2>
 
-* Module Structures
-
-* Module Skins
-
 * Content objects
-
 * Library
+* DHTML blocks (tabs, carousel, toggle, etc)
 
 <h2>Thanks!</h2>
 
