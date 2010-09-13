@@ -49,7 +49,7 @@ I've broken up the CSS files into modules like grids and template. On a real sit
 
 <h2 id="editOverwrite">Should I edit these files, or overwrite them with my own stylesheet?</h2>
 
-I wouldn't edit grids, template, or libraries.  A lot of testing has gone into getting those just right.  If you want to customize, think about "extending the basic objects":[[extend]] instead. That's the magic behind OOCSS.  
+I wouldn't edit grids, template, or libraries.  A lot of testing has gone into getting those just right.  If you want to customize, think about <a href="#extend">extending the basic objects</a> instead.  
 
 <h2 id="contentStyles">Pink is not my color! What do I do with content.css?</h2>
 
