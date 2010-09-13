@@ -32,7 +32,7 @@ I managed a team of front end developers at FullSIX (a web marketing agency in F
 
 Their code is live on a client website. It is as good as anything written by the senior developers, maybe better because they didn’t have to un-learn bad habits. :) 
 
-<h2>Getting Started: How do I work with these files?</h2>
+<h2 id="GettingStarted">Getting Started: How do I work with these files?</h2>
 
 Two files, libraries.css (reset and fonts from yui), grids.css and template.css are ready, the others are still extremely unstable. 
 
@@ -41,8 +41,8 @@ Two files, libraries.css (reset and fonts from yui), grids.css and template.css 
 # Use grids to break up any of the content areas into smaller chunks. See grids docs for more information.
 # Add content.  Hint: This should also be OO.
 
-<h2>How do I deploy this on a live site?</h2>
+<h2 id="deploy">How do I deploy this on a live site?</h2>
 
-Keep in mind that the CSS is still evolving, I may still change things based on feedback I'm receiving.
+Keep in mind that the CSS is still evolving, I may change things based on feedback I'm receiving.
 
-I've broken up the CSS files into modules like grids and template. On a real site you should remove unnecessary comments and reduce HTTP requests, or the site will be super slow.  This means you need to combine CSS files into one larger file.  I do that via nested comments, so that the overall CSS stays organized.  Finally, run a CSS minifier as a part of the push/deployment process to remove stray comments.
+I've broken up the CSS files into modules like grids and template. On a real site you should remove unnecessary comments and reduce HTTP requests, or the site will be super slow.  This means you need to combine CSS files into one larger file.  I do that via nested comments, to keep the CSS organized.  Finally, run a CSS minifier as a part of the push/deployment process to remove stray comments.
