@@ -208,25 +208,25 @@ Nope, luckily screen readers ignore empty b tags. I take advantage of this prese
 
 <h2 id="descendentSelectors">The OOCSS approach says avoid location-dependent styles. Does that mean I shouldn't use descendent selectors like .myModule .title?</h2>
 
-No--descendant selectors are not discouraged, but putting them too high in the DOM tree is. Avoid putting a wide-net class or id way up on the body or outermost divs of a page, and then writing lots of styles to generate variants of objects. It's no reusable, and it slows down page rendering. Instead, make a more "local" variant by adding a class directly onto the object (and add descendent styles to its children).
+No--descendant selectors are not discouraged, but putting them too high in the DOM tree is. Avoid putting a wide-net class or id way up on the body or outermost divs of a page, and then writing lots of styles to generate variants of objects. It's not reusable, and it slows down page rendering. Instead, make a more "local" variant by adding a class directly onto the object (and add descendent styles to its children).
 
-So something like this is bad:
+I make the distinction between location-based selectors based on whether or not the sub-node is really part of the larger parent object. B and Inner clearly belong to the module, they can't exist on their own. A good rule of thumb is that anything within the body of a container is clearly a separate object.
 
-<code>.BrowseProducts .carousel</code>
+This is questionable because the UL is clearly a separate object:
 
-where the first class is on the body tag, and "browse products" is a page or area of the site. This makes the browser do a lot of recalculation of "computed values," which slows things down.
+<pre>#sidebar ul { ... }</pre>
 
-But something like:
+so is this, because a carousel is clearly not part of the body object: 
 
-<code>.myWidget .title</code>
+<pre>body.browseProducts .carousel </pre> 
 
-is encouraged, because it's object-based--the ancestor element is close enough to the child to minimize performance impact.
+This is appropriate use of the cascade:
 
-
-
-
- 
-
+<pre>
+.myModule { ... }
+.myModule b { ... }
+.myModule .inner { ... }
+</pre>
 
 <h2 id="getInvolved">How can I help?</h2>
 
