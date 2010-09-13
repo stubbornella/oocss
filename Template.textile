@@ -17,15 +17,15 @@
 		<td>Main wraps site content. It can be extended via the classes <code>oldSchool</code> and <code>liquid</code> to provide 750px and full width layouts respectively.</td>
 	</tr>
 	<tr class="even">
-		<th scope="row"><code>hd</code></th>
+		<th scope="row"><code>head</code></th>
 		<td>Site header, generally contains custom code. (e.g. horizontal navigation, logo, search box)</td>
 	</tr>
 	<tr class="odd">
-		<th scope="row"><code>bd</code></th>
+		<th scope="row"><code>body</code></th>
 		<td>Main content area, body of the page.</td>
 	</tr>
 	<tr class="even">
-		<th scope="row"><code>ft</code></th>
+		<th scope="row"><code>foot</code></th>
 		<td>Site footer, generally contains custom code.</td>
 	</tr>
 	<tr class="odd">
@@ -70,25 +70,25 @@
 <h2 id="basicTemplate">Basic template</h2>
 <pre>
 <div class="page">
-	<div class="hd"><!-- Head --></div>
-	<div class="bd"><!-- Body -->
+	<div class="head"><!-- Head --></div>
+	<div class="body"><!-- Body -->
 		<div class="leftCol"><!-- Left Column (optional region) --></div>
 		<div class="rightCol"><!-- Right Column (optional region) --></div>
 		<div class="main"><!-- Main Content --></div>
 	</div>
-	<div class="ft"><!-- Foot --></div>	
+	<div class="foot"><!-- Foot --></div>	
 </div>
 </pre>
 <h2 id="liquid">Full width template, 2 columns, gmail style (160px left column width)</h2>
 <pre>
 <div class="page liquid">
-	<div class="hd"><!-- Head --></div>
-	<div class="bd"><!-- Body -->
+	<div class="head"><!-- Head --></div>
+	<div class="body"><!-- Body -->
 		<div class="leftCol gMail"><!-- Left Column (optional region) --></div>
 		<div class="main"><!-- Main Content --></div>
 		<!-- note: right column has been removed -->
 	</div>
-	<div class="ft"><!-- Foot --></div>	
+	<div class="foot"><!-- Foot --></div>	
 </div>
 </pre>
 <h2>Goals</h2>
