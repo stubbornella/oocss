@@ -32,6 +32,7 @@ If you find this project useful, you can...
 
 *%{color:#da0000}Please help me test the talk bubble objects. Put them through their paces and let me know if you manage to break them! Add feature requests under the "issues" tab.%*
 
+* Tabs - very experimental
 * Talk Bubbles
 * Content Objects - particularly media
 
