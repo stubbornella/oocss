@@ -154,7 +154,7 @@
 
 <a href="http://www.flickr.com/photos/nicole_hugo/3291776052/" title="AG test of a great grids system by Stubbornella (aka Nicole), on Flickr"><img style="max-width:100%" src="http://farm4.static.flickr.com/3549/3291776052_b7c8f36ed9.jpg" alt="AG test of a great grids system" /></a>
 
-<p>Many years ago Arnaud Gueras, an excellent developer I worked with, created this limus of a great grids system.  It should be able to nest any combination of the units and lines, and so it should be able to create the complicated layout below.  His test reminded me of the golden mean, so I still use it today.  </p>
+<p>Many years ago Arnaud Gueras, an excellent developer I worked with, created this litmus of a great grids system.  It should be able to nest any combination of the units and lines, and so it should be able to create the complicated layout below.  His test reminded me of the golden mean, so I still use it today.  </p>
 
 <pre>
 <div class="line">
