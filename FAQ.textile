@@ -158,6 +158,10 @@ Obviously, the first consideration is keeping hacks as few and far between as po
 
 I think my choice helps minimize the total number of hacks, improves performance, and has little future risk. On the other hand, if seeing the _ in your code makes you feel nauseous, you can absolutely move that to a separate file.
 
+<h2 id="b">The container objects use empty <code><b></code> tags to add presentational effects such as borders, won't this be a problem for screen reader users?</h2>
+
+Nope, luckily screen readers ignore empty b tags. They don't announce it because it doesn't exist. I take advantage of this presentational fluff tag (b means bold) to apply presentational fluff. This markup should be included via a server-side script so that the day full css borders and drop shadows are supported we can turn off the script and have nice, clean, semantic html.
+
 <h2 id="getInvolved">How can I help?</h2>
 
 The best way to get involved is to start using the code (libraries, grids, fonts) and submit bug reports and feature requests.  I also started a <a href="http://groups.google.com/group/object-oriented-css">OOCSS google group</a> to facilitate discussion that is more complex than 140 twitter chars allows.
