@@ -18,7 +18,9 @@ How do you scale CSS for millions of visitors or thousands of pages? Nicole firs
 # Use *grids* to break the page up further into smaller sections.
 # Test your site functionality by adding content objects from the content.css file. These can also be found in *library.html*.
 
-<h2>Modules ready for alpha testing</h2>
+<h2>Ready for alpha testing</h2>
+
+Please help me test the grids and template objects. Put them through their paces and let me know if you manage to break them!
 
 * Grids
 
