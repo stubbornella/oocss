@@ -69,7 +69,7 @@
 </div>
 <h2 id="basicTemplate">Basic template</h2>
 <pre>
-<div id="main">
+<div id="page">
 	<div id="hd"><!-- Head --></div>
 	<div id="bd"><!-- Body -->
 		<div class="leftCol"><!-- Left Column (optional region) --></div>
@@ -81,7 +81,7 @@
 </pre>
 <h2 id="liquid">Full width template, 2 columns, gmail style (160px left column width)</h2>
 <pre>
-<div id="main" class="liquid">
+<div id="page" class="liquid">
 	<div id="hd"><!-- Head --></div>
 	<div id="bd"><!-- Body -->
 		<div class="leftCol gMail"><!-- Left Column (optional region) --></div>
