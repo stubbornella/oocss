@@ -23,6 +23,13 @@ How do you scale CSS for millions of visitors or thousands of pages? Nicole firs
 *%{color:#da0000}Please help me test the talk bubble objects. Put them through their paces and let me know if you manage to break them! Add feature requests under the "issues" tab.%*
 
 * Talk Bubbles
+* Content Objects - particularly media
+
+<h2>Stable</h2>
+
+* Module
+* Template
+* Grids
 
 <h2>Base Libraries</h2>
 
@@ -33,7 +40,6 @@ OOCSS is built on top of reset and fonts from the YUI libraries.  These librarie
 <h2> Upcoming </h2>
 
 * Content objects
-* Library
 * DHTML blocks (tabs, carousel, toggle, etc)
 
 <h2>Thanks!</h2>
