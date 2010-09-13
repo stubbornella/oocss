@@ -67,7 +67,7 @@
 	</tbody>
 </table>
 </div>
-<h2>Basic template</h2>
+<h2 id="basicTemplate">Basic template</h2>
 <pre>
 <div id="main">
 	<div id="hd"><!-- Head --></div>
