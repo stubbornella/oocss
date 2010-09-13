@@ -11,7 +11,7 @@ A CSS object consists of four things:
 # Components like background images and sprites required for display, and
 # JavaScript behaviors, listeners, or methods associated with the object.
 
-This can be confusing because each CSS class is not necessarily an object in it’s own right, but can be a property of a wrapper class.
+This can be confusing because each CSS class is not necessarily an object in its own right, but can be a property of a wrapper class.
 
 For example:
 
