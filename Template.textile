@@ -65,14 +65,35 @@
 </table>
 </div>
 <h2>Basic template</h2>
-<pre>&lt;div id=&quot;main&quot;&gt;<br />	&lt;div id=&quot;hd&quot;&gt;&lt;!-- Head --&gt;&lt;/div&gt;<br />	&lt;div id=&quot;bd&quot;&gt;&lt;!-- Body --&gt;<br />		&lt;div class=&quot;leftCol&quot;&gt;&lt;!-- Left Column (optional region) --&gt;&lt;/div&gt;<br />		&lt;div class=&quot;rightCol&quot;&gt;&lt;!-- Right Column (optional region) --&gt;&lt;/div&gt;<br />		&lt;div class=&quot;main&quot;&gt;&lt;!-- Main Content --&gt;&lt;/div&gt;<br />	&lt;/div&gt;<br />	&lt;div id=&quot;ft&quot;&gt;&lt;!-- Foot --&gt;&lt;/div&gt;	<br />&lt;/div&gt;</pre>
+<pre>
+<div id="main">
+	<div id="hd"><!-- Head --></div>
+	<div id="bd"><!-- Body -->
+		<div class="leftCol"><!-- Left Column (optional region) --></div>
+		<div class="rightCol"><!-- Right Column (optional region) --></div>
+		<div class="main"><!-- Main Content --></div>
+	</div>
+	<div id="ft"><!-- Foot --></div>	
+</div>
+</pre>
 <h2>Full width template, 2 columns, gmail style (160px left column width)</h2>
-<pre>&lt;div id=&quot;main <strong>liquid</strong>&quot;&gt;<br />	&lt;div id=&quot;hd&quot;&gt;&lt;!-- Head --&gt;&lt;/div&gt;<br />	&lt;div id=&quot;bd&quot;&gt;&lt;!-- Body --&gt;<br />		&lt;div class=&quot;leftCol <strong>gMail</strong>&quot;&gt;&lt;!-- Left Column (optional region) --&gt;&lt;/div&gt;<br />		&lt;div class=&quot;main&quot;&gt;&lt;!-- Main Content --&gt;&lt;/div&gt;
-		<strong>&lt;!-- note: right column has been removed --&gt;</strong><br />	&lt;/div&gt;<br />	&lt;div id=&quot;ft&quot;&gt;&lt;!-- Foot --&gt;&lt;/div&gt;	<br />&lt;/div&gt;</pre>
+<pre>
+<div id="main liquid">
+	<div id="hd"><!-- Head --></div>
+	<div id="bd"><!-- Body -->
+		<div class="leftCol gMail"><!-- Left Column (optional region) --></div>
+		<div class="main"><!-- Main Content --></div>
+		<!-- note: right column has been removed -->
+	</div>
+	<div id="ft"><!-- Foot --></div>	
+</div>
+</pre>
 <h2>Goals</h2>
 <p>In object oriented CSS the most important goal is to have a single template from which all pages are built.  This eases CMS development because by having a single starting point all pages can be made into any other page. Users of the CMS do not have traps in which a page they have built cannot be morphed into a different page type.  Another goal of and OO template is to have each section (column, header, etc) control it's own destiny.  Practically, that means that if you want to add a left column to the template, the only required action should be actually adding the column to the HTML.  You never want to write CSS in such a way that changes are required higher in the DOM tree in order to make child elements behave properly.  Looping through the dom is costly for CMS development. Similarly, if you want to have a different left column width, it should be accomplished by <em>extending the left column object</em> by adding an additional class.   </p>
 <h3>Extending an object</h3>
-<pre>&lt;div class=&quot;leftCol <strong>gMail</strong>&quot;&gt; ... &lt;/div&gt;</pre>
+<pre>
+<div class="leftCol gMail"> ... </div>
+</pre>
 
 <h2>Customizing the template</h2>
 <p>You may not find the default and extended widths of columns or pages match your site. In this case you can extend the column or #main objects to allow custom widths. For performance reasons, you should avoid customizing templates whenever possible.</p>
