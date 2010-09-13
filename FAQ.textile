@@ -160,7 +160,7 @@ I think my choice helps minimize the total number of hacks, improves performance
 
 <h2 id="b">The container objects use empty <code><b></code> tags to add presentational effects such as borders, won't this be a problem for screen reader users?</h2>
 
-Nope, luckily screen readers ignore empty b tags. They don't announce it because it doesn't exist. I take advantage of this presentational fluff tag (b means bold) to apply presentational fluff. This markup should be included via a server-side script so that the day full css borders and drop shadows are supported we can turn off the script and have nice, clean, semantic html.
+Nope, luckily screen readers ignore empty b tags. I take advantage of this presentational fluff tag (b means bold) to apply presentational fluff. This markup should be included via a server-side script so that the day full css borders and drop shadows are supported we can turn off the script and have nice, clean, semantic html.
 
 <h2 id="getInvolved">How can I help?</h2>
 
