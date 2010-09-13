@@ -1,7 +1,7 @@
 <h1>Lines & Grids</h1>
 <p class="intro">Grids are used to break any space into fractions, they can be nested and stacked. A unit can contain another line or it can contain other objects directly.  The sum of the fractional sizes of all children of one line should be equal to one. Grids control width, content controls height. The grids have all the functionality of YUI grids and some other important features.</p>
 
-* Only 4kb! (including full templates and grids)
+* Less than 1kb! (including full templates and grids)
 * Infinite nesting and stacking.
 * The only change required to use any of the objects, is to place it in the HTML. No changes to other places in the DOM, and no location dependent styling. 
 * Easy integration with back-end development.
