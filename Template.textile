@@ -55,11 +55,11 @@
 	</tr>
 	<tr class="odd">
 		<th scope="row"><code>oldSchool</code></th>
-		<td>Extends <code>#main</code> to create a <strong>750px</strong> layout.</td>
+		<td>Extends <code>#page</code> to create a <strong>750px</strong> layout.</td>
 	</tr>
 	<tr class="even">
 		<th scope="row"><code>liquid</code></th>
-		<td>Extends <code>#main</code> to create a <strong>full-width</strong> liquid layout.</td>
+		<td>Extends <code>#page</code> to create a <strong>full-width</strong> liquid layout.</td>
 	</tr>
 	</tbody>
 </table>
