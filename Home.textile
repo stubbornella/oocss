@@ -23,8 +23,8 @@ How do you scale CSS for millions of visitors or thousands of pages? Nicole firs
 *%{color:#da0000}Please help me test the grids and template objects. Put them through their paces and let me know if you manage to break them!%*
 
 * Grids
-
 * Template
+* Modules (New!)
 
 <h2>Base Libraries</h2>
 
