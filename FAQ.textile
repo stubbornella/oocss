@@ -81,7 +81,7 @@ What <strong>not</strong> to do (because it will make it harder for you to upgra
 
 <h2 id="unusedStyles">Unused Styles. My site will never have a 160px gmail-style column, is it ok to remove it?</h2>
 
-Sure.  Removing objects or extensions to those objects is perfectly reasonable. Just keep in mind that it is hard to imagine what HTML someone might build with your CSS when a site is still evolving. Premature optimization a danger. 
+Sure.  Removing objects or extensions to those objects is perfectly reasonable. Just keep in mind that it is hard to imagine what HTML someone might build with your CSS when a site is still evolving. Premature optimization is a danger. 
 
 <h2 id="singleTemplate">Why have a single template?</h2>
 
