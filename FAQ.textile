@@ -127,6 +127,27 @@ Do you rewrite the math class every time you need a random number generated?
 
 CSS is hard, "not because it is broken":http://www.stubbornella.org/content/2009/02/12/css-doesn’t-suck-you’re-just-doing-it-wrong/ , but because it is a legitimate technology requiring expertise to architect correctly. It would be foolish to reinvent the wheel for every site.
 
+<h2 id="sourceOrder">The right column comes before the main column in the source order, will this impact accessibility?</h2>
+
+Early sites I worked on had a more normal template structure with an uber class on the body that showed or hid left and right columns based on the template. Users of the custom CMS got really frustrated when they would build a page in a three column layout, realize it needed to be two columns and find they had to start from scratch because there were multiple templates / starting points. You probably noticed that main is a liquid column, it expands to take all the room left over after the left and right columns have been rendered.
+
+I prefer tab order to match visual order (because it is weird if tab order varies from that), but I also want a single template. As often happens in web development, two important goals came into conflict, and I made a judgement call about how to resolve it. In this case tab order matches visual order for everything except the right column. In the current code, the only requirement to create a left or right column is to put it in the HTML, no costly changes to make elsewhere in the dom.
+
+Markup navigation menus as lists, which will allow screen reader users to skip them, and provide "skip to content" links. This provides a double fallback for accessibility. 
+
+<h2 id="hacks">You have used the _ hack, why? Can I put this code in a separate file? Or add and IE specific class?</h2>
+
+Obviously, the first consideration is keeping hacks as few and far between as possible.
+
+# Adding a separate stylesheet would add an additional HTTP request and increase total file size for a browser that already struggles with performance.
+# I like to keep all the code for any one object in one place. I think it helps minimize the number of hacks used especially as a project evolves over time.
+# Dev tools for IE6 and earlier are extremely primitive, which makes having hacks and normal code side by side even more important. I want to be able to figure out quickly when I have an IE bug which properties are coming into play. Again, I think this helps minimize hacks.
+# The spec indicates that properties which are not understood should be ignored by the browser. Given that the _ behavior of IE6 and earlier is very well known, I can reasonably expect that good browsers will always ignore this property.
+# Using conditional comments means that each html page has to contain a link to the IE specific stylesheet. One day (I can’t wait!) when IE6 market share drops to the minimal levels of IE5, I will turn off this code, but the last thing I want to do is touch 100s or 1000s of HTML pages. I’d rather have only CSS dependence on CSS hacks, rather than pushing this into the HTML. Unfortunately, IMHO the end of IE6 compatibility is farther off than we would like because quirksmode behavior in IE often falls back to an IE5.5 type model.
+
+I think my choice helps minimize the total number of hacks, improves performance, and has little future risk. On the other hand, if seeing the _ in your code makes you feel nauseous, you can absolutely move that to a separate file.
+
 <h2 id="getInvolved">How can I help?</h2>
 
 The best way to get involved is to start using the code (libraries, grids, fonts) and submit bug reports and feature requests.  I also started a <a href="http://groups.google.com/group/object-oriented-css">OOCSS google group</a> to facilitate discussion that is more complex than 140 twitter chars allows.
+
