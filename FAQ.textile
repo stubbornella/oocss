@@ -210,7 +210,7 @@ Nope, luckily screen readers ignore empty b tags. I take advantage of this prese
 
 No--descendant selectors are not discouraged, but putting them too high in the DOM tree is. Avoid putting a wide-net class or id way up on the body or outermost divs of a page, and then writing lots of styles to generate variants of objects. It's not reusable, and it slows down page rendering. Instead, make a more "local" variant by adding a class directly onto the object (and add descendent styles to its children).
 
-I make the distinction between location-based selectors based on whether or not the sub-node is really part of the larger parent object. B and Inner clearly belong to the module, they can't exist on their own. A good rule of thumb is that anything within the body of a container is clearly a separate object.
+A good rule of thumb is that anything within the body of a container is clearly a separate object.
 
 This is questionable because the UL is clearly a separate object:
 
@@ -220,7 +220,7 @@ so is this, because a carousel is clearly not part of the body object:
 
 <pre>body.browseProducts .carousel </pre> 
 
-This is appropriate use of the cascade:
+This is appropriate use of the cascade because the sub-node is really part of the larger parent object. <strong>b (corners)</strong> and <strong>inner</strong> clearly belong to the module, they can't exist on their own.:
 
 <pre>
 .myModule { ... }
