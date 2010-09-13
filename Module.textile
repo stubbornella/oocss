@@ -1,5 +1,5 @@
 <h1>Modules - Container Objects</h1>
-<p class="intro">Modules are based on the [[standard-module-format][standard module format]]. They provide a simple, predictable way to skin container objects while maintaining accessibility and performance. Contour skins are separate from background skins, headers, and footers. I suggest you name skins in a way that indicates how that skin should be used (semantically). The module skin should not change the display of objects within its open editable zones. Features include: </p>
+<p class="intro">Modules are based on the <a href="standard-module-format">Standard Module Format</a>. They provide a simple, predictable way to skin container objects while maintaining accessibility and performance. Contour skins are separate from background skins, headers, and footers. I suggest you name skins in a way that indicates how that skin should be used (semantically). The module skin should not change the display of objects within its open editable zones. Features include: </p>
 
 * Less than 2K! (structures)
 * Simple to skin
