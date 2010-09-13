@@ -3,7 +3,9 @@ Some parts of content are ready for alpha testing, however, it isn't ready to be
 <h2>Media Object </h2>
 The media object allows you to have an image/flash or other fixed width media to the left or right with some content that describes it in the center. 
 
-<h2>Base Classes</h2>
+* Status: ready for alpha testing
+
+<h3>Base Classes</h3>
 <div class="data">
 <table>
 	<thead>
@@ -32,7 +34,7 @@ The media object allows you to have an image/flash or other fixed width media to
 	</tbody>
 </table>
 </div>
-<h2>HTML</h2>
+<h3>HTML</h3>
 <pre>
 <div class="media">
 	<a href="http://twitter.com/stubbornella" class="img">
