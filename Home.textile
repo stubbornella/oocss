@@ -2,19 +2,21 @@ Welcome to the blocks wiki! It is the online home for Object Oriented CSS.
 
 <h2>Modules ready for alpha testing</h2>
 
-  * Grids
+* Grids
 
-  * Page Templates
+* Page Templates
 
 <h2>Base Libraries</h2>
 
-  * Reset and Fonts from YUI are a starting point.
+* Reset and Fonts from YUI are a starting point.
 
 <h2> Upcoming </h2>
 
-  * Modules
+* Module Structures
 
-  * Content objects
+* Module Skins
+
+* Content objects
 
   * etc.
 
