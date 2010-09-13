@@ -1,10 +1,14 @@
-Talk bubbles were created to give context specific help, however they may be used for other purposes like blog comments, cartoon-style talk bubbles, etc. They use no images. Unless you are building a complex application or interactive site it is unlikely that you will need all of the code for the different positions of the talk-nub. IE6 uses page background color for the transparent bits because it doesn't support the color keyword "transparent". 
+Talk bubbles were created to give context specific help, however they may be used for other purposes like blog comments, cartoon-style talk bubbles, etc. 
 
 <a href="http://www.flickr.com/photos/nicole_hugo/3897449437/" title="Talk Bubbles by Stubbornella (aka Nicole), on Flickr"><img src="http://farm4.static.flickr.com/3506/3897449437_6b0fe48b29_o.png" width="322" height="196" alt="Talk Bubbles" /></a>
 
+* No images required
+* Secondary elements in place to allow for borders (just make the lower b a bit larger and set the border color)
 * Allows eight different arrow positions
 * Easy to adapt the size of the arrow
 * Compatible with border-radius generated rounded corners
+* Base CSS objects are 1K
+* IE6 uses page background color for the transparent bits because it doesn't support the color keyword "transparent"
 
 <h2>Base Classes</h2>
 <div class="data">
@@ -53,3 +57,5 @@ h2. Files
 * talk.html
 * /css/talk.css
 * /css/talk_skins.css
+
+Unless you are building a complex application or interactive site it is unlikely that you will need all of the code for the different positions of the talk-nub. Keep the ones you need to make the stylesheet even smaller.
