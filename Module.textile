@@ -84,6 +84,7 @@
 <h3>Popup</h3>
 <pre>
 <div class="mod pop"> 
+        <b class="top"><b class="tl"></b><b class="tr"></b></b>
 	<div class="inner">
 		<div class="bd">
 			<p>Lorem ipsum.</p>
