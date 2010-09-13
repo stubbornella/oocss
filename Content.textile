@@ -98,7 +98,7 @@ It can sometimes be convenient to be able to format a data table to align correc
 <h3>HTML</h3>
 <pre>
 <div class="data">
-  <table class="txtC"><!--default alignment set to center -->
+  <table class="txtC"><!--table alignment set to center -->
     <tr class="odd txtL">
       <th scope="row" class="txtR">Right aligned</th>
       <td>Left aligned</td>
