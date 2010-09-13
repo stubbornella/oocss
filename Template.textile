@@ -22,7 +22,7 @@
 		<td>Main content area, body of the page.</td>
 	</tr>
 	<tr class="even">
-		<th scope="row"><code>#ft<strong></strong></code></th>
+		<th scope="row"><code>#ft</code></th>
 		<td>Site footer, generally contains custom code.</td>
 	</tr>
 	<tr class="odd">
