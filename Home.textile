@@ -2,10 +2,9 @@
 
 How do you scale CSS for millions of visitors or thousands of pages? Nicole first presented Object Oriented CSS at Web Directions North in Denver. Since then, the response has been overwhelming. Object Oriented CSS allows you to write fast, maintainable, standards-based front end code. Adds much needed predictability to CSS so that even beginners can participate in writing beautiful, standards-compliant, fast websites.
 
-h3.Two main principles:
+<h3>Two main principles</h3>
 
 # Separate structure and skin 
-
 # Separate Container and Content 
 
 
