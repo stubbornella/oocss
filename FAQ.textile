@@ -32,3 +32,17 @@ I managed a team of front end developers at FullSIX (a web marketing agency in F
 
 Their code is live on a client website. It is as good as anything written by the senior developers, maybe better because they didn’t have to un-learn bad habits. :) 
 
+<h2>Getting Started: How do I work with these files?</h2>
+
+Two files, libraries.css (reset and fonts from yui), grids.css and template.css are ready, the others are still extremely unstable. 
+
+# Open template.html and save it as a new file.
+# Adapt the number and width of the columns by extending those objects. You only need one template for your site, even if you have pages with different columns, because the columns are objects like anything else. You can think of them as optional regions, you may have 0-n left columns.  See template docs for more information.
+# Use grids to break up any of the content areas into smaller chunks. See grids docs for more information.
+# Add content.  Hint: This should also be OO.
+
+<h2>How do I deploy this on a live site?</h2>
+
+Keep in mind that the CSS is still evolving, I may still change things based on feedback I'm receiving.
+
+I've broken up the CSS files into modules like grids and template. On a real site you should remove unnecessary comments and reduce HTTP requests, or the site will be super slow.  This means you need to combine CSS files into one larger file.  I do that via nested comments, so that the overall CSS stays organized.  Finally, run a CSS minifier as a part of the push/deployment process to remove stray comments.
