@@ -1,0 +1,6 @@
+Documenting constraints.
+
+* 100% of the width of its parent container, adapts to any sized container.
+* Controls can be above, below, or right/left.
+* Items width must be set in pixels (they can't be %, no way to inherit container width from parent's parent)
+* Ideally it would not have half-items visible, in JS remove the extra bit or expand the units to fill more space?
