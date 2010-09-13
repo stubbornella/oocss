@@ -3,7 +3,9 @@
 <div style="overflow:hidden; _overflow:visible; zoom:1; padding-left: 20px;">
 How do you scale CSS for millions of visitors or thousands of pages? Nicole first presented Object Oriented CSS at Web Directions North in Denver. Since then, the response has been overwhelming. OOCSS allows you to write fast, maintainable, standards-based front end code. It adds much needed predictability to CSS so that even beginners can participate in writing beautiful websites.
 
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+If you find this project useful, you can...
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" style="text-align:right;">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="8665109">
 <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
