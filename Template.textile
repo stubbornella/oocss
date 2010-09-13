@@ -79,7 +79,7 @@
 	<div id="ft"><!-- Foot --></div>	
 </div>
 </pre>
-<h2>Full width template, 2 columns, gmail style (160px left column width)</h2>
+<h2 id="liquid">Full width template, 2 columns, gmail style (160px left column width)</h2>
 <pre>
 <div id="main liquid">
 	<div id="hd"><!-- Head --></div>
