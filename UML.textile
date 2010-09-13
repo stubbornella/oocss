@@ -1,0 +1,3 @@
+Where am I going with this?  How can we make HTML and CSS so predictable that they validate against a custom grammar? This is a very alpha look at describing OO CSS and HTML in UML.
+
+<a href="http://www.flickr.com/photos/nicole_hugo/3296789176/" title="Object Oriented CSS UML by Stubbornella (aka Nicole), on Flickr"><img src="http://farm4.static.flickr.com/3336/3296789176_90588ac94a.jpg" width="500" height="329" alt="Object Oriented CSS UML" /></a>
