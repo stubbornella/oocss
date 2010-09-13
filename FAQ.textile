@@ -127,11 +127,22 @@ Do you rewrite the math class every time you need a random number generated?
 
 CSS is hard, "not because it is broken":http://www.stubbornella.org/content/2009/02/12/css-doesn’t-suck-you’re-just-doing-it-wrong/ , but because it is a legitimate technology requiring expertise to architect correctly. It would be foolish to reinvent the wheel for every site.
 
-<h2 id="sourceOrder">The right column comes before the main column in the source order, will this impact accessibility?</h2>
+<h2 id="sourceOrder">The right column comes before the main column in the source order, will this impact accessibility? SEO?</h2>
 
 Early sites I worked on had a more normal template structure with an uber class on the body that showed or hid left and right columns based on the template. Users of the custom CMS got really frustrated when they would build a page in a three column layout, realize it needed to be two columns and find they had to start from scratch because there were multiple templates / starting points. You probably noticed that main is a liquid column, it expands to take all the room left over after the left and right columns have been rendered.
 
 I prefer tab order to match visual order (because it is weird if tab order varies from that), but I also want a single template. As often happens in web development, two important goals came into conflict, and I made a judgement call about how to resolve it. In this case tab order matches visual order for everything except the right column. In the current code, the only requirement to create a left or right column is to put it in the HTML, no costly changes to make elsewhere in the dom.
+
+Screen reader users have two options: 
+
+# Skip links 
+# Navigation menus are always marked up as a list of links, or nested list of links. This is interesting because it allows screen reader users to skip the whole list via screen reader specific controls. 
+
+Two ways to get past menus is sufficient IMO. 
+
+Everyone seems to have an opinion re: SEO, and they are all different, and even opposed to one another.  :)  Given that climate, I'm inclined to think that, especially for navigation menus with a reasonable number of links, it just doesn't matter that much.  Once I did see the 
+nav links being indexed in the content part of the search results, but that was years ago.  Search bots are pretty smart, I'm ready to assume that if I mark up my content in a semantic, clean way, and I'm not filling it out with a bunch of spam links, the bot should figure it 
+out. 
 
 Markup navigation menus as lists, which will allow screen reader users to skip them, and provide "skip to content" links. This provides a double fallback for accessibility. 
 
