@@ -4,11 +4,13 @@ Talk bubbles were created to give context specific help, however they may be use
 
 * No images required
 * Secondary elements in place to allow for borders (just make the lower b a bit larger and set the border color)
-* Allows eight different arrow positions
 * Easy to adapt the size of the arrow
 * Compatible with border-radius generated rounded corners
 * Base CSS objects are 1K
 * IE6 uses page background color for the transparent bits because it doesn't support the color keyword "transparent"
+* Allows eight different arrow positions
+
+<a href="http://www.flickr.com/photos/nicole_hugo/3898006763/" title="Speech Bubble Pointer positions by Stubbornella (aka Nicole), on Flickr"><img src="http://farm3.static.flickr.com/2452/3898006763_07e964665b_o.png" width="472" height="187" alt="Speech Bubble Pointer positions" /></a>
 
 <h2>Base Classes</h2>
 <div class="data">
