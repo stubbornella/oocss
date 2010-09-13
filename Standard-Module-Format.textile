@@ -15,7 +15,7 @@ The standard module format is based on the <a href="http://developer.yahoo.com/y
 	</tr>
 	<tr class="even">
 		<th scope="row"><code>inner</code></th>
-		<td>Inner exists for two reasons. First, it solves a (safari or opera?) bug in which position relative and overflow hidden cannot exist on the same element. Second, it allows for two elements on which borders can be placed to extend the number of blocks that can be built without using image based borders.</td>
+		<td>Inner exists for two reasons. First, it solves a bug (Opera prior to version 8.5) in which position relative and overflow hidden cannot exist on the same element. Second, it allows for two elements on which borders can be placed to extend the number of blocks that can be built without using image based borders.</td>
 	</tr>
 	<tr class="odd">
 		<th scope="row"><code>hd</code></th>
