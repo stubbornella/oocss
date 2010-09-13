@@ -1,0 +1,8 @@
+Each of the three module types needs to be skinned differently.  Abstracting all the heavy lifting to the <code>mod</code>, <code>complex</code>, and <code>pop</code> classes means that all of the values in the skins are predictable. In fact, I'll show you how they can be easily calculated.
+
+<h2>mod</h2>
+
+
+<h2>complex</h2>
+
+</h2>pop</h2>
