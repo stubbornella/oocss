@@ -13,19 +13,19 @@
 	</thead>
 	<tbody>
 	<tr class="odd">
-		<th scope="row"><code>#page</code></th>
+		<th scope="row"><code>page</code></th>
 		<td>Main wraps site content. It can be extended via the classes <code>oldSchool</code> and <code>liquid</code> to provide 750px and full width layouts respectively.</td>
 	</tr>
 	<tr class="even">
-		<th scope="row"><code>#hd</code></th>
+		<th scope="row"><code>hd</code></th>
 		<td>Site header, generally contains custom code. (e.g. horizontal navigation, logo, search box)</td>
 	</tr>
 	<tr class="odd">
-		<th scope="row"><code>#bd</code></th>
+		<th scope="row"><code>bd</code></th>
 		<td>Main content area, body of the page.</td>
 	</tr>
 	<tr class="even">
-		<th scope="row"><code>#ft</code></th>
+		<th scope="row"><code>ft</code></th>
 		<td>Site footer, generally contains custom code.</td>
 	</tr>
 	<tr class="odd">
