@@ -1,4 +1,7 @@
-<p>Templates are used to solve common design patterns for page templates. Using these templates you can build pages which have a <strong>header</strong>, <strong>footer</strong>, <strong>left</strong> and <strong>right columns</strong>, and a <strong>main content area</strong>. Any of the sections can be broken up via <a href="grids_docs.html">grids</a>. You can also use grids instead of columns. The main column is fully liquid, taking up all the rest of the space when the left column and right colum have been rendered. </p>
+<p>Templates are used to solve common design patterns for page layout. Using these templates you can build pages which have a <strong>header</strong>, <strong>footer</strong>, <strong>left</strong> and <strong>right columns</strong>, and a <strong>main content area</strong>. Any of the sections can be broken up via <a href="grids_docs.html">grids</a>. You can also use grids instead of columns. The main column is fully liquid, taking up all the rest of the space when the left column and right colum have been rendered. </p>
+
+*%{color:#da0000}Please help me test the grids and template objects. Put them through their paces and let me know if you manage to break them!%*
+
 <h2>Base Classes</h2>
 <div class="data">
 <table>
