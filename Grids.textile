@@ -1,0 +1,32 @@
+h1. Lines & Grids
+
+Grids are used to break any space into fractions, they can be nested. A unit can contain another line or it can contain other objects directly.  The sum of the fractional sizes of all children of one line should be equal to one. Grids control width, content controls height.
+
+h2. Base Classes
+
+<table>
+	<thead>
+		<tr>
+			<th>Property</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+	<tr class="odd">
+		<th scope="row"><code>line</code></th>
+		<td>Groups units on one horizontal line.  Note: for mobile layout units may be stacked to avoid horizontal scrolling.</td>
+	</tr>
+	<tr class="even">
+		<th scope="row"><code>unit</code></th>
+		<td>Base class which divides a line into sections (columns).</td>
+	</tr>
+	<tr class="odd">
+		<th scope="row"><code>sizeXofY</code></th>
+		<td>Extends <code>unit</code>. Indicates the fractional width of the unit, for example <code>size3of4</code> would take up three quarters, or 75%, of the horizontal space. The following fractions are supported: 1, 1/2, 1/3, 2/3, 1/4, 3/4, 1/5, 2/5, 3/5, 4/5</td>
+	</tr>
+	<tr class="even">
+		<th scope="row"><code>lastUnit</code></th>
+		<td>Extends <code>unit</code>. Applied to the last child of every line.</td>
+	</tr>
+	</tbody>
+</table>
