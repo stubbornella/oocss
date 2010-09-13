@@ -1,6 +1,3 @@
-
-
-Welcome to the online home for Object Oriented CSS. 
 <div style="width:350px;text-align:left;" id="__ss_990405"><object style="margin:0px" width="350" height="300"><param name="movie" value="http://static.slideshare.net/swf/ssplayer2.swf?doc=oocss-1233786987806904-3&stripped_title=object-oriented-css" /><param name="allowFullScreen" value="true"/><param name="allowScriptAccess" value="always"/><embed src="http://static.slideshare.net/swf/ssplayer2.swf?doc=oocss-1233786987806904-3&stripped_title=object-oriented-css" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="350" height="300"></embed></object></div>
 <h2>Modules ready for alpha testing</h2>
 
