@@ -81,7 +81,7 @@
 </pre>
 <h2 id="liquid">Full width template, 2 columns, gmail style (160px left column width)</h2>
 <pre>
-<div id="main liquid">
+<div id="main" class="liquid">
 	<div id="hd"><!-- Head --></div>
 	<div id="bd"><!-- Body -->
 		<div class="leftCol gMail"><!-- Left Column (optional region) --></div>
