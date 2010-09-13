@@ -60,23 +60,25 @@
 <h3>Module</h3>
 <pre>
 <div class="mod"> 
+        <b class="top"><b class="tl"></b><b class="tr"></b></b>
 	<div class="inner">
 		<div class="bd">
 			<p>Lorem ipsum.</p>
 		</div>
 	</div>
-	<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+	<b class="bottom"><b class="bl"></b><b class="br"></b></b> 
 </div>
 </pre>
 <h3>Complex</h3>
 <pre>
 <div class="mod complex"> 
+        <b class="top"><b class="tl"></b><b class="tr"></b></b>
 	<div class="inner">
 		<div class="bd">
 			<p>Lorem ipsum.</p>
 		</div>
 	</div>
-	<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+	<b class="bottom"><b class="bl"></b><b class="br"></b></b> 
 </div>
 </pre>
 <h3>Popup</h3>
@@ -87,11 +89,11 @@
 			<p>Lorem ipsum.</p>
 		</div>
 	</div>
-	<b class="top"><b class="tl"></b><b class="tr"></b></b><b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+	<b class="bottom"><b class="bl"></b><b class="br"></b></b> 
 </div>
 </pre>
 
 <h2>Skinning suggestions</h2>
-<p>The contour and the background can be used to define the intersection of two parameters. For example you cross product status with product type. E.g. <code>sale</code>, <code>normal</code>, and <code>featured</code> backgrounds with <code>motorcycle</code>, <code>helmet</code>, and <code>clothing</code> contours. In so far as possible, keep your classes as abstract as they can reasonably be. For example choose motorcycle over <code>ducati</code>, <code>ducatiMonster</code>, or <code>NicolesDucatiMonster620dark</code> -- unless you really mean to exclude all other uses! </p>
+<p>The contour and the background can be used to define the intersection of two parameters. For example you cross product status with product type. E.g. <code>sale</code>, <code>normal</code>, and <code>featured</code> backgrounds with <code>motorcycle</code>, <code>helmet</code>, and <code>clothing</code> contours. In so far as possible, keep your classes as abstract as they can reasonably be. For example choose <code>motorcycle</code> over <code>ducati</code>, <code>ducatiMonster</code>, or <code>NicolesDucatiMonster620dark</code> -- unless you really mean to exclude all other uses! </p>
 
 <p>Be careful not to choose classes linked to the display of the object (e.g. big blue borders).  The client *will* change their mind, you'll have classes which no longer correlate to actual display.</p>
