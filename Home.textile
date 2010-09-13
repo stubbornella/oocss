@@ -24,7 +24,7 @@ How do you scale CSS for millions of visitors or thousands of pages? Nicole firs
 
 * Grids
 
-* Page Templates
+* Template
 
 <h2>Base Libraries</h2>
 
