@@ -58,6 +58,16 @@
 <h2>The Markup</h2>
 
 <h3>Module</h3>
+
+
+Mod is the basic container, all other containers inherit from this one. This is the high performance container that should be used unless you specifically need another type.
+
+* One tiny image
+* Expands to any height or width
+* Compatible with any content
+* Choose for any container object that doesn't require outside transparency or complex borders.
+
+
 <pre>
 <div class="mod"> 
         <b class="top"><b class="tl"></b><b class="tr"></b></b>
@@ -70,6 +80,16 @@
 </div>
 </pre>
 <h3>Complex</h3>
+
+Complex should be used in cases where you require images for borders because borders or drop shadows are too complex to be simulated via borders on mod and/or inner.
+
+* One image
+* Height and width limited by image size
+* Compatible with any content
+* Choose when you require complex borders which cannot be simulated via css borders on mod and inner.
+
+Inspired by a conversation with Arnaud.
+
 <pre>
 <div class="mod complex"> 
         <b class="top"><b class="tl"></b><b class="tr"></b></b>
@@ -82,6 +102,16 @@
 </div>
 </pre>
 <h3>Popup</h3>
+
+Use for popups and other containers that need outside transparency.
+
+* One image
+* Height and width limited by image size
+* Compatible with any container, but not any content
+* Choose when you require outside transparency which cannot be simulated. (do i need to make this work with clip rather than bkg position?)
+
+Inspired by Leslie Sommers mojo blocks.
+
 <pre>
 <div class="mod pop"> 
         <b class="top"><b class="tl"></b><b class="tr"></b></b>
