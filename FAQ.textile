@@ -1,0 +1,33 @@
+Whoa, you have lots of questions!  Realizing I'd better start recording the answers if I want to scale better.
+
+<h2 id="idForStyle">Should I use IDs to style my content?</h2>
+
+When you reuse an object in the same page (or on the same site if the cache is working properly), it is a performance "freebie".  Styling using IDs makes it impossible to use the same element twice on the same page. @cgriego (twitter) compared it to singletons, which sounds accurate to me.  There may be cases where you want to style using an ID, like header menus that are very specific, in this case you can use an ID to sandbox the particular element and be sure that the code written for it doesn't impact the rest of the site. Think carefully before you choose an ID over a class, it is <em>really hard to predict</em> what people will do with HTML built from your CSS as the site evolves. If you have a choice, leave things as flexible as possible.
+
+I am considering removing the ids from head, body, and foot in my template. Someone could have multiple main content areas.  Multiple site headers and footers are more difficult to imagine, but I bet there is a designer who can dream up something like that, so the IDs are very likely to disappear. 
+
+On the other hand, <em>ID hooks are great for linking</em>.  Put them in the HTML, just don't use them for styles.
+
+<h2 id="designersCan">Designers can't do OOCSS, can they?</h2>
+
+Yes, designers instinctively understand objects, it is much more concrete than the way most people are currently coding CSS --layers of exceptions (think, there was an old lady who swallowed a fly). In fact, they love OOCSS for two reasons.  
+
+# It allows them to ramp up a lot faster when creating complex high traffic sites. They don't have to bother with understanding the structures until they are reasonably competent and comfortable with basic syntax.
+# When learning CSS, they never have to create the ugly "hello world!" website.  Designers care very much that their work is beautiful.  If they have to make something ugly, even for the sake of learning, they will very quickly get frustrated and annoyed.  OO-CSS allows their work to be beautiful at each stage of the learning process. 
+
+Designers are <strong>smart</strong>.  We need to give them credit. They may speak a different, non-engineering language, but often I think language is meant to create an exclusive club. 
+
+<h2 id="learn">I'm a Front-end Architect, how do I teach this to my team?</h2>
+
+As the architect, you should write the structure object; set up how the rounded corner box is created, positions all the presentational elems for corners or other features, and deals with browser differences. Newbies write the skins for these modules (borders, colors, background images, etc).
+
+I built large scale sites (1000s of pages, millions of visitors) using the OO-CSS method. It scales well and, when done correctly, it means that the individual components a newbie would be working on are relatively predictable. Code review is easy because there are clear rules about acceptable ways to extend objects. This kind of feedback makes new developers productive really quickly.
+
+I managed a team of front end developers at FullSIX (a web marketing agency) in France who are among the most talented people I’ve ever worked with. At some point our success meant that we had far more work than we could handle. It is very hard to hire front-end experts (there is no school for this stuff!), so I started an <a href="http://www.slideshare.net/stubbornella/object-oriented-css/57">internal internship program where designers who were interested in exploring code</a> (but had little to no previous experience) could come work as junior members of our team for one month.
+
+* Week 1: They learned about semantics and built html from existing CSS. Learning to build new pages without writing more CSS, HTML syntax, multiple classes, validation, semantics, intro to code review, etc.
+* Week 2: They built simple content objects (headings, lists, etc) for a week. Learning CSS syntax, how to extend objects, colors, % sizes for text, etc.
+* Week 3: they were building block skins. Borders, colors, background images, basic positioning, sprites. They worked with an amazing senior developer who answered a ton of questions and really helped them scale the learning curve. He also happens to be a very talented code reviewer.
+* Week 4: they were productive members of my team building skins that were production ready.
+
+Their code is live on a client website. It is as good as anything written by the senior developers, maybe better because they didn’t have to un-learn bad habits. :) 
