@@ -1,1 +1,44 @@
-Content isn't ready to be used in production projects. The code is unstable. Anything and everything might change.
+Some parts of content are ready for alpha testing, however, it isn't ready to be used in production projects. 
+
+<h2>Media Object </h2>
+The media object allows you to have an image/flash or other fixed width media to the left or right with some content that describes it in the center. 
+
+<h2>Base Classes</h2>
+<div class="data">
+<table>
+	<thead>
+		<tr>
+			<th>Property</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+	<tr class="odd">
+		<th scope="row"><code>media</code></th>
+		<td>Wrapper for the media object</td>
+	</tr>
+	<tr class="even">
+		<th scope="row"><code>img</code></th>
+		<td>Child node of the media object. Generally a link, image, or flash wrapper. Will appear to the left of the <code>.bd</code>. Optional region.</td>
+	</tr>
+	<tr class="odd">
+		<th scope="row"><code>bd</code></th>
+		<td>Main content area for the media object, can contain any other objects. Protected. Required region.</td>
+	</tr>
+	<tr class="even">
+		<th scope="row"><code>imgExt</code></th>
+		<td>Child node of the media object. Generally a link, image, or flash wrapper. Will appear to the right of the <code>.bd</code>. Optional region.</td>
+	</tr>
+	</tbody>
+</table>
+</div>
+<pre>
+<div class="media">
+	<a href="http://twitter.com/stubbornella" class="img">
+		<img src="http://a3.twimg.com/profile_images/72157651/tattoo_pink_bkg_square_mini.jpg" alt="Stubbornella" />
+	</a>
+	<div class="bd">
+		<a href="http://twitter.com/stubbornella">@Stubbornella</a> <span class="detail">14 miniutes ago</span>
+	</div>
+</div>
+</pre>
