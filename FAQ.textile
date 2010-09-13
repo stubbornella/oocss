@@ -77,7 +77,7 @@ Their code is live on a client website. It is as good as anything written by the
 
 <h2 id="GettingStarted">Getting Started: How do I work with these files?</h2>
 
-Two files, libraries.css (reset and fonts from yui), grids.css and template.css are ready, the others are still extremely unstable. 
+Three files, libraries.css (reset and fonts from yui), grids.css and template.css are ready, the others are still extremely unstable. 
 
 # Open template.html and save it as a new file.
 # Adapt the number and width of the columns by extending those objects. You only need one template for your site, even if you have pages with different columns, because the columns are objects like anything else. You can think of them as optional regions, you may have 0-n left columns.  See template docs for more information.
