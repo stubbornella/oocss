@@ -105,9 +105,9 @@ Sure.  Removing objects or extensions to those objects is perfectly reasonable. 
 
 In object oriented CSS, an important goal is to have a single template from which all pages are built.  This eases CMS development because by having a single starting point all pages can be made into any other page. Users of the CMS do not have traps in which a page they have built cannot be morphed into a different page type.  Another goal of and OO template is to have each section (column, header, etc) control it's own destiny.  Practically, that means that if you want to add a left column to the template, the only required action should be actually adding the column to the HTML.  You never want to write CSS in such a way that changes are required higher in the DOM tree in order to make child elements behave properly.  Looping through the dom is costly for CMS development. 
 
-<h2>Is this semantic? Will I end up with classes like <code>.formYellow</code>?</h2>
+<h2>Is this semantic? Will I end up with classes like <code>.formYellow</code> or <code>tinyBlueH2</code>?</h2>
 
-OOCSS can be written in a semantic or non-semantic way, it is up to you to create modules like <code>errorMod</code> rather than <code>bigRedModule</code>. The code and docs are a framework, an example of OOCSS. I can't predict what you are going to put in leftCol. I could call it navigation, but that my not be true for your site. I've chosen to use generic class names, and when doing so I had a few goals in mind (in no particular order).
+OOCSS can be written in a semantic or non-semantic way, it is up to you to create modules like <code>errorMod</code> rather than <code>bigRedModule</code>. I've chosen class names with a few goals in mind (in no particular order).
 
 * Brevity - every byte counts, so I kept classes as short as possible
 * Clarity - expected behavior/style should be immediately obvious
@@ -115,4 +115,4 @@ OOCSS can be written in a semantic or non-semantic way, it is up to you to creat
 * Generic - the name should be true for most sites. Overly specific names reduce the number of use cases or cause semantic classes to be used in a non-semantic way.  
 * Screen - Different views might be provided by mobile or print stylesheets, however they override the default screen view, so the classes chosen are screen specific when there was a conflict. This simplifies development.
 
-Sometimes these <strong>important goals are in opposition to one another</strong>.  In those cases I've fallen back on pragmatism and made a judgement call. Nothing can replace a clever developer making the right choice in a given situation.
+The code and docs are a framework, an example of OOCSS. I can't predict what you are going to put in leftCol. I could call it navigation, but that my not be true for your site. Sometimes these <strong>important goals are in opposition to one another</strong>.  In those cases I've fallen back on pragmatism and made a judgement call. Nothing can replace a clever developer making the right choice in a given situation.
