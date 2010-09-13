@@ -15,7 +15,7 @@ Yes, designers instinctively understand objects, it is much more concrete than t
 # It allows them to ramp up a lot faster when creating complex high traffic sites. They don't have to bother with understanding the structures until they are reasonably competent and comfortable with basic syntax.
 # When learning CSS, they never have to create the ugly "hello world!" website.  Designers care very much that their work is beautiful.  If they have to make something ugly, even for the sake of learning, they will very quickly get frustrated and annoyed.  OO-CSS allows their work to be beautiful at each stage of the learning process. 
 
-Designers are <strong>smart</strong>.  We need to give them credit. They may speak a different, non-engineering language, but often I think language is meant to create an exclusive club. 
+Designers are <strong>smart</strong>.  We need to give them credit. They may speak a different, non-engineering language, but often geeky language excludes people in a way that is kind of ugly. We can do better than that.
 
 <h2 id="learn">I'm a Front-end Architect, how do I teach this to my team?</h2>
 
