@@ -1,1 +1,1 @@
-Content isn't ready to be used in production projects. The code is unstable anything and everything might change.
+Content isn't ready to be used in production projects. The code is unstable. Anything and everything might change.
