@@ -7,15 +7,12 @@ In keeping with the OO metaphor, an object is analogous with a class in Java.
 
 A CSS object consists of four things:
 # HTML, which can be one or more nodes of the DOM,
-# CSS declarations about the style of those nodes all of which begin
-with the class name of the wrapper node
-# Components like background images and sprites required for display,
-and
-# JavaScript behaviors, listeners, or methods associated with the
-object.
+# CSS declarations about the style of those nodes all of which begin with the class name of the wrapper node
+# Components like background images and sprites required for display, and
+# JavaScript behaviors, listeners, or methods associated with the object.
 
-This can be confusing because each CSS class is not necessarily an
-object in it’s own right, but can be a property of a wrapper class.
+This can be confusing because each CSS class is not necessarily an object in it’s own right, but can be a property of a wrapper class.
+
 For example:
 
 <pre><code><div class=”mod”>
@@ -26,10 +23,7 @@ For example:
         </div>
 </div></code></pre>
 
-The object is a module, indicated by the class mod. It contains four
-property nodes (which cannot live independently from the module,
-including two required regions, inner and body, and two optional
-regions, head and foot.
+The object is a module, indicated by the class mod. It contains four property nodes (which cannot live independently from the module,  including two required regions, inner and body, and two optional regions, head and foot.
 
 
 <h2 id="howDoesItImprovePerformance">How does OOCSS improve performance?</h2>
@@ -38,9 +32,8 @@ The performance benefits of OOCSS are twofold:
 # Heavy reuse of CSS code, so less CSS code needed, which means:
 ** Smaller files, hence faster transfers
 ** A bigger percentage of the CSS code needed on most pages of your site is likely to be reused and possibly cached by the browser
-# Less repaints and layout calculations on the part of the browser.  
-** On a single page, the more CSS rules are reused, the less time the rendering engine spends calculating "computed values"
-** with the class "extending"  approach to CSS, one tends to end up with less overriding rules, which means again less of a need for the engine to compute with rules to apply.
+# To a lesser degree, fewer repaints and layout calculations on the part of the browser.  
+On a single page, the more CSS rules are reused, the less time the rendering engine spends calculating "computed values"
 
 
 <h2 id="idForStyle">Should I use IDs to style my content?</h2>
