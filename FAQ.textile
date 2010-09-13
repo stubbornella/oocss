@@ -218,9 +218,9 @@ where the first class is on the body tag, and "browse products" is a page or are
 
 But something like:
 
-<code>.myModule .title</code>
+<code>.myWidget .title</code>
 
-is encouraged, because it's object-based--the ancestor element is presumably close enough to the child to minimize performance impact.
+is encouraged, because it's object-based--the ancestor element is close enough to the child to minimize performance impact.
 
 
 
