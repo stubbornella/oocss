@@ -46,3 +46,40 @@ Two files, libraries.css (reset and fonts from yui), grids.css and template.css 
 Keep in mind that the CSS is still evolving, I may change things based on feedback I'm receiving.
 
 I've broken up the CSS files into modules like grids and template. On a real site you should remove unnecessary comments and reduce HTTP requests, or the site will be super slow.  This means you need to combine CSS files into one larger file.  I do that via nested comments, to keep the CSS organized.  Finally, run a CSS minifier as a part of the push/deployment process to remove stray comments.
+
+<h2 id="editOverwrite">Should I edit these files, or overwrite them with my own stylesheet?</h2>
+
+I wouldn't edit grids, template, or libraries.  A lot of testing has gone into getting those just right.  If you want to customize, think about extending the basic objects instead. That's the magic behind OOCSS.  You may well want to edit content.css. If say, pink isn't your color? ;) Go ahead, change colors, font sizes, capitalization.  Just keep in mind that this file is rapidly evolving and I don't have any docs yet to show you how to do it correctly.  I'm working on it, I promise.
+
+<h2>How do I extend an object?</h2>
+
+If you want to extend an object, for example a 160px left column, rather than the default, you should add an additional class to the column.
+
+<pre>
+<div class="leftCol gMail"> ... </div>
+</pre>
+
+If the default and extended widths of columns or pages don't match your site, you can extend the column to allow a custom width. 
+
+<h3>Columns</h3>
+<p><code>myColumn</code> extends column objects to allow for custom column widths.</p>
+
+<pre>.myColumn{width:400px;}</pre>
+
+And the HTML
+
+<pre>
+<div class="leftCol myColumn"> ... </div>
+</pre>
+
+Don't think of this as overwriting my classes, but rather <em>extending</em> the objects provided by the framework.  I give you columns, headings, and other objects.  You can extend those objects by adding another class that only specifies the differences between my base object and your implementation of the same. Mixins may be a good analogy here. 
+
+What <strong>not</strong> to do (because it will make it harder for you to upgrade to newer versions of my framework):
+<pre>
+.leftCol{... custom css here ...}
+</pre>
+
+<h2>Why have a single template?</h2>
+
+In object oriented CSS, an important goal is to have a single template from which all pages are built.  This eases CMS development because by having a single starting point all pages can be made into any other page. Users of the CMS do not have traps in which a page they have built cannot be morphed into a different page type.  Another goal of and OO template is to have each section (column, header, etc) control it's own destiny.  Practically, that means that if you want to add a left column to the template, the only required action should be actually adding the column to the HTML.  You never want to write CSS in such a way that changes are required higher in the DOM tree in order to make child elements behave properly.  Looping through the dom is costly for CMS development. 
+
