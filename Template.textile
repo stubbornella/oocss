@@ -1,0 +1,1 @@
+Need to convert template_docs.html to textile and put it here.  Link to template.html example.
