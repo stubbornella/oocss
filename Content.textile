@@ -55,44 +55,16 @@ It can sometimes be convenient to be able to format a data table to align correc
 
 <h3>Base Classes</h3>
 <div class="data">
-<table>
-	<thead>
-		<tr>
-			<th>Property</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-	<tr class="odd">
-		<th scope="row"><code>data</code></th>
-		<td>Div wrapper for the data table</td>
-	</tr>
-	<tr class="even">
-		<th scope="row"><code>txtL</code></th>
-		<td>Aligns left, default alignment, can be applied to table, tr, td, or th.</td>
-	</tr>
-	<tr class="odd">
-		<th scope="row"><code>txtR</code></th>
-		<td>Aligns right, can be applied to table, tr, td, or th.</td>
-	</tr>
-	<tr class="even">
-		<th scope="row"><code>txtC</code></th>
-		<td>Aligns center (horizontally), can be applied to table, tr, td, or th.</td>
-	</tr>
-        <tr class="odd">
-		<th scope="row"><code>txtT</code></th>
-		<td>Aligns top, can be applied to table, tr, td, or th.</td>
-	</tr>
-	<tr class="even">
-		<th scope="row"><code>txtB</code></th>
-		<td>Aligns bottom, can be applied to table, tr, td, or th.</td>
-	</tr>
-        <tr class="odd">
-		<th scope="row"><code>txtM</code></th>
-		<td>Aligns middle (vertically), can be applied to table, tr, td, or th.</td>
-	</tr>
-	</tbody>
-</table>
+  <table class="txtC"><!--default alignment set to center -->
+    <tr class="odd txtL">
+      <th scope="row" class="txtR">Right aligned</th>
+      <td>Left aligned</td>
+    </tr>
+    <tr class="even">
+      <th scope="row">center aligned</th>
+      <td>center aligned</td>
+    </tr>
+  </table>
 </div>
 <h3>HTML</h3>
 <pre>
