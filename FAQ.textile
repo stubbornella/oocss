@@ -49,7 +49,25 @@ I've broken up the CSS files into modules like grids and template. On a real sit
 
 <h2 id="editOverwrite">Should I edit these files, or overwrite them with my own stylesheet?</h2>
 
-I wouldn't edit grids, template, or libraries.  A lot of testing has gone into getting those just right.  If you want to customize, think about extending the basic objects instead. That's the magic behind OOCSS.  You may well want to edit content.css. If say, pink isn't your color? ;) Go ahead, change colors, font sizes, capitalization.  Just keep in mind that this file is rapidly evolving and I don't have any docs yet to show you how to do it correctly.  I'm working on it, I promise.
+I wouldn't edit grids, template, or libraries.  A lot of testing has gone into getting those just right.  If you want to customize, think about extending the basic objects instead. That's the magic behind OOCSS.  
+
+<h2 id="contentStyles">Pink is not my color! What do I do with content.css?</h2>
+
+You may well want to edit content.css. Go ahead, change colors, font sizes, capitalization.  Just keep in mind that this file is rapidly evolving and I don't have any docs yet to show you how to do it correctly.  I'm working on it, I promise.
+
+<h2 id="moreHeadings">I need more than six (h1-h6) headings on my site. How do I add more?</h2>
+
+If you want more than six heading styles, extend the heading objects by adding a new class.
+
+<pre>
+.category{font-size:108%; font-weight:normal; font-style: normal; text-transform:uppercase; color: #333;}
+</pre>
+
+What <strong>not</strong> to do:
+
+<pre>
+#mySaleModule h2, #mySaleModule .h2{font-size:108%; font-weight:normal; font-style: normal; text-transform:uppercase; color: #333;}
+</pre>
 
 <h2 id="extend">How do I extend an object?</h2>
 
