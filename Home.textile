@@ -20,11 +20,9 @@ How do you scale CSS for millions of visitors or thousands of pages? Nicole firs
 
 <h2>Ready for alpha testing</h2>
 
-*%{color:#da0000}Please help me test the module objects. Put them through their paces and let me know if you manage to break them!%*
+*%{color:#da0000}Please help me test the talk bubble objects. Put them through their paces and let me know if you manage to break them! Add feature requests under the "issues" tab.%*
 
-* Grids
-* Template
-* Modules (New!)
+* Talk Bubbles
 
 <h2>Base Libraries</h2>
 
