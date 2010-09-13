@@ -1,4 +1,4 @@
-
+The standard module format is based on the <a href="http://developer.yahoo.com/yui/examples/container/module.html">YUI module control</a>.  I hope to include input from microformats and HTML5 communities to inform the choice of class names.
 
 <pre>
 <div class="mod">
