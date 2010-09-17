@@ -33,24 +33,6 @@ a:visited { color:#005a9c; }
 ol.simpleList li{list-style-type: decimal; margin-left:40px;}
 /* standard list */
 ul.simpleList li{list-style-type:disc; margin-left:40px;}
-/* ====== Tables ====== */
-.data{padding: 20px; position:relative; zoom:1;vertical-align: top;border-right:solid 1px transparent;/* border fixes a FF2 bug which causes the data table to overlay its borders*/}
-.data table {width:100%;border:1px solid #AE0345;}
-th, td{vertical-align:top;border:1px solid #AE0345;}
-.txtC, .data .txtC td, .data .txtC th{text-align:center;}
-.txtL, .data .txtL td, .data .txtL th{text-align:left;}
-.txtR, .data .txtR td, .data .txtR th{text-align:right;}
-.txtT, .data .txtT td, .data .txtT th{vertical-align:top;}
-.txtB, .data .txtB td, .data .txtB th{vertical-align:bottom;}
-.txtM, .data .txtM td, .data .txtM th{vertical-align:middle;}
-.data th,.data td{padding:3px 20px}
-.data thead tr{background-color: #fff0f8;}
-.data th{color: #000; font-weight:bold}
-/* specification table - extends data table */
-.spec{padding:10px;}
-.spec table{border-top: 1px solid #e2e2e2; border-bottom-color:#fff; border-left:none; border-right:none;}
-.spec th, .spec td{border:1px solid #e2e2e2; border-width: 1px 0; padding-left:0;}
-.spec .odd, .spec .even{background-color: #fff;}
 /* ====== blockquote ====== */
 cite{display:block; text-align:right; padding-top: 10px;}
 /* ====== callout ====== */
@@ -64,10 +46,5 @@ cite{display:block; text-align:right; padding-top: 10px;}
 1. find a way to capture the width of the caption in the width of the image or flash
 2. Set some default widths, mby use flickr widths?
 */
-/* ====== media ====== */
-.media{overflow:hidden; overflow:visible; zoom:1;margin:10px;}
-.media .img{float:left;margin-right: 10px;}
-.media .img img{display:block;}
-.media .imgExt{float:right; margin-left: 10px;}
 /* ====== special formatting classes ====== */
 .detail{color: #777; font-size:11px;display:block;}

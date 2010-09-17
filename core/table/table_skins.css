@@ -1,0 +1,11 @@
+/* simple table @extends data table */
+.simpleTable{padding: 20px;/* doesn't this break stuff??? ok for win & mac on Safari, FF, chrome, opera. OK on IE6/7/8.   */ }
+.simpleTable table{border:1px solid #AE0345;}
+.simpleTable th, .simpleTable td{border:1px solid #AE0345;}
+.simpleTable thead tr{background-color: #fff0f8;}
+.simpleTable th{color: #000; font-weight:bold}
+/* specification table @extends data table */
+.spec{padding:10px;}
+.spec table{border-top: 1px solid #e2e2e2; border-bottom-color:#fff; border-left:none; border-right:none;}
+.spec th, .spec td{border:1px solid #e2e2e2; border-width: 1px 0; padding-left:0;}
+.spec .odd, .spec .even{background-color: #fff;}

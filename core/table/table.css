@@ -1,0 +1,18 @@
+/** 
+ * Data Table 
+ * Allows you to align various table cells so that the alignment class can be placed on either the table, table row, or table cell 
+ * Cell takes precedence over table row and table
+ * Table row takes precedence over table
+ */
+.data{position:relative; zoom:1;vertical-align: top;text-align: left; /*border-right:solid 1px transparent;*//* border fixes a FF2 bug which causes the data table to overlay its borders*/}
+.data table {width:100%; table-layout:fixed;}
+th, td{/*vertical-align:top;*/}
+/* horizontal alignment */
+.txtC, table .txtC td, table .txtC th, .data .txtC th, .data .txtC td{text-align:center;}
+.txtL, table .txtL td, table .txtL th, .data .txtL th, .data .txtL td{text-align:left;}
+.txtR, table .txtR td, table .txtR th, .data .txtR th, .data .txtR td{text-align:right;}
+/* vertical alignment */
+.txtT, table .txtT td, table .txtT th, .data .txtT th, .data .txtT td{vertical-align:top;}
+.txtB, table .txtB td, table .txtB th, .data .txtB th, .data .txtB td{vertical-align:bottom;}
+.txtM, table .txtM td, table .txtM th, .data .txtM th, .data .txtM td{vertical-align:middle;}
+.data th,.data td{padding:3px 20px}
