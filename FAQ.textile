@@ -3,7 +3,7 @@ Whoa, you have lots of questions! I'd better start recording the answers if I wa
 
 <h2 id="whatIsAnObject">What is meant by an "object" in OOCSS?</h2>
 
-In keeping with the OO metaphor, an object is analogous with a class in, e.g., Java or PHP.
+In keeping with the OO metaphor, an object is analogous with an instance of Java or PHP class, for example (though the "granularity is different!":http://www.stubbornella.org/content/2010/06/21/css-granularity-architecture/)
 
 A CSS object consists of four things:
 # HTML, which can be one or more nodes of the DOM,
