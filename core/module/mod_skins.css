@@ -92,9 +92,9 @@
 .login .inner{background: url(skin/universe_login.png) repeat left top;}
 .comment .inner{background:#e2e2e2 none;}
 /* ====== Block headers and footers ====== */
-.hd h1, .hd h2, .hd h3, .hd h4, .hd h5, .hd h6{padding: 5px 10px;}
-.section{background: #e9e9e9 url(skin/header.png) repeat-x left bottom; color:#de2c72;font-size:120%;padding:5px 10px;}
-.section h1,.section h2,.section h3,.section h4,.section h5,.section h6{font-size:100%;color:#de2c72;padding:0;}
+/*.hd h1, .hd h2, .hd h3, .hd h4, .hd h5, .hd h6{padding: 5px 10px;}*/
+.section{background: #e9e9e9 url(skin/header.png) repeat-x left bottom; color:#de2c72;font-size:120%;/*padding:5px 10px;*/}
+.section h1,.section h2,.section h3,.section h4,.section h5,.section h6{font-size:100%;color:#de2c72;/*padding:0;*/}
 .act{background-color:#e9e9e9;}
 .topper{background: #fff url(skin/header_gradient_light.png) repeat-x left bottom;color: #4D4D4D;font-size:120%;padding:5px 10px;}
 .topper h1,.topper h2,.topper h3,.topper h4,.topper h5,.topper h6{font-size:100%;color:#4D4D4D;padding:0;}

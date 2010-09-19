@@ -1,10 +1,6 @@
 body{font-family:"Myriad Pro","Segoe UI",Helvetica, Arial, sans-serif;}
 /* **************** CONTENT OBJECTS ***************** */
-/* ====== Default spacing ====== */
-h1, h2, h3, h4, h5, h6, ul, ol,dl, p,blockquote {padding:10px;}
-h1, h2, h3, h4, h5, h6,img{padding-bottom:0px;}
-pre{margin: 10px;}
-table h1,table h2,table h3, table h4, table h5, table h6, table p, table ul, table ol, table dl{padding:0;}
+
 /* ====== Elements ====== */
 img{display:block;}
 em{font-style: italic;}
@@ -38,3 +34,5 @@ cite{display:block; text-align:right; padding-top: 10px;}
 */
 /* ====== special formatting classes ====== */
 .detail{color: #777; font-size:11px;display:block;}
+/* ====== images ====== */
+.icon{margin-right: 5px;}

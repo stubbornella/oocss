@@ -7,7 +7,7 @@ version: 0.2
 /* mod */
 .mod{margin:10px;}
 .mod .inner{/*background: url(skin/transparent.png) repeat left top;*/}
-.inner,.bd,.ft{*zoom:1;}
+.bd,.ft, .hd{display: inline-block; width:100%; *display:block; *width:auto; zoom:1;}
 .inner:after,.hd:after,.bd:after,.ft:after{clear:both;display:block;visibility:hidden;overflow:hidden;height:0 !important;line-height:0;font-size:xx-large;content:" x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";}
 .inner{position:relative;}
 b{display:block;background-repeat:no-repeat;font-size:1%;position:relative;z-index:10;}
