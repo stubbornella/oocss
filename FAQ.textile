@@ -244,6 +244,10 @@ This is appropriate use of the cascade because the sub-node is really part of th
 .myModule .inner { ... }
 </pre>
 
+<h2 id="codeReview">Do you have an example of a website built with OOCSS?</h2>
+
+There is a in-depth code review of a website made with OOCSS in the OOCSS Google Group. The *link to the demo has moved* to <a href="http://waltschmidt.com/v2">http://waltschmidt.com/v2</a>. You can also <a href="http://groups.google.com/group/object-oriented-css/browse_thread/thread/be6cab782afa2fcf">read the full thread</a> (including the code review). Thanks to Walt for his permission to use his "first stab" as an example.
+
 <h2 id="getInvolved">How can I help?</h2>
 
 The best way to get involved is to start using the code (libraries, grids, fonts) and <a href="http://stubbornella.lighthouseapp.com/projects/26663-object-oriented-css/tickets">submit bug reports and feature requests</a>.  I also started a <a href="http://groups.google.com/group/object-oriented-css">OOCSS google group</a> to facilitate discussion that is more complex than 140 twitter chars allows.
