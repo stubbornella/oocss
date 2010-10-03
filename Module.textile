@@ -129,5 +129,10 @@ Inspired by Leslie Sommers mojo blocks.
 
 <p>Be careful not to choose classes linked to the display of the object (e.g. big blue borders).  The client *will* change their mind, you'll have classes which no longer correlate to actual display.</p>
 
+<h2>How to decide when to use Modules</h2>
+<p>Deciding when to use Modules can be confusing. As a rule of thumb, if you are marking up an element on the page that conveys relevant information to the user by itself (e.g. breadcrumbs), you do not need a module. This is a good example for a content object. However, if you are marking up a container that conveys *no relevant information on its own* (e.g. tabs) and would only make sense to use when you place content objects in it, then you could mark it up as a module.</p>
+
+<p>So you could ask "_Is this element conveying any relevant information to the user?_". A container is never useful information to the user on its own; only the content elements within it convey reasonable information to the user. So if your answer to the question is "_No_", you could use a module.</p>
+
 <h2>Thanks</h2>
 <p>Great feedback, bug reports,etc. Chris Griego, Jordan LaMons, Arnaud Gueras (as usual), Ryan Grove, Nicholas Zakas, Peter Ellenhauge, Chris Eppstein, Vinod Kerkar, Carsten, Dan H, Cindy Li, etc.</p>
