@@ -1,4 +1,4 @@
-.breadcrumb li{ display: inline;}
-.breadcrumb li:after{ content: "\25B8"; display: inline-block; padding: 0 6px 0 10px;}
-.breadcrumb li:last-child:after{content: "";}
-.breadcrumb a {color: #2c4460 !important;}
+.oo-breadcrumb li{ display: inline;}
+.oo-breadcrumb li:after{ content: "\25B8"; display: inline-block; padding: 0 6px 0 10px;}
+.oo-breadcrumb li:last-child:after{content: "";}
+.oo-breadcrumb a {color: #2c4460 !important;}

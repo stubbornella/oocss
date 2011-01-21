@@ -1,11 +1,11 @@
 /* debug modules */
-.top, .bottom{background-color:#e2e2e2;}
-.tl{background-color:red;}
-.tr{background-color:orange;}
-.bl{background-color:yellow;}
-.br{background-color:lime;}
-/*.hd{background-color: green;}
-.bd{background-color: teal;}
-.ft{background-color: blue;}*/
-.mod{background-color:purple;}
-.inner{background-color:#E20074;}
+.oo-top, .oo-bottom{background-color:#e2e2e2;}
+.oo-tl{background-color:red;}
+.oo-tr{background-color:orange;}
+.oo-bl{background-color:yellow;}
+.oo-br{background-color:lime;}
+/*.oo-hd{background-color: green;}
+.oo-bd{background-color: teal;}
+.oo-ft{background-color: blue;}*/
+.oo-mod{background-color:purple;}
+.oo-inner{background-color:#E20074;}

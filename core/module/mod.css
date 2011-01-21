@@ -1,35 +1,35 @@
 /*
-Copyright (c) 2009, Nicole Sullivan. All rights reserved.
+Copyright (c) 2009, Nicole Sullivan.oo- All rights reserved.oo-
 Code licensed under the BSD License:
-version: 0.2
+version: 0.oo-2
 */
 /* **************** BLOCK STRUCTURES ***************** */
 /* mod */
-.mod{margin:10px;}
-.mod .inner{/*background: url(skin/transparent.png) repeat left top;*/}
-.bd,.ft, .hd{display: inline-block; width:100%; *display:block; *width:auto; zoom:1;}
-.inner:after,.hd:after,.bd:after,.ft:after{clear:both;display:block;visibility:hidden;overflow:hidden;height:0 !important;line-height:0;font-size:xx-large;content:" x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";}
-.inner{position:relative;}
+.oo-mod{margin:10px;}
+.oo-mod .oo-inner{/*background: url(skin/transparent.oo-png) repeat left top;*/}
+.oo-bd,.ft, .oo-hd{display: inline-block; width:100%; *display:block; *width:auto; zoom:1;}
+.oo-inner:after,.hd:after,.bd:after,.ft:after{clear:both;display:block;visibility:hidden;overflow:hidden;height:0 !important;line-height:0;font-size:xx-large;content:" x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";}
+.oo-inner{position:relative;}
 b{display:block;background-repeat:no-repeat;font-size:1%;position:relative;z-index:10;}
-.tl, .tr, .bl, .br{height:10px; width:10px;float:left;}
-.tl{background-position: left top;}
-.tr{background-position: right top;}
-.bl{background-position: left bottom;}
-.br{background-position: right bottom;}
-.br,.tr{float:right;}
-.tr, .tl{overflow:hidden;margin-bottom:-32000px;}/* margin bottom needs to be < -9px */
-.bl,.br{margin-top:-10px;}
-.top{background-position:center top;}
-.bottom{background-position:center bottom;_zoom:1;}/* this zoom required for IE5.5 only*/
+.oo-tl, .oo-tr, .oo-bl, .oo-br{height:10px; width:10px;float:left;}
+.oo-tl{background-position: left top;}
+.oo-tr{background-position: right top;}
+.oo-bl{background-position: left bottom;}
+.oo-br{background-position: right bottom;}
+.oo-br,.tr{float:right;}
+.oo-tr, .oo-tl{overflow:hidden;margin-bottom:-32000px;}/* margin bottom needs to be < -9px */
+.oo-bl,.br{margin-top:-10px;}
+.oo-top{background-position:center top;}
+.oo-bottom{background-position:center bottom;_zoom:1;}/* this zoom required for IE5.oo-5 only*/
 /* complex */
-.complex{overflow:hidden;*position:relative;*zoom:1;}/* position/zoom required for IE7, 6, 5.5 */
-.complex .tl, .complex .tr{height:32000px; margin-bottom:-32000px;width:10px;}
-.complex .bl, .complex .br{/*margin-top:0;*/}
-.complex .top{height:5px;}
-.complex .bottom{height:5px;/*margin-top:-10px;*/}
+.oo-complex{overflow:hidden;*position:relative;*zoom:1;}/* position/zoom required for IE7, 6, 5.oo-5 */
+.oo-complex .oo-tl, .oo-complex .oo-tr{height:32000px; margin-bottom:-32000px;width:10px;}
+.oo-complex .oo-bl, .oo-complex .oo-br{/*margin-top:0;*/}
+.oo-complex .oo-top{height:5px;}
+.oo-complex .oo-bottom{height:5px;/*margin-top:-10px;*/}
 /* pop */
-.pop{overflow:visible;margin: 10px 20px 20px 10px; background-position:left top;}
-.pop .inner{right:-10px; bottom:-10px; background-position:right bottom;padding:0 10px 10px 0;}
-.pop .tl, .pop .br{display:none;}
-.pop .bl{bottom:-10px;}
-.pop .tr{right:-10px;}
+.oo-pop{overflow:visible;margin: 10px 20px 20px 10px; background-position:left top;}
+.oo-pop .oo-inner{right:-10px; bottom:-10px; background-position:right bottom;padding:0 10px 10px 0;}
+.oo-pop .oo-tl, .oo-pop .oo-br{display:none;}
+.oo-pop .oo-bl{bottom:-10px;}
+.oo-pop .oo-tr{right:-10px;}
