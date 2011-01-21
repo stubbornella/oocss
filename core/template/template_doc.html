@@ -14,7 +14,7 @@ pre{padding: 20px;background-color: #FCF8BC;overflow:auto;width:auto;}
 <h1>Template</h1>
 <p>Templates are used to solve common design patterns for page templates. Using these templates you can build pages which have a <strong>header</strong>, <strong>footer</strong>, <strong>left</strong> and <strong>right columns</strong>, and a <strong>main content area</strong>. Any of the sections can be broken up via <a href="grids_docs.html">grids</a>. You can also use grids instead of columns. The main column is fully liquid, taking up all the rest of the space when the left column and right column have been rendered.</p>
 <h2>Base Classes</h2>
-<div class="data">
+<div class="oo-data">
 <table>
 	<thead>
 		<tr>
@@ -23,55 +23,55 @@ pre{padding: 20px;background-color: #FCF8BC;overflow:auto;width:auto;}
 		</tr>
 	</thead>
 	<tbody>
-	<tr class="odd">
+	<tr class="oo-odd">
 		<th scope="row"><code>page</code></th>
 		<td>Main wraps site content. It can be extended via the classes <code>oldSchool</code> and <code>liquid</code> to provide 750px and full width layouts respectively.</td>
 	</tr>
-	<tr class="even">
+	<tr class="oo-even">
 		<th scope="row"><code>head</code></th>
 		<td>Site header, generally contains custom code. (e.g. horizontal navigation, logo, search box)</td>
 	</tr>
-	<tr class="odd">
+	<tr class="oo-odd">
 		<th scope="row"><code>body</code></th>
 		<td>Main content area, body of the page.</td>
 	</tr>
-	<tr class="even">
+	<tr class="oo-even">
 		<th scope="row"><code>foot<strong></strong></code></th>
 		<td>Site footer, generally contains custom code.</td>
 	</tr>
-	<tr class="odd">
+	<tr class="oo-odd">
 		<th scope="row"><code>main</code></th>
 		<td>Creates a main content area, often the center column. Fully liquid, it takes all remaining space when left and right columns have been rendered. You may have 1 main columns.</td>
 	</tr>
-	<tr class="odd">
+	<tr class="oo-odd">
 		<th scope="row"><code>leftCol</code></th>
 		<td>Creates a left column, default width is 250px. Extended by <code>gMail</code>, <code>gCal</code>, <code>yahoo</code>, and <code>myYahoo</code> to create widths of 160px, 180px, 240px, and 300px respectively. You may have 0-n left columns.</td>
 	</tr>
-	<tr class="even">
+	<tr class="oo-even">
 		<th scope="row"><code>rightCol</code></th>
 		<td>Creates a right column, default width is 250px. Extended by <code>gMail</code>, <code>gCal</code>, <code>yahoo</code>, and <code>myYahoo</code> to create widths of 160px, 180px, 240px, and 300px respectively. You may have 0-n right columns.</td>
 	</tr>
-	<tr class="odd">
+	<tr class="oo-odd">
 		<th scope="row"><code>gMail</code></th>
 		<td>Extends <code>leftCol</code> and <code>rightCol</code> to create a <strong>160px</strong> column width.</td>
 	</tr>
-	<tr class="even">
+	<tr class="oo-even">
 		<th scope="row"><code>gCal</code></th>
 		<td>Extends <code>leftCol</code> and <code>rightCol</code> to create a <strong>180px</strong> column width.</td>
 	</tr>
-	<tr class="even">
+	<tr class="oo-even">
 		<th scope="row"><code>yahoo</code></th>
 		<td>Extends <code>leftCol</code> and <code>rightCol</code> to create a <strong>240px</strong> column width.</td>
 	</tr>
-	<tr class="odd">
+	<tr class="oo-odd">
 		<th scope="row"><code>myYahoo</code></th>
 		<td>Extends <code>leftCol</code> and <code>rightCol</code> to create a <strong>300px</strong> column width.</td>
 	</tr>
-	<tr class="odd">
+	<tr class="oo-odd">
 		<th scope="row"><code>oldSchool</code></th>
 		<td>Extends <code>page</code> to create a <strong>750px</strong> layout.</td>
 	</tr>
-	<tr class="even">
+	<tr class="oo-even">
 		<th scope="row"><code>liquid</code></th>
 		<td>Extends <code>page</code> to create a <strong>full-width</strong> liquid layout.</td>
 	</tr>
