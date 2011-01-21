@@ -1,6 +1,6 @@
 /* table debug */
-.data{background-color: #FF3300}
-.data table{background-color:#FF6600;}
-.data tr{background-color: #FF9900;}
-.data th{background-color:#FFCC00;}
-.data td{ background-color:#FFFF00;}
+.oo-data{background-color: #FF3300}
+.oo-data table{background-color:#FF6600;}
+.oo-data tr{background-color: #FF9900;}
+.oo-data th{background-color:#FFCC00;}
+.oo-data td{ background-color:#FFFF00;}

@@ -4,15 +4,15 @@
  * Cell takes precedence over table row and table
  * Table row takes precedence over table
  */
-.data{position:relative; zoom:1;vertical-align: top;text-align: left; /*border-right:solid 1px transparent;*//* border fixes a FF2 bug which causes the data table to overlay its borders*/}
-.data table {width:100%; table-layout:fixed;}
+.oo-data{position:relative; zoom:1;vertical-align: top;text-align: left; /*border-right:solid 1px transparent;*//* border fixes a FF2 bug which causes the data table to overlay its borders*/}
+.oo-data table {width:100%; table-layout:fixed;}
 th, td{/*vertical-align:top;*/}
 /* horizontal alignment */
-.txtC, table .txtC td, table .txtC th, .data .txtC th, .data .txtC td{text-align:center;}
-.txtL, table .txtL td, table .txtL th, .data .txtL th, .data .txtL td{text-align:left;}
-.txtR, table .txtR td, table .txtR th, .data .txtR th, .data .txtR td{text-align:right;}
+.oo-txtC, table .oo-txtC td, table .oo-txtC th, .oo-data .oo-txtC th, .oo-data .oo-txtC td{text-align:center;}
+.oo-txtL, table .oo-txtL td, table .oo-txtL th, .oo-data .oo-txtL th, .oo-data .oo-txtL td{text-align:left;}
+.oo-txtR, table .oo-txtR td, table .oo-txtR th, .oo-data .oo-txtR th, .oo-data .oo-txtR td{text-align:right;}
 /* vertical alignment */
-.txtT, table .txtT td, table .txtT th, .data .txtT th, .data .txtT td{vertical-align:top;}
-.txtB, table .txtB td, table .txtB th, .data .txtB th, .data .txtB td{vertical-align:bottom;}
-.txtM, table .txtM td, table .txtM th, .data .txtM th, .data .txtM td{vertical-align:middle;}
-.data th,.data td{padding:3px 20px}
+.oo-txtT, table .oo-txtT td, table .oo-txtT th, .oo-data .oo-txtT th, .oo-data .oo-txtT td{vertical-align:top;}
+.oo-txtB, table .oo-txtB td, table .oo-txtB th, .oo-data .oo-txtB th, .oo-data .oo-txtB td{vertical-align:bottom;}
+.oo-txtM, table .oo-txtM td, table .oo-txtM th, .oo-data .oo-txtM th, .oo-data .oo-txtM td{vertical-align:middle;}
+.oo-data th,.oo-data td{padding:3px 20px}
