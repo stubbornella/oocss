@@ -10,13 +10,13 @@
 /* ----- simpleExt (extends mod) ----- */
 .oo-simpleExt,.simpleExt .oo-inner{border:1px solid #c7c7c7;-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px; }
 .oo-simpleExt .oo-inner{border-color:#fff; border-width:4px; background-color:#e2e2e2;}
-.oo-simpleExt b{*background-image:url(skin/simple_extended.oo-png);}
+.oo-simpleExt b{*background-image:url(skin/simple_extended2.png);}
 .oo-simpleExt .oo-tl{left:-1px;top:-1px;height:12px; width:12px;}
-.oo-simpleExt .oo-tr{right:-1px;top:-1px;height:12px; width:12px;}
+.oo-simpleExt .oo-tr{right:-1px;top:-1px;height:12px; width:12px;*position: absolute}
 .oo-simpleExt .oo-bl{left:-1px;bottom:-1px;height:12px; width:12px;margin-top:-12px;}
 .oo-simpleExt .oo-br{right:-1px;bottom:-1px;height:12px; width:12px;margin-top:-12px;}
 /* ----- me (extends mod) use for my comments ----- */
-.oo-me,.me .oo-inner{border:1px solid #909090;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
+.oo-me,.oo-me .oo-inner{border:1px solid #909090;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
 .oo-me .oo-inner{border-color:#d76a84;}
 .oo-me b{*background-image:url(skin/me.oo-png);}
 .oo-me .oo-tl{left:-1px;top:-1px;}
