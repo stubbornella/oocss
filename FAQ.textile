@@ -15,11 +15,11 @@ This can be confusing because each CSS class is not necessarily an object in its
 
 For example:
 
-<pre><code><div class=”mod”>
-        <div class=”inner”>
-                <div class=”hd”>Block Head</div>
-                <div class=”bd”>Block Body</div>
-                <div class=”ft”>Block Foot</div>
+<pre><code><div class="mod">
+        <div class="inner">
+                <div class="hd">Block Head</div>
+                <div class="bd">Block Body</div>
+                <div class="ft">Block Foot</div>
         </div>
 </div></code></pre>
 
