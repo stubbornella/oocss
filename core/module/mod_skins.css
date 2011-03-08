@@ -3,14 +3,14 @@
 /* remove background-image:" to default to square corners for IE */
 /* ----- simple (extends mod) ----- */
 .simple .inner {border:1px solid #D7D7D7;-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px;}
-.simple b{*background-image:url(skin/simple_corners.png);}
+.simple b{background-image:url(skin/simple_corners.png)\9;}
 /* ----- basic (extends mod) ----- */
 .basic .inner {-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px;}
-.basic b{*background-image:url(skin/round.png);}
+.basic b{background-image:url(skin/round.png)\9;}
 /* ----- simpleExt (extends mod) ----- */
 .simpleExt,.simpleExt .inner{border:1px solid #c7c7c7;-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px; }
 .simpleExt .inner{border-color:#fff; border-width:4px; background-color:#e2e2e2;}
-.simpleExt b{*background-image:url(skin/simple_extended.png);}
+.simpleExt b{background-image:url(skin/simple_extended.png)\9;}
 .simpleExt .tl{left:-1px;top:-1px;height:12px; width:12px;}
 .simpleExt .tr{right:-1px;top:-1px;height:12px; width:12px;}
 .simpleExt .bl{left:-1px;bottom:-1px;height:12px; width:12px;margin-top:-12px;}
@@ -18,7 +18,7 @@
 /* ----- me (extends mod) use for my comments ----- */
 .me,.me .inner{border:1px solid #909090;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
 .me .inner{border-color:#d76a84;}
-.me b{*background-image:url(skin/me.png);}
+.me b{background-image:url(skin/me.png)\9;}
 .me .tl{left:-1px;top:-1px;}
 .me .tr{right:-1px;top:-1px;}
 .me .bl{left:-1px;bottom:-1px;}
@@ -26,7 +26,7 @@
 /* ----- noted (extends mod) ----- */
 .noted,.noted .inner{border:1px solid #c2c2c2;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
 .noted .inner{border-color:#eded68;}
-.noted b{*background-image:url(skin/noted.png);}
+.noted b{background-image:url(skin/noted.png)\9;}
 .noted .tl{left:-1px;top:-1px;}
 .noted .tr{right:-1px;top:-1px;}
 .noted .bl{left:-1px;bottom:-1px;}
@@ -51,7 +51,7 @@
 /* ----- talk (extends mod) ----- */
 .talk,.talk .inner{border:1px solid #c7c7c7;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
 .talk .inner{border-color:#ededed;}
-.talk b{*background-image:url(skin/talk.png);}
+.talk b{background-image:url(skin/talk.png)\9;}
 .talk .tl{left:-1px;top:-1px;}
 .talk .tr{right:-1px;top:-1px;}
 .talk .bl{left:-1px;bottom:-1px;}
