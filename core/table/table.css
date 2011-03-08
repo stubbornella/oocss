@@ -8,11 +8,11 @@
 .data table {width:100%; table-layout:fixed;}
 th, td{/*vertical-align:top;*/}
 /* horizontal alignment */
-.txtC, .txtC td, .txtC th, .data .txtC th, .data .txtC td{text-align:center;}
-.txtL, .txtL td, .txtL th, .data .txtL th, .data .txtL td{text-align:left;}
-.txtR, .txtR td, .txtR th, .data .txtR th, .data .txtR td{text-align:right;}
+.txtC, table .txtC, table tr .txtC{text-align:center;}
+.txtL, table .txtL, table tr .txtL{text-align:left;}
+.txtR, table .txtR, table tr .txtR{text-align:right;}
 /* vertical alignment */
-.txtT, .txtT td, .txtT th, .data .txtT th, .data .txtT td{vertical-align:top;}
-.txtB, .txtB td, .txtB th, .data .txtB th, .data .txtB td{vertical-align:bottom;}
-.txtM, .txtM td, .txtM th, .data .txtM th, .data .txtM td{vertical-align:middle;}
+.txtT, table .txtT, table tr .txtT{vertical-align:top;}
+.txtB, table .txtB, table tr .txtB{vertical-align:bottom;}
+.txtM, table .txtM, table tr .txtM{vertical-align:middle;}
 .data th,.data td{padding:3px 20px}
