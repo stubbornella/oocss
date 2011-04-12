@@ -1,6 +1,6 @@
 .line:after,.lastUnit:after{clear:both;display:block;visibility:hidden;overflow:hidden;height:0 !important;line-height:0;font-size:xx-large;content:" x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";}
 .line{*zoom:1;}
-.unit{float:left;}
+.size1of1,.size1of2,.size1of3,.size2of3,.size1of4,.size3of4,.size1of5,.size2of5,.size3of5,.size4of5{float:left;}
 .size1of1{float:none;}
 .size1of2{width:50%;}
 .size1of3{width:33.33333%;}
