@@ -11,4 +11,10 @@
 .size2of5{width:40%;}
 .size3of5{width:60%;}
 .size4of5{width:80%;}
+.size1of7{width:14.2857143%;}
+.size2of7{width:28.5714286%;}
+.size3of7{width:42.8571429%;}
+.size4of7{width:57.1428572%;}
+.size5of7{width:71.4285715%;}
+.size6of7{width:85.7142858%;}
 .lastUnit{display:table-cell;float:none;width:auto;*display:block;*zoom:1;_position:relative;_left:-3px;_margin-right:-3px;}
