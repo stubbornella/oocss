@@ -12,3 +12,8 @@
 .size3of5{width:60%;}
 .size4of5{width:80%;}
 .lastUnit{display:table-cell;float:none;width:auto;*display:block;*zoom:1;_position:relative;_left:-3px;_margin-right:-3px;}
+
+.rtl {direction:rtl;}
+.rtl .line{*zoom:1;}
+.rtl .unit{float:right;}
+.rtl .lastUnit{_right:-3px;_margin-left:-3px;_margin-right:0; _left:0;} 
