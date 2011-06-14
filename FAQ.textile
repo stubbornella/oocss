@@ -244,6 +244,10 @@ This is appropriate use of the cascade because the sub-node is really part of th
 .myModule .inner { ... }
 </pre>
 
+<h2 id="leafNode">What is a Leaf Node?</h2>
+
+A <strong>leaf node</strong> is an element that <em>doesn't</em> contain other elements, e.g. <code><strong></code> or sometimes <code><p></code>, *not* sidebar or <code><article></code>.
+
 <h2 id="codeReview">Do you have an example of a website built with OOCSS?</h2>
 
 There is a in-depth code review of a website made with OOCSS in the OOCSS Google Group. The *link to the demo has moved* to <a href="http://waltschmidt.com/v2">http://waltschmidt.com/v2</a>. You can also <a href="http://groups.google.com/group/object-oriented-css/browse_thread/thread/be6cab782afa2fcf">read the full thread</a> (including the code review). Thanks to Walt for his permission to use his "first stab" as an example.
