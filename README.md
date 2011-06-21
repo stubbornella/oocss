@@ -2,7 +2,7 @@
 
 * Split module skins   
 
-## Filestructure Coventions
+## Filestructure Conventions
 
 _Example:_  
 
