@@ -32,4 +32,4 @@ b{display:block;background-repeat:no-repeat;font-size:1%;position:relative;z-ind
 .pop .inner{right:-10px; bottom:-10px; background-position:right bottom;padding:0 10px 10px 0;}
 .pop .tl, .pop .br{display:none;}
 .pop .bl{bottom:-10px;}
-.pop .tr{float:right;margin-right:-10px;_display:inline;/fix double margin bug/}
+.pop .tr{float:right;margin-right:-10px;_display:inline;/*fix double margin bug*/}
