@@ -70,7 +70,7 @@
 .flow .bottom{height:4px;margin-top:-4px;}
 .flow .br,.flow .bl{margin-top:-6px;}/* margin top = bottom height - corner height */
 /* ----- shadow test (experimental attempt to match "flow" cross browser w no img)----- */
-.boo{-webkit-box-shadow: 0px 0px 1px rgba(0,0,0,33);-moz-box-shadow: black 2px 2px 2px 2px;/*-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;*/border:solid 1px #949494;background:#fff;}
+.boo{-webkit-box-shadow: 0px 0px 1px rgba(0,0,0,0.33);-moz-box-shadow: black 2px 2px 2px 2px;/*-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;*/border:solid 1px #949494;background:#fff;}
 /* ----- .excerpt (extends complex) ----- */
 .excerpt b{background-image:url(skin/excerpt.png);}
 .excerpt .top{height:1px;}
