@@ -1,1 +1,1 @@
-@media screen and (max-width: 319px) {.unit{float: none !important; width: auto !important;}}
+@media screen and (max-device-width: 320px) { .unit { float: none !important; width: auto !important; } }
