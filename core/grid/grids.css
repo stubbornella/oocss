@@ -1,6 +1,8 @@
-.line:after,.lastUnit:after{clear:both;display:block;visibility:hidden;overflow:hidden;height:0 !important;line-height:0;font-size:xx-large;content:" x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";}
+.line:before,.line:after{content:"";display:table;}
+.line:after{clear:both;}
 .line{*zoom:1;}
 .unit{float:left;}
+.unitRight{float:right;}
 .size1of1{float:none;}
 .size1of2{width:50%;}
 .size1of3{width:33.33333%;}

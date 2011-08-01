@@ -10,7 +10,7 @@ version: 0.2
 .bd,.ft, .hd{display: inline-block; width:100%; *display:block; *width:auto; zoom:1;}
 .inner:after,.hd:after,.bd:after,.ft:after{clear:both;display:block;visibility:hidden;overflow:hidden;height:0 !important;line-height:0;font-size:xx-large;content:" x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";}
 .inner{position:relative;}
-b{display:block;background-repeat:no-repeat;font-size:1%;position:relative;z-index:10;}
+b.top, b.top b, b.bottom, b.bottom b{display:block;background-repeat:no-repeat;font-size:1%;position:relative;z-index:10;}
 .tl, .tr, .bl, .br{height:10px; width:10px;float:left;}
 .tl{background-position: left top;}
 .tr{background-position: right top;}
@@ -32,4 +32,4 @@ b{display:block;background-repeat:no-repeat;font-size:1%;position:relative;z-ind
 .pop .inner{right:-10px; bottom:-10px; background-position:right bottom;padding:0 10px 10px 0;}
 .pop .tl, .pop .br{display:none;}
 .pop .bl{bottom:-10px;}
-.pop .tr{float:right;margin-right:-10px;_display:inline;/fix double margin bug/}
+.pop .tr{float:right;margin-right:-10px;_display:inline; /*fix double margin bug*/ }
