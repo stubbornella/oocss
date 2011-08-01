@@ -1,0 +1,4 @@
+/* ----- about (extends mod) ----- */
+.about .inner{border: 3px solid #494949; border-bottom-width:10px;}/* can't be done w border radius */
+.about b{background-image:url(img/about.png);}
+.about .bl, .about .br{height:16px;/*if height is set, margin set*/margin-top:-16px;}

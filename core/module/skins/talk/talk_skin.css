@@ -1,0 +1,8 @@
+/* ----- talk (extends mod) ----- */
+.talk,.talk .inner{border:1px solid #c7c7c7;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
+.talk .inner{border-color:#ededed;}
+.talk b{background-image:url(img/talk.png);}
+.talk .tl{left:-1px;top:-1px;}
+.talk .tr{right:-1px;top:-1px;}
+.talk .bl{left:-1px;bottom:-1px;}
+.talk .br{right:-1px;bottom:-1px;}

@@ -1,0 +1,6 @@
+/* ----- photo (extends complex) ----- */
+.photo .inner{border:solid 10px #fff;margin:0 4px;}/* muck with margins to change how the block will align with other blocks, any value between 0-10px */
+.photo b{background-image:url(img/photo.png);}
+.photo .tr, .photo .tl{width:20px;}
+.photo .top, .photo .bottom{height:4px;margin-top:0px;}
+.photo .bl, .photo .br{height:16px;margin-top: -12px;}

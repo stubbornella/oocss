@@ -1,0 +1,4 @@
+/* ----- faq (extends mod) ----- */
+.faq .inner{border: 3px solid #b20029; border-bottom-width:10px;}/* can't be done w border radius */
+.faq b{background-image:url(img/faq.png);}
+.faq .bl, .faq .br{height:16px;/*if height is set, margin set*/margin-top:-16px;}

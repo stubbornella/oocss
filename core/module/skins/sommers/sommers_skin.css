@@ -1,0 +1,4 @@
+/* ----- sommers (extends pop) ----- */
+.sommers .inner{_border:3px solid #D7D7D7;}/*IE6 backup no alpha transparency */
+.sommers,.sommers .inner,.sommers b{background-image:url(img/glow_7px.png);_background-image:none;}
+.sommers{margin:3px 20px 20px 3px;}

@@ -1,0 +1,8 @@
+/* ----- me (extends mod) use for my comments ----- */
+.me,.me .inner{border:1px solid #909090;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
+.me .inner{border-color:#d76a84;}
+.me b{background-image:url(img/me.png);}
+.me .tl{left:-1px;top:-1px;}
+.me .tr{right:-1px;top:-1px;}
+.me .bl{left:-1px;bottom:-1px;}
+.me .br{right:-1px;bottom:-1px;}

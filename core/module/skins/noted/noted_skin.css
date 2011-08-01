@@ -1,0 +1,8 @@
+/* ----- noted (extends mod) ----- */
+.noted,.noted .inner{border:1px solid #c2c2c2;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
+.noted .inner{border-color:#eded68;}
+.noted b{background-image:url(img/noted.png);}
+.noted .tl{left:-1px;top:-1px;}
+.noted .tr{right:-1px;top:-1px;}
+.noted .bl{left:-1px;bottom:-1px;}
+.noted .br{right:-1px;bottom:-1px;}

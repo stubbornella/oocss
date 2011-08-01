@@ -1,0 +1,5 @@
+/* ----- grab (extends mod) ----- */
+.grab .inner{border: 3px solid #00477a; border-bottom-width:10px;}/* can't be done w border radius */
+.grab b{background-image:url(img/grab.png);}
+/*.grab .tl, .grab .tr{height:10px; width:10px;}*/
+.grab .bl, .grab .br{height:16px;/*if height is set, margin set*/margin-top:-16px;}

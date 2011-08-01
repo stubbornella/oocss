@@ -1,0 +1,3 @@
+/* ----- simple (extends mod) ----- */
+.simple .inner {border:1px solid #D7D7D7;-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px;}
+.simple b{background-image:url(img/simple_corners.png);}

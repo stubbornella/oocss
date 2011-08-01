@@ -1,0 +1,4 @@
+/* ----- onlinestore (extends mod) ----- */
+.onlinestore .inner{border: 3px solid #9a9800; border-bottom-width:10px;}/* can't be done w border radius */
+.onlinestore b{background-image:url(img/store.png);}
+.onlinestore .bl, .onlinestore .br{height:16px;/*if height is set, margin set*/margin-top:-16px;}

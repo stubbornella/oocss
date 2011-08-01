@@ -1,0 +1,6 @@
+.topper{background: #fff url(img/header_gradient_light.png) repeat-x left bottom;color: #4D4D4D;font-size:120%;padding:5px 10px;}
+.topper h1,.topper h2,.topper h3,.topper h4,.topper h5,.topper h6{font-size:100%;color:#4D4D4D;padding:0;}
+.tabPosLeft .topper li,.tabPosRight .topper li{background: #fff url(img/header_gradient_light.png) repeat-x left bottom;/* belongs in topper */}
+.tabPosBottom .topper{
+  background-image:-webkit-gradient(linear, 0% 0%, 0% 40%, from(#E2E2E2), to(#FFFFFF));
+  background-image:-moz-linear-gradient(0% 8% 270deg, #E2E2E2, #FFFFFF, #FFFFFF 77%);}

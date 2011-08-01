@@ -1,0 +1,5 @@
+/* ----- .excerpt (extends complex) ----- */
+.excerpt b{background-image:url(img/excerpt.png);}
+.excerpt .top{height:1px;}
+.excerpt .bottom{height:6px;margin-top:-6px;}/* margin top equal to - height of bottom */
+.excerpt .br,.excerpt .bl{height:12px;margin-top:-6px;}/* margin top = bottom height - corner height */
