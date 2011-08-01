@@ -1,13 +1,23 @@
 <h1>Object Oriented CSS</h1>
 <div style="width:350px;text-align:left;float:left;" id="__ss_990405"><object style="margin:0px" width="350" height="300"><param name="movie" value="http://static.slideshare.net/swf/ssplayer2.swf?doc=oocss-1233786987806904-3&stripped_title=object-oriented-css" /><param name="allowFullScreen" value="true"/><param name="allowScriptAccess" value="always"/><embed src="http://static.slideshare.net/swf/ssplayer2.swf?doc=oocss-1233786987806904-3&stripped_title=object-oriented-css" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="350" height="300"></embed></object></div>
 <div style="overflow:hidden; _overflow:visible; zoom:1; padding-left: 20px;">
-How do you scale CSS for thousands of pages? Nicole first presented Object Oriented CSS at Web Directions North in Denver. Since then, the response has been overwhelming. OOCSS allows you to write fast, maintainable, standards-based front end code. It adds much needed predictability to CSS so that even beginners can participate in writing beautiful websites.
+How do you scale CSS for thousands of pages? Object Oriented CSS is an answer. It's an approach for writing CSS that's fast, maintainable, and standards-based. It adds much needed predictability to CSS so that even beginners can participate in writing beautiful websites. Nicole Sullivan first presented it at Web Directions North in Denver and the response has been overwhelming.
 
-<h3>Two main principles</h3>
+This Github project is for the OOCSS framework—a collection of code that's built using the OOCSS approach and is meant to help you get started. However, the framework is not the same thing as the OOCSS idea. (Confusingly though, they have the same name...that'll probably change.)
 
-# Separate structure and skin 
-# Separate container and content 
+<h3>What's a CSS Object?</h3>
+Basically, an "object" is a reusable concept based on a certain content requirement; objects should be named based on the content they require. In the OOCSS framework, for instance, the "media object":https://github.com/stubbornella/oocss/wiki/Content#template describes a content block containing a fixed-size media element (e.g. image or video) along with other content of an unknown size (e.g. text). Another example is the "module object":https://github.com/stubbornella/oocss/wiki/Module, which describes a generic content block that has a required body area and optional header and footer areas.
 
+<h3>Two Main Principles of OOCSS</h3>
+<ul>
+<li><h4>Separate structure and skin</h4>
+    <p>In plain terms, this means: use classes to name your objects and their components. For example, the media object is named with @class="media"@, and its components are named with @class="img"@ (for the image/video component) and @class="bd"@ (for the body/text component).</p>
+    <p>By referencing these classes, rather than the HTML elements directly, in your stylesheets, your HTML can be flexible. For instance, if a new media element were to take off in the next few years (e.g. @<svg>@), it could be integrated into the HTML without having to touch the CSS.</p>
+
+<li><h4>Separate container and content</h4>
+<p>Essentially, this means: rarely use location-dependent styles. An object should look the same no matter where you put it. So instead of styling a specific @<h2>@ with @.myObject h2 {...}@, create and apply a class that describes the @<h2>@ in question, like @<h2 class="category">@. This gives you the assurance that: 1) all unclassed @<h2>@s will look the same; 2) all elements with the category class (called a mixin) will look the same; and 3) you won't need to create an override style for the case when you actually do want @.myObject h2@ to look like the normal @<h2>@.</p>
+</li>
+</ul>
 </div>
 
 <h2>Getting Started</h2>
