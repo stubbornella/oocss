@@ -12,7 +12,7 @@ Basically, an "object" is a reusable concept based on a certain content requirem
 <ul>
 <li><h4>Separate structure and skin</h4>
     <p>This means to define repeating visual features (like background and border styles) as separate "skins" that you can mix-and-match with your various objects to achieve a large amount of visual variety without much code. See the "module object":https://github.com/stubbornella/oocss/wiki/Module and "its skins":https://github.com/stubbornella/oocss/wiki/Module-Skins.</p>
-    <p>Separating structure and skin can also mean to use classes to name your objects and their components, rather than relying solely on the semantics of HTML. For example, the media object is named with @class="media"@, and its components are named with @class="img"@ (for the image/video component) and @class="bd"@ (for the body/text component).</p>
+    <p>Separating structure and skin can also mean using classes to name your objects and their components, rather than relying solely on the semantics of HTML. For example, the media object is named with @class="media"@, and its components are named with @class="img"@ (for the image/video component) and @class="bd"@ (for the body/text component).</p>
     <p>By referencing these classes in your stylesheets, rather than, say an @<img>@ element directly, your HTML can be flexible. For instance, if a new media element were to take off in the next few years (e.g. @<svg>@), it could be integrated into the HTML without having to touch the CSS.</p>
 
 <li><h4>Separate container and content</h4>
