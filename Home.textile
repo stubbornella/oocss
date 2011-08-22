@@ -1,41 +1,57 @@
 <h1>Object Oriented CSS</h1>
-<div style="width:350px;text-align:left;float:left;" id="__ss_990405"><object style="margin:0px" width="350" height="300"><param name="movie" value="http://static.slideshare.net/swf/ssplayer2.swf?doc=oocss-1233786987806904-3&stripped_title=object-oriented-css" /><param name="allowFullScreen" value="true"/><param name="allowScriptAccess" value="always"/><embed src="http://static.slideshare.net/swf/ssplayer2.swf?doc=oocss-1233786987806904-3&stripped_title=object-oriented-css" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="350" height="300"></embed></object></div>
+
+<div style="width:350px;text-align:left;float:left;" id="__ss_990405">
+<object style="margin:0px" width="350" height="300">
+<param 
+name="movie" 
+value="http://static.slideshare.net/swf/ssplayer2.swf?doc=oocss-1233786987806904-3&stripped_title=object-oriented-css" />
+<param name="allowFullScreen" value="true"/>
+<param name="allowScriptAccess" value="always"/>
+<embed src="http://static.slideshare.net/swf/ssplayer2.swf?doc=oocss-1233786987806904-3&stripped_title=object-oriented-css" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="350" height="300"></embed>
+</object></div>
+
 <div style="overflow:hidden; _overflow:visible; zoom:1; padding-left: 20px;">
 How do you scale CSS for thousands of pages? Object Oriented CSS is an answer. It's an approach for writing CSS that's fast, maintainable, and standards-based. It adds much needed predictability to CSS so that even beginners can participate in writing beautiful websites. Nicole Sullivan first presented it at Web Directions North in Denver and the response has been overwhelming.
 
-This Github project is for the OOCSS framework—a collection of code that's built using the OOCSS approach and is meant to help you get started. However, the framework is not the same thing as the OOCSS idea. (Confusingly though, they have the same name...that'll probably change.)
+This Github project is for the OOCSS framework—a collection of code that's built using the OOCSS approach and is meant to help you get started. However, the framework is <em>not</em> the same thing as the OOCSS idea. (Confusingly though, they have the same name...that'll probably change.)
 
 <h3>What's a CSS Object?</h3>
-Basically, an "object" is a reusable concept based on a certain content requirement; objects should be named based on the content they require. In the OOCSS framework, for instance, the "media object":https://github.com/stubbornella/oocss/wiki/Content#template describes a content block containing a fixed-size media element (e.g. image or video) along with other content of an unknown size (e.g. text). Another example is the "module object":https://github.com/stubbornella/oocss/wiki/Module, which describes a generic content block that has a required body area and optional header and footer areas. There's more about objects on "the FAQ page":https://github.com/stubbornella/oocss/wiki/FAQ.
+Basically, a CSS "object" is a reusable concept based on a certain content requirement.  A CSS object's name should be based on the content it requires. 
+
+For instance, in the OOCSS framework the "media object":https://github.com/stubbornella/oocss/wiki/Content#template describes a content block containing a *fixed-size* media element (e.g. image or video) along with other *variable-size* content (e.g. text). Another example is the "module object":https://github.com/stubbornella/oocss/wiki/Module, which describes a generic content block with a required body area and optional header and footer areas. 
+
+"Read more about objects on the FAQ page…":https://github.com/stubbornella/oocss/wiki/FAQ
 
 <h3>Two Main Principles of OOCSS</h3>
 <ul>
 <li><h4>Separate structure and skin</h4>
     <p>This means to define repeating visual features (like background and border styles) as separate "skins" that you can mix-and-match with your various objects to achieve a large amount of visual variety without much code. See the "module object":https://github.com/stubbornella/oocss/wiki/Module and "its skins":https://github.com/stubbornella/oocss/wiki/Module-Skins.</p>
     <p>Separating structure and skin can also mean using classes to name your objects and their components, rather than relying solely on the semantics of HTML. For example, the media object is named with @class="media"@, and its components are named with @class="img"@ (for the image/video component) and @class="bd"@ (for the body/text component).</p>
-    <p>By referencing these classes in your stylesheets, rather than, say an @<img>@ element directly, your HTML can be flexible. For instance, if a new media element were to take off in the next few years (e.g. @<svg>@), it could be integrated into the HTML without having to touch the CSS.</p>
+    <p>By referencing these classes in your stylesheets (say, rather than directly styling the @<img>@ element), your HTML can be flexible. For instance, if a new media element were to take off in the next few years (e.g. @<svg>@), it could be integrated into the HTML without having to touch the CSS.</p>
 
 <li><h4>Separate container and content</h4>
-<p>Essentially, this means: rarely use location-dependent styles. An object should look the same no matter where you put it. So instead of styling a specific @<h2>@ with @.myObject h2 {...}@, create and apply a class that describes the @<h2>@ in question, like @<h2 class="category">@. This gives you the assurance that: 1) all unclassed @<h2>@s will look the same; 2) all elements with the category class (called a mixin) will look the same; and 3) you won't need to create an override style for the case when you actually do want @.myObject h2@ to look like the normal @<h2>@.</p>
+<p>Essentially, this means “rarely use location-dependent styles”. An object should look the same no matter where you put it. So instead of styling a specific @<h2>@ with @.myObject h2 {...}@, create and apply a class that describes the @<h2>@ in question, like @<h2 class="category">@.</p>
+
+<p>This gives you the assurance that: (1) all unclassed @<h2>@s will look the same; (2) all elements with the category class (called a mixin) will look the same; and 3) you won't need to create an override style for the case when you actually do want @.myObject h2@ to look like the normal @<h2>@.</p>
 </li>
 </ul>
 </div>
 
 <h2>Getting Started</h2>
 
-# Download all the files and set up a local directory
+# Download all the files and set up a local directory.
 # Open *template.html* (this is the basic template you will modify to create all other pages).
 # Set your left and right column widths by _<a href="http://wiki.github.com/stubbornella/oocss/faq#extend">extending the column objects</a>_
 # Use *grids* to break the page up further into smaller sections.
-# Test your site functionality by adding content objects from the content.css file. These can also be found in *library.html*.
+# *Test site functionality* by adding content objects from the *content.css* file. (These can also be found in *library.html*).
 
 <h2>Ready for alpha testing</h2>
 
-*%{color:#da0000}Please help me test the talk bubble objects. Put them through their paces and let me know if you manage to break them! Add feature requests under the "issues" tab.%*
+*%{color:#da0000}Please help me test the talk bubble objects! Put them through their paces and let me know if you manage to break them. Add feature requests under the "issues" tab.%*
 
-* Tabs - very experimental
+* Tabs (very experimental)
 * Talk Bubbles
-* Content Objects - particularly media
+* Content Objects (particularly media)
 
 <h2>Stable</h2>
 
@@ -45,7 +61,7 @@ Basically, an "object" is a reusable concept based on a certain content requirem
 
 <h2>Base Libraries</h2>
 
-OOCSS is built on top of reset and fonts from the YUI libraries.  These libraries provide a common starting point across different navigators.
+OOCSS is built on top of *reset* and *fonts* from the YUI libraries.  These libraries provide a common starting point across different navigators.
 
 * Reset and Fonts from YUI are a starting point.
 
@@ -56,9 +72,13 @@ OOCSS is built on top of reset and fonts from the YUI libraries.  These librarie
 
 <h2>Thanks!</h2>
 
-I've had the good fortune to work/study/play with some amazing developers, engineers, managers, designers, and visionaries over the years.  All of them contributed in different ways to shaping my ideas about how CSS should be built and maintained.  Many many thanks to Arnaud Gueras, Florian Harmel,  Sebastian Tiphaine, Yann Doussot, Thomas Vial, Adrien Thery, Sebastien Cardif, Thomas Vergnaud, Etienne Bernard, Yannick Bonnieux, Renaud Boyerand, Matt Sweeney, Nate Koechley, Leslie Jensen-Inman, Philip Tellis, Stoyan Stefanov, Robin Garner, Kevin Michel, Christophe Dubois, Orphelie Dudemaine, Medhi El Azmi, Christophe Charles, Eric Prudhommeaux, Mark Mason, Tenni Theurer, Steve Souders, Jennifer Le Hegaret, Praveen P N, Doug Crockford, Nicholas Zakas, Mark Norman Francis, Christian Heilmann, Jenny Han Donnelly, Tom Croucher, Brian Rountree, Ryan Grove, Philippe Mihelic, Stephanie Troeth, Nick Fogler, Gonzalo Cordero and the other Jukus, and Dan Cederholm and his book bulletproof. I'm sure I've forgotten some... deepest apologies.
-<blockquote>“If you can't be a good example, then you'll just have to serve as a horrible warning.” 
+I've had the good fortune to work/study/play with some amazing developers, engineers, managers, designers, and visionaries over the years.  All of them contributed in different ways to shaping my ideas about how CSS should be built and maintained.  
 
+Many many thanks to Arnaud Gueras, Florian Harmel,  Sebastian Tiphaine, Yann Doussot, Thomas Vial, Adrien Thery, Sebastien Cardif, Thomas Vergnaud, Etienne Bernard, Yannick Bonnieux, Renaud Boyerand, Matt Sweeney, Nate Koechley, Leslie Jensen-Inman, Philip Tellis, Stoyan Stefanov, Robin Garner, Kevin Michel, Christophe Dubois, Orphelie Dudemaine, Medhi El Azmi, Christophe Charles, Eric Prudhommeaux, Mark Mason, Tenni Theurer, Steve Souders, Jennifer Le Hegaret, Praveen P N, Doug Crockford, Nicholas Zakas, Mark Norman Francis, Christian Heilmann, Jenny Han Donnelly, Tom Croucher, Brian Rountree, Ryan Grove, Philippe Mihelic, Stephanie Troeth, Nick Fogler, Gonzalo Cordero and the other Jukus, and Dan Cederholm and his book bulletproof. 
+
+I'm sure I've forgotten some... deepest apologies.
+
+<blockquote>“If you can't be a good example, then you'll just have to serve as a horrible warning.” 
 <cite>Catherine Aird</cite></blockquote>
 
 
