@@ -51,7 +51,7 @@
 	</tr>
 	<tr class="odd">
 		<th scope="row"><code>br</code></th>
-		<td>A presentational element used to display the bottom left corner of a block. This empty, non-semantic element should be inserted via a serverside script or JavaScript, the former is preferable.</td>
+		<td>A presentational element used to display the bottom right corner of a block. This empty, non-semantic element should be inserted via a serverside script or JavaScript, the former is preferable.</td>
 	</tr>
 	</tbody>
 </table>
