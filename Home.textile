@@ -1,6 +1,6 @@
 <h1>Object Oriented CSS</h1>
 
-<div style="width:350px;text-align:left;float:left;" id="__ss_990405">
+<div style="float:left;" id="__ss_990405">
 <object style="margin:0px" width="350" height="300">
 <param 
 name="movie" 
