@@ -16,7 +16,7 @@ How do you scale CSS for thousands of pages? Object Oriented CSS is an answer. I
 This Github project is for the OOCSS framework—a collection of code that's built using the OOCSS approach and is meant to help you get started. However, the framework is <em>not</em> the same thing as the OOCSS idea. (Confusingly though, they have the same name...that'll probably change.)
 
 <h3>What's a CSS Object?</h3>
-Basically, a CSS "object" is a reusable concept based on a certain content requirement.  A CSS object's name should be based on the content it requires. 
+Basically, a CSS "object" is a repeating visual pattern, that can be abstracted into an independent snippet of HTML, CSS, and possibly JavaScript. That object can then be reused throughout a site. 
 
 For instance, in the OOCSS framework the "media object":https://github.com/stubbornella/oocss/wiki/Content#template describes a content block containing a *fixed-size* media element (e.g. image or video) along with other *variable-size* content (e.g. text). Another example is the "module object":https://github.com/stubbornella/oocss/wiki/Module, which describes a generic content block with a required body area and optional header and footer areas. 
 
