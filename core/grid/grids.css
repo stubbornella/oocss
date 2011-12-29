@@ -1,5 +1,5 @@
 .line,.lastUnit{overflow:hidden; *overflow:visible;*zoom:1;}
-.unit{float:left;}
+.unit{float:left; min-height: 1px;}
 .unitRight{float:right;}
 .size1of1{float:none;}
 .size1of2{width:50%;}
