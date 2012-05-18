@@ -1,20 +1,22 @@
 /* **************** TALK BUBBLE ***************** */
-.bubble{overflow:hidden;_overflow:visible;_zoom:1;margin:10px;}
-.bubble b b{position:absolute;height:0;width:0;border: solid 7px transparent;_border: 7px solid #fff /* set color to match background color for IE6 */;}
-.bubble .bottom{visibility:hidden;}
-/* top bubbles */
-.bubbleTop .inner{margin-top:7px;}
-.bubbleTop b b{top:0;left:10px;border-top-style:none;}
-/* left bubbles */
-.bubbleLeft .inner{margin-left:7px;}
-.bubbleLeft b b{top:10px;left:0;border-left-style:none;}
-/* right bubbles */
-.bubbleRight .inner{margin-right:7px;}
-.bubbleRight b b{top:10px;right:0;border-right-style:none;}
-/* bottom bubbles */
-.bubbleBottom .inner{margin-bottom:7px;}
-.bubbleBottom b b{bottom:0;left:10px;border-bottom-style:none;}
-.bubbleBottom .bottom{visibility:visible;}
-/* extensions (swaps alignment of talk bubble) */
-.bubbleHorizontalExt b b{top:auto; bottom:10px;visibility:visible;} /* apply to bubbleLeft or bubbleRight */
-.bubbleVerticalExt b b{right:10px;left:auto;} /* apply to bubbleTop or bubbleBottom */
+.bubble {position: relative;}
+.bubble:after, .bubble:before {border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none;}
+
+/* top & bottom */
+.bubbleTop:after, .bubbleTop:before {bottom:100%; left:10%;}
+.bubbleBottom:after, .bubbleBottom:before {top: 100%; left:10%;}
+.bubbleTop:after, .bubbleBottom:after {border-width: 10px; margin-left: -10px;}
+.bubbleTop:before, .bubbleBottom:before {border-width: 14px; margin-left: -14px;}
+
+/*left & right*/
+.bubbleLeft:after, .bubbleLeft:before {right: 100%; top: 10%;}
+.bubbleRight:after, .bubbleRight:before { left: 100%; top: 10%;}
+.bubbleLeft:after, .bubbleRight:after {border-width: 10px; margin-top: -10px;}
+.bubbleLeft:before, .bubbleRight:before {border-width: 14px; margin-top: -14px;}
+
+/* horizMid & horizExt - extend bubbleTop and bubbleBottom */
+.horizMid:after, .horizMid:before {left: 50%;}
+.horizExt:after, .horizExt:before {left: 90%;}
+/* vertMid & vertExt - extend bubbleRight and bubbleLeft */
+.vertMid:before, .vertMid:after {top: 50%;}
+.vertExt:before, .vertExt:after{top: 90%;}
