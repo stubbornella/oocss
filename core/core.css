@@ -22,3 +22,6 @@
 @import url("table/table.css");
 @import url("table/table_skins.css");
 /*@import url("table/table_debug.css");*/
+
+@import url("callout/callout.css");
+@import url("callout/callout_skins.css");
