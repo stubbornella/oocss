@@ -1,0 +1,34 @@
+/* yowza (extends bubbleTop) */
+.yowza .inner{background-color:#d4494f;}
+.yowza b b{border-bottom-color:#d4494f;}
+/* discuss (extends bubbleBottom) */
+.discuss .inner{background-color:#CCC;}
+.discuss b b{border-top-color:#CCC;}
+/* lol (extends bubbleLeft) */
+.lol .inner{background-color:#845B4E; color:#fff;}
+.lol b b{border-right-color:#845B4E;}
+/* meep (extends bubbleRight) */
+.meep .inner{background-color:#6cc6c6;}
+.meep b b{border-left-color:#6cc6c6;}
+/* yoyo (extends bubbleBottom) */
+.yoyo .inner{background-color:#52a583;}
+.yoyo b b{border-top-color:#52a583;}
+/* header */
+.fire, .fire *{color: #000; font-size:18px; border-bottom: 1px dashed #b7c8c9;}
+.attribution{margin-left:30px;}
+
+
+/* default style - white with light 3px border */
+.bubble {background: #fff; border: 3px solid #b7c8c9;}
+/* top */
+.bubbleTop:after {border-bottom-color: #fff;}
+.bubbleTop:before {border-bottom-color: #b7c8c9;}
+/* bottom */
+.bubbleBottom:after {border-top-color: #fff;}
+.bubbleBottom:before {border-top-color: #b7c8c9;}
+/* left */
+.bubbleLeft:after {border-right-color: #ffffff;}
+.bubbleLeft:before {border-right-color: #b7c8c9;}
+/* right */
+.bubbleRight:after {border-left-color: #ffffff;}
+.bubbleRight:before {border-left-color: #b7c8c9;}
