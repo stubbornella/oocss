@@ -1,260 +1,76 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/*@import "compass/reset";*/
-/* colors */
-/* neutrals */
-/* typography */
-/* 
- * em-ratio	converts between em and px
- * to em 	divide by this ratio
- * to px 	mulitply by this ratio
- */
-/* whitespace */
-/* grids */
-/* layout */
-/* line 35, ../variables.scss */
-body {
-  width: 988px;
-  margin: 0 auto;
-}
+/*
+Syntax error: File to import not found or unreadable: whitespace/whitespace.
+              Load paths:
+                /Users/stubbornella/Documents/blocks
+                /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets
+                /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets
+                Compass::SpriteImporter
+        on line 32 of /Users/stubbornella/Documents/blocks/screen.scss
 
-/* thierry's method for embedding video w out it blowing up the page */
-/* line 2, ../video/video.scss */
-.videoWrap {
-  position: relative;
-  height: 0;
-}
-
-/* line 6, ../video/video.scss */
-* html .videoWrap {
-  margin-bottom: 45px;
-  margin-bot\tom: 0;
-}
-
-/* line 11, ../video/video.scss */
-.videoWrap div, .videoWrap embed, .videoWrap object, .videoWrap iframe {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-}
-
-/* making it so images don't bust open grids */
-/* line 22, ../video/video.scss */
-.imgWrap img {
-  max-width: 100%;
-}
-
-/* line 25, ../video/video.scss */
-.wideScreen {
-  padding-bottom: 56.25%;
-}
-
-/* line 26, ../video/video.scss */
-.fourBYthree {
-  padding-bottom: 75%;
-}
-
-/* line 27, ../video/video.scss */
-.chrome_25 {
-  padding-top: 25px;
-}
-
-/* line 28, ../video/video.scss */
-.chrome_35 {
-  padding-top: 35px;
-}
-
-/* 
- * clearfix 		used project wide to clear floats and create a new formatting context
- * usage			@include clearfix-me(<empty|overflow|facebook|micro|stubborn>)
- * $clearfix-method	sets default method
- */
-/* line 12, ../utils/clearfix-me.scss */
-.line, .line .unit.lastUnit, .line .unit:last-child {
-  overflow: hidden;
-  *overflow: visible;
-  zoom: 1;
-}
-
-/* colors */
-/* neutrals */
-/* typography */
-/* 
- * em-ratio	converts between em and px
- * to em 	divide by this ratio
- * to px 	mulitply by this ratio
- */
-/* whitespace */
-/* grids */
-/* layout */
-/* line 35, ../variables.scss */
-body {
-  width: 988px;
-  margin: 0 auto;
-}
-
-/* line 92, ../grid/grid.scss */
-.unit:before {
-  content: "unit";
-  display: block;
-  min-height: 40px;
-  line-height: 40px;
-  background-color: #EEE;
-  text-align: center;
-  border-radius: 3px;
-}
-
-/* add any fixed widths for columns here */
-/*navCol{width: 150px;}
+Backtrace:
+/Users/stubbornella/Documents/blocks/screen.scss:32
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.277/lib/sass/../sass/tree/import_node.rb:64:in `import'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.277/lib/sass/../sass/tree/import_node.rb:25:in `imported_file'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.277/lib/sass/../sass/tree/visitors/perform.rb:149:in `visit_import'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.277/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.277/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.277/lib/sass/../sass/tree/visitors/perform.rb:20:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.277/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.277/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.277/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.277/lib/sass/../sass/tree/visitors/perform.rb:29:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.277/lib/sass/../sass/tree/visitors/perform.rb:41:in `with_environment'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.277/lib/sass/../sass/tree/visitors/perform.rb:28:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.277/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.277/lib/sass/../sass/tree/visitors/perform.rb:48:in `visit_root'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.277/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.277/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.277/lib/sass/../sass/tree/visitors/perform.rb:20:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.277/lib/sass/../sass/tree/visitors/perform.rb:7:in `send'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.277/lib/sass/../sass/tree/visitors/perform.rb:7:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.277/lib/sass/../sass/tree/root_node.rb:20:in `render'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.277/lib/sass/../sass/engine.rb:309:in `_render'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.0.alpha.277/lib/sass/../sass/engine.rb:256:in `render'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:140:in `compile'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:139:in `compile'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/logger.rb:45:in `red'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:138:in `compile'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:103:in `run'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `each'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `run'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:147:in `recompile'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:36:in `to_proc'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.9/lib/fssm/path.rb:73:in `call'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.9/lib/fssm/path.rb:73:in `run_callback'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.9/lib/fssm/path.rb:55:in `callback_action'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.9/lib/fssm/path.rb:35:in `update'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.9/lib/fssm/state/directory.rb:39:in `modified'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.9/lib/fssm/state/directory.rb:37:in `each'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.9/lib/fssm/state/directory.rb:37:in `modified'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.9/lib/fssm/state/directory.rb:18:in `refresh'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:17:in `run'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:17:in `each'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:17:in `run'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:15:in `loop'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:15:in `run'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.9/lib/fssm/monitor.rb:26:in `run'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.9/lib/fssm.rb:70:in `monitor'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:87:in `perform'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/bin/compass:30
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/bin/compass:44:in `call'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/bin/compass:44
+/usr/bin/compass:23:in `load'
+/usr/bin/compass:23
 */
-/* ie 7 and earlier need percentage based gutters because they don't do border-box */
-/* line 22, ../grid/grid.scss */
-.size1of12 {
-  width: 8.33333%;
-  *width: 6.81511%;
-  /* IE7- width = normal width - gutter width + spanned gutters width */
-}
-
-/* line 22, ../grid/grid.scss */
-.size2of12 {
-  width: 16.66667%;
-  *width: 16.66667%;
-  /* IE7- width = normal width - gutter width + spanned gutters width */
-}
-
-/* line 22, ../grid/grid.scss */
-.size3of12 {
-  width: 25%;
-  *width: 26.51822%;
-  /* IE7- width = normal width - gutter width + spanned gutters width */
-}
-
-/* line 22, ../grid/grid.scss */
-.size4of12 {
-  width: 33.33333%;
-  *width: 36.36977%;
-  /* IE7- width = normal width - gutter width + spanned gutters width */
-}
-
-/* line 22, ../grid/grid.scss */
-.size5of12 {
-  width: 41.66667%;
-  *width: 46.22132%;
-  /* IE7- width = normal width - gutter width + spanned gutters width */
-}
-
-/* line 22, ../grid/grid.scss */
-.size6of12 {
-  width: 50%;
-  *width: 56.07287%;
-  /* IE7- width = normal width - gutter width + spanned gutters width */
-}
-
-/* line 22, ../grid/grid.scss */
-.size7of12 {
-  width: 58.33333%;
-  *width: 65.92443%;
-  /* IE7- width = normal width - gutter width + spanned gutters width */
-}
-
-/* line 22, ../grid/grid.scss */
-.size8of12 {
-  width: 66.66667%;
-  *width: 75.77598%;
-  /* IE7- width = normal width - gutter width + spanned gutters width */
-}
-
-/* line 22, ../grid/grid.scss */
-.size9of12 {
-  width: 75%;
-  *width: 85.62753%;
-  /* IE7- width = normal width - gutter width + spanned gutters width */
-}
-
-/* line 22, ../grid/grid.scss */
-.size10of12 {
-  width: 83.33333%;
-  *width: 95.47908%;
-  /* IE7- width = normal width - gutter width + spanned gutters width */
-}
-
-/* line 22, ../grid/grid.scss */
-.size11of12 {
-  width: 91.66667%;
-  *width: 105.33063%;
-  /* IE7- width = normal width - gutter width + spanned gutters width */
-}
-
-/* line 22, ../grid/grid.scss */
-.size12of12 {
-  width: 100%;
-  *width: 115.18219%;
-  /* IE7- width = normal width - gutter width + spanned gutters width */
-}
-
-/* line 32, ../grid/grid.scss */
-.line .unit {
-  float: left;
-  zoom: 1;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  /*IE8+*/
-  padding: 0 10px 0 5px;
-  *padding: 0;
-  /* IE7- */
-  *margin: 0 0.75911%;
-  /* IE7- */
-}
-/* line 42, ../grid/grid.scss */
-.line .unit.lastUnit, .line .unit:last-child {
-  /* for IE8- you must put a class .lastUnit on the final unit in a line */
-  float: none;
-  width: auto !important;
-  _position: relative;
-  _left: -3px;
-  _margin-right: -3px;
-  padding: 0 0 0 5px;
-  *padding: 0 0 0 15px;
-  /* IE7- */
-  *margin: 0;
-  /* IE7- */
-}
-/* line 57, ../grid/grid.scss */
-.line .unit.firstUnit, .line .unit:first-child {
-  /* for IE7- you must put a class .firstUnit on the first unit in a line */
-  padding: 0 10px 0 0;
-  *padding: 0;
-  /* IE7- */
-  *margin: 0 0.75911% 0 0;
-  /* IE7- */
-}
-/* line 65, ../grid/grid.scss */
-.line .unitExt {
-  float: right;
-  zoom: 1;
-  padding: 0 0 0 10px;
-  *padding: 0;
-  /* IE7- */
-  *margin: 0 0 0 1.51822%;
-  /* IE7- */
-}
-/* line 76, ../grid/grid.scss */
-.line .unitExt ~ .unit:last-child,
-.line .unitExt ~ .unitExt {
-  /*IE7+*/
-  padding: 0 5px;
-  *padding: 0;
-}
-/* line 81, ../grid/grid.scss */
-.line .unit:nth-last-child(2) {
-  /* IE9+ - TODO: fix IE8 */
-}
-/* line 85, ../grid/grid.scss */
-.line .unit:first-child:last-child {
-  padding: 0;
-}
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: File to import not found or unreadable: whitespace/whitespace.\A               Load paths:\A                 /Users/stubbornella/Documents/blocks\A                 /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets\A                 /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets\A                 Compass::SpriteImporter\A         on line 32 of /Users/stubbornella/Documents/blocks/screen.scss"; }
