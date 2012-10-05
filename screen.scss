@@ -3,28 +3,47 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-/*@import "compass/reset";*/
+@import "compass/reset";
+//TODO: what does this do? why had I commented it?
 
 @import "variables";
+/* ==========================================================================
+   Video
+   ========================================================================== */
 @import "video/video";
+/* ==========================================================================
+   Grid
+   ========================================================================== */
 @import "grid/grid";
 @include oogrids((12), 15px);
 // @import "grid/grid-responsive";
-// @import "typography/typography";
+// @import "grid/grid-responsive";
+// @include oogrids-responsive((2em, 50em, 500em, 900em));
+// TODO change oogrids mixin to oogrid
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+@import "typography/typography";
+
+/* ==========================================================================
+   Whitespace
+   ========================================================================== */
 // @import "whitespace/whitespace";
 // @include whitespace($spacing-helpers);
-
-
+// @include whitespace;
+/* ==========================================================================
+   Vertical Rhythm
+   ========================================================================== */
 //@import "compass/typography/vertical_rhythm";
 //@include establish-baseline;
 
+/* ==========================================================================
+   Box
+   ========================================================================== */
 // @import "box/box";
 // @include oobox();
 
-// @include whitespace;
+
 
 // @import "examples";
-
-// @import "grid/grid-responsive";
-// TODO change oogrids mixin to oogrid
-// @include oogrids-responsive((2em, 50em, 500em, 900em));
