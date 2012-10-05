@@ -1,0 +1,91 @@
+@import "compass/css3";
+
+// hide, show, collapse?, expand
+
+
+//TODO: make it work with ems (or any unit?)
+//TODO: stephen doens't think incremental breakpoints are a good idea
+//TODO: allow developers to choose which types of options get outputted (show, hide, expand, collapse, cols, etc)
+@mixin oogrids-responsive($breakpoints: (699px, 200px, 100px), $mobile-first: true, $columns: 0){
+    $direction:lt;
+    $min-max: max;
+
+    @if $mobile-first {
+        $direction: gt;
+        $min-max: min;
+    }
+
+    // t-shirt sizing
+    //TODO: think about what happens if a site needs to *add* breakpoints later, especially in the middle
+    
+    $t-shirt-sizes: ();
+    @if (length($breakpoints) == 1) {
+        $t-shirt-sizes: (med);
+    } 
+    @else if (length($breakpoints) == 2) {
+        $t-shirt-sizes: (med, lg);
+    } 
+    @else if (length($breakpoints) == 3) {
+        $t-shirt-sizes: (sm, med, lg);
+    } 
+    @else if (length($breakpoints) == 4) {
+        $t-shirt-sizes: (sm, med, lg, xl);
+    } 
+    @else if (length($breakpoints) == 5) {
+        $t-shirt-sizes: (xs, sm, med, lg, xl);
+    } 
+    @else if (length($breakpoints) == 6) {
+        $t-shirt-sizes: (xs, sm, med, lg, xl, xxl);
+    } 
+    @else if (length($breakpoints) == 7) {
+        $t-shirt-sizes: (xxs, xs, sm, med, lg, xl, xxl);
+    }
+    @else if (length($breakpoints) == 8) {
+        $t-shirt-sizes: (xxs, xs, sm, med, lg, xl, xxl, xxxl);
+    }
+    @else if (length($breakpoints) == 9) {
+        $t-shirt-sizes: (xxxs, xxs, xs, sm, med, lg, xl, xxl, xxxl);
+    } 
+    @else if (length($breakpoints) > 9) {
+        $t-shirt-sizes: $breakpoints;
+        @warn "T-shirt sizing doesn't work well with more than 9 breakpoints, we'll have to default to using explicit pixel values. This will make your code less maintainable."
+    }
+
+    // create breakpoints
+    @each $break in $breakpoints {
+        //@each $t-shirt-size in $t-shirt-sizes {
+        @media screen and (#{$min-max}-width: $break) {
+            /* ====== #{t-shirt-size} t-shirt size is equal to #{$break} ====== */
+            /* general classes - use on any block level element */
+            //TODO: figure out how to add a count var and to reference that item number in var t-shirt-sizes
+            //TODO: dont display all sizes
+
+            .#{$t-shirt-sizes}-hide{
+                display: none;
+            }
+            // .#{$t-shirt-size}-show{
+            //     display: block; //problematic depending on what the display was before it was hidden
+            // }
+            
+            // /* grids tools (can be used on grids, media block, template) */
+            // .#{$t-shirt-size}-collapse > .unit{
+            //     width: auto;
+            //     display: block;
+            //     float: none;
+            // }
+            // .#{$t-shirt-size}-expand > .unit{
+            //     width: auto;
+            // }            
+            // .#{$t-shirt-size}-deepExpand .unit{
+            //     width: auto;
+            // }
+
+            /* columns */
+            @for $i from 1 through $columns {
+                .#{$t-shirt-size}-#{$i}cols {
+                    @include column-count($i);
+                } 
+            }
+        } 
+    }
+}

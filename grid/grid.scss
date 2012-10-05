@@ -1,0 +1,313 @@
+@import "compass/utilities/general/hacks"; 
+@import "utils/clearfix-me";
+@import "../variables";
+@import "compass/css3";
+
+$grids-debug: true;
+$grids-debug-position: false;
+//TODO: make params into variables instead, so they can easily be updated w out changing this file.
+//TODO: Take different units into account, what if gutters are in rems? ems? percentage?
+//TODO: test in IE6 :(
+@mixin oogrids($cols: (2,3,4,5,6), $gutter: $gutters-h){ 
+	$small-gutter: $gutter/3;
+	$large-gutter: ($gutter/3)*2;
+	
+	/* ie 7 and earlier need percentage based gutters because they don't do border-box */
+	$ie-percent-gutter: percentage($gutter/$page-width);
+	$ie-small-gutter: $ie-percent-gutter/3;
+	$ie-large-gutter: ($ie-percent-gutter/3)*2;
+
+	@each $col in $cols {
+		@for $i from 1 through $col {
+			.size#{$i}of#{$col} {
+				width: percentage($i/$col);
+				$spanned-gutters: $i - 1;
+				*width: percentage($i/$col)-$ie-percent-gutter + $spanned-gutters*$ie-percent-gutter; /* IE7- width = normal width - gutter width + spanned gutters width */
+			}
+		}
+	}
+	.line{
+		@include clearfix-me;
+		
+		.unit{ 
+			float:left;
+			zoom:1;
+			@if $gutter {
+				@include box-sizing(border-box); /*IE8+*/
+				padding: 0 $large-gutter 0 $small-gutter;
+				*padding: 0; /* IE7- */
+				*margin: 0 $ie-percent-gutter/2; /* IE7- */
+			}
+
+			&.lastUnit, &:last-child{ /* for IE8- you must put a class .lastUnit on the final unit in a line */
+				@include clearfix-me;
+				float: none;
+				width: auto !important;
+				_position: relative;
+				_left: -3px;
+				_margin-right: -3px;
+				@if $gutter {
+					padding: 0 0 0 $small-gutter;
+					*padding: 0 0 0 $large-gutter+5;/* IE7- */
+					*margin: 0;/* IE7- */
+					//*margin: 0 0 0 $ie-percent-gutter*30;
+				}
+			}
+			@if $gutter {
+				&.firstUnit, &:first-child{ /* for IE7- you must put a class .firstUnit on the first unit in a line */
+					padding: 0 $large-gutter 0 0;
+					*padding: 0;/* IE7- */
+					*margin: 0 $ie-percent-gutter/2 0 0;/* IE7- */
+					//*margin: 0;
+				}
+			}
+		}
+		.unitExt { // TODO: handle case where there are two (or more) unitExt in a line.
+			float:right;
+			zoom:1;
+			@if $gutter {
+				padding: 0 0 0 $large-gutter;
+				*padding: 0;/* IE7- */
+				*margin: 0 0 0 $ie-percent-gutter;/* IE7- */
+			}
+		}
+		@if $gutter {
+			.unitExt ~ .unit:last-child, 
+			.unitExt ~ .unitExt{ /*IE7+*/
+				padding: 0 $small-gutter;
+				*padding: 0; // what should happen for IE7 here?
+			}
+		}
+		.unit:nth-last-child(2) { /* IE9+ - TODO: fix IE8 */
+			//border: 10px solid red;
+			//padding-right: $small-gutter + $small-gutter/2;
+		}
+		.unit:first-child:last-child {
+			padding:0 ;
+		}
+	}
+}
+
+@if $grids-debug {
+	.unit:before {
+		content: "unit";
+		display:block;
+		min-height: 40px;
+		line-height: 40px;
+		background-color: #EEE;
+		text-align: center;
+		border-radius: 3px;
+	}
+	// .line {margin: 20px 0;}
+}
+
+@if $grids-debug-position {
+	.line{background-color: #e2e2e2;}
+	.unit{background-color:#da0000; border-radius: 7px;}
+	.unit:first-child{background-color:green;}
+	.unit:first-child, .firstUnit{background-color:blue;}
+	.unitExt ~ [class*=size]:last-child,.lastUnit{background-color:purple;}
+	.unitExt ~ .unitExt{ background-color: gray;}
+}
+
+// if gutters were true they would need to be % based, so you would need to know page width
+// e.g. 15px gutters / 960px page width = 0.015625 or 1.5625%
+
+// or have them be pixel based and set padding box thingy
+
+
+
+
+
+
+/* add any fixed widths for columns here */
+/*navCol{width: 150px;}
+*/
+// .expand, .expand > img {
+// 	min-width: 100%;
+// }
+
+// .col { /* how will media queries affect this? */
+// 	-webkit-column-gap: 1.5em;
+// 	-moz-column-gap: 1.5em;
+// 	column-gap: 1.5em;
+// }
+// .twoCol{
+// 	-webkit-column-count: 2;
+// 	-moz-column-count: 2;
+// 	column-count: 2;
+// }
+// .threeCol{
+// 	-webkit-column-count: 3;
+// 	-moz-column-count: 3;
+// 	column-count: 3;
+// }
+// .fourCol{
+// 	-webkit-column-count: 4;
+// 	-moz-column-count: 4;
+// 	column-count: 4;
+// }
+// .fiveCol{
+// 	-webkit-column-count: 5;
+// 	-moz-column-count: 5;
+// 	column-count: 5;
+// }
+// .sixCol{
+// 	-webkit-column-count: 6;
+// 	-moz-column-count: 6;
+// 	column-count: 6;
+// }
+// /* media queries */
+
+// /* states that can be applied to media blocks */ 
+
+// .imgWrap{
+// 	//margin: 0 10px;
+// }
+// embed, img, object, video {
+// max-width: 100% !important;/* needs to be important so that inline styles can be used to prevent unnecessary reflows during page load */
+// height:auto !important;/* needs to be important so that inline styles can be used to prevent unnecessary reflows during page load */
+// }
+// .show{display:block;}
+// .hide{display:none;}
+
+// /* <1024px */
+// @media screen and (max-width: 1024px) {
+// 	.flex {
+// 		/* default behavior */
+// 	}
+// 	.collapse-1024 > .unit {
+// 		display:block;
+// 		width:auto;
+// 		float:none;
+// 	}
+// 	/* Inline all child units */
+// 	.collapse-deep-1024-minus .unit {
+// 		display:block;
+// 		width:auto;
+// 		float:none;
+// 	}
+// 	.show-1024-minus { /* no workie */
+// 		display:block;
+// 	}
+// 	.hide-1024-minus {
+// 		display:none;
+// 	}
+// 	/* not drop but instead just named cols */
+	
+// 	.twoCol-1024-minus {
+// 		-webkit-column-count: 2;
+// 		-moz-column-count: 2;
+// 		column-count: 2;
+// 	}
+// 	.threeCol-1024-minus {
+// 		-webkit-column-count: 3;
+// 			-moz-column-count: 3;
+// 			column-count: 3;
+// 		}
+	
+// 	.fourCol-1024-minus{
+// 		-webkit-column-count: 4;
+// 			-moz-column-count: 4;
+// 			column-count: 4;
+// 		}
+// 	.fiveCol-1024-minus{
+// 		-webkit-column-count: 5;
+// 			-moz-column-count: 5;
+// 			column-count: 5;
+// 		}
+// 	.sixCol-1024-minus{
+// 	-webkit-column-count: 6;
+// 	-moz-column-count: 6;
+// 	column-count: 6;
+// 	}	
+// 	/*.dropCol-1024-minus.twoCol{
+// 	-webkit-column-count: 1;
+// 	-moz-column-count: 1;
+// 	column-count: 1;
+// }
+// .dropCol-1024-minus.threeCol{
+// 	-webkit-column-count: 2;
+// 	-moz-column-count: 2;
+// 	column-count: 2;
+// }
+// .dropCol-1024-minus.fourCol{
+// 	-webkit-column-count: 3;
+// 	-moz-column-count: 3;
+// 	column-count: 3;
+// }
+// .dropCol-1024-minus.fiveCol{
+// 	-webkit-column-count: 4;
+// 	-moz-column-count: 4;
+// 	column-count: 4;
+// }
+// .dropCol-1024-minus.sixCol{
+// 	-webkit-column-count: 5;
+// 	-moz-column-count: 5;
+// 	column-count: 5;
+// }*/
+	
+	
+// }
+// /* >1024px */
+// @media screen and (min-width: 1024px) {
+	
+// 	.expand-1024 img {
+// 		min-width: 100% !important; 
+// 	}
+// 	.expand-1024 .unit{
+// 		float:none;
+// 		width:auto;
+// 	}
+// 	.show-1024-plus { /* no workie */
+// 		display:block;
+// 	}
+// 	.hide-1024-plus {
+// 		display:none;
+// 	}
+// 	.twoCol-1024-plus {
+// 		-webkit-column-count: 2;
+// 		-moz-column-count: 2;
+// 		column-count: 2;
+// 	}
+// 	.threeCol-1024-plus {
+// 		-webkit-column-count: 3;
+// 			-moz-column-count: 3;
+// 			column-count: 3;
+// 		}
+	
+// 	.fourCol-1024-plus{
+// 		-webkit-column-count: 4;
+// 			-moz-column-count: 4;
+// 			column-count: 4;
+// 		}
+// 	.fiveCol-1024-plus{
+// 		-webkit-column-count: 5;
+// 			-moz-column-count: 5;
+// 			column-count: 5;
+// 		}
+// 	.sixCol-1024-plus{
+// 	-webkit-column-count: 6;
+// 	-moz-column-count: 6;
+// 	column-count: 6;
+// 	}	
+	
+// }
+
+// @media screen and (max-width: 720px) {
+	
+// }
+
+// @media screen and (max-width: 550px) {
+	
+// }
+
+// @media screen and (max-width: 480px) {
+// }
+
+// @media screen and (max-width: 320px) {
+// }
+
+// @media screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 480px) {
+
+// }

@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Grids Documentation</title>
+<link rel="stylesheet" type="text/css" media="all"  href="../css/screen.css" />
+<style type="text/css">
+dt{font-weight:bold;}
+pre strong, dt strong{color: #0B8C8F;}
+pre{padding: 20px;background-color: #FCF8BC;overflow:auto;width:auto;}
+</style>
+</head>
+<body>
+<h1>Lines &amp; Grids</h1>
+<p class="intro">Grids are used to break any space into fractions, they can be nested. A unit can contain another line or it can contain other objects directly. The sum of the fractional sizes of all children of one line should be equal to one. Grids control width, content controls height.</p>
+<h2>Base Classes</h2>
+<div class="data">
+<table>
+	<thead>
+		<tr>
+			<th>Property</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+	<tr class="odd">
+		<th scope="row"><code>line</code></th>
+		<td>Groups units on one horizontal line. Note: for mobile layout units may be stacked to avoid horizontal scrolling.</td>
+	</tr>
+	<tr class="even">
+		<th scope="row"><code>unit</code></th>
+		<td>Base class which divides a line into sections (columns).</td>
+	</tr>
+	<tr class="odd">
+		<th scope="row"><code>size<strong>X</strong>of<strong>Y</strong></code></th>
+		<td>Extends <code>unit</code>. Indicates the fractional width of the unit, for example <code>size9of12</code> would take up three quarters, or 75%, of the horizontal space.</td>
+	</tr>
+	<tr class="even">
+		<th scope="row"><code>lastUnit</code></th>
+		<td>Extends <code>unit</code>. Applied to the last child of every line.</td>
+	</tr>
+	</tbody>
+</table>
+</div>
+	
+<div class="line">
+	<div class="unit size1of12 firstUnit">1</div>
+	<div class="unit size1of12">1</div>
+	<div class="unit size1of12">1</div>
+	<div class="unit size1of12">1</div>
+	<div class="unit size1of12">1</div>
+	<div class="unit size1of12">1</div>
+	<div class="unit size1of12">1</div>
+	<div class="unit size1of12">1</div>
+	<div class="unit size1of12">1</div>
+	<div class="unit size1of12">1</div>
+	<div class="unit size1of12">1</div>
+	<div class="unit size1of12 lastUnit">1</div>
+</div>
+<div class="line">
+	<div class="unit size2of12 firstUnit">2</div>
+	<div class="unit size2of12">2</div>
+	<div class="unit size2of12">2</div>
+	<div class="unit size2of12">2</div>
+	<div class="unit size2of12">2</div>
+	<div class="unit size2of12 lastUnit">2</div>
+</div>
+<div class="line">
+	<div class="unit size3of12 firstUnit">3</div>
+	<div class="unit size3of12">3</div>
+	<div class="unit size3of12">3</div>
+	<div class="unit size3of12 lastUnit">3</div>
+</div>
+<div class="line">
+	<div class="unit size4of12 firstUnit">4</div>
+	<div class="unit size4of12">4</div>
+	<div class="unit size4of12 lastUnit">4</div>
+</div>
+<div class="line">
+	<div class="unit size5of12 firstUnit">5</div>
+	<div class="unit size7of12 lastUnit">7</div>
+</div>	
+<div class="line">
+	<div class="unit size7of12 firstUnit">7</div>
+	<div class="unit size5of12 lastUnit">5</div>
+</div>
+<div class="line">
+	<div class="unit size6of12 firstUnit">6</div>
+	<div class="unit size6of12 lastUnit">6</div>
+</div>
+<div class="line">
+	<div class="unit size8of12 firstUnit">8</div>
+	<div class="unit size4of12 lastUnit">4</div>
+</div>
+<div class="line">
+	<div class="unit size3of12 firstUnit">3</div>
+	<div class="unit size9of12 lastUnit">9</div>
+</div>
+<div class="line">
+	<div class="unit size10of12 firstUnit">10</div>
+	<div class="unit size2of12 lastUnit">2</div>
+</div>
+<div class="line">
+	<div class="unit size1of12 firstUnit">1</div>
+	<div class="unit size11of12 lastUnit">11</div>
+</div>
+<div class="line">
+	<div class="unit size12of12 firstUnit lastUnit">12</div>
+</div>
+
+
+
+<h2>Halves</h2>
+<div class="line">
+	<div class="unit size6of12">
+		<h3>6/12</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	<div class="unit size6of12 lastUnit">
+		<h3>6/12</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+</div>
+<pre>&lt;div class=&quot;<strong>line</strong>&quot;&gt;<br />
+	&lt;div class=&quot;<strong>unit size6of12</strong>&quot;&gt;<br />
+		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit ... &lt;/p&gt;
+	&lt;/div&gt;<br />
+	&lt;div class=&quot;unit size6of12 <strong>lastUnit</strong>&quot;&gt;<br />
+		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit ... &lt;/p&gt;
+	&lt;/div&gt;<br />
+&lt;/div&gt;</pre>
+<h2>Thirds</h2>
+<div class="line">
+	<div class="unit size4of12">
+		<h3>4/12</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	<div class="unit size4of12">
+		<h3>4/12</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	<div class="unit size4of12 lastUnit">
+		<h3>4/12</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+</div>
+<pre>&lt;div class=&quot;<strong>line</strong>&quot;&gt;<br />	&lt;div class=&quot;<strong>unit size4of12</strong>&quot;&gt;<br />		&lt;p&gt;&lt;strong&gt;unit size4of12&lt;/strong&gt; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &lt;/p&gt;<br />	&lt;/div&gt;<br />	&lt;div class=&quot;unit size4of12&quot;&gt;<br />		&lt;p&gt;&lt;strong&gt;unit size4of12&lt;/strong&gt; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &lt;/p&gt;<br />	&lt;/div&gt;<br />	&lt;div class=&quot;unit size4of12 <strong>lastUnit</strong>&quot;&gt;<br />		&lt;p&gt;&lt;strong&gt;unit size4of12&lt;/strong&gt; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &lt;/p&gt;<br />	&lt;/div&gt;<br />&lt;/div&gt;</pre>
+<div class="line">
+	<div class="unit size4of12">
+		<h3>4/12</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	<div class="unit size8of12 lastUnit">
+		<h3>8/12</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+</div>
+<pre>&lt;div class=&quot;line&quot;&gt;<br />	&lt;div class=&quot;unit size4of12&quot;&gt;<br />		&lt;p&gt;&lt;strong&gt;unit size4of12&lt;/strong&gt; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &lt;/p&gt;<br />	&lt;/div&gt;<br />	&lt;div class=&quot;unit <strong>size8of12</strong> lastUnit&quot;&gt;<br />		&lt;p&gt;&lt;strong&gt;unit size4of12&lt;/strong&gt; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &lt;/p&gt;<br />	&lt;/div&gt;<br />&lt;/div&gt;</pre>
+<h2>Quarters</h2>
+<div class="line">
+	<div class="unit size3of12">
+		<h3>3/12</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	<div class="unit size3of12">
+		<h3>3/12</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	<div class="unit size6of12 lastUnit">
+		<h3>6/12</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+</div>
+<pre>&lt;div class=&quot;line&quot;&gt;<br />	&lt;div class=&quot;unit <strong>size3of12</strong>&quot;&gt;<br />		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &lt;/p&gt;<br />	&lt;/div&gt;<br />	&lt;div class=&quot;unit size3of12&quot;&gt;<br />		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &lt;/p&gt;<br />	&lt;/div&gt;<br />	&lt;div class=&quot;unit size6of12 lastUnit&quot;&gt;<br />		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &lt;/p&gt;<br />	&lt;/div&gt;<br />&lt;/div&gt;</pre>
+<div class="line">
+	<div class="unit size9of12">
+		<h3>9/12</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	<div class="unit size3of12 lastUnit">
+		<h3>3/12</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+</div>
+<pre>&lt;div class=&quot;line&quot;&gt;<br />	&lt;div class=&quot;unit <strong>size9of12</strong>&quot;&gt;<br />		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;<br />	&lt;/div&gt;<br />	&lt;div class=&quot;unit size3of12 lastUnit&quot;&gt;<br />		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &lt;/p&gt;<br />	&lt;/div&gt;<br />&lt;/div&gt;</pre>
+
+</body>
+</html>
