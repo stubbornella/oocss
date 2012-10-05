@@ -35,3 +35,4 @@ Thumbs.db
 *.sublime-workspace
 *.sublime-project
 *.sass-cache
+.sass-cache
