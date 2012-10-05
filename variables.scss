@@ -1,0 +1,38 @@
+
+/* colors */
+$type-color: #333;
+
+/* neutrals */
+//warm neutrals
+//blue neutrals
+//gray neutrals
+
+
+/* typography */
+$base-line-height: 1.5em !default; //must be in em
+$base-font-size: 15px !default; // must be px
+$base-font-family: Georgia, "Times New Roman", Times, serif;
+
+/* 
+ * em-ratio	converts between em and px
+ * to em 	divide by this ratio
+ * to px 	mulitply by this ratio
+ */
+$em-ratio: $base-font-size/$base-line-height; 
+
+/* whitespace */
+$gutters-h: 15px;
+$gutters-v: $base-line-height/2em*1rem; // set top and bottom margins to half the base line height so that the total takes up one row of vertical rhythm.
+$spacing-helpers: ($em-ratio*$base-line-height/3, $em-ratio*$base-line-height/2, $em-ratio*$base-line-height); //TODO: convert to px;
+
+/* grids */
+$break-points: (); // can be pixel values or if only one value, break points will be made at that increment. (not for now)
+$mobile-first: true;
+
+
+/* layout */
+$page-width: 988px;
+body{ // TODO: move to a template file.
+    width: $page-width;
+    margin: 0 auto;
+}
