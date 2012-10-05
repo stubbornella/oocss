@@ -1,8 +1,13 @@
+#OOCSS in SASS
+
+We're converting OOCSS to SASS because we think it will be more fun and powerful.
+
 ## To Do
 
-* Split module skins   
 
 ## Filestructure Conventions
+
+If you want to commit a new component to the project it should go in the folder *plugins/<component name>*. 
 
 _Example:_  
 
