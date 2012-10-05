@@ -1,0 +1,47 @@
+/* thierry's method for embedding video w out it blowing up the page */
+/* line 2, ../../video/video.scss */
+.videoWrap {
+  position: relative;
+  height: 0;
+}
+
+/* line 6, ../../video/video.scss */
+* html .videoWrap {
+  margin-bottom: 45px;
+  margin-bot\tom: 0;
+}
+
+/* line 11, ../../video/video.scss */
+.videoWrap div, .videoWrap embed, .videoWrap object, .videoWrap iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+/* making it so images don't bust open grids */
+/* line 22, ../../video/video.scss */
+.imgWrap img {
+  max-width: 100%;
+}
+
+/* line 25, ../../video/video.scss */
+.wideScreen {
+  padding-bottom: 56.25%;
+}
+
+/* line 26, ../../video/video.scss */
+.fourBYthree {
+  padding-bottom: 75%;
+}
+
+/* line 27, ../../video/video.scss */
+.chrome_25 {
+  padding-top: 25px;
+}
+
+/* line 28, ../../video/video.scss */
+.chrome_35 {
+  padding-top: 35px;
+}
