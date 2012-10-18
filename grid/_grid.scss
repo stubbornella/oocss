@@ -1,89 +1,58 @@
 @import "compass/utilities/general/hacks"; 
-@import "utils/clearfix-me";
-@import "../variables";
 @import "compass/css3";
 
-$grids-debug: true;
+$grids-debug: false;
 $grids-debug-position: false;
 //TODO: make params into variables instead, so they can easily be updated w out changing this file.
 //TODO: Take different units into account, what if gutters are in rems? ems? percentage?
 //TODO: test in IE6 :(
 @mixin oogrids($cols: (2,3,4,5,6), $gutter: $gutters-h){ 
-	$small-gutter: $gutter/3;
-	$large-gutter: ($gutter/3)*2;
+	// $small-gutter: $gutter/3;
+	// $large-gutter: ($gutter/3)*2;
 	
 	/* ie 7 and earlier need percentage based gutters because they don't do border-box */
 	$ie-percent-gutter: percentage($gutter/$page-width);
-	$ie-small-gutter: $ie-percent-gutter/3;
-	$ie-large-gutter: ($ie-percent-gutter/3)*2;
+	// $ie-small-gutter: $ie-percent-gutter/3;
+	// $ie-large-gutter: ($ie-percent-gutter/3)*2;
 
 	@each $col in $cols {
 		@for $i from 1 through $col {
 			.size#{$i}of#{$col} {
 				width: percentage($i/$col);
-				$spanned-gutters: $i - 1;
-				*width: percentage($i/$col)-$ie-percent-gutter + $spanned-gutters*$ie-percent-gutter; /* IE7- width = normal width - gutter width + spanned gutters width */
+				*width: percentage($i/$col)-$ie-percent-gutter; /* IE7- width = normal width - gutter width */
 			}
 		}
 	}
 	.line{
-		@include clearfix-me;
+		@include clearfix-me(micro);
+		margin-left: -$gutter;
 		
 		.unit{ 
 			float:left;
 			zoom:1;
 			@if $gutter {
 				@include box-sizing(border-box); /*IE8+*/
-				padding: 0 $large-gutter 0 $small-gutter;
-				*padding: 0; /* IE7- */
-				*margin: 0 $ie-percent-gutter/2; /* IE7- */
+				padding-left: $gutter;
 			}
 
-			&.lastUnit, &:last-child{ /* for IE8- you must put a class .lastUnit on the final unit in a line */
-				@include clearfix-me;
+			&.lastUnit { /* for IE8- you must put a class .lastUnit on the final unit in a line */
+				@include clearfix-me(facebook);
 				float: none;
-				width: auto !important;
 				_position: relative;
 				_left: -3px;
 				_margin-right: -3px;
-				@if $gutter {
-					padding: 0 0 0 $small-gutter;
-					*padding: 0 0 0 $large-gutter+5;/* IE7- */
-					*margin: 0;/* IE7- */
-					//*margin: 0 0 0 $ie-percent-gutter*30;
-				}
-			}
-			@if $gutter {
-				&.firstUnit, &:first-child{ /* for IE7- you must put a class .firstUnit on the first unit in a line */
-					padding: 0 $large-gutter 0 0;
-					*padding: 0;/* IE7- */
-					*margin: 0 $ie-percent-gutter/2 0 0;/* IE7- */
-					//*margin: 0;
-				}
+				/* IE 7 */
+			    *display: block;
+			    *width: auto;
+			    *zoom: 1;
 			}
 		}
 		.unitExt { // TODO: handle case where there are two (or more) unitExt in a line.
 			float:right;
 			zoom:1;
 			@if $gutter {
-				padding: 0 0 0 $large-gutter;
-				*padding: 0;/* IE7- */
-				*margin: 0 0 0 $ie-percent-gutter;/* IE7- */
+				padding: 0 0 0 $gutter;
 			}
-		}
-		@if $gutter {
-			.unitExt ~ .unit:last-child, 
-			.unitExt ~ .unitExt{ /*IE7+*/
-				padding: 0 $small-gutter;
-				*padding: 0; // what should happen for IE7 here?
-			}
-		}
-		.unit:nth-last-child(2) { /* IE9+ - TODO: fix IE8 */
-			//border: 10px solid red;
-			//padding-right: $small-gutter + $small-gutter/2;
-		}
-		.unit:first-child:last-child {
-			padding:0 ;
 		}
 	}
 }

@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,45 +24,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -78,29 +78,55 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* whitespace */
 /* grids */
 /* layout */
-/* line 35, /Users/stubbornella/Documents/blocks/_variables.scss */
+/* line 35, ../_variables.scss */
 body {
   width: 988px;
   margin: 0 auto;
+}
+
+/* 
+ * clearfix 		used project wide to clear floats and create a new formatting context
+ * usage			@include clearfix-me(<empty|overflow|facebook|micro|stubborn>)
+ * $clearfix-method	sets default method
+ */
+/* line 17, ../utils/_clearfix-me.scss */
+.line .unit.lastUnit {
+  display: table-cell;
+  vertical-align: top;
+  width: 10000px;
+}
+
+/* line 22, ../utils/_clearfix-me.scss */
+.line, .box .box-head, .box .box-body, .box .box-foot {
+  zoom: 1;
+}
+/* line 26, ../utils/_clearfix-me.scss */
+.line:before, .box .box-head:before, .box .box-body:before, .box .box-foot:before, .line:after, .box .box-head:after, .box .box-body:after, .box .box-foot:after {
+  content: " ";
+  display: table;
+}
+/* line 30, ../utils/_clearfix-me.scss */
+.line:after, .box .box-head:after, .box .box-body:after, .box .box-foot:after {
+  clear: both;
 }
 
 /* ==========================================================================
    Video
    ========================================================================== */
 /* thierry's method for embedding video w out it blowing up the page */
-/* line 2, /Users/stubbornella/Documents/blocks/video/_video.scss */
+/* line 2, ../video/_video.scss */
 .videoWrap {
   position: relative;
   height: 0;
 }
 
-/* line 6, /Users/stubbornella/Documents/blocks/video/_video.scss */
+/* line 6, ../video/_video.scss */
 * html .videoWrap {
   margin-bottom: 45px;
   margin-bot\tom: 0;
 }
 
-/* line 11, /Users/stubbornella/Documents/blocks/video/_video.scss */
+/* line 11, ../video/_video.scss */
 .videoWrap div, .videoWrap embed, .videoWrap object, .videoWrap iframe {
   position: absolute;
   width: 100%;
@@ -110,27 +136,27 @@ body {
 }
 
 /* making it so images don't bust open grids */
-/* line 22, /Users/stubbornella/Documents/blocks/video/_video.scss */
+/* line 22, ../video/_video.scss */
 .imgWrap img {
   max-width: 100%;
 }
 
-/* line 25, /Users/stubbornella/Documents/blocks/video/_video.scss */
+/* line 25, ../video/_video.scss */
 .wideScreen {
   padding-bottom: 56.25%;
 }
 
-/* line 26, /Users/stubbornella/Documents/blocks/video/_video.scss */
+/* line 26, ../video/_video.scss */
 .fourBYthree {
   padding-bottom: 75%;
 }
 
-/* line 27, /Users/stubbornella/Documents/blocks/video/_video.scss */
+/* line 27, ../video/_video.scss */
 .chrome_25 {
   padding-top: 25px;
 }
 
-/* line 28, /Users/stubbornella/Documents/blocks/video/_video.scss */
+/* line 28, ../video/_video.scss */
 .chrome_35 {
   padding-top: 35px;
 }
@@ -138,146 +164,96 @@ body {
 /* ==========================================================================
    Grid
    ========================================================================== */
-/* 
- * clearfix 		used project wide to clear floats and create a new formatting context
- * usage			@include clearfix-me(<empty|overflow|facebook|micro|stubborn>)
- * $clearfix-method	sets default method
- */
-/* line 12, /Users/stubbornella/Documents/blocks/utils/_clearfix-me.scss */
-.line, .line .unit.lastUnit, .line .unit:last-child {
-  overflow: hidden;
-  *overflow: visible;
-  zoom: 1;
-}
-
-/* line 22, /Users/stubbornella/Documents/blocks/utils/_clearfix-me.scss */
-.box .box-head, .box .box-body, .box .box-foot {
-  zoom: 1;
-}
-/* line 26, /Users/stubbornella/Documents/blocks/utils/_clearfix-me.scss */
-.box .box-head:before, .box .box-body:before, .box .box-foot:before, .box .box-head:after, .box .box-body:after, .box .box-foot:after {
-  content: " ";
-  display: table;
-}
-/* line 30, /Users/stubbornella/Documents/blocks/utils/_clearfix-me.scss */
-.box .box-head:after, .box .box-body:after, .box .box-foot:after {
-  clear: both;
-}
-
-/* colors */
-/* neutrals */
-/* typography */
-/* 
- * em-ratio	converts between em and px
- * to em 	divide by this ratio
- * to px 	mulitply by this ratio
- */
-/* whitespace */
-/* grids */
-/* layout */
-/* line 35, /Users/stubbornella/Documents/blocks/grid/../_variables.scss */
-body {
-  width: 988px;
-  margin: 0 auto;
-}
-
-/* line 92, /Users/stubbornella/Documents/blocks/grid/_grid.scss */
-.unit:before {
-  content: "unit";
-  display: block;
-  min-height: 40px;
-  line-height: 40px;
-  background-color: #EEE;
-  text-align: center;
-  border-radius: 3px;
-}
-
 /* ie 7 and earlier need percentage based gutters because they don't do border-box */
-/* line 22, /Users/stubbornella/Documents/blocks/grid/_grid.scss */
+/* line 20, ../grid/_grid.scss */
 .size1of12 {
   width: 8.33333%;
   *width: 6.81511%;
-  /* IE7- width = normal width - gutter width + spanned gutters width */
+  /* IE7- width = normal width - gutter width */
 }
 
-/* line 22, /Users/stubbornella/Documents/blocks/grid/_grid.scss */
+/* line 20, ../grid/_grid.scss */
 .size2of12 {
   width: 16.66667%;
-  *width: 16.66667%;
-  /* IE7- width = normal width - gutter width + spanned gutters width */
+  *width: 15.14845%;
+  /* IE7- width = normal width - gutter width */
 }
 
-/* line 22, /Users/stubbornella/Documents/blocks/grid/_grid.scss */
+/* line 20, ../grid/_grid.scss */
 .size3of12 {
   width: 25%;
-  *width: 26.51822%;
-  /* IE7- width = normal width - gutter width + spanned gutters width */
+  *width: 23.48178%;
+  /* IE7- width = normal width - gutter width */
 }
 
-/* line 22, /Users/stubbornella/Documents/blocks/grid/_grid.scss */
+/* line 20, ../grid/_grid.scss */
 .size4of12 {
   width: 33.33333%;
-  *width: 36.36977%;
-  /* IE7- width = normal width - gutter width + spanned gutters width */
+  *width: 31.81511%;
+  /* IE7- width = normal width - gutter width */
 }
 
-/* line 22, /Users/stubbornella/Documents/blocks/grid/_grid.scss */
+/* line 20, ../grid/_grid.scss */
 .size5of12 {
   width: 41.66667%;
-  *width: 46.22132%;
-  /* IE7- width = normal width - gutter width + spanned gutters width */
+  *width: 40.14845%;
+  /* IE7- width = normal width - gutter width */
 }
 
-/* line 22, /Users/stubbornella/Documents/blocks/grid/_grid.scss */
+/* line 20, ../grid/_grid.scss */
 .size6of12 {
   width: 50%;
-  *width: 56.07287%;
-  /* IE7- width = normal width - gutter width + spanned gutters width */
+  *width: 48.48178%;
+  /* IE7- width = normal width - gutter width */
 }
 
-/* line 22, /Users/stubbornella/Documents/blocks/grid/_grid.scss */
+/* line 20, ../grid/_grid.scss */
 .size7of12 {
   width: 58.33333%;
-  *width: 65.92443%;
-  /* IE7- width = normal width - gutter width + spanned gutters width */
+  *width: 56.81511%;
+  /* IE7- width = normal width - gutter width */
 }
 
-/* line 22, /Users/stubbornella/Documents/blocks/grid/_grid.scss */
+/* line 20, ../grid/_grid.scss */
 .size8of12 {
   width: 66.66667%;
-  *width: 75.77598%;
-  /* IE7- width = normal width - gutter width + spanned gutters width */
+  *width: 65.14845%;
+  /* IE7- width = normal width - gutter width */
 }
 
-/* line 22, /Users/stubbornella/Documents/blocks/grid/_grid.scss */
+/* line 20, ../grid/_grid.scss */
 .size9of12 {
   width: 75%;
-  *width: 85.62753%;
-  /* IE7- width = normal width - gutter width + spanned gutters width */
+  *width: 73.48178%;
+  /* IE7- width = normal width - gutter width */
 }
 
-/* line 22, /Users/stubbornella/Documents/blocks/grid/_grid.scss */
+/* line 20, ../grid/_grid.scss */
 .size10of12 {
   width: 83.33333%;
-  *width: 95.47908%;
-  /* IE7- width = normal width - gutter width + spanned gutters width */
+  *width: 81.81511%;
+  /* IE7- width = normal width - gutter width */
 }
 
-/* line 22, /Users/stubbornella/Documents/blocks/grid/_grid.scss */
+/* line 20, ../grid/_grid.scss */
 .size11of12 {
   width: 91.66667%;
-  *width: 105.33063%;
-  /* IE7- width = normal width - gutter width + spanned gutters width */
+  *width: 90.14845%;
+  /* IE7- width = normal width - gutter width */
 }
 
-/* line 22, /Users/stubbornella/Documents/blocks/grid/_grid.scss */
+/* line 20, ../grid/_grid.scss */
 .size12of12 {
   width: 100%;
-  *width: 115.18219%;
-  /* IE7- width = normal width - gutter width + spanned gutters width */
+  *width: 98.48178%;
+  /* IE7- width = normal width - gutter width */
 }
 
-/* line 32, /Users/stubbornella/Documents/blocks/grid/_grid.scss */
+/* line 26, ../grid/_grid.scss */
+.line {
+  margin-left: -15px;
+}
+/* line 30, ../grid/_grid.scss */
 .line .unit {
   float: left;
   zoom: 1;
@@ -285,90 +261,39 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   /*IE8+*/
-  padding: 0 10px 0 5px;
-  *padding: 0;
-  /* IE7- */
-  *margin: 0 0.75911%;
-  /* IE7- */
+  padding-left: 15px;
 }
-/* line 42, /Users/stubbornella/Documents/blocks/grid/_grid.scss */
-.line .unit.lastUnit, .line .unit:last-child {
+/* line 38, ../grid/_grid.scss */
+.line .unit.lastUnit {
   /* for IE8- you must put a class .lastUnit on the final unit in a line */
   float: none;
-  width: auto !important;
   _position: relative;
   _left: -3px;
   _margin-right: -3px;
-  padding: 0 0 0 5px;
-  *padding: 0 0 0 15px;
-  /* IE7- */
-  *margin: 0;
-  /* IE7- */
+  /* IE 7 */
+  *display: block;
+  *width: auto;
+  *zoom: 1;
 }
-/* line 57, /Users/stubbornella/Documents/blocks/grid/_grid.scss */
-.line .unit.firstUnit, .line .unit:first-child {
-  /* for IE7- you must put a class .firstUnit on the first unit in a line */
-  padding: 0 10px 0 0;
-  *padding: 0;
-  /* IE7- */
-  *margin: 0 0.75911% 0 0;
-  /* IE7- */
-}
-/* line 65, /Users/stubbornella/Documents/blocks/grid/_grid.scss */
+/* line 50, ../grid/_grid.scss */
 .line .unitExt {
   float: right;
   zoom: 1;
-  padding: 0 0 0 10px;
-  *padding: 0;
-  /* IE7- */
-  *margin: 0 0 0 1.51822%;
-  /* IE7- */
-}
-/* line 76, /Users/stubbornella/Documents/blocks/grid/_grid.scss */
-.line .unitExt ~ .unit:last-child,
-.line .unitExt ~ .unitExt {
-  /*IE7+*/
-  padding: 0 5px;
-  *padding: 0;
-}
-/* line 81, /Users/stubbornella/Documents/blocks/grid/_grid.scss */
-.line .unit:nth-last-child(2) {
-  /* IE9+ - TODO: fix IE8 */
-}
-/* line 85, /Users/stubbornella/Documents/blocks/grid/_grid.scss */
-.line .unit:first-child:last-child {
-  padding: 0;
+  padding: 0 0 0 15px;
 }
 
 /* ==========================================================================
    Typography
    ========================================================================== */
-/* colors */
-/* neutrals */
-/* typography */
-/* 
- * em-ratio	converts between em and px
- * to em 	divide by this ratio
- * to px 	mulitply by this ratio
- */
-/* whitespace */
-/* grids */
-/* layout */
-/* line 35, /Users/stubbornella/Documents/blocks/_variables.scss */
-body {
-  width: 988px;
-  margin: 0 auto;
-}
-
 /* set body base fonts */
-/* line 5, /Users/stubbornella/Documents/blocks/typography/_typography.scss */
+/* line 4, ../typography/_typography.scss */
 body {
   font: 15px/1.5em Georgia, "Times New Roman", Times, serif;
   color: #333333;
 }
 
 /* shared styles */
-/* line 50, /Users/stubbornella/Documents/blocks/typography/_typography.scss */
+/* line 49, ../typography/_typography.scss */
 h1, .h1,
 h2, .h2,
 h3, .h3,
@@ -381,42 +306,42 @@ h6, .h6 {
 }
 
 /* different styles */
-/* line 54, /Users/stubbornella/Documents/blocks/typography/_typography.scss */
+/* line 53, ../typography/_typography.scss */
 h1, .h1 {
   font-size: 45px;
   line-height: 1.5em;
   color: #AE0345;
 }
 
-/* line 59, /Users/stubbornella/Documents/blocks/typography/_typography.scss */
+/* line 58, ../typography/_typography.scss */
 h2, .h2 {
   font-size: 25px;
   line-height: 2.1em;
   color: #AE0345;
 }
 
-/* line 64, /Users/stubbornella/Documents/blocks/typography/_typography.scss */
+/* line 63, ../typography/_typography.scss */
 h3, .h3 {
   font-size: 22px;
   line-height: 1.97727em;
   color: #DF2B72;
 }
 
-/* line 69, /Users/stubbornella/Documents/blocks/typography/_typography.scss */
+/* line 68, ../typography/_typography.scss */
 h4, .h4 {
   font-size: 18px;
   line-height: 1.25em;
   color: #333;
 }
 
-/* line 74, /Users/stubbornella/Documents/blocks/typography/_typography.scss */
+/* line 73, ../typography/_typography.scss */
 h5, .h5 {
   font-size: 16px;
   line-height: 1.40625em;
   color: #AE0345;
 }
 
-/* line 79, /Users/stubbornella/Documents/blocks/typography/_typography.scss */
+/* line 78, ../typography/_typography.scss */
 h6, .h6 {
   font-size: 16px;
   line-height: 1.40625em;
@@ -424,7 +349,7 @@ h6, .h6 {
   color: #333;
 }
 
-/* line 85, /Users/stubbornella/Documents/blocks/typography/_typography.scss */
+/* line 84, ../typography/_typography.scss */
 .h7 {
   font-size: 16px;
   line-height: 1.40625em;
@@ -436,38 +361,22 @@ h6, .h6 {
 /* ==========================================================================
    Whitespace
    ========================================================================== */
-/* colors */
-/* neutrals */
-/* typography */
-/* 
- * em-ratio	converts between em and px
- * to em 	divide by this ratio
- * to px 	mulitply by this ratio
- */
-/* whitespace */
-/* grids */
-/* layout */
-/* line 35, /Users/stubbornella/Documents/blocks/_variables.scss */
-body {
-  width: 988px;
-  margin: 0 auto;
-}
-
 /* ====== Establish Default Spacing ====== */
-/* line 5, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 4, ../whitespace/_whitespace.scss */
 h1, h2, h3, h4, h5, h6, ul, ol, dl, p, blockquote, .media, pre, .data, .line {
-  margin: 0.75rem 0;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
 }
-/* line 14, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 14, ../whitespace/_whitespace.scss */
 h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child, ul:first-child, ol:first-child, dl:first-child, p:first-child, blockquote:first-child, .media:first-child, pre:first-child, .data:first-child, .line:first-child {
   margin-top: 0;
 }
-/* line 17, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 17, ../whitespace/_whitespace.scss */
 h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child, ul:last-child, ol:last-child, dl:last-child, p:last-child, blockquote:last-child, .media:last-child, pre:last-child, .data:last-child, .line:last-child {
   margin-bottom: 0;
 }
 
-/* line 22, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 22, ../whitespace/_whitespace.scss */
 table h1, table h2, table h3, table h4, table h5, table h6, table p, table ul, table ol, table dl, table blockquote, table .media, table pre {
   margin-left: 0;
   margin-right: 0;
@@ -486,282 +395,282 @@ table h1, table h2, table h3, table h4, table h5, table h6, table p, table ul, t
  * a,t,r,b,l,h,v	all,top,right,bottom,left,horizontal,vertical
  * s,m,l,n 			small(5px),medium(10px),large(20px),none(0px)
  */
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .pan {
   padding: 0 !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .man {
   margin: 0 !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .pas {
   padding: 5px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .mas {
   margin: 5px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .pam {
   padding: 7.5px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .mam {
   margin: 7.5px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .pal {
   padding: 15px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .mal {
   margin: 15px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .pvn {
   padding-top: 0 !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .mvn {
   margin-top: 0 !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .pvs {
   padding-top: 5px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .mvs {
   margin-top: 5px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .pvm {
   padding-top: 7.5px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .mvm {
   margin-top: 7.5px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .pvl {
   padding-top: 15px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .mvl {
   margin-top: 15px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .phn {
   padding-left: 0 !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .mhn {
   margin-left: 0 !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .phs {
   padding-left: 5px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .mhs {
   margin-left: 5px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .phm {
   padding-left: 7.5px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .mhm {
   margin-left: 7.5px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .phl {
   padding-left: 15px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .mhl {
   margin-left: 15px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .ptn {
   padding-top: 0 !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .mtn {
   margin-top: 0 !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .pts {
   padding-top: 5px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .mts {
   margin-top: 5px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .ptm {
   padding-top: 7.5px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .mtm {
   margin-top: 7.5px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .ptl {
   padding-top: 15px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .mtl {
   margin-top: 15px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .prn {
   padding-right: 0 !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .mrn {
   margin-right: 0 !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .prs {
   padding-right: 5px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .mrs {
   margin-right: 5px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .prm {
   padding-right: 7.5px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .mrm {
   margin-right: 7.5px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .prl {
   padding-right: 15px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .mrl {
   margin-right: 15px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .pbn {
   padding-bottom: 0 !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .mbn {
   margin-bottom: 0 !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .pbs {
   padding-bottom: 5px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .mbs {
   margin-bottom: 5px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .pbm {
   padding-bottom: 7.5px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .mbm {
   margin-bottom: 7.5px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .pbl {
   padding-bottom: 15px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .mbl {
   margin-bottom: 15px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .pln {
   padding-left: 0 !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .mln {
   margin-left: 0 !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .pls {
   padding-left: 5px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .mls {
   margin-left: 5px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .plm {
   padding-left: 7.5px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .mlm {
   margin-left: 7.5px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .pll {
   padding-left: 15px !important;
 }
 
-/* line 94, /Users/stubbornella/Documents/blocks/whitespace/_whitespace.scss */
+/* line 94, ../whitespace/_whitespace.scss */
 .mll {
   margin-left: 15px !important;
 }
@@ -772,32 +681,6 @@ table h1, table h2, table h3, table h4, table h5, table h6, table p, table ul, t
 /* ==========================================================================
    Box
    ========================================================================== */
-/* 
- * clearfix 		used project wide to clear floats and create a new formatting context
- * usage			@include clearfix-me(<empty|overflow|facebook|micro|stubborn>)
- * $clearfix-method	sets default method
- */
-/* line 12, /Users/stubbornella/Documents/blocks/utils/_clearfix-me.scss */
-.line, .line .unit.lastUnit, .line .unit:last-child {
-  overflow: hidden;
-  *overflow: visible;
-  zoom: 1;
-}
-
-/* line 22, /Users/stubbornella/Documents/blocks/utils/_clearfix-me.scss */
-.box .box-head, .box .box-body, .box .box-foot {
-  zoom: 1;
-}
-/* line 26, /Users/stubbornella/Documents/blocks/utils/_clearfix-me.scss */
-.box .box-head:before, .box .box-body:before, .box .box-foot:before, .box .box-head:after, .box .box-body:after, .box .box-foot:after {
-  content: " ";
-  display: table;
-}
-/* line 30, /Users/stubbornella/Documents/blocks/utils/_clearfix-me.scss */
-.box .box-head:after, .box .box-body:after, .box .box-foot:after {
-  clear: both;
-}
-
 /*
 Copyright (c) 2009, Nicole Sullivan. All rights reserved.
 Code licensed under the BSD License:
@@ -807,7 +690,7 @@ version: 0.2
 /* ====== Contour blocks ====== */
 /* remove background-image:" to default to square corners for IE */
 /* ----- simple (extends mod) ----- */
-/* line 5, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 5, ../box/_box_skin.scss */
 .simple .inner {
   border: 1px solid #D7D7D7;
   -moz-border-radius: 7px;
@@ -815,26 +698,26 @@ version: 0.2
   border-radius: 7px;
 }
 
-/* line 6, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 6, ../box/_box_skin.scss */
 .simple b {
   background-image: url(skin/simple_corners.png) \9;
 }
 
 /* ----- basic (extends mod) ----- */
-/* line 8, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 8, ../box/_box_skin.scss */
 .basic .inner {
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
   border-radius: 7px;
 }
 
-/* line 9, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 9, ../box/_box_skin.scss */
 .basic b {
   background-image: url(skin/round.png) \9;
 }
 
 /* ----- simpleExt (extends mod) ----- */
-/* line 11, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 11, ../box/_box_skin.scss */
 .simpleExt, .simpleExt .inner {
   border: 1px solid #c7c7c7;
   -moz-border-radius: 7px;
@@ -842,19 +725,19 @@ version: 0.2
   border-radius: 7px;
 }
 
-/* line 12, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 12, ../box/_box_skin.scss */
 .simpleExt .inner {
   border-color: #fff;
   border-width: 4px;
   background-color: #e2e2e2;
 }
 
-/* line 13, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 13, ../box/_box_skin.scss */
 .simpleExt b {
   background-image: url(skin/simple_extended.png) \9;
 }
 
-/* line 14, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 14, ../box/_box_skin.scss */
 .simpleExt .tl {
   left: -1px;
   top: -1px;
@@ -862,7 +745,7 @@ version: 0.2
   width: 12px;
 }
 
-/* line 15, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 15, ../box/_box_skin.scss */
 .simpleExt .tr {
   right: -1px;
   top: -1px;
@@ -870,7 +753,7 @@ version: 0.2
   width: 12px;
 }
 
-/* line 16, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 16, ../box/_box_skin.scss */
 .simpleExt .bl {
   left: -1px;
   bottom: -1px;
@@ -879,7 +762,7 @@ version: 0.2
   margin-top: -12px;
 }
 
-/* line 17, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 17, ../box/_box_skin.scss */
 .simpleExt .br {
   right: -1px;
   bottom: -1px;
@@ -889,7 +772,7 @@ version: 0.2
 }
 
 /* ----- me (extends mod) use for my comments ----- */
-/* line 19, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 19, ../box/_box_skin.scss */
 .me, .me .inner {
   border: 1px solid #909090;
   -moz-border-radius: 5px;
@@ -897,42 +780,42 @@ version: 0.2
   border-radius: 5px;
 }
 
-/* line 20, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 20, ../box/_box_skin.scss */
 .me .inner {
   border-color: #d76a84;
 }
 
-/* line 21, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 21, ../box/_box_skin.scss */
 .me b {
   background-image: url(skin/me.png) \9;
 }
 
-/* line 22, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 22, ../box/_box_skin.scss */
 .me .tl {
   left: -1px;
   top: -1px;
 }
 
-/* line 23, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 23, ../box/_box_skin.scss */
 .me .tr {
   right: -1px;
   top: -1px;
 }
 
-/* line 24, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 24, ../box/_box_skin.scss */
 .me .bl {
   left: -1px;
   bottom: -1px;
 }
 
-/* line 25, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 25, ../box/_box_skin.scss */
 .me .br {
   right: -1px;
   bottom: -1px;
 }
 
 /* ----- noted (extends mod) ----- */
-/* line 27, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 27, ../box/_box_skin.scss */
 .noted, .noted .inner {
   border: 1px solid #c2c2c2;
   -moz-border-radius: 5px;
@@ -940,55 +823,55 @@ version: 0.2
   border-radius: 5px;
 }
 
-/* line 28, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 28, ../box/_box_skin.scss */
 .noted .inner {
   border-color: #eded68;
 }
 
-/* line 29, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 29, ../box/_box_skin.scss */
 .noted b {
   background-image: url(skin/noted.png) \9;
 }
 
-/* line 30, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 30, ../box/_box_skin.scss */
 .noted .tl {
   left: -1px;
   top: -1px;
 }
 
-/* line 31, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 31, ../box/_box_skin.scss */
 .noted .tr {
   right: -1px;
   top: -1px;
 }
 
-/* line 32, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 32, ../box/_box_skin.scss */
 .noted .bl {
   left: -1px;
   bottom: -1px;
 }
 
-/* line 33, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 33, ../box/_box_skin.scss */
 .noted .br {
   right: -1px;
   bottom: -1px;
 }
 
 /* ----- grab (extends mod) ----- */
-/* line 35, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 35, ../box/_box_skin.scss */
 .grab .inner {
   border: 3px solid #00477a;
   border-bottom-width: 10px;
 }
 
 /* can't be done w border radius */
-/* line 36, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 36, ../box/_box_skin.scss */
 .grab b {
   background-image: url(skin/grab.png);
 }
 
 /*.grab .tl, .grab .tr{height:10px; width:10px;}*/
-/* line 38, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 38, ../box/_box_skin.scss */
 .grab .bl, .grab .br {
   height: 16px;
   /*if height is set, margin set*/
@@ -996,19 +879,19 @@ version: 0.2
 }
 
 /* ----- faq (extends mod) ----- */
-/* line 40, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 40, ../box/_box_skin.scss */
 .faq .inner {
   border: 3px solid #b20029;
   border-bottom-width: 10px;
 }
 
 /* can't be done w border radius */
-/* line 41, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 41, ../box/_box_skin.scss */
 .faq b {
   background-image: url(skin/faq.png);
 }
 
-/* line 42, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 42, ../box/_box_skin.scss */
 .faq .bl, .faq .br {
   height: 16px;
   /*if height is set, margin set*/
@@ -1016,19 +899,19 @@ version: 0.2
 }
 
 /* ----- onlinestore (extends mod) ----- */
-/* line 44, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 44, ../box/_box_skin.scss */
 .onlinestore .inner {
   border: 3px solid #9a9800;
   border-bottom-width: 10px;
 }
 
 /* can't be done w border radius */
-/* line 45, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 45, ../box/_box_skin.scss */
 .onlinestore b {
   background-image: url(skin/store.png);
 }
 
-/* line 46, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 46, ../box/_box_skin.scss */
 .onlinestore .bl, .onlinestore .br {
   height: 16px;
   /*if height is set, margin set*/
@@ -1036,19 +919,19 @@ version: 0.2
 }
 
 /* ----- about (extends mod) ----- */
-/* line 48, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 48, ../box/_box_skin.scss */
 .about .inner {
   border: 3px solid #494949;
   border-bottom-width: 10px;
 }
 
 /* can't be done w border radius */
-/* line 49, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 49, ../box/_box_skin.scss */
 .about b {
   background-image: url(skin/about.png);
 }
 
-/* line 50, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 50, ../box/_box_skin.scss */
 .about .bl, .about .br {
   height: 16px;
   /*if height is set, margin set*/
@@ -1056,7 +939,7 @@ version: 0.2
 }
 
 /* ----- talk (extends mod) ----- */
-/* line 52, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 52, ../box/_box_skin.scss */
 .talk, .talk .inner {
   border: 1px solid #c7c7c7;
   -moz-border-radius: 5px;
@@ -1064,105 +947,105 @@ version: 0.2
   border-radius: 5px;
 }
 
-/* line 53, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 53, ../box/_box_skin.scss */
 .talk .inner {
   border-color: #ededed;
 }
 
-/* line 54, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 54, ../box/_box_skin.scss */
 .talk b {
   background-image: url(skin/talk.png) \9;
 }
 
-/* line 55, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 55, ../box/_box_skin.scss */
 .talk .tl {
   left: -1px;
   top: -1px;
 }
 
-/* line 56, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 56, ../box/_box_skin.scss */
 .talk .tr {
   right: -1px;
   top: -1px;
 }
 
-/* line 57, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 57, ../box/_box_skin.scss */
 .talk .bl {
   left: -1px;
   bottom: -1px;
 }
 
-/* line 58, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 58, ../box/_box_skin.scss */
 .talk .br {
   right: -1px;
   bottom: -1px;
 }
 
 /* ----- photo (extends complex) ----- */
-/* line 60, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 60, ../box/_box_skin.scss */
 .photo .inner {
   border: solid 10px #fff;
   margin: 0 4px;
 }
 
 /* muck with margins to change how the block will align with other blocks, any value between 0-10px */
-/* line 61, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 61, ../box/_box_skin.scss */
 .photo b {
   background-image: url(skin/photo.png);
 }
 
-/* line 62, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 62, ../box/_box_skin.scss */
 .photo .tr, .photo .tl {
   width: 20px;
 }
 
-/* line 63, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 63, ../box/_box_skin.scss */
 .photo .top, .photo .bottom {
   height: 4px;
   margin-top: 0px;
 }
 
-/* line 64, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 64, ../box/_box_skin.scss */
 .photo .bl, .photo .br {
   height: 16px;
   margin-top: -12px;
 }
 
 /* ----- flow (extends complex) ----- */
-/* line 66, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 66, ../box/_box_skin.scss */
 .flow {
   margin: 6px;
 }
 
-/* line 67, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 67, ../box/_box_skin.scss */
 .flow b {
   background-image: url(skin/even.png);
 }
 
-/* line 68, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 68, ../box/_box_skin.scss */
 .flow .inner {
   padding: 0 4px;
 }
 
-/* line 69, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 69, ../box/_box_skin.scss */
 .flow .top {
   height: 4px;
 }
 
-/* line 70, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 70, ../box/_box_skin.scss */
 .flow .bottom {
   height: 4px;
   margin-top: -4px;
 }
 
-/* line 71, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 71, ../box/_box_skin.scss */
 .flow .br, .flow .bl {
   margin-top: -6px;
 }
 
 /* margin top = bottom height - corner height */
 /* ----- shadow test (experimental attempt to match "flow" cross browser w no img)----- */
-/* line 73, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 73, ../box/_box_skin.scss */
 .boo {
   -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.33);
   -moz-box-shadow: black 2px 2px 2px 2px;
@@ -1172,24 +1055,24 @@ version: 0.2
 }
 
 /* ----- .excerpt (extends complex) ----- */
-/* line 75, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 75, ../box/_box_skin.scss */
 .excerpt b {
   background-image: url(skin/excerpt.png);
 }
 
-/* line 76, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 76, ../box/_box_skin.scss */
 .excerpt .top {
   height: 1px;
 }
 
-/* line 77, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 77, ../box/_box_skin.scss */
 .excerpt .bottom {
   height: 6px;
   margin-top: -6px;
 }
 
 /* margin top equal to - height of bottom */
-/* line 78, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 78, ../box/_box_skin.scss */
 .excerpt .br, .excerpt .bl {
   height: 12px;
   margin-top: -6px;
@@ -1197,74 +1080,74 @@ version: 0.2
 
 /* margin top = bottom height - corner height */
 /* ----- sommers (extends pop) ----- */
-/* line 80, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 80, ../box/_box_skin.scss */
 .sommers .inner {
   _border: 3px solid #D7D7D7;
 }
 
 /*IE6 backup no alpha transparency */
-/* line 81, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 81, ../box/_box_skin.scss */
 .sommers, .sommers .inner, .sommers b {
   background-image: url(skin/glow_7px.png);
   _background-image: none;
 }
 
-/* line 82, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 82, ../box/_box_skin.scss */
 .sommers {
   margin: 3px 20px 20px 3px;
 }
 
 /* ----- gonzalo ----- */
-/* line 84, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 84, ../box/_box_skin.scss */
 .gonzalo, .gonzalo .inner, .gonzalo b {
   background-image: url(skin/gc.png);
 }
 
 /* ====== Background blocks ====== */
-/* line 86, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 86, ../box/_box_skin.scss */
 .sale .inner {
   background: red none;
 }
 
-/* line 87, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 87, ../box/_box_skin.scss */
 .nicole .inner {
   background: #c01c41 none;
   color: #fff;
 }
 
-/* line 88, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 88, ../box/_box_skin.scss */
 .nicole *, .login * {
   color: #fff;
 }
 
-/* line 89, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 89, ../box/_box_skin.scss */
 .highlight .inner {
   background: #e3e36f none;
 }
 
-/* line 90, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 90, ../box/_box_skin.scss */
 .universe .inner {
   background: url(skin/universe.png) repeat left top;
 }
 
-/* line 91, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 91, ../box/_box_skin.scss */
 .foo .inner {
   background: url(skin/universe_gray.png) repeat left top;
 }
 
-/* line 92, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 92, ../box/_box_skin.scss */
 .login .inner {
   background: url(skin/universe_login.png) repeat left top;
 }
 
-/* line 93, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 93, ../box/_box_skin.scss */
 .comment .inner {
   background: #e2e2e2 none;
 }
 
 /* ====== Block headers and footers ====== */
 /*.hd h1, .hd h2, .hd h3, .hd h4, .hd h5, .hd h6{padding: 5px 10px;}*/
-/* line 96, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 96, ../box/_box_skin.scss */
 .section {
   background: #e9e9e9 url(skin/header.png) repeat-x left bottom;
   color: #de2c72;
@@ -1272,19 +1155,19 @@ version: 0.2
   /*padding:5px 10px;*/
 }
 
-/* line 97, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 97, ../box/_box_skin.scss */
 .section h1, .section h2, .section h3, .section h4, .section h5, .section h6 {
   font-size: 100%;
   color: #de2c72;
   /*padding:0;*/
 }
 
-/* line 98, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 98, ../box/_box_skin.scss */
 .act {
   background-color: #e9e9e9;
 }
 
-/* line 99, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 99, ../box/_box_skin.scss */
 .topper {
   background: white url(skin/header_gradient_light.png) repeat-x left bottom;
   color: #4D4D4D;
@@ -1292,26 +1175,26 @@ version: 0.2
   padding: 5px 10px;
 }
 
-/* line 100, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 100, ../box/_box_skin.scss */
 .topper h1, .topper h2, .topper h3, .topper h4, .topper h5, .topper h6 {
   font-size: 100%;
   color: #4D4D4D;
   padding: 0;
 }
 
-/* line 101, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 101, ../box/_box_skin.scss */
 .tabPosLeft .topper li, .tabPosRight .topper li {
   background: white url(skin/header_gradient_light.png) repeat-x left bottom;
   /* belongs in topper */
 }
 
-/* line 102, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 102, ../box/_box_skin.scss */
 .tabPosBottom .topper {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 40%, from(#e2e2e2), to(white));
   background-image: -moz-linear-gradient(0% 8% 270deg, #e2e2e2, white, white 77%);
 }
 
-/* line 105, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 105, ../box/_box_skin.scss */
 .bam {
   background: #00477a url(skin/header_glossy.png) repeat-x left top;
   color: #fff;
@@ -1319,14 +1202,14 @@ version: 0.2
   padding: 5px 10px;
 }
 
-/* line 106, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 106, ../box/_box_skin.scss */
 .bam h1, .bam h2, .bam h3, .bam h4, .bam h5, .bam h6 {
   font-size: 100%;
   color: #fff;
   padding: 0;
 }
 
-/* line 107, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 107, ../box/_box_skin.scss */
 .online {
   background: #9a9400 url(skin/online.png) repeat-x left top;
   color: #000;
@@ -1334,14 +1217,14 @@ version: 0.2
   padding: 5px 10px;
 }
 
-/* line 108, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 108, ../box/_box_skin.scss */
 .online h1, .online h2, .online h3, .online h4, .online h5, .online h6 {
   font-size: 100%;
   color: #000;
   padding: 0;
 }
 
-/* line 109, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 109, ../box/_box_skin.scss */
 .help {
   background: #b20029 url(skin/help.png) repeat-x left top;
   color: #fff;
@@ -1349,14 +1232,14 @@ version: 0.2
   padding: 5px 10px;
 }
 
-/* line 110, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 110, ../box/_box_skin.scss */
 .help h1, .help h2, .help h3, .help h4, .help h5, .help h6 {
   font-size: 100%;
   color: #fff;
   padding: 0;
 }
 
-/* line 111, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 111, ../box/_box_skin.scss */
 .info {
   background: #636363 url(skin/info.png) repeat-x left top;
   color: #fff;
@@ -1364,20 +1247,20 @@ version: 0.2
   padding: 5px 10px;
 }
 
-/* line 112, /Users/stubbornella/Documents/blocks/box/_box_skin.scss */
+/* line 112, ../box/_box_skin.scss */
 .info h1, .info h2, .info h3, .info h4, .info h5, .info h6 {
   font-size: 100%;
   color: #fff;
   padding: 0;
 }
 
-/* line 16, /Users/stubbornella/Documents/blocks/box/_box.scss */
+/* line 15, ../box/_box.scss */
 .box .box-head, .box .box-body, .box .box-foot {
   border: 1px solid red;
 }
 
 /* ----- simple (extends box) ----- */
-/* line 125, /Users/stubbornella/Documents/blocks/box/_box.scss */
+/* line 124, ../box/_box.scss */
 .box-simple {
   border: 1px solid #D7D7D7;
   -webkit-border-radius: 7px;
