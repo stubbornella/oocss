@@ -1,5 +1,0 @@
-/* 
- * clearfix 		used project wide to clear floats and create a new formatting context
- * usage			@include clearfix-me(<empty|overflow|facebook|micro|stubborn>)
- * $clearfix-method	sets default method
- */
