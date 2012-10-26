@@ -1,0 +1,25 @@
+{
+    "parameters":{
+        "componentHandlebarsName":"{name}.handlebars",
+        "componentDocName":"{name}_doc.handlerbars"
+    },
+    "components":[
+        {
+            "name":"box",
+            "path":"components/box",
+            "skins":[
+                {
+                    "classname":"box1",
+                    "title":"box2",
+                    "body":"box3",
+                    "doc":"this is a doc"
+                },
+                {
+                    "classname":"box2",
+                    "title":"box2",
+                    "body":"box2"
+                }
+            ]
+        }
+    ]
+}
