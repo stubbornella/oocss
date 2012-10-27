@@ -1,9 +1,0 @@
-.box {
-    .hd {
-        @include clearfix-me(micro);
-    }
-
-    .bd {
-        @include clearfix-me(micro);
-    }
-}
