@@ -7,13 +7,9 @@ $grids-debug-position: false;
 //TODO: Take different units into account, what if gutters are in rems? ems? percentage?
 //TODO: test in IE6 :(
 @mixin oogrids($cols: (2,3,4,5,6), $gutter: $gutters-h){ 
-	// $small-gutter: $gutter/3;
-	// $large-gutter: ($gutter/3)*2;
 	
 	/* ie 7 and earlier need percentage based gutters because they don't do border-box */
 	$ie-percent-gutter: percentage($gutter/$page-width);
-	// $ie-small-gutter: $ie-percent-gutter/3;
-	// $ie-large-gutter: ($ie-percent-gutter/3)*2;
 
 	@each $col in $cols {
 		@for $i from 1 through $col {
@@ -35,7 +31,7 @@ $grids-debug-position: false;
 				padding-left: $gutter;
 			}
 
-			&.lastUnit { /* for IE8- you must put a class .lastUnit on the final unit in a line */
+			&.lastUnit {
 				@include clearfix-me(facebook);
 				float: none;
 				_position: relative;
@@ -67,7 +63,6 @@ $grids-debug-position: false;
 		text-align: center;
 		border-radius: 3px;
 	}
-	// .line {margin: 20px 0;}
 }
 
 @if $grids-debug-position {
