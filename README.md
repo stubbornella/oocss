@@ -22,4 +22,13 @@ _Example:_
         +-img/  
       +-\ flow/ {skin-root}  
         +-flow_skin.css  
-        +-img/  
+        +-img/
+
+## Build
+
+### Required for build
+- NodeJS,
+- NodeJS plusings : handlebars
+
+
+

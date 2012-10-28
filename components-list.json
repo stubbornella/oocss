@@ -1,5 +1,6 @@
 {
     "parameters":{
+        "buildDirectory" : "./build",
         "componentHandlebarsName":"{name}.handlebars",
         "componentDocName":"{name}_doc.handlerbars"
     },

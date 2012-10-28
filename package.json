@@ -1,0 +1,11 @@
+{
+    "name":"oocss build",
+    "description":"oocss build package",
+    "version":"0.1",
+    "keywords":["oocss", "build"],
+    "homepage":"http://www.oocss.com",
+    "author":"oocss",
+    "devDependencies":{
+        "uglify-js":"1.2.6"
+    }
+}
