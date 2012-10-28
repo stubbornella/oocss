@@ -14,22 +14,23 @@ exports.parseComponents = function (params, compList) {
     compList.forEach(function (compObject) {
         var name = compObject.name;
 
-        getComponentTemplate(name, compObject.path, onGetComponentTemplate);
+        getComponentTemplate(params.componentHandlebarsName.replace('{name}',name), compObject.path, onGetComponentTemplate);
 
     });
 };
 
 var getComponentTemplate = function (name, path, callback) {
     var fs = require('fs');
-    fs.readFile(path + "/" + name, function (err) {
+    fs.readFile(path + "/" + name, 'utf8', function (err,data) {
         if (err) {
             return console.log(err);
         }
-        callback(data);
+        console.log(data);
     });
 };
 
 var onGetComponentTemplate = function(data) {
+    console.log('readfile');
     console.log(data);
 };
 

@@ -1,11 +1,11 @@
 {
-    "name":"oocss build",
+    "name":"oocss-build",
     "description":"oocss build package",
-    "version":"0.1",
+    "version":"1.0.0",
     "keywords":["oocss", "build"],
     "homepage":"http://www.oocss.com",
     "author":"oocss",
     "devDependencies":{
-        "uglify-js":"1.2.6"
+        "handlebars":"1.0.7"
     }
 }
