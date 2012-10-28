@@ -1,0 +1,4 @@
+.box-error {
+    @extend .box-basic-ext;
+    border: 1px solid #d2572c;
+}

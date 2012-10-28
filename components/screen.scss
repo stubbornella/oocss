@@ -42,9 +42,14 @@
    Box
    ========================================================================== */
 @import "box/box";
-@import "box/box_skin";
-@include oobox();
 
+// Contour
+@import "box/skin/box-basic-ext";
+@import "box/skin/box-simple";
+@import "box/skin/box-error";
+
+// Background
+@import "box/skin/box-bg-hlight";
 
 
 // @import "examples";
