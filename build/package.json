@@ -1,8 +1,8 @@
 {
-    "name":"oocss-build",
+    "name":"oocss",
     "description":"oocss build package",
     "version":"1.0.0",
-    "keywords":["oocss", "build"],
+    "keywords":["oocss"],
     "homepage":"http://www.oocss.com",
     "author":"oocss",
     "devDependencies":{

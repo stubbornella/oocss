@@ -7,12 +7,12 @@ HR=\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\
 #
 
 build:
-        @echo "\n${HR}"
-        @echo "Building OOCSS..."
-        @echo "${HR}\n"
+	@echo "\n${HR}"
+	@echo "Building OOCSS..."
+	@echo "${HR}\n"
 
-
-        @echo "\n${HR}"
-        @echo "Building OOCSS done..."
-        @echo "${HR}\n"
+	@mkdir prout
+	@echo "\n${HR}"
+	@echo "Building OOCSS done..."
+	@echo "${HR}\n"
 

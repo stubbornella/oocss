@@ -2,7 +2,7 @@
     "parameters":{
         "buildDirectory" : "./build",
         "componentHandlebarsName":"{name}.handlebars",
-        "componentDocName":"{name}_doc.handlerbars"
+        "componentDocName":"{name}_doc.handlebars"
     },
     "components":[
         {
