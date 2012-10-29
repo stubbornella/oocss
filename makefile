@@ -20,9 +20,10 @@ build:
 # INITIALIZE THE NODE PACKAGE FOR THE BUILD PROCESS
 #
 
-init:
+initbuild:
 	@echo "${HR}"
 	@echo "Initialize node packages"
 	@echo "${HR}"
-	@npm link tools/build
+	@cd tools/build; npm link
 	@echo "Loading                                     ${CHECK} Done"
+
