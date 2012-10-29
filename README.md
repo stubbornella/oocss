@@ -546,7 +546,7 @@ No heights on anything that contains text. Components should be flexible and the
 
 ## Naming classes
 
-When labelling elements within a component with a class, try to avoid generic classes like ``.inner``, ``.hd``, ``.bd``. Instead, prefix the class name with the name of the component.
+When labelling elements within a component with a class, try to avoid generic classes like ``.inner``, ``.hd``, ``.bd``. Instead, prefix the class name with the name of the component. This is to avoid CSS getting overwritten when classes are too generic.
 
 ```css
 /* Good */
