@@ -1,5 +1,29 @@
-<p>Some text about the box</p>
-<ul>
+<h2>{{longname}}</h2>
+<p>Boxes are a common way of grouping related content. They consist of a wrapper with the class <code>box</code> applied. Inside a box, there are three sections the header, body, and footer. All boxes have a body, but some may not have either a header or footer. </p>
+<div class="data codeTable">
+    <table>
+        <tr>
+            <th scope="row">box</th>
+            <td>Base class. Required. Skins and subclasses that extend box should add their classname to this element.</td>
+        </tr>
+        <tr>
+            <th scope="row">boxHead</th>
+            <td>Subnode of box. Creates a box header which generally contains the box title and/or controls. Can be extended via skin classes. Optional.</td>
+        </tr>
+        <tr>
+            <th scope="row">boxBody</th>
+            <td>Subnode of box. Creates the main content area of the box. Required. Any other types of objects may be placed inside the body of a box. A box does not control the display of it's content objects.</td>
+        </tr> 
+        <tr>
+            <th scope="row">boxFoot</th>
+            <td>Subnode of box. Creates the box footer. Any content can go in the footer including buttons, text, etc. Optional.</td>
+        </tr>   
+    </table>
+</div>
+<h3>Box html:</h3>
+<p>This is the html structure on which all the different boxes are built.</p>
+<!-- TODO: how to include box.handlebars here? -->
+<ul class="listBoxes">
     {{#list skins}}
     <li>
         {{this}}

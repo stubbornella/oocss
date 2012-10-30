@@ -6,6 +6,7 @@
     "components":[
         {
             "name":"box",
+            "longname":"Boxes",
             "path":"components/box",
             "skins":[
                 {
