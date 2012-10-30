@@ -15,6 +15,9 @@ build:
 	@echo "Building Documentation..."
 	@echo "${HR}\n"
 	@node tools/build
+#	@echo "\n${HR}"
+#	@echo "Building CSS Files with Sass..."
+#	@echo "${HR}\n"
 	@echo "\n${HR}"
 	@echo "OOCSS Build                                 ${CHECK} Done"
 	@echo "${HR}"

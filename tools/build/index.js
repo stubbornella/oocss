@@ -14,8 +14,8 @@ var Handlerbars = require('handlebars');
 
 var params = componentsListFile.parameters;
 var compList = componentsListFile.components;
-
-var componentPageLayoutTemplate = fs.readFileSync(PROJECT_DIR + 'library/component_doc_template.handlebars', 'utf8');
+params.docsDirectory = params.docsDirectory.replace(/\/$/, '') + '/';
+var componentPageLayoutTemplate = fs.readFileSync(PROJECT_DIR + params.docsDirectory + '/component_doc_template.handlebars', 'utf8');
 
 // iterate  components list
 var template;
@@ -62,11 +62,11 @@ var allComponentsDocumentation = compList.map(function (compObject) {
 
 
 // get library index file
-var libraryHTML = Handlerbars.compile(fs.readFileSync(PROJECT_DIR + 'library/index.handlebars', 'utf8'))({
+var libraryHTML = Handlerbars.compile(fs.readFileSync(PROJECT_DIR + params.docsDirectory + 'index.handlebars', 'utf8'))({
     components:allComponentsDocumentation
 });
 
-var libraryFile = PROJECT_DIR + 'library/index.html';
+var libraryFile = PROJECT_DIR + params.docsDirectory + 'index.html';
 fs.writeFileSync(libraryFile, libraryHTML, 'utf8');
 console.log('Write Library File');
 
