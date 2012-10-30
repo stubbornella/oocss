@@ -10,9 +10,13 @@ build:
 	@echo "\n${HR}"
 	@echo "Building OOCSS..."
 	@echo "${HR}\n"
+	@make clean
+	@echo "\n${HR}"
+	@echo "Building Documentation..."
+	@echo "${HR}\n"
 	@node tools/build
 	@echo "\n${HR}"
-	@echo "OOCSS Documentation Build                   ${CHECK} Done"
+	@echo "OOCSS Build                                 ${CHECK} Done"
 	@echo "${HR}"
 
 
@@ -25,5 +29,16 @@ initbuild:
 	@echo "Initialize node packages"
 	@echo "${HR}"
 	@cd tools/build; npm link
+	@echo "\n${HR}"
 	@echo "Loading                                     ${CHECK} Done"
 
+
+#
+# CLEAN THE BUILD DIRECTORY
+#
+
+clean:
+	@rm -rf build
+	@echo "${HR}"
+	@echo "Clean the build directory                   ${CHECK} Done"
+	@echo "${HR}"

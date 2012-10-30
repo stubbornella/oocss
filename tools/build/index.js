@@ -54,8 +54,7 @@ var allComponentsDocumentation = compList.map(function (compObject) {
     var fileNameHTML = fileName.replace(/\.(handlebars|hbs)$/, '.html');
     var filePath = PROJECT_DIR + compObject.path + '/' + fileNameHTML;
 
-
-    console.log('Write Component documentation : ', compObject.name); //, 'in file : ', filePath);
+    console.log('Write Component documentation : ', compObject.name);
     var file = fs.writeFileSync(filePath, componentDocHTML);
 
     return docsTemplate;
