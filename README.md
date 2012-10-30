@@ -34,7 +34,7 @@ Each indentation level is made up of four spaces. Do not use tabs. (Please set y
 .stubbornella {color: #fff; background-color: #000;}
 ```
 
-Rules inside of @media must be indented an additional level.
+Rules inside of `@media` must be indented an additional level.
 
 ```css
 /* Good */
@@ -109,16 +109,16 @@ The decoration group contains any other properties necessary to style the elemen
 ```css
 /* Good */
 .stubbornella {
-width: 200px
-height: 100px;
-padding: 1px;
+    width: 200px
+    height: 100px;
+    padding: 1px;
 
-position: absolute;
-top: 50px;
-left: 50px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
 
-font-size: 14px;
-text-transform: uppercase;
+    font-size: 14px;
+    text-transform: uppercase;
 }
 
 /* Bad - missing blank lines between groups*/
@@ -166,7 +166,7 @@ text-transform: uppercase;
 
 Keep nesting to 3 levels deep. 
 
-```css
+```scss
 /* Good */
 .stubbornella {
     .inner {
@@ -204,14 +204,14 @@ Keep nesting to 3 levels deep.
 }
 ```
 
-Declare @extend followed by @include statements first in a declaration block. (Adapted from Idiomatic CSS)
+Declare `@extend` followed by `@include` statements first in a declaration block. (Borrowed from [Idiomatic CSS] (https://github.com/necolas/idiomatic-css#4-format))
 
-```css
+```scss
 /* Good */
 .stubbornella {
     @extend .company;
     @include font-size(14);
-        color: #555;
+    color: #555;
     font-size: 11px;
 }
 
@@ -287,7 +287,7 @@ All font sizes must be specified using rem only with a pixel fall back. Do not u
 ```css
 /* Good */
 .stubbornella {
-   font-size: 14px;
+   font-size: 14px; /* pixel fall back rule should come first */
    font-size: 1.4rem;
 }
 
@@ -309,7 +309,7 @@ All font sizes must be specified using rem only with a pixel fall back. Do not u
 
 ## HEX value
 
-When declaring HEX values, use lowercase and shorthand (where possible) (Adapted from Idiomatic CSS)
+When declaring HEX values, use lowercase and shorthand (where possible) (Borrowed from [Idiomatic CSS] (https://github.com/necolas/idiomatic-css#4-format))
 
 ```css
 /* Good */
@@ -346,18 +346,13 @@ When using a url() value, always use quotes around the actual URL.
 ```css
 /* Good */
 .stubbornella {
-    background: url("https://github.com/Stubbornella-Co/<client-name>/img/logo.png");
+    background: url("img/logo.png");
 }
 
 /* Bad - missing quotes */
 .stubbornella {
-    background: url(https://github.com/Stubbornella-Co/<client-name>/img/logo.png);
+    background: url(img/logo.png);
 }
-
-/* Bad - missing proper domain */
-.stubbornella {
-    background: url(/logo.png);
-} 
 ```
 
 ## Attribute values in selectors
@@ -551,49 +546,45 @@ When labelling elements within a component with a class, try to avoid generic cl
 ```css
 /* Good */
 .boxHd {
-    ...
+    background: #ccc;
 }
 .boxBd {
-    ...
+    background: #ccc;
 }
 
 /* Bad */
 .box .hd {
-    ...
+    background: #ccc;
 }
-..box .bd  {
-    ...
+.box .bd  {
+    background: #ccc;
 }
 ```
 
-However when extending a component, use the base component's class names to style the inner elemennts.
+However when extending a component and styling the inner elements, try to use the base component's inner elements' class name for styling, instead of extending the class names of the inner elements as well.
 
 ```css
 /* Good */
 .boxSimple .boxHd {
-    ....
+    background: #ccc;
 }
 .boxSimple .boxBd {
-    ...
+    background: #ccc;
 }
 
-/* Bad */
+/* Avoid this if possible */
 .boxSimple .boxSimpleHd {
-    ...
-}
-    ...
+    background: #ccc;
 }
 ```
 
 
 ## Comments
 
-We following the commenting guideline from [Idiomatic CSS] (https://github.com/necolas/idiomatic-css#comments) with the following exception:
+We follow the commenting guideline from [Idiomatic CSS] (https://github.com/necolas/idiomatic-css#comments) with the following exception:
 * Place comment on the same line as the CSS declaration it's related to.
 
-## File-level Comments
-
-At the top of every CSS file should be a comment describing the file in the following format:
+Also, add file-level comments at the top of every CSS file, describing the file in the following format:
 
 ```css
 /**
