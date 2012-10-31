@@ -3,21 +3,30 @@
 /*jshint node: true */
 "use strict";
 
-var PROJECT_DIR = process.cwd().replace(/\/tools\/build$/, '') + '/';
 
-var COMPONENTS_LIST = PROJECT_DIR + "components-list.json";
-
-var componentsListFile = require(COMPONENTS_LIST);
+// REQUIRED
 var fs = require('fs');
 var Handlerbars = require('handlebars');
+var batchdir = require('batchdir');
 
 
+// DIRECTORIES + parameters
+var PROJECT_DIR = process.cwd().replace(/\/tools\/build$/, '') + '/';
+var COMPONENTS_LIST = PROJECT_DIR + "components-list.json";
+
+// INITIALIZE COMPONENTS LIST AND PARAMETERS
+var componentsListFile = require(COMPONENTS_LIST);
 var params = componentsListFile.parameters;
 var compList = componentsListFile.components;
-params.docsDirectory = params.docsDirectory.replace(/\/$/, '') + '/';
-var componentPageLayoutTemplate = fs.readFileSync(PROJECT_DIR + params.docsDirectory + '/component_doc_template.handlebars', 'utf8');
 
-// iterate  components list
+var docsDir = params.docsDirectory.replace(/\/$/, '') + '/';
+
+
+var componentPageLayoutTemplate = fs.readFileSync(PROJECT_DIR + docsDir + '/component_doc_template.handlebars', 'utf8');
+
+/*******************************
+* iterate  components list
+*******************************/
 var template;
 var allComponentsDocumentation = compList.map(function (compObject) {
     var name = compObject.name;
@@ -30,6 +39,7 @@ var allComponentsDocumentation = compList.map(function (compObject) {
     var skinsHTML = compObject.skins.map(function (skin) {
         return template(skin);
     });
+
     // get the component template
     var compTemplate = fs.readFileSync(PROJECT_DIR + compObject.path + '/' + params.componentDocName.replace('{name}', name), 'utf8');
 
@@ -52,21 +62,30 @@ var allComponentsDocumentation = compList.map(function (compObject) {
 
     //write the documentation file
     var fileNameHTML = fileName.replace(/\.(handlebars|hbs)$/, '.html');
-    var filePath = PROJECT_DIR + compObject.path + '/' + fileNameHTML;
-
+    var fileSourceLocalPath = compObject.path + '/' + fileNameHTML;
+    var fileBuildPath =
     console.log('Write Component documentation : ', compObject.name);
-    var file = fs.writeFileSync(filePath, componentDocHTML);
+
+    var boxDocDir = (PROJECT_DIR + params.docsBuildDirectory + '/' + compObject.path).replace(/\/\.\//g,'/');
+    batchdir([boxDocDir]).mkdirs(function() {
+        fs.writeFileSync(PROJECT_DIR + params.docsBuildDirectory + '/' + fileSourceLocalPath, componentDocHTML);
+        //fs.renameSync(PROJECT_DIR + fileSourceLocalPath, PROJECT_DIR + params.docsBuildDirectory + '/' + fileSourceLocalPath);
+    });
+    //move component file
+
 
     return docsTemplate;
 });
 
-
+/*******************************
+ * generate global library file
+ *******************************/
 // get library index file
-var libraryHTML = Handlerbars.compile(fs.readFileSync(PROJECT_DIR + params.docsDirectory + 'index.handlebars', 'utf8'))({
+var libraryHTML = Handlerbars.compile(fs.readFileSync(PROJECT_DIR + docsDir + 'index.handlebars', 'utf8'))({
     components:allComponentsDocumentation
 });
 
-var libraryFile = PROJECT_DIR + params.docsDirectory + 'index.html';
+var libraryFile = PROJECT_DIR + params.docsBuildDirectory + 'index.html';
 fs.writeFileSync(libraryFile, libraryHTML, 'utf8');
 console.log('Write Library File');
 

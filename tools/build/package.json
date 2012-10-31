@@ -6,6 +6,7 @@
     "homepage":"http://www.oocss.com",
     "author":"oocss",
     "devDependencies":{
-        "handlebars":"1.0.7"
+        "handlebars":"1.0.7",
+        "batchdir":"0.1.0"
     }
 }

@@ -1,6 +1,7 @@
 DATE=$(shell date +%I:%M%p)
 HR=\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#
 CHECK=\033[32m✔\033[39m
+BUILDDIR=build
 
 #
 # BUILD DOCS
@@ -11,13 +12,16 @@ build:
 	@echo "Building OOCSS..."
 	@echo "${HR}\n"
 	@make clean
+	@mkdir ${BUILDDIR}
 	@echo "\n${HR}"
 	@echo "Building Documentation..."
 	@echo "${HR}\n"
+	@mkdir ${BUILDDIR}/docs
 	@node tools/build
-#	@echo "\n${HR}"
-#	@echo "Building CSS Files with Sass..."
-#	@echo "${HR}\n"
+	@echo "\n${HR}"
+	@echo "Building CSS Files with Sass..."
+	@echo "${HR}\n"
+	@mkdir build/css
 	@echo "\n${HR}"
 	@echo "OOCSS Build                                 ${CHECK} Done"
 	@echo "${HR}"
@@ -33,7 +37,13 @@ initbuild:
 	@echo "${HR}"
 	@cd tools/build; npm link
 	@echo "\n${HR}"
-	@echo "Loading                                     ${CHECK} Done"
+	@echo "Node Packages                               ${CHECK} Done"
+	@echo "Install sass and compass with gem\n"
+	@echo "If you have an error, please install ruby : http://www.ruby-lang.org/en/downloads/"
+	@echo "If password is requested, you must type your system password because root access is needed"
+	@echo "Otherwise, wait..."
+	@sudo gem install compass
+	@echo "Tools installation                          ${CHECK} Done"
 
 
 #
@@ -41,9 +51,15 @@ initbuild:
 #
 
 clean:
-	@rm -rf build
 	@echo "${HR}"
-	@echo "Clean the build directory                   ${CHECK} Done"
+	@echo "Clean the project"
+	@echo "${HR}"
+	@echo "Cleaning the builddir (remove it)"
+	@rm -rf ${BUILDDIR}
+	@echo "cleaning compass files..."
+	@cd config;compass clean
+	@echo "${HR}"
+	@echo "Clean project                               ${CHECK} Done"
 	@echo "${HR}"
 
 
@@ -62,7 +78,6 @@ tools:
 	@echo "If you have an error, please install ruby : http://www.ruby-lang.org/en/downloads/"
 	@echo "If password is requested, you must type your system password because root access is needed"
 	@echo "Otherwise, wait..."
-	@sudo gem install sass
 	@sudo gem install compass
 	@echo "Tools installation                          ${CHECK} Done"
 
@@ -73,6 +88,6 @@ tools:
 
 watch:
 	@echo "${HR}"
-	@echo "Start Sass for watching CSS"
-	sass --scss --compass --watch .:.
-	@echo "End of Sass watching"
+	@echo "Start Compass for watching CSS"
+	@cd config; compass watch
+	@echo "End of Compass watching"

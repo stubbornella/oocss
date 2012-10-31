@@ -1,6 +1,7 @@
 {
     "parameters":{
         "docsDirectory" : "./docs",
+        "docsBuildDirectory" : "./build/docs",
         "buildDirectory" : "./tools/build",
         "componentHandlebarsName":"{name}.handlebars",
         "componentDocName":"{name}_doc.handlebars"

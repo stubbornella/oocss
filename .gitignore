@@ -37,5 +37,6 @@ Thumbs.db
 *.sass-cache
 .sass-cache
 /.sass-cache
+/build
 npm-debug.log
 node_modules
