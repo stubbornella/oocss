@@ -45,3 +45,34 @@ clean:
 	@echo "${HR}"
 	@echo "Clean the build directory                   ${CHECK} Done"
 	@echo "${HR}"
+
+
+#
+# INSTALL THIRD PARTY TOOLS FOR BUILD AND WORKING
+#
+
+tools:
+	@echo "${HR}"
+	@echo "Installing Tools (sass, compass)...."
+	@echo "${HR}"
+	@echo "This command must be launch as root"
+	@echo "in Mac use : sudo make tools"
+	@echo "${HR}"
+	@echo "Install sass and compass with gem\n"
+	@echo "If you have an error, please install ruby : http://www.ruby-lang.org/en/downloads/"
+	@echo "If password is requested, you must type your system password because root access is needed"
+	@echo "Otherwise, wait..."
+	@sudo gem install sass
+	@sudo gem install compass
+	@echo "Tools installation                          ${CHECK} Done"
+
+
+#
+# INSTALL THIRD PARTY TOOLS FOR BUILD AND WORKING
+#
+
+watch:
+	@echo "${HR}"
+	@echo "Start Sass for watching CSS"
+	sass --scss --compass --watch .:.
+	@echo "End of Sass watching"
