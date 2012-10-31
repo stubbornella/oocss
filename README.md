@@ -76,7 +76,7 @@
 * `template.html` - the overall page layout. There can be multiple ones.
 * `form.html` - form layouts.
 
-
+For all files, separate words with an underscore e.g. box_doc.html
 
 ## CSS Code Conventions
 
