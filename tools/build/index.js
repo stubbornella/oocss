@@ -67,9 +67,9 @@ var allComponentsDocumentation = compList.map(function (compObject) {
     console.log('Write Component documentation : ', compObject.name);
 
     var boxDocDir = (PROJECT_DIR + params.docsBuildDirectory + '/' + compObject.path).replace(/\/\.\//g,'/');
+    //create file directory and then write it
     batchdir([boxDocDir]).mkdirs(function() {
         fs.writeFileSync(PROJECT_DIR + params.docsBuildDirectory + '/' + fileSourceLocalPath, componentDocHTML);
-        //fs.renameSync(PROJECT_DIR + fileSourceLocalPath, PROJECT_DIR + params.docsBuildDirectory + '/' + fileSourceLocalPath);
     });
     //move component file
 
