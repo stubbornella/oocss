@@ -34,8 +34,8 @@ build:
 
 initbuild:
 	@echo "${HR}"
-	@echo "INSTALL NEED TOOLS FOR BUILD"
-	@echo "THIS COMMAND MUST BE LAUNCH IN ROOT MODE (su, sudo, etc...)"
+	@echo "INSTALL NEEDED TOOLS FOR BUILD"
+	@echo "THIS COMMAND MUST BE LAUNCHED IN ROOT MODE (su, sudo, etc...)"
 	@echo "Example in Mac OSX : sudo make initbuild"
 	@echo "${HR}"
 	@echo "Initialize node packages"
@@ -62,7 +62,7 @@ clean:
 	@echo "${HR}"
 	@echo "Clean the project"
 	@echo "${HR}"
-	@echo "Cleaning the builddir (remove it)"
+	@echo "Removing the build directory"
 	@rm -rf ${BUILDDIR}
 	@echo "cleaning compass files..."
 	@cd config;compass clean
