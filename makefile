@@ -22,6 +22,7 @@ build:
 	@echo "Building CSS Files with Sass..."
 	@echo "${HR}\n"
 	@mkdir build/css
+	@cd config; compass compile
 	@echo "\n${HR}"
 	@echo "OOCSS Build                                 ${CHECK} Done"
 	@echo "${HR}"
@@ -33,14 +34,21 @@ build:
 
 initbuild:
 	@echo "${HR}"
+	@echo "INSTALL NEED TOOLS FOR BUILD"
+	@echo "THIS COMMAND MUST BE LAUNCH IN ROOT MODE (su, sudo, etc...)"
+	@echo "Example in Mac OSX : sudo make initbuild"
+	@echo "${HR}"
 	@echo "Initialize node packages"
 	@echo "${HR}"
 	@cd tools/build; npm link
 	@echo "\n${HR}"
 	@echo "Node Packages                               ${CHECK} Done"
+	@echo "\n${HR}"
 	@echo "Install sass and compass with gem\n"
-	@echo "If you have an error, please install ruby : http://www.ruby-lang.org/en/downloads/"
-	@echo "If password is requested, you must type your system password because root access is needed"
+	@echo "If you have an error, please install ruby :
+	@echo "http://www.ruby-lang.org/en/downloads/"
+	@echo "If password is requested, you must type your system
+	@echo "password because root access is needed"
 	@echo "Otherwise, wait..."
 	@sudo gem install compass
 	@echo "Tools installation                          ${CHECK} Done"
@@ -62,24 +70,6 @@ clean:
 	@echo "Clean project                               ${CHECK} Done"
 	@echo "${HR}"
 
-
-#
-# INSTALL THIRD PARTY TOOLS FOR BUILD AND WORKING
-#
-
-tools:
-	@echo "${HR}"
-	@echo "Installing Tools (sass, compass)...."
-	@echo "${HR}"
-	@echo "This command must be launch as root"
-	@echo "in Mac use : sudo make tools"
-	@echo "${HR}"
-	@echo "Install sass and compass with gem\n"
-	@echo "If you have an error, please install ruby : http://www.ruby-lang.org/en/downloads/"
-	@echo "If password is requested, you must type your system password because root access is needed"
-	@echo "Otherwise, wait..."
-	@sudo gem install compass
-	@echo "Tools installation                          ${CHECK} Done"
 
 
 #

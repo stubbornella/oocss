@@ -85,7 +85,7 @@ var libraryHTML = Handlerbars.compile(fs.readFileSync(PROJECT_DIR + docsDir + 'i
     components:allComponentsDocumentation
 });
 
-var libraryFile = PROJECT_DIR + params.docsBuildDirectory + 'index.html';
+var libraryFile = PROJECT_DIR + params.docsBuildDirectory + '/index.html';
 fs.writeFileSync(libraryFile, libraryHTML, 'utf8');
 console.log('Write Library File');
 
