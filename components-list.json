@@ -1,11 +1,15 @@
 {
     "parameters":{
+        "docsDirectory" : "./docs",
+        "docsBuildDirectory" : "./build/docs",
+        "buildDirectory" : "./tools/build",
         "componentHandlebarsName":"{name}.handlebars",
-        "componentDocName":"{name}_doc.handlerbars"
+        "componentDocName":"{name}_doc.handlebars"
     },
     "components":[
         {
             "name":"box",
+            "longname":"Boxes",
             "path":"components/box",
             "skins":[
                 {

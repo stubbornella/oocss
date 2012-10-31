@@ -6,6 +6,21 @@
     * [Directory Explaination](#directory-explaination)
 2. [CSS Code Convention](#css-code-conventions)
 
+## Build
+
+### Required for build
+- NodeJS,
+- NodeJS plugins : handlebars
+
+### How to prepare the build
+- first you must have the node modules :
+    - handlebars
+
+- If you don't have them, you can install each by using : npm install <modulename>
+- Or you cas use the package.json file in the build directory.
+    - go to the build directory
+      `cd build`
+
 ## Directory Structure
 
 ```

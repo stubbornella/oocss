@@ -1,0 +1,12 @@
+{
+    "name":"oocss",
+    "description":"oocss build package",
+    "version":"1.0.0",
+    "keywords":["oocss"],
+    "homepage":"http://www.oocss.com",
+    "author":"oocss",
+    "devDependencies":{
+        "handlebars":"1.0.7",
+        "batchdir":"0.1.0"
+    }
+}

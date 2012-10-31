@@ -1,6 +1,8 @@
-.boxHd, 
-.boxBd,
-.boxFt {
-    @include clearfix-me(micro);
-    padding: 8px;
+.box {
+    .boxHead, 
+    .boxBody,
+    .boxFoot {
+        @include clearfix-me(micro);
+        padding: 8px;
+    }
 }
