@@ -81,7 +81,7 @@ var allComponentsDocumentation = compList.map(function (compObject) {
  * generate global library file
  *******************************/
 // get library index file
-var libraryHTML = Handlerbars.compile(fs.readFileSync(PROJECT_DIR + docsDir + 'index.handlebars', 'utf8'))({
+var libraryHTML = Handlerbars.compile(fs.readFileSync(PROJECT_DIR + docsDir + 'library.handlebars', 'utf8'))({
     components:allComponentsDocumentation
 });
 
