@@ -45,9 +45,9 @@ initbuild:
 	@echo "Node Packages                               ${CHECK} Done"
 	@echo "\n${HR}"
 	@echo "Install sass and compass with gem\n"
-	@echo "If you have an error, please install ruby :
+	@echo "If you have an error, please install ruby :"
 	@echo "http://www.ruby-lang.org/en/downloads/"
-	@echo "If password is requested, you must type your system
+	@echo "If password is requested, you must type your system"
 	@echo "password because root access is needed"
 	@echo "Otherwise, wait..."
 	@sudo gem install compass
