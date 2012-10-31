@@ -18,7 +18,9 @@
 
 The purpose of this document is to provide guidelines for writing CSS. Code conventions are important for the long-term maintainability of code. Most of the time, developers are maintaining code, either their own or someone else’s. The goal is to have everyone’s code look the same, which allows any developer to easily work on another developer’s code.
 
-We've borrowed some ideas from [Idiomatic CSS] (https://github.com/necolas/idiomatic-css) and credited it throughout the document.
+These code conventions were largely born out of our work with some amazingly smart User Interface Engineers at PayPal. PayPal was gracious enough to let us make them a part of this open source project. Many thanks for this contribution to the community.
+
+We've also borrowed some ideas from [Idiomatic CSS] (https://github.com/necolas/idiomatic-css) and credited it throughout the document.
 
 ## Class Names
 
