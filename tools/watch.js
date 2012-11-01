@@ -9,12 +9,16 @@ var build = require('./build.js');
 
 var fs = require('fs');
 var watch = require('nodewatch');
+var exec = require('child_process').exec;
 
 
 watch.add("./components",true).add("./docs", true).onChange(function (file, prev, curr, action) {
     console.log(file);
     if (/(handlebars|hbs)$/.test(file)) {
         handlebarsFileChanged(file);
+    }
+    if (/(scss|sass)$/.test(file)) {
+        compassFileChanged(file);
     }
     /*console.log(file);
      console.log(prev.mtime.getTime());
@@ -25,4 +29,19 @@ watch.add("./components",true).add("./docs", true).onChange(function (file, prev
 
 var handlebarsFileChanged = function(file) {
     common.build();
-}
+};
+
+var compassFileChanged=function(file) {
+    var child = exec('compass compile',
+        {
+            cwd:common.params.PROJECT_DIR + 'config'
+        },
+        function (error, stdout, stderr) {
+            console.log('stdout: ' + stdout);
+            /*console.log('stderr: ' + stderr);
+            if (error !== null) {
+                console.log('exec error: ' + error);
+            }*/
+        }
+    );
+};

@@ -3,7 +3,7 @@ var Handlerbars = require('handlebars');
 var fs = require('fs');
 
 var params = {
-    PROJECT_DIR:process.cwd().replace(/\/tools\/?$/, '') + '/',
+    PROJECT_DIR:process.cwd().replace(/\/tools\/?$/, '') + '/'
 };
 params.COMPONENTS_LIST = params.PROJECT_DIR + "components-list.json";
 var componentsListFile = require(params.COMPONENTS_LIST);
