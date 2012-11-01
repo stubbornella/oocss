@@ -4,10 +4,8 @@
 "use strict";
 
 // DIRECTORIES + parameters
-// TODO: use common.js
-var PROJECT_DIR = process.cwd().replace(/\/tools\/?$/, '') + '/';
-var COMPONENTS_LIST = PROJECT_DIR + "components-list.json";
-
+var common = require('./common.js');
+var build = require('./build.js');
 
 var fs = require('fs');
 var watch = require('nodewatch');
@@ -26,5 +24,5 @@ watch.add("./components",true).add("./docs", true).onChange(function (file, prev
 
 
 var handlebarsFileChanged = function(file) {
-
+    common.build();
 }

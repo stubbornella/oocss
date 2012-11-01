@@ -67,7 +67,34 @@ var buildComponentDoc = function(compObject) {
     return componentDocHTML;
 };
 
+
+
+var build = function() {
+    var template;
+
+    /*******************************
+     * iterate  components list
+     *******************************/
+    var allComponentsDocumentation = params.componentsList.map(function (compObject) {
+        //build each component doc
+        return buildComponentDoc(compObject);
+    });
+
+    /*******************************
+     * generate global library file
+     *******************************/
+    // get library index file
+    var libraryHTML = Handlerbars.compile(fs.readFileSync(params.PROJECT_DIR + params.docsDirectory + 'library.handlebars', 'utf8'))({
+        components:allComponentsDocumentation
+    });
+
+    var libraryFile = params.PROJECT_DIR + params.docsBuildDirectory + '/index.html';
+    fs.writeFileSync(libraryFile, libraryHTML, 'utf8');
+    console.log('Write library file');
+};
+
 module.exports = {
     params:params,
-    buildComponentDoc : buildComponentDoc
+    buildComponentDoc : buildComponentDoc,
+    build:build
 };
