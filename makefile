@@ -40,7 +40,7 @@ initbuild:
 	@echo "${HR}"
 	@echo "Initialize node packages"
 	@echo "${HR}"
-	@cd tools/build; npm link
+	@cd tools; npm link
 	@echo "\n${HR}"
 	@echo "Node Packages                               ${CHECK} Done"
 	@echo "\n${HR}"
@@ -78,6 +78,7 @@ clean:
 
 watch:
 	@echo "${HR}"
-	@echo "Start Compass for watching CSS"
-	@cd config; compass watch
-	@echo "End of Compass watching"
+	@echo "Start Compass and project watch"
+	node tools/watch
+#	@cd config; compass watch
+	@echo "End of project watching"

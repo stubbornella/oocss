@@ -1,3 +1,11 @@
+# OOCSS
+
+## Table of Contents
+
+1. [Build](#build)
+1. [Directory Structure](#directory-structure)
+1. [CSS Code Convention](#css-code-conventions)
+
 ## Build
 
 ### Required for build
@@ -13,16 +21,85 @@
     - go to the build directory
       `cd build`
 
+## Directory Structure
 
-# CSS Code Conventions
+```
+/components
+    /<component name>        
+        <component name>.json       
+        <component name>.js         
+        _<component name>.scss      
+        <component name>.handlebars
+        <component name>_doc.html  
+        <component name>_test.html      
+        /img            
+        /skin
+            _<skin name>.sass
 
-The purpose of this document is to provide guidelines for writing CSS. Code conventions are important for the long-term maintainability of code. Most of the time, developers are maintaining code, either their own or someone elseís. The goal is to have everyoneís code look the same, which allows any developer to easily work on another developerís code.
+/plugins  
+    /<plugin name>
+        <plugin name>.js
+        _<plugin name>.scss
+        <plugin name>.handlebars
+        <plugin name>_doc.html
+        <plugin name>-_test.html
+        /img
+        /skin
+            _<skin name>.scss
+/build 
+    
+/libs
+    /jquery
+    /handlebars
+    /fonts
+/docs
+    library.html 
+    template.html
+    form.html
+  
+```
 
-These code conventions were largely born out of our work with some amazingly smart User Interface Engineers at PayPal. PayPal was gracious enough to let us make them a part of this open source project. Many thanks for this contribution to the community.
+### Directory explaination
 
-We've also borrowed some ideas from [Idiomatic CSS] (https://github.com/necolas/idiomatic-css) and credited it throughout the document.
+**`/components`**
 
-## Class Names
+* Contains components that have been reviewed and accepted. 
+* Each component will be in its own folder e.g. `/box`.
+* Files inside the component folder will always start with the name of the component e.g. `box_doc.html`.
+* `_<component>.scss` - structural CSS of the component.
+* `<component name>_doc.html` - documentation of the component.
+* `<component name>_test.html` - a file for testing purpose only such as testing the different variations and combinations of your component e.g. nesting of a grid.
+* `<skin>` - contains the skinning of a component. You can have multiple ones. Each skin should be in its own SCSS file.
+* `<skin name>` of the component should match the name of the class name e.g. `_boxSimple.scss`.
+
+**`/plugin`**
+
+* Contains proof of concept components only.
+* The structure and files will be the same as the component folder.
+
+**`/build`**
+
+* Contains all the compiled files after running the built script.
+
+**`libs`**
+
+* Contains library or frameworks we use, e.g. jQuery, fonts
+
+**`/docs`**
+
+* `library.html` - all the components and their documentation.
+* `template.html` - the overall page layout. There can be multiple ones.
+* `form.html` - form layouts.
+
+For all files, separate words with an underscore e.g. box_doc.html
+
+## CSS Code Conventions
+
+The purpose of this document is to provide guidelines for writing CSS. Code conventions are important for the long-term maintainability of code. Most of the time, developers are maintaining code, either their own or someone else‚Äôs. The goal is to have everyone‚Äôs code look the same, which allows any developer to easily work on another developer‚Äôs code.
+
+We've borrowed some ideas from [Idiomatic CSS](https://github.com/necolas/idiomatic-css) and credited it throughout the document.
+
+### Class Names
 
 Class names should be camel case, with no dashes or underscores.
 
@@ -37,7 +114,7 @@ Class names should be camel case, with no dashes or underscores.
 .this-is-good {}
 ```
 
-## Indentation
+### Indentation
 
 Each indentation level is made up of four spaces. Do not use tabs. (Please set your editor to use four spaces)
 
@@ -63,7 +140,7 @@ Rules inside of `@media` must be indented an additional level.
 }
 ```
 
-## Brace Alignment
+### Brace Alignment
 
 The opening brace should be on the same line as the last selector in the rule and should be preceded by a space. The closing brace should be on its own line after the last property and be indented to the same level as the line on which the opening brace is.
 
@@ -84,7 +161,7 @@ The opening brace should be on the same line as the last selector in the rule an
 }
 ```
 
-## Property Format
+### Property Format
 
 Each property must be on its own line and indented one level. There should be no space before the colon and one space after. All properties must end with a semicolon.
 
@@ -180,7 +257,7 @@ The decoration group contains any other properties necessary to style the elemen
 }
 ```
 
-## Using CSS Preprocessors
+### Using CSS Preprocessors
 
 Keep nesting to 3 levels deep. 
 
@@ -243,7 +320,7 @@ Declare `@extend` followed by `@include` statements first in a declaration block
 ```
 
 
-## Vendor-Prefixed Properties
+### Vendor-Prefixed Properties
 
 When using vendor-prefixed properties, always use the standard property as well. The standard property must always come after all of the vendor-prefixed versions of the same property.
 
@@ -281,7 +358,7 @@ background: -ms-linear-gradient(...); /* IE10+ */
 background: linear-gradient(...); /* W3C */
 ```
 
-Suffix fallback with ìOld browsersî and standard property with ìW3Cî. Add a plus or minus to indicate that a property applies to all previous browsers by the same vendor or all future browsers by the same vendor.
+Suffix fallback with ‚ÄúOld browsers‚Äù and standard property with ‚ÄúW3C‚Äù. Add a plus or minus to indicate that a property applies to all previous browsers by the same vendor or all future browsers by the same vendor.
 Using !important
 
 Do not use !important on CSS properties. The only time this is allowed is in a global style (provided by Core team).
@@ -298,7 +375,7 @@ Do not use !important on CSS properties. The only time this is allowed is in a g
 }
 ```
 
-## Font Sizing
+### Font Sizing
 
 All font sizes must be specified using rem only with a pixel fall back. Do not use percentages, ems or pixels alone.
 
@@ -325,7 +402,7 @@ All font sizes must be specified using rem only with a pixel fall back. Do not u
 }
 ```
 
-## HEX value
+### HEX value
 
 When declaring HEX values, use lowercase and shorthand (where possible) (Borrowed from [Idiomatic CSS] (https://github.com/necolas/idiomatic-css#4-format))
 
@@ -341,7 +418,7 @@ When declaring HEX values, use lowercase and shorthand (where possible) (Borrowe
 }
 ```
 
-## String Literals
+### String Literals
 
 Strings should always use double quotes (never single quotes).
 
@@ -357,7 +434,7 @@ Strings should always use double quotes (never single quotes).
 }
 ```
 
-## Background Images and Other URLs
+### Background Images and Other URLs
 
 When using a url() value, always use quotes around the actual URL. 
 
@@ -373,7 +450,7 @@ When using a url() value, always use quotes around the actual URL.
 }
 ```
 
-## Attribute values in selectors
+### Attribute values in selectors
 
 Use double quotes around attribute selectors.
 
@@ -395,9 +472,9 @@ input[type='submit'] {
 ```
 
 
-## Do not use units with zero values
+### Do not use units with zero values
 
-Zero values do not require named units, omit the ìpxî or other unit.
+Zero values do not require named units, omit the ‚Äúpx‚Äù or other unit.
 
 ```css
 /* Good */
@@ -411,7 +488,7 @@ Zero values do not require named units, omit the ìpxî or other unit.
 }
 ```
 
-## Internet Explorer Hacks
+### Internet Explorer Hacks
 
 Only property hacks are allowed. To target Internet Explorer, use Internet Explorer-specific hacks like * and _ in the normal CSS files. Browser specific styles should not be in separate per-browser stylesheets. We prefer to keep all the CSS for a particular object in one place as it is more maintainable. In addition selector hacks should not be used. Classes like .ie6 increase specificity. Hacks should be kept within the CSS rule they affect and only property hacks should be used.
 
@@ -431,7 +508,7 @@ Only property hacks are allowed. To target Internet Explorer, use Internet Explo
 }
 ```
 
-## Selectors
+### Selectors
 
 Each selector should appear on its own line. The line should break immediately after the comma. Each selector should be aligned to the same left column.
 
@@ -448,7 +525,7 @@ button, input.button {
 }
 ```
 
-## Class Qualification
+### Class Qualification
 
 Do not over-qualify class name selectors with an element type unless you are specifying exceptions to the default styling of a particular class.
 
@@ -464,7 +541,7 @@ span.buttonAsLink {}
 span.buttonAsLink {}
 ```
 
-## Scoped styles
+### Scoped styles
 
 All selectors for a particular component start with the wrapper class name.
 
@@ -486,7 +563,7 @@ span {
 }
 ```
 
-## JavaScript Dependence
+### JavaScript Dependence
 
 All rules should be coded to expect JavaScript to be enabled. Rules that apply when JavaScript is disabled should be preceded by the noJS class.
 
@@ -502,7 +579,7 @@ All rules should be coded to expect JavaScript to be enabled. Rules that apply w
 }
 ```
 
-## :hover and :focus
+### :hover and :focus
 
 If :hover pseudo class is styled, :focus should also be styled for accessibility. Focus styles should never be removed.
 
@@ -519,7 +596,7 @@ a:hover {
 }
 ```
 
-## Avoid using IDs
+### Avoid using IDs
 
 Selectors should never use HTML element IDs. Always use classes for applying styles to specific areas of a page.
 
@@ -537,7 +614,7 @@ Selectors should never use HTML element IDs. Always use classes for applying sty
 
 The author field should contain the username of the person who first created the file. Subsequent authors or primary maintainers may also choose to add their name. The browsers in which this file was tested should be listed next to @tested.
 
-## Width and height on components
+### Width and height on components
 
 No heights on anything that contains text. Components should be flexible and their widths should be controlled by grids.
 
@@ -557,7 +634,7 @@ No heights on anything that contains text. Components should be flexible and the
 }
 ```
 
-## Naming classes
+### Naming classes
 
 When labelling elements within a component with a class, try to avoid generic classes like ``.inner``, ``.hd``, ``.bd``. Instead, prefix the class name with the name of the component. This is to avoid CSS getting overwritten when classes are too generic.
 
@@ -597,7 +674,7 @@ However when extending a component and styling the inner elements, try to use th
 ```
 
 
-## Comments
+### Comments
 
 We follow the commenting guideline from [Idiomatic CSS] (https://github.com/necolas/idiomatic-css#comments) with the following exception:
 * Place comment on the same line as the CSS declaration it's related to.
