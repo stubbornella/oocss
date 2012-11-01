@@ -44,12 +44,12 @@
 @import "box/box";
 
 // Contour
-@import "box/skin/box-basic-ext";
-@import "box/skin/box-simple";
-@import "box/skin/box-error";
+@import "box/skin/_boxSimple";
+//@import "box/skin/box-simple";
+//@import "box/skin/box-error";
 
 // Background
-@import "box/skin/box-bg-hlight";
+//@import "box/skin/box-bg-hlight";
 
 
 // @import "examples";

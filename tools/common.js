@@ -88,7 +88,7 @@ var build = function() {
         components:allComponentsDocumentation
     });
 
-    var libraryFile = params.PROJECT_DIR + params.docsBuildDirectory + '/index.html';
+    var libraryFile = params.PROJECT_DIR + params.docsBuildDirectory + '/library.html';
     fs.writeFileSync(libraryFile, libraryHTML, 'utf8');
     console.log('Write library file');
 };
