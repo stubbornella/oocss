@@ -2,9 +2,9 @@
 
 ## Table of Contents
 
+1. [Build](#build)
 1. [Directory Structure](#directory-structure)
-    * [Directory Explaination](#directory-explaination)
-2. [CSS Code Convention](#css-code-conventions)
+1. [CSS Code Convention](#css-code-conventions)
 
 ## Build
 
