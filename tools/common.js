@@ -34,7 +34,7 @@ var buildComponentDoc = function(compObject) {
     // get the component template
     var compTemplate = fs.readFileSync(params.PROJECT_DIR + compObject.path + '/' + params.componentDocName.replace('{name}', name), 'utf8');
 
-    var docsTemplate = Handlerbars.compile(compTemplate)({
+    var skinsTemplatesWithHTML = Handlerbars.compile(compTemplate)({
         name:compObject.name,
         skins:skinsHTML
     });
@@ -48,7 +48,7 @@ var buildComponentDoc = function(compObject) {
 
     var componentDocHTML = Handlerbars.compile(componentPageLayoutTemplate)({
         name:compObject.name,
-        content:docsTemplate
+        content:skinsTemplatesWithHTML
     });
 
     //write the documentation file
@@ -64,7 +64,7 @@ var buildComponentDoc = function(compObject) {
     });
 
     // return the core of the component documentation
-    return componentDocHTML;
+    return skinsTemplatesWithHTML;
 };
 
 
