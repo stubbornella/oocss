@@ -6,7 +6,7 @@
 //TODO: make it work with ems (or any unit?)
 //TODO: stephen doens't think incremental breakpoints are a good idea
 //TODO: allow developers to choose which types of options get outputted (show, hide, expand, collapse, cols, etc)
-@mixin oogrids-responsive($breakpoints: (699px, 200px, 100px), $mobile-first: true, $columns: 0){
+@mixin ooGridResponsive($breakpoints: (699px, 200px, 100px), $mobile-first: true, $columns: 0){
     $direction:lt;
     $min-max: max;
 

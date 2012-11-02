@@ -1,98 +1,117 @@
 
 $debug-typography: false; // set to true to turn on base line stripes
-/* set body base fonts */
-body {
-	font: #{$base-font-size}/#{$base-line-height} $base-font-family;
-	color: $type-color;
-}
-
 
 // TODO: handle rems, ems, %;
 @function line-height($font-size) { //TODO: A bit stupid to declare font-size twice in each heading, fix
-	// strip units 
-	$blh: $base-line-height/1em;
-	$bfs: $base-font-size/1px; 
-	$font-size-no-unit: $font-size/1px;
-	// convert to px
-	$base-line-height-px: $blh*$bfs;
-	// calculate minimum line height based on current font size and base line height
-	$min-line-height: $font-size-no-unit*$blh;
+    // strip units 
+    $blh: $base-line-height/1em;
+    $bfs: $base-font-size/1px; 
+    $font-size-no-unit: $font-size/1px;
+    // convert to px
+    $base-line-height-px: $blh*$bfs;
+    // calculate minimum line height based on current font size and base line height
+    $min-line-height: $font-size-no-unit*$blh;
 
-	// How much to add to line-height for vertical rhythm
-	$addl-line-height-for-vertical-rhythm: $min-line-height%$base-line-height-px;
-	
-	// if very little would be added to the line height return the lower value
-	@if ($addl-line-height-for-vertical-rhythm < 5){ // 5 is the tolerance for how much a line height can be reduced to match vertical rhythm
-		
-		$actual-line-height-px: ($min-line-height - ($min-line-height%$base-line-height-px));
-		$actual-line-height-em: $actual-line-height-px/$font-size-no-unit*1em;
-		
-		@return $actual-line-height-em;
-	} @else { // jump up to the next highest multiple of the base line height
-		
-		// Calculate line height
-		$actual-line-height-px: $addl-line-height-for-vertical-rhythm+$min-line-height;
-		// Convert to em
-		$actual-line-height-em: $actual-line-height-px/$font-size-no-unit*1em;
-		
-		@return $actual-line-height-em;	
-	}
-	
+    // How much to add to line-height for vertical rhythm
+    $addl-line-height-for-vertical-rhythm: $min-line-height%$base-line-height-px;
+    
+    // if very little would be added to the line height return the lower value
+    @if ($addl-line-height-for-vertical-rhythm < 5){ // 5 is the tolerance for how much a line height can be reduced to match vertical rhythm
+        
+        $actual-line-height-px: ($min-line-height - ($min-line-height%$base-line-height-px));
+        $actual-line-height-em: $actual-line-height-px/$font-size-no-unit*1em;
+        
+        @return $actual-line-height-em;
+    } @else { // jump up to the next highest multiple of the base line height
+        
+        // Calculate line height
+        $actual-line-height-px: $addl-line-height-for-vertical-rhythm+$min-line-height;
+        // Convert to em
+        $actual-line-height-em: $actual-line-height-px/$font-size-no-unit*1em;
+        
+        @return $actual-line-height-em; 
+    }
+    
 }
 
-/* shared styles */
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6{font-weight:normal; font-style: normal; color:#AE0345; }
+@mixin ooTypography(){
+    /* set body base fonts */
+    body {
+        font: #{$base-font-size}/#{$base-line-height} $base-font-family;
+        color: $type-color;
+    }
 
-/* different styles */
+    /* shared styles */
+    h1, 
+    .h1,
+    h2, 
+    .h2,
+    h3, 
+    .h3,
+    h4, 
+    .h4,
+    h5, 
+    .h5,
+    h6, 
+    .h6 {
+        font-weight:normal; 
+        font-style: normal; 
+        color:#AE0345; 
+    }
 
-h1,.h1 {
-	font-size: 45px; // TODO: font-size repeated, yuck.
-	line-height: line-height(45px);// TODO: line height said twice, make a function?
-	color:#AE0345;
+    /* different styles */
+
+    h1,
+    .h1 {
+        font-size: 45px; // TODO: font-size repeated, yuck.
+        line-height: line-height(45px);// TODO: line height said twice, make a function?
+        color:#AE0345;
+    }
+    h2, 
+    .h2 {
+        font-size:25px;
+        line-height: line-height(25px);
+        color:#AE0345;
+    }
+    h3, 
+    .h3 {
+        font-size: 22px;
+        line-height: line-height(22px);
+        color:#DF2B72;
+    }
+    h4, 
+    .h4 {
+        font-size: 18px;
+        line-height: line-height(18px);
+        color: #333;
+    }
+    h5, 
+    .h5 {
+        font-size: 16px;
+        line-height: line-height(16px);
+        color:#AE0345;
+    }
+    h6, 
+    .h6 {
+        font-size: 16px;
+        line-height: line-height(16px);
+        font-style: italic; 
+        color:#333;
+    }
+    .h7 {
+        font-size: 16px;
+        line-height: line-height(16px);
+        text-transform:uppercase; 
+        color: #333;
+    }
 }
-h2, .h2 {
-	font-size:25px;
-	line-height: line-height(25px);
-	color:#AE0345;
-}
-h3, .h3 {
-	font-size: 22px;
-	line-height: line-height(22px);
-	color:#DF2B72;
-}
-h4, .h4 {
-	font-size: 18px;
-	line-height: line-height(18px);
-	color: #333;
-}
-h5, .h5 {
-	font-size: 16px;
-	line-height: line-height(16px);
-	color:#AE0345;
-}
-h6, .h6 {
-	font-size: 16px;
-	line-height: line-height(16px);
-	font-style: italic; 
-	color:#333;
-}
-.h7 {
-	font-size: 16px;
-	line-height: line-height(16px);
-	text-transform:uppercase; 
-	color: #333;
-}
+
 
 /* debug */
 @if $debug-typography {
-	body { // thank you lea ;)
-		background-color: #fff;
-		background-image: -webkit-linear-gradient(transparent 50%, rgba(0,0,0,.1) 50%);
-		background-size: $base-line-height*2 $base-line-height*2;
-	}
+    body { // thank you lea ;)
+        background-color: #fff;
+        background-image: -webkit-linear-gradient(transparent 50%, rgba(0,0,0,.1) 50%);
+        background-size: $base-line-height*2 $base-line-height*2;
+    }
 }

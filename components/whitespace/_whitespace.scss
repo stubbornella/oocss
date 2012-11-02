@@ -1,26 +1,6 @@
 $debug-spacing: false;
 
- /* ====== Establish Default Spacing ====== */
-h1, h2, h3, h4, h5, h6, ul, ol, dl, p, blockquote, .media, pre, .data, .line { // should they all @include default spacing instead?
-
-// TODO: put these content based gutters back in for support for IE8-
-//  @if ($gutters-v == $gutters-h){
-//    margin: gutters-h;
-//  } @else {
-//    margin: $gutters-v $gutters-h; 
-//  }
-  margin-top: $gutters-v;
-  margin-bottom: $gutters-v;
-  &:first-child {
-    margin-top:0;
-  }
-  &:last-child {
-    margin-bottom:0;
-  }
-}
-table {
-  h1, h2, h3, h4, h5, h6, p, ul, ol, dl, blockquote, .media, pre{margin-left:0; margin-right: 0;}
-}
+ 
 
 /* debug default spacing 
  * set $debug-spacing to true to visualize spacing and positioning
@@ -68,6 +48,57 @@ $whitespace-keys: (p padding, m margin, a '', v -top -bottom, h -left -right, t 
 }
 
 @mixin  whitespace($sizes: (5px, 10px, 20px)){ //for now assume this list is always ascending
+    /* ====== Establish Default Spacing ====== */
+    h1, 
+    h2, 
+    h3, 
+    h4, 
+    h5, 
+    h6, 
+    ul, 
+    ol, 
+    dl, 
+    p, 
+    blockquote, 
+    .media, 
+    pre, 
+    .data, 
+    .line { // should they all @include default spacing instead?
+
+        // TODO: put these content based gutters back in for support for IE8-
+        //  @if ($gutters-v == $gutters-h){
+        //    margin: gutters-h;
+        //  } @else {
+        //    margin: $gutters-v $gutters-h; 
+        //  }
+        margin-top: $gutters-v;
+        margin-bottom: $gutters-v;
+        &:first-child {
+            margin-top:0;
+        }
+        &:last-child {
+            margin-bottom:0;
+        }
+    }
+    table {
+        h1, 
+        h2, 
+        h3, 
+        h4, 
+        h5, 
+        h6, 
+        p, 
+        ul, 
+        ol, 
+        dl, 
+        blockquote, 
+        .media, 
+        pre {
+            margin-left:0; 
+            margin-right: 0;
+        }
+    }
+    /* build spacing exceptions */
   $sizes: join(0, $sizes);
   $size-names: ();
   @if (length($sizes) == 1) {
