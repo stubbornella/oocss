@@ -26,9 +26,9 @@
             ]
         },
         {
-            "name":"alert",
-            "longname":"Alerts",
-            "path":"components/alert",
+            "name":"message",
+            "longname":"Messages",
+            "path":"components/message",
             "skins":[
                 {
                     "classname":"warn",
@@ -148,9 +148,9 @@
             "skins":[]
         },
         {
-            "name":"toggler",
-            "longname":"Toggler",
-            "path":"components/toggler",
+            "name":"toggle",
+            "longname":"Toggle",
+            "path":"components/toggle",
             "skins":[]
         },
         {
