@@ -11,7 +11,7 @@ var componentsListFile = require(params.COMPONENTS_LIST);
 
 // merge config file with params
 for (var obj in componentsListFile.parameters) {
-    if(componentsListFile.parameters.hasOwnProperty(obj))
+    if (componentsListFile.parameters.hasOwnProperty(obj))
         params[obj] = componentsListFile.parameters[obj];
 }
 params.docsDirectory = params.docsDirectory.replace(/\/$/, '') + '/';
@@ -19,11 +19,12 @@ params.componentsList = componentsListFile.components;
 
 var componentPageLayoutTemplate = fs.readFileSync(params.PROJECT_DIR + params.docsDirectory + '/component_doc_template.handlebars', 'utf8');
 
-var buildComponentDoc = function(compObject) {
+var buildComponentDoc = function (compObject) {
     var name = compObject.name;
 
     // generate the differents html skins of the component
-    var skinTemplate = fs.readFileSync(params.PROJECT_DIR + compObject.path + '/' + params.componentHandlebarsName.replace('{name}', name), 'utf8');
+    var srcComponentPath = params.PROJECT_DIR + compObject.path + '/';
+    var skinTemplate = fs.readFileSync(srcComponentPath + params.componentHandlebarsName.replace('{name}', name), 'utf8');
     template = Handlerbars.compile(skinTemplate);
 
     // iterate each skins of one component
@@ -32,7 +33,7 @@ var buildComponentDoc = function(compObject) {
     });
 
     // get the component template
-    var compTemplate = fs.readFileSync(params.PROJECT_DIR + compObject.path + '/' + params.componentDocName.replace('{name}', name), 'utf8');
+    var compTemplate = fs.readFileSync(srcComponentPath + params.componentDocName.replace('{name}', name), 'utf8');
 
     var skinsTemplatesWithHTML = Handlerbars.compile(compTemplate)({
         name:compObject.name,
@@ -56,11 +57,13 @@ var buildComponentDoc = function(compObject) {
     var fileSourceLocalPath = compObject.path + '/' + fileNameHTML;
 
     console.log('Write Component documentation : ', compObject.name);
+    var buildComponentDirectory = params.PROJECT_DIR + params.docsBuildDirectory + '/';
 
-    var boxDocDir = (params.PROJECT_DIR + params.docsBuildDirectory + '/' + compObject.path).replace(/\/\.\//g,'/');
+    var boxDocDir = (buildComponentDirectory + compObject.path).replace(/\/\.\//g, '/');
     //create file directory and then write it
-    batchdir([boxDocDir]).mkdirs(function() {
-        fs.writeFileSync(params.PROJECT_DIR + params.docsBuildDirectory + '/' + fileSourceLocalPath, componentDocHTML);
+    batchdir([boxDocDir]).mkdirs(function () {
+
+        fs.writeFileSync(buildComponentDirectory + fileSourceLocalPath, componentDocHTML);
     });
 
     // return the core of the component documentation
@@ -68,8 +71,7 @@ var buildComponentDoc = function(compObject) {
 };
 
 
-
-var build = function() {
+var build = function () {
     var template;
 
     /*******************************
@@ -90,11 +92,20 @@ var build = function() {
 
     var libraryFile = params.PROJECT_DIR + params.docsBuildDirectory + '/library.html';
     fs.writeFileSync(libraryFile, libraryHTML, 'utf8');
-    console.log('Write library file');
+    //copy other files
+    //copyComponentFiles();
 };
+
+
+/*
+var copyComponentFiles = function (srcComponentPath) {
+
+};
+*/
+
 
 module.exports = {
     params:params,
-    buildComponentDoc : buildComponentDoc,
+    buildComponentDoc:buildComponentDoc,
     build:build
 };
