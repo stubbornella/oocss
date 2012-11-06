@@ -12,7 +12,7 @@ var watch = require('nodewatch');
 var exec = require('child_process').exec;
 
 
-watch.add("./components",true).add("./docs", true).onChange(function (file, prev, curr, action) {
+watch.add("./components",true).add("./docs").onChange(function (file, prev, curr, action) {
     console.log(file);
     if (/(handlebars|hbs)$/.test(file)) {
         handlebarsFileChanged(file);
