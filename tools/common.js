@@ -62,8 +62,9 @@ var buildComponentDoc = function (compObject) {
     var boxDocDir = (buildComponentDirectory + compObject.path).replace(/\/\.\//g, '/');
     //create file directory and then write it
     batchdir([boxDocDir]).mkdirs(function () {
-
-        fs.writeFileSync(buildComponentDirectory + fileSourceLocalPath, componentDocHTML);
+        //fs.unlink(buildComponentDirectory + fileSourceLocalPath,function() {
+            fs.writeFileSync(buildComponentDirectory + fileSourceLocalPath, componentDocHTML);
+        //});
     });
 
     // return the core of the component documentation
@@ -72,8 +73,6 @@ var buildComponentDoc = function (compObject) {
 
 
 var build = function () {
-    var template;
-
     /*******************************
      * iterate  components list
      *******************************/
@@ -91,7 +90,11 @@ var build = function () {
     });
 
     var libraryFile = params.PROJECT_DIR + params.docsBuildDirectory + '/library.html';
-    fs.writeFileSync(libraryFile, libraryHTML, 'utf8');
+    //fs.unlink(libraryFile,function() {
+        fs.writeFileSync(libraryFile, libraryHTML, 'utf8');
+    //});
+
+    console.log('Build done at :', new Date());
     //copy other files
     //copyComponentFiles();
 };
