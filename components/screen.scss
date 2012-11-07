@@ -7,7 +7,14 @@
 //TODO: what does this do? why had I commented it?
 
 @import "variables";
+
+/* ==========================================================================
+   Utilities
+   ========================================================================== */
 @import "utils/clearfix-me";
+@import "utils/imageReplacement";
+@import "utils/hide";
+
 /* ==========================================================================
    Video
    ========================================================================== */
@@ -43,13 +50,4 @@
    ========================================================================== */
 @import "box/box";
 
-// Contour
 @import "box/skin/_boxSimple";
-//@import "box/skin/box-simple";
-//@import "box/skin/box-error";
-
-// Background
-//@import "box/skin/box-bg-hlight";
-
-
-// @import "examples";
