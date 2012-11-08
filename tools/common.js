@@ -1,6 +1,7 @@
 var batchdir = require('batchdir');
 var Handlerbars = require('handlebars');
-var fs = require('fs');
+//var fs = require('fs');
+var fs = require('fs.extra');
 
 var params = {
     PROJECT_DIR:process.cwd().replace(/\/tools\/?$/, '') + '/'
@@ -67,7 +68,12 @@ var buildComponentDoc = function (compObject) {
         //});
     });
 
+    //copy other files
+    copyComponentFiles(srcComponentPath);
+
+
     // return the core of the component documentation
+
     return skinsTemplatesWithHTML;
 };
 
@@ -95,16 +101,21 @@ var build = function () {
     //});
 
     console.log('Build done at :', new Date());
-    //copy other files
-    //copyComponentFiles();
+
 };
 
 
-/*
 var copyComponentFiles = function (srcComponentPath) {
-
+    var dirContent = fs.readdirSync(srcComponentPath);
+    dirContent.forEach(function(file) {
+        if(/handlebars|hbs|s[ac]ss|css/.test(file)) {
+            //donothing
+        } else {
+            console.log(srcComponentPath);
+            //fs.copy(srcComponentPath + '/' + file, )
+        }
+    });
 };
-*/
 
 
 module.exports = {
