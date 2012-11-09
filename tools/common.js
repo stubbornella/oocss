@@ -87,6 +87,10 @@ var build = function () {
         return buildComponentDoc(compObject);
     });
 
+    //copy custom directories
+    copyCustomDir('lib');
+
+
     /*******************************
      * generate global library file
      *******************************/
@@ -107,25 +111,31 @@ var build = function () {
 
 var copyComponentFiles = function (srcComponentPath) {
     var buildDir = params.PROJECT_DIR + params.buildDirectory;
-    //<if(!fs.exists(buildDir + '/script')) fs.mkdirSync(buildDir + '/script');
     var dirContent = fs.readdirSync(srcComponentPath);
     dirContent.forEach(function (file) {
         if (/handlebars|hbs|s[ac]ss|css/.test(file)) {
             //donothing
         } else {
-            if (file == "script" && fs.statSync(srcComponentPath+file).isDirectory()) {
-                console.log(srcComponentPath + file, buildDir + '/script');
-                fs.copyRecursive(srcComponentPath + file, buildDir + '/script', function(err){
-                    if (err) {
-                        throw err;
-                    }
-                });
+            if (fs.statSync(srcComponentPath + file).isDirectory()) {
+                if (file == "script") {
+                    console.log(srcComponentPath + file, buildDir + '/script');
+                    fs.copyRecursive(srcComponentPath + file, buildDir + '/script', function (err) {
+                        if (err) {
+                            throw err;
+                        }
+                    });
+                }
             }
+
         }
     });
 };
 
-
+var copyCustomDir = function (dir) {
+    fs.copyRecursive(params.PROJECT_DIR + dir, params.PROJECT_DIR + params.buildDirectory + '/' + dir, function (err) {
+        if (err) console.log(err)
+    });
+};
 
 
 module.exports = {
