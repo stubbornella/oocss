@@ -132,9 +132,11 @@ var copyComponentFiles = function (srcComponentPath) {
 };
 
 var copyCustomDir = function (dir) {
-    fs.copyRecursive(params.PROJECT_DIR + dir, params.PROJECT_DIR + params.buildDirectory + '/' + dir, function (err) {
-        if (err) console.log(err)
-    });
+    if(fs.exists(params.PROJECT_DIR + dir)) {
+        fs.copyRecursive(params.PROJECT_DIR + dir, params.PROJECT_DIR + params.buildDirectory + '/' + dir, function (err) {
+            if (err) console.log(err)
+        });
+    }
 };
 
 
