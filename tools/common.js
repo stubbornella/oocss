@@ -1,6 +1,7 @@
 var batchdir = require('batchdir');
 var Handlerbars = require('handlebars');
-var fs = require('fs');
+//var fs = require('fs');
+var fs = require('fs.extra');
 
 var params = {
     PROJECT_DIR:process.cwd().replace(/\/tools\/?$/, '') + '/'
@@ -63,11 +64,16 @@ var buildComponentDoc = function (compObject) {
     //create file directory and then write it
     batchdir([boxDocDir]).mkdirs(function () {
         //fs.unlink(buildComponentDirectory + fileSourceLocalPath,function() {
-            fs.writeFileSync(buildComponentDirectory + fileSourceLocalPath, componentDocHTML);
+        fs.writeFileSync(buildComponentDirectory + fileSourceLocalPath, componentDocHTML);
         //});
     });
 
+    //copy other files
+    copyComponentFiles(srcComponentPath);
+
+
     // return the core of the component documentation
+
     return skinsTemplatesWithHTML;
 };
 
@@ -81,6 +87,10 @@ var build = function () {
         return buildComponentDoc(compObject);
     });
 
+    //copy custom directories
+    copyCustomDir('lib');
+
+
     /*******************************
      * generate global library file
      *******************************/
@@ -91,20 +101,41 @@ var build = function () {
 
     var libraryFile = params.PROJECT_DIR + params.docsBuildDirectory + '/library.html';
     //fs.unlink(libraryFile,function() {
-        fs.writeFileSync(libraryFile, libraryHTML, 'utf8');
+    fs.writeFileSync(libraryFile, libraryHTML, 'utf8');
     //});
 
     console.log('Build done at :', new Date());
-    //copy other files
-    //copyComponentFiles();
+
 };
 
 
-/*
 var copyComponentFiles = function (srcComponentPath) {
+    var buildDir = params.PROJECT_DIR + params.buildDirectory;
+    var dirContent = fs.readdirSync(srcComponentPath);
+    dirContent.forEach(function (file) {
+        if (/handlebars|hbs|s[ac]ss|css/.test(file)) {
+            //donothing
+        } else {
+            if (fs.statSync(srcComponentPath + file).isDirectory()) {
+                if (file == "script") {
+                    console.log(srcComponentPath + file, buildDir + '/script');
+                    fs.copyRecursive(srcComponentPath + file, buildDir + '/script', function (err) {
+                        if (err) {
+                            throw err;
+                        }
+                    });
+                }
+            }
 
+        }
+    });
 };
-*/
+
+var copyCustomDir = function (dir) {
+    fs.copyRecursive(params.PROJECT_DIR + dir, params.PROJECT_DIR + params.buildDirectory + '/' + dir, function (err) {
+        if (err) console.log(err)
+    });
+};
 
 
 module.exports = {

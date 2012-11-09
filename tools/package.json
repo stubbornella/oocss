@@ -6,6 +6,7 @@
     "homepage":"http://www.oocss.com",
     "author":"oocss",
     "devDependencies":{
+        "fs.extra":"1.2.0",
         "nodewatch":"0.3.1",
         "handlebars":"1.0.7",
         "batchdir":"0.1.0"
