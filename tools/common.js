@@ -64,7 +64,7 @@ var buildComponentDoc = function (compObject) {
     //create file directory and then write it
     batchdir([boxDocDir]).mkdirs(function () {
         //fs.unlink(buildComponentDirectory + fileSourceLocalPath,function() {
-            fs.writeFileSync(buildComponentDirectory + fileSourceLocalPath, componentDocHTML);
+        fs.writeFileSync(buildComponentDirectory + fileSourceLocalPath, componentDocHTML);
         //});
     });
 
@@ -97,7 +97,7 @@ var build = function () {
 
     var libraryFile = params.PROJECT_DIR + params.docsBuildDirectory + '/library.html';
     //fs.unlink(libraryFile,function() {
-        fs.writeFileSync(libraryFile, libraryHTML, 'utf8');
+    fs.writeFileSync(libraryFile, libraryHTML, 'utf8');
     //});
 
     console.log('Build done at :', new Date());
@@ -106,16 +106,26 @@ var build = function () {
 
 
 var copyComponentFiles = function (srcComponentPath) {
+    var buildDir = params.PROJECT_DIR + params.buildDirectory;
+    //<if(!fs.exists(buildDir + '/script')) fs.mkdirSync(buildDir + '/script');
     var dirContent = fs.readdirSync(srcComponentPath);
-    dirContent.forEach(function(file) {
-        if(/handlebars|hbs|s[ac]ss|css/.test(file)) {
+    dirContent.forEach(function (file) {
+        if (/handlebars|hbs|s[ac]ss|css/.test(file)) {
             //donothing
         } else {
-            console.log(srcComponentPath);
-            //fs.copy(srcComponentPath + '/' + file, )
+            if (file == "script" && fs.statSync(srcComponentPath+file).isDirectory()) {
+                console.log(srcComponentPath + file, buildDir + '/script');
+                fs.copyRecursive(srcComponentPath + file, buildDir + '/script', function(err){
+                    if (err) {
+                        throw err;
+                    }
+                });
+            }
         }
     });
 };
+
+
 
 
 module.exports = {
