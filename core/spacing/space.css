@@ -48,3 +48,5 @@ s,m,l,n = small(5px),medium(10px),large(20px),none(0px)
 .mls,.mhs,.mas{margin-left:5px !important}
 .mlm,.mhm,.mam{margin-left:10px !important}
 .mll,.mhl,.mal{margin-left:20px !important}
+.mra,.mha{margin-right:auto !important}
+.mla,.mha{margin-left:auto !important}
