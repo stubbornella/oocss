@@ -26,8 +26,9 @@ b.top, b.top b, b.bottom, b.bottom b{display:block;background-repeat:no-repeat;f
 .complex .top{height:5px;}
 .complex .bottom{height:5px;/*margin-top:-10px;*/}
 /* pop */
-.pop{overflow:visible;margin: 10px 20px 20px 10px; background-position:left top;}
-.pop .inner{right:-10px; bottom:-10px; background-position:right bottom;padding:0 10px 10px 0;}
+.pop{overflow:visible;margin: 10px 20px 20px 10px; background-position:left top; padding-top:1px;/*padding to avoid margin collapsing*/}
+.pop .inner{right:-10px; bottom:-10px; margin:9px -10px -10px 10px; background-position:right bottom;padding:0 10px 10px 0;}
 .pop .tl, .pop .br{display:none;}
-.pop .bl{bottom:-10px;}
-.pop .tr{float:right;margin-right:-10px;_display:inline; /*fix double margin bug*/ }
+.pop .bottom{height:0;}
+.pop .bl{float:none;}
+.pop .tr{float:right;margin-right:-10px;margin-top:-1px;/*corresponding to padding*/_display:inline;/*fix double margin bug*/ }
