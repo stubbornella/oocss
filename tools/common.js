@@ -29,17 +29,17 @@ var buildComponentDoc = function (compObject) {
     template = Handlerbars.compile(skinTemplate);
 
     // iterate each skins of one component
-    var skinsHTML = compObject.skins.map(function (skin) {
+    if(!compObject.skinsTmpl) compObject.skinsTmpl = compObject.skins;
+    var skinsHTML = compObject.skinsTmpl.map(function(skin) {
         return template(skin);
     });
 
     // get the component template
     var compTemplate = fs.readFileSync(srcComponentPath + params.componentDocName.replace('{name}', name), 'utf8');
 
-    var skinsTemplatesWithHTML = Handlerbars.compile(compTemplate)({
-        name:compObject.name,
-        skins:skinsHTML
-    });
+    compObject.skins = skinsHTML;
+
+    var skinsTemplatesWithHTML = Handlerbars.compile(compTemplate)(compObject);
     // generate the component documentation
     // get the template
     // component file name
@@ -63,9 +63,7 @@ var buildComponentDoc = function (compObject) {
     var boxDocDir = (buildComponentDirectory + compObject.path).replace(/\/\.\//g, '/');
     //create file directory and then write it
     batchdir([boxDocDir]).mkdirs(function () {
-        //fs.unlink(buildComponentDirectory + fileSourceLocalPath,function() {
         fs.writeFileSync(buildComponentDirectory + fileSourceLocalPath, componentDocHTML);
-        //});
     });
 
     //copy other files
@@ -132,9 +130,11 @@ var copyComponentFiles = function (srcComponentPath) {
 };
 
 var copyCustomDir = function (dir) {
-    fs.copyRecursive(params.PROJECT_DIR + dir, params.PROJECT_DIR + params.buildDirectory + '/' + dir, function (err) {
-        if (err) console.log(err)
-    });
+    if(fs.exists(params.PROJECT_DIR + dir)) {
+        fs.copyRecursive(params.PROJECT_DIR + dir, params.PROJECT_DIR + params.buildDirectory + '/' + dir, function (err) {
+            if (err) console.log(err)
+        });
+    }
 };
 
 
