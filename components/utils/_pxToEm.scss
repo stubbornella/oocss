@@ -1,0 +1,12 @@
+/**
+ * Convert px to em
+ *
+ * @param $px - the value in pixel you want to convert
+ * @param $context - the context in pixel e.g. you want to set margin on your text,
+ * and font size on your text is equivalent to 14px, then your context is 14.
+ */
+
+@function pxToEm ($px, $context){
+  $em: ($px/$context) * 1em;
+  @return $em;
+}
