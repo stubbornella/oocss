@@ -66,13 +66,13 @@ $whitespace-keys: (p padding, m margin, a '', v -top -bottom, h -left -right, t 
     .line { // should they all @include default spacing instead?
 
         // TODO: put these content based gutters back in for support for IE8-
-        //  @if ($gutters-v == $gutters-h){
+        //  @if ($guttersV == $guttersH){
         //    margin: gutters-h;
         //  } @else {
-        //    margin: $gutters-v $gutters-h; 
+        //    margin: $guttersV $guttersH; 
         //  }
-        margin-top: $gutters-v;
-        margin-bottom: $gutters-v;
+        margin-top: $guttersV;
+        margin-bottom: $guttersV;
         &:first-child {
             margin-top:0;
         }
