@@ -6,10 +6,10 @@ $grids-debug-position: false;
 //TODO: make params into variables instead, so they can easily be updated w out changing this file.
 //TODO: Take different units into account, what if gutters are in rems? ems? percentage?
 //TODO: test in IE6 :(
-@mixin oogrids($cols: (2,3,4,5,6), $gutter: $gutters-h){ 
+@mixin oogrids($cols: (2,3,4,5,6), $gutter: $guttersH){ 
 	
 	/* ie 7 and earlier need percentage based gutters because they don't do border-box */
-	$ie-percent-gutter: percentage($gutter/$page-width);
+	$ie-percent-gutter: percentage($gutter/$pageWidth);
 
 	@each $col in $cols {
 		@for $i from 1 through $col {
