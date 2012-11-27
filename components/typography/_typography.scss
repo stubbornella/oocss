@@ -4,21 +4,21 @@ $debug-typography: false; // set to true to turn on base line stripes
 // TODO: handle rems, ems, %;
 @function line-height($font-size) { //TODO: A bit stupid to declare font-size twice in each heading, fix
     // strip units 
-    $blh: $base-line-height/1em;
-    $bfs: $base-font-size/1px; 
+    $blh: $baseLineHeight/1em;
+    $bfs: $baseFontSize/1px; 
     $font-size-no-unit: $font-size/1px;
     // convert to px
-    $base-line-height-px: $blh*$bfs;
+    $baseLineHeight-px: $blh*$bfs;
     // calculate minimum line height based on current font size and base line height
     $min-line-height: $font-size-no-unit*$blh;
 
     // How much to add to line-height for vertical rhythm
-    $addl-line-height-for-vertical-rhythm: $min-line-height%$base-line-height-px;
+    $addl-line-height-for-vertical-rhythm: $min-line-height%$baseLineHeight-px;
     
     // if very little would be added to the line height return the lower value
     @if ($addl-line-height-for-vertical-rhythm < 5){ // 5 is the tolerance for how much a line height can be reduced to match vertical rhythm
         
-        $actual-line-height-px: ($min-line-height - ($min-line-height%$base-line-height-px));
+        $actual-line-height-px: ($min-line-height - ($min-line-height%$baseLineHeight-px));
         $actual-line-height-em: $actual-line-height-px/$font-size-no-unit*1em;
         
         @return $actual-line-height-em;
@@ -35,10 +35,18 @@ $debug-typography: false; // set to true to turn on base line stripes
 }
 
 @mixin ooTypography(){
-    /* set body base fonts */
-    body {
-        font: #{$base-font-size}/#{$base-line-height} $base-font-family;
-        color: $type-color;
+    /*
+     * Addresses `font-family` inconsistency between `textarea` and other form
+     * elements.
+     */
+
+    html,
+    button,
+    input,
+    select,
+    textarea {
+        font: #{$baseFontSize}/#{$baseLineHeight} $baseFontFamily;
+        color: $typeColor;
     }
 
     /* shared styles */
@@ -52,7 +60,7 @@ $debug-typography: false; // set to true to turn on base line stripes
     .h4,
     h5, 
     .h5,
-    h6, 
+    h6,  
     .h6 {
         font-weight:normal; 
         font-style: normal; 
@@ -104,6 +112,42 @@ $debug-typography: false; // set to true to turn on base line stripes
         text-transform:uppercase; 
         color: #333;
     }
+
+    blockquote {
+        margin: $guttersV 40px;
+    }
+
+    /*
+     * Addresses styling not present in IE 6/7/8/9.
+     */
+
+    mark {
+        background: #ff0;
+        color: #000;
+    }
+
+    /*
+     * Addresses margins set differently in IE 6/7.
+     */
+
+    p,
+    pre {
+        margin: $guttersV 0;
+    }
+
+    /*
+     * Corrects font family set oddly in IE 6, Safari 4/5, and Chrome.
+     */
+
+    code,
+    kbd,
+    pre,
+    samp {
+        font-family: monospace, serif;
+        _font-family: 'courier new', monospace;
+        font-size: 1em;
+    }
+
 }
 
 
@@ -112,6 +156,6 @@ $debug-typography: false; // set to true to turn on base line stripes
     body { // thank you lea ;)
         background-color: #fff;
         background-image: -webkit-linear-gradient(transparent 50%, rgba(0,0,0,.1) 50%);
-        background-size: $base-line-height*2 $base-line-height*2;
+        background-size: $baseLineHeight*2 $baseLineHeight*2;
     }
 }

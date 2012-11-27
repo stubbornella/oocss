@@ -3,10 +3,15 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-@import "compass/reset";
-//TODO: what does this do? why had I commented it?
-
 @import "variables";
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+@import "normalize";
+
+@include ooNormalize;
+
 
 /* ==========================================================================
    Utilities
@@ -38,7 +43,7 @@
    Whitespace
    ========================================================================== */
 @import "whitespace/whitespace";
-@include whitespace($spacing-helpers);
+@include whitespace($spacingHelpers);
 /* ==========================================================================
    Vertical Rhythm
    ========================================================================== */
