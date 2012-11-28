@@ -1,5 +1,27 @@
-@mixin ooDropdown(){
-    .dropdown {
-        
+/**
+* @desc         Skin of Dropdown
+* @name         Dropdown Basic
+* @author       Fiona Chan
+* @tested       Firefox, Chrome, Safari, IE7-9
+* @requires     _variables.scss, _dropdown.scss
+*/
+
+@mixin ooDropdown {
+  .dropdown {
+    position: relative;
+  }
+  .dropdownBox {
+    top: 100%;
+    left: 0;
+    position: absolute;
+    display: none;
+
+    .active & {
+      display: block;
     }
+
+    a {
+      display: block;
+    }
+  }
 }

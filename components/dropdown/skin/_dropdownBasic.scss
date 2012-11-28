@@ -1,0 +1,26 @@
+/**
+* @desc         Skin of Dropdown
+* @name         Dropdown Basic
+* @author       Fiona Chan
+* @tested       
+* @requires     _variables.scss, _dropdown.scss
+*/
+
+@mixin ooDropdownBasic {
+    .dropdownBasic .dropdownBox {
+        padding: 10px;
+
+        font-size: 12px;
+        background: #fff;
+        border: 1px solid #999;
+
+        a {
+            padding: 5px 8px;
+        }
+
+        a:hover,
+        a:focus {
+            background: #eee;
+        }
+    }
+}

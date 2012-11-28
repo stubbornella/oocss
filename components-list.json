@@ -79,7 +79,9 @@
             "name":"dropdown",
             "longname":"Dropdown",
             "path":"components/dropdown",
-            "skins":[]
+            "skins":[{
+                "classname":"dropdownBasic"
+            }]
         },
         {
             "name":"form",

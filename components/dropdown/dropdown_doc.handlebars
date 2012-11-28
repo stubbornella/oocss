@@ -1,0 +1,39 @@
+<h2>{{longname}}</h2>
+
+<p>Dropdown component can be used as a single dropdown or in a navigation with multiple dropdowns.</p>
+
+<div class="data codeTable">
+  <table>
+    <tr>
+      <th scope="row"><code>.dropdown</code></th>
+      <td>Base class. Required. Skins and subclasses that extend dropdown should add their classname to this element.</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>.dropdownTrigger</code></th>
+      <td>Subnode of <code>.dropdown</code>. Trigger of the dropdown. Required.</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>.dropdownBox</code></th>
+      <td>Subnode of <code>.dropdown</code>. Required. This is the wrapper of the actual dropdown that appears when you hover over the trigger.</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>.active</code></th>
+      <td>Class that gets added to <code>.dropdown</code> via JavaScript to make the dropdown appear.</td>
+    </tr>
+  </table>
+</div>
+
+
+<ul>
+    {{#each skins}}
+    <li>
+        {{{html}}}
+
+        <p>code :</p>
+        <pre><code>
+            {{html}}
+        </code></pre>
+
+    </li>
+    {{/each}}
+</ul>
