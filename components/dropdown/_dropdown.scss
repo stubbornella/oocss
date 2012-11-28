@@ -7,21 +7,27 @@
 */
 
 @mixin ooDropdown {
-  .dropdown {
-    position: relative;
-  }
-  .dropdownBox {
-    top: 100%;
-    left: 0;
-    position: absolute;
-    display: none;
-
-    .active & {
-      display: block;
+    .dropdown {
+        position: relative;
     }
 
-    a {
-      display: block;
+    .dropdownBox {
+        top: 100%;
+        left: 0;
+        position: absolute;
+        display: none;
+
+        .active & {
+          display: block;
+        }
+
+        .no-js & {
+            display: block;
+            position: static;
+        }
+
+        a {
+          display: block;
+        }
     }
-  }
 }
