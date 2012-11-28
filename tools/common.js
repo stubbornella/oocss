@@ -31,7 +31,10 @@ var buildComponentDoc = function (compObject) {
     // iterate each skins of one component
     if(!compObject.skinsTmpl) compObject.skinsTmpl = compObject.skins;
     var skinsHTML = compObject.skinsTmpl.map(function(skin) {
-        return template(skin);
+        skin.html = template(skin);
+        //tmp fix
+        skin['this'] = skin.html;
+        return skin;
     });
 
     // get the component template
@@ -86,7 +89,7 @@ var build = function () {
     });
 
     //copy custom directories
-    copyCustomDir('lib');
+    copyCustomDir('libs');
 
 
     /*******************************
@@ -114,10 +117,16 @@ var copyComponentFiles = function (srcComponentPath) {
         if (/handlebars|hbs|s[ac]ss|css/.test(file)) {
             //donothing
         } else {
-            if (fs.statSync(srcComponentPath + file).isDirectory()) {
+            var srcFile = srcComponentPath + file;
+            if (fs.statSync(srcFile).isDirectory()) {
                 if (file == "script") {
-                    console.log(srcComponentPath + file, buildDir + '/script');
-                    fs.copyRecursive(srcComponentPath + file, buildDir + '/script', function (err) {
+                    var destDir = buildDir + '/script';
+                    var srcDirContent = fs.readdirSync(srcFile);
+                    srcDirContent.forEach(function(file) {
+                        fs.unlink(destDir + '/' + file);
+                    });
+                    console.log(srcFile,  destDir);
+                    fs.copyRecursive(srcFile,  destDir, function (err) {
                         if (err) {
                             throw err;
                         }
@@ -130,16 +139,45 @@ var copyComponentFiles = function (srcComponentPath) {
 };
 
 var copyCustomDir = function (dir) {
-    if(fs.exists(params.PROJECT_DIR + dir)) {
+    if(fs.existsSync(params.PROJECT_DIR + dir)) {
         fs.copyRecursive(params.PROJECT_DIR + dir, params.PROJECT_DIR + params.buildDirectory + '/' + dir, function (err) {
             if (err) console.log(err)
         });
     }
 };
 
+var moveDocCSSFile = function() {
+    var builddir = params.PROJECT_DIR + params.buildDirectory;
+    fs.move(builddir + '/css/doc.css', builddir + '/docs/doc.css', function() {})
+};
+
 
 module.exports = {
     params:params,
     buildComponentDoc:buildComponentDoc,
-    build:build
+    build:build,
+    moveDocCSSFile:moveDocCSSFile
 };
+
+/** Handlebars helpers **/
+
+/**
+ * {{#repeat num}} code {{/repeat}}
+ */
+Handlerbars.registerHelper("repeat", function(num, options) {
+    var str=[];
+    for (var i=0; i<num; i++) {
+        str.push(options.fn(this));
+    }
+    return str.join('');
+});
+
+
+Handlerbars.registerHelper("words", function(num, options) {
+    var str=[];
+    for (var i=0; i<num; i++) {
+        str.push(options.fn(this));
+    }
+    return str.join('');
+});
+
