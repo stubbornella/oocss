@@ -20,10 +20,6 @@ watch.add("./components",true).add("./docs").onChange(function (file, prev, curr
     if (/(scss|sass)$/.test(file)) {
         compassFileChanged(file);
     }
-    /*console.log(file);
-     console.log(prev.mtime.getTime());
-     console.log(curr.mtime.getTime());
-     console.log(action); // new, change, delete*/
 });
 
 
@@ -37,7 +33,11 @@ var compassFileChanged=function(file) {
             cwd:common.params.PROJECT_DIR + 'config'
         },
         function (error, stdout, stderr) {
-            console.log('stdout: ' + stdout);
+            console.log(stdout);
+
+            setTimeout(function() {
+                common.moveDocCSSFile();
+            },10);
             /*console.log('stderr: ' + stderr);
             if (error !== null) {
                 console.log('exec error: ' + error);
