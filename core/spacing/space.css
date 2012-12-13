@@ -13,7 +13,7 @@ table h1,table h2,table h3, table h4, table h5, table h6, table p, table ul, tab
 /* spacing helpers
 p,m = padding,margin
 a,t,r,b,l,h,v = all,top,right,bottom,left,horizontal,vertical
-s,m,l,n = small(5px),medium(10px),large(20px),none(0px)
+s,m,l,n, a = small(5px),medium(10px),large(20px),none(0), auto(auto)
 */
 
 .ptn,.pvn,.pan{padding-top:0 !important}
