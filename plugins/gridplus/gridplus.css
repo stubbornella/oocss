@@ -1,4 +1,5 @@
 /* ClearFix */
+.clearFix {clear:both}
 .clearFix:after {content:'';display:block;height:0;clear:both}
 
 /* Grid */
