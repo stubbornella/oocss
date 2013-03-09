@@ -49,7 +49,7 @@ $clearfix-method: overflow !default; // can be one of: overflow,facebook,micro,s
 
 @mixin clearfix-me($method: $clearfix-method) {
   @if $method != overflow and $method != facebook and $method != micro and $method != stubborn {
-  	@warn "The clearfix method #{$method} is unkown";
+  	@warn "The clearfix method #{$method} is unknown";
   	@extend %clearfix-micro; 
   }
   @else {
