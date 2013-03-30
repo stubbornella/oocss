@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Grids Documentation</title>
+<link rel="stylesheet" type="text/css" media="all"  href="../../all.css" />
+<style type="text/css">
+dt{font-weight:bold;}
+pre strong, dt strong{color: #0B8C8F;}
+pre{padding: 20px;background-color: #FCF8BC;overflow:auto;width:auto;}
+</style>
+</head>
+<body>
+<h1>Lines &amp; Grids</h1>
+<p class="intro">Grids are used to break any space into fractions, they can be nested. A unit can contain another line or it can contain other objects directly. The sum of the fractional sizes of all children of one line should be equal to one. Grids control width, content controls height.</p>
+<h2>Base Classes</h2>
+<div class="data">
+<table>
+	<thead>
+		<tr>
+			<th>Property</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+	<tr class="odd">
+		<th scope="row"><code>line</code></th>
+		<td>Groups units on one horizontal line. Note: for mobile layout units may be stacked to avoid horizontal scrolling.</td>
+	</tr>
+	<tr class="even">
+		<th scope="row"><code>unit</code></th>
+		<td>Base class which divides a line into sections (columns).</td>
+	</tr>
+	<tr class="odd">
+		<th scope="row"><code>size<strong>X</strong>of<strong>Y</strong></code></th>
+		<td>Extends <code>unit</code>. Indicates the fractional width of the unit, for example <code>size3of4</code> would take up three quarters, or 75%, of the horizontal space. The following fractions are supported: 1
+
+1/2
+
+1/3
+
+2/3
+
+1/4
+
+3/4
+
+1/5
+
+2/5
+
+3/5
+
+4/5</td>
+	</tr>
+	<tr class="even">
+		<th scope="row"><code>lastUnit</code></th>
+		<td>Extends <code>unit</code>. Applied to the last child of every line.</td>
+	</tr>
+	</tbody>
+</table>
+</div>
+<h2>Halves</h2>
+<div class="line">
+	<div class="unit size1of2">
+		<h3>1/2</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	<div class="unit size1of2 lastUnit">
+		<h3>1/2</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+</div>
+<pre>&lt;div class=&quot;<strong>line</strong>&quot;&gt;<br />
+	&lt;div class=&quot;<strong>unit size1of2</strong>&quot;&gt;<br />
+		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit ... &lt;/p&gt;
+	&lt;/div&gt;<br />
+	&lt;div class=&quot;unit size1of2 <strong>lastUnit</strong>&quot;&gt;<br />
+		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit ... &lt;/p&gt;
+	&lt;/div&gt;<br />
+&lt;/div&gt;</pre>
+<h2>Thirds</h2>
+<div class="line">
+	<div class="unit size1of3">
+		<h3>1/3</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	<div class="unit size1of3">
+		<h3>1/3</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	<div class="unit size1of3 lastUnit">
+		<h3>1/3</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+</div>
+<pre>&lt;div class=&quot;<strong>line</strong>&quot;&gt;<br />	&lt;div class=&quot;<strong>unit size1of3</strong>&quot;&gt;<br />		&lt;p&gt;&lt;strong&gt;unit size1of3&lt;/strong&gt; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &lt;/p&gt;<br />	&lt;/div&gt;<br />	&lt;div class=&quot;unit size1of3&quot;&gt;<br />		&lt;p&gt;&lt;strong&gt;unit size1of3&lt;/strong&gt; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &lt;/p&gt;<br />	&lt;/div&gt;<br />	&lt;div class=&quot;unit size1of3 <strong>lastUnit</strong>&quot;&gt;<br />		&lt;p&gt;&lt;strong&gt;unit size1of3&lt;/strong&gt; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &lt;/p&gt;<br />	&lt;/div&gt;<br />&lt;/div&gt;</pre>
+<div class="line">
+	<div class="unit size1of3">
+		<h3>1/3</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	<div class="unit size2of3 lastUnit">
+		<h3>2/3</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+</div>
+<pre>&lt;div class=&quot;line&quot;&gt;<br />	&lt;div class=&quot;unit size1of3&quot;&gt;<br />		&lt;p&gt;&lt;strong&gt;unit size1of3&lt;/strong&gt; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &lt;/p&gt;<br />	&lt;/div&gt;<br />	&lt;div class=&quot;unit <strong>size2of3</strong> lastUnit&quot;&gt;<br />		&lt;p&gt;&lt;strong&gt;unit size1of3&lt;/strong&gt; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &lt;/p&gt;<br />	&lt;/div&gt;<br />&lt;/div&gt;</pre>
+<h2>Quarters</h2>
+<div class="line">
+	<div class="unit size1of4">
+		<h3>1/4</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	<div class="unit size1of4">
+		<h3>1/4</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	<div class="unit size1of2 lastUnit">
+		<h3>1/2</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+</div>
+<pre>&lt;div class=&quot;line&quot;&gt;<br />	&lt;div class=&quot;unit <strong>size1of4</strong>&quot;&gt;<br />		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &lt;/p&gt;<br />	&lt;/div&gt;<br />	&lt;div class=&quot;unit size1of4&quot;&gt;<br />		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &lt;/p&gt;<br />	&lt;/div&gt;<br />	&lt;div class=&quot;unit size1of2 lastUnit&quot;&gt;<br />		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &lt;/p&gt;<br />	&lt;/div&gt;<br />&lt;/div&gt;</pre>
+<div class="line">
+	<div class="unit size3of4">
+		<h3>3/4</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	<div class="unit size1of4 lastUnit">
+		<h3>1/4</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+</div>
+<pre>&lt;div class=&quot;line&quot;&gt;<br />	&lt;div class=&quot;unit <strong>size3of4</strong>&quot;&gt;<br />		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;<br />	&lt;/div&gt;<br />	&lt;div class=&quot;unit size1of4 lastUnit&quot;&gt;<br />		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &lt;/p&gt;<br />	&lt;/div&gt;<br />&lt;/div&gt;</pre>
+
+<h2>Fifths</h2>
+<div class="line">
+	<div class="unit size4of5">
+		<h3>4/5</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	<div class="unit size1of5 lastUnit">
+		<h3>1/5</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+</div>
+<pre>&lt;div class=&quot;line&quot;&gt;<br />	&lt;div class=&quot;unit <strong>size4of5</strong>&quot;&gt;<br />		&lt;h3&gt;size4of5&lt;/h3&gt;<br />		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &lt;/p&gt;<br />	&lt;/div&gt;<br />	&lt;div class=&quot;unit <strong>size1of5</strong> lastUnit&quot;&gt;<br />		&lt;h3&gt;size1of5&lt;/h3&gt;<br />		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. &lt;/p&gt;<br />	&lt;/div&gt;<br />&lt;/div&gt;</pre>
+
+<div class="line">
+	<div class="unit size2of5">
+		<h3>2/5</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	<div class="unit size3of5 lastUnit">
+		<h3>3/5</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+</div>
+
+<h2>Complicated Nesting - the AG test</h2>
+
+<p>Many years ago Arnaud Gueras, an excellent developer I worked with, created this litmus test of a great grid system. It should be able to nest any combination of the units and lines, and so it should be able to create the complicated layout below. His test reminded me of the golden mean, so I still use it today.</p>
+
+<div class="line">
+	<div class="unit size1of5">
+		<h3>1/5</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	</div>
+	<div class="unit size3of5">
+		<!-- line -->
+		<div class="line">
+			<div class="unit size1of2">
+				<h3>1/2</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div class="unit size1of2 lastUnit">
+				<h3>1/2</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</div>
+		<!-- /line -->
+		<div class="line">
+			<div class="unit size1of3">
+				<h3>1/3</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+			<div class="unit size2of3 lastUnit">
+				<!-- line -->
+				<div class="line">
+					<div class="unit size1of2">
+						<h3>1/2</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+					<div class="unit size1of2 lastUnit">
+						<h3>1/2</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+				</div>
+				<!-- /line -->
+				<div class="line">
+					<div class="unit size1of1">
+						<h3>1</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="unit size1of5 lastUnit">
+		<h3>1/5</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	</div>
+</div>
+</body>
+</html>

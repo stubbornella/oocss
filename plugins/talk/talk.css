@@ -1,0 +1,20 @@
+/* **************** TALK BUBBLE ***************** */
+.bubble{overflow:hidden;_overflow:visible;_zoom:1;margin:10px;}
+.bubble b b{position:absolute;height:0;width:0;border: solid 7px transparent;_border: 7px solid #fff /* set color to match background color for IE6 */;}
+.bubble .bottom{visibility:hidden;}
+/* top bubbles */
+.bubbleTop .inner{margin-top:7px;}
+.bubbleTop b b{top:0;left:10px;border-top-style:none;}
+/* left bubbles */
+.bubbleLeft .inner{margin-left:7px;}
+.bubbleLeft b b{top:10px;left:0;border-left-style:none;}
+/* right bubbles */
+.bubbleRight .inner{margin-right:7px;}
+.bubbleRight b b{top:10px;right:0;border-right-style:none;}
+/* bottom bubbles */
+.bubbleBottom .inner{margin-bottom:7px;}
+.bubbleBottom b b{bottom:0;left:10px;border-bottom-style:none;}
+.bubbleBottom .bottom{visibility:visible;}
+/* extensions (swaps alignment of talk bubble) */
+.bubbleHorizontalExt b b{top:auto; bottom:10px;visibility:visible;} /* apply to bubbleLeft or bubbleRight */
+.bubbleVerticalExt b b{right:10px;left:auto;} /* apply to bubbleTop or bubbleBottom */

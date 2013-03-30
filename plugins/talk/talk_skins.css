@@ -1,0 +1,18 @@
+/* yowza (extends bubbleTop) */
+.yowza .inner{background-color:#d4494f;}
+.yowza b b{border-bottom-color:#d4494f;}
+/* discuss (extends bubbleBottom) */
+.discuss .inner{background-color:#CCC;}
+.discuss b b{border-top-color:#CCC;}
+/* lol (extends bubbleLeft) */
+.lol .inner{background-color:#845B4E; color:#fff;}
+.lol b b{border-right-color:#845B4E;}
+/* meep (extends bubbleRight) */
+.meep .inner{background-color:#6cc6c6;}
+.meep b b{border-left-color:#6cc6c6;}
+/* yoyo (extends bubbleBottom) */
+.yoyo .inner{background-color:#52a583;}
+.yoyo b b{border-top-color:#52a583;}
+/* header */
+.fire, .fire *{color: #000; font-size:18px; border-bottom: 1px dashed #fff;}
+.attribution{margin-left:27px;}

@@ -1,0 +1,4 @@
+.breadcrumb li{ display: inline;}
+.breadcrumb li:after{ content: "\25B8"; display: inline-block; padding: 0 6px 0 10px;}
+.breadcrumb li:last-child:after{content: "";}
+.breadcrumb a {color: #2c4460 !important;}

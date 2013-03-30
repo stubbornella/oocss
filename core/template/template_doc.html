@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Template Documentation</title>
+<link rel="stylesheet" type="text/css" media="all"  href="../../all.css" />
+<style type="text/css">
+dt{font-weight:bold;}
+pre strong, dt strong{color: #0B8C8F;}
+pre{padding: 20px;background-color: #FCF8BC;overflow:auto;width:auto;}
+</style>
+</head>
+<body>
+<h1>Template</h1>
+<p>Templates are used to solve common design patterns for page templates. Using these templates you can build pages which have a <strong>header</strong>, <strong>footer</strong>, <strong>left</strong> and <strong>right columns</strong>, and a <strong>main content area</strong>. Any of the sections can be broken up via <a href="grids_docs.html">grids</a>. You can also use grids instead of columns. The main column is fully liquid, taking up all the rest of the space when the left column and right column have been rendered.</p>
+<h2>Base Classes</h2>
+<div class="data">
+<table>
+	<thead>
+		<tr>
+			<th>Property</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+	<tr class="odd">
+		<th scope="row"><code>page</code></th>
+		<td>Main wraps site content. It can be extended via the classes <code>oldSchool</code> and <code>liquid</code> to provide 750px and full width layouts respectively.</td>
+	</tr>
+	<tr class="even">
+		<th scope="row"><code>head</code></th>
+		<td>Site header, generally contains custom code. (e.g. horizontal navigation, logo, search box)</td>
+	</tr>
+	<tr class="odd">
+		<th scope="row"><code>body</code></th>
+		<td>Main content area, body of the page.</td>
+	</tr>
+	<tr class="even">
+		<th scope="row"><code>foot<strong></strong></code></th>
+		<td>Site footer, generally contains custom code.</td>
+	</tr>
+	<tr class="odd">
+		<th scope="row"><code>main</code></th>
+		<td>Creates a main content area, often the center column. Fully liquid, it takes all remaining space when left and right columns have been rendered. You may have 1 main columns.</td>
+	</tr>
+	<tr class="odd">
+		<th scope="row"><code>leftCol</code></th>
+		<td>Creates a left column, default width is 250px. Extended by <code>gMail</code>, <code>gCal</code>, <code>yahoo</code>, and <code>myYahoo</code> to create widths of 160px, 180px, 240px, and 300px respectively. You may have 0-n left columns.</td>
+	</tr>
+	<tr class="even">
+		<th scope="row"><code>rightCol</code></th>
+		<td>Creates a right column, default width is 250px. Extended by <code>gMail</code>, <code>gCal</code>, <code>yahoo</code>, and <code>myYahoo</code> to create widths of 160px, 180px, 240px, and 300px respectively. You may have 0-n right columns.</td>
+	</tr>
+	<tr class="odd">
+		<th scope="row"><code>gMail</code></th>
+		<td>Extends <code>leftCol</code> and <code>rightCol</code> to create a <strong>160px</strong> column width.</td>
+	</tr>
+	<tr class="even">
+		<th scope="row"><code>gCal</code></th>
+		<td>Extends <code>leftCol</code> and <code>rightCol</code> to create a <strong>180px</strong> column width.</td>
+	</tr>
+	<tr class="even">
+		<th scope="row"><code>yahoo</code></th>
+		<td>Extends <code>leftCol</code> and <code>rightCol</code> to create a <strong>240px</strong> column width.</td>
+	</tr>
+	<tr class="odd">
+		<th scope="row"><code>myYahoo</code></th>
+		<td>Extends <code>leftCol</code> and <code>rightCol</code> to create a <strong>300px</strong> column width.</td>
+	</tr>
+	<tr class="odd">
+		<th scope="row"><code>oldSchool</code></th>
+		<td>Extends <code>page</code> to create a <strong>750px</strong> layout.</td>
+	</tr>
+	<tr class="even">
+		<th scope="row"><code>liquid</code></th>
+		<td>Extends <code>page</code> to create a <strong>full-width</strong> liquid layout.</td>
+	</tr>
+	</tbody>
+</table>
+</div>
+<h2>Basic template</h2>
+<pre>&lt;div class=&quot;page&quot;&gt;<br />	&lt;div class=&quot;head&quot;&gt;&lt;!-- Head --&gt;&lt;/div&gt;<br />	&lt;div class=&quot;body&quot;&gt;&lt;!-- Body --&gt;<br />		&lt;div class=&quot;leftCol&quot;&gt;&lt;!-- Left Column (optional region) --&gt;&lt;/div&gt;<br />		&lt;div class=&quot;rightCol&quot;&gt;&lt;!-- Right Column (optional region) --&gt;&lt;/div&gt;<br />		&lt;div class=&quot;main&quot;&gt;&lt;!-- Main Content --&gt;&lt;/div&gt;<br />	&lt;/div&gt;<br />	&lt;div class=&quot;foot&quot;&gt;&lt;!-- Foot --&gt;&lt;/div&gt;	<br />&lt;/div&gt;</pre>
+<h2>Full width template, 2 columns, gmail style (160px left column width)</h2>
+<pre>&lt;div class=&quot;page <strong>liquid</strong>&quot;&gt;<br />	&lt;div class=&quot;head&quot;&gt;&lt;!-- Head --&gt;&lt;/div&gt;<br />	&lt;div class=&quot;body&quot;&gt;&lt;!-- Body --&gt;<br />		&lt;div class=&quot;leftCol <strong>gMail</strong>&quot;&gt;&lt;!-- Left Column (optional region) --&gt;&lt;/div&gt;
+		<strong>&lt;!-- note: right column has been removed --&gt;</strong><br />		&lt;div class=&quot;main&quot;&gt;&lt;!-- Main Content --&gt;&lt;/div&gt;<br />	&lt;/div&gt;<br />	&lt;div class=&quot;foot&quot;&gt;&lt;!-- Foot --&gt;&lt;/div&gt;	<br />&lt;/div&gt;</pre>
+<h2>Goals</h2>
+<p>In object oriented CSS the most important goal is to have a single template from which all pages are built. This eases CMS development because by having a single starting point all pages can be made into any other page. Users of the CMS do not have traps in which a page they have built cannot be morphed into a different page type. Another goal of an OO template is to have each section (column, header, etc) control it's own destiny. Practically, that means that if you want to add a left column to the template, the only required action should be actually adding the column to the HTML. You never want to write CSS in such a way that changes are required higher in the DOM tree in order to make child elements behave properly. Looping through the DOM is costly for CMS development. Similarly, if you want to have a different left column width, it should be accomplished by <em>extending the left column object</em> by adding an additional class.</p>
+<h3>Extending an object</h3>
+<pre>&lt;div class=&quot;leftCol <strong>gMail</strong>&quot;&gt; ... &lt;/div&gt;</pre>
+
+<h2>Customizing the template</h2>
+<p>You may not find the default and extended widths of columns or pages match your site. In this case you can extend the column or page objects to allow custom widths. For performance reasons, you should avoid customizing templates whenever possible.</p>
+<h3>Columns</h3>
+<p><code>myColumn</code> extends column objects to allow for custom column widths.</p>
+<pre>.myColumn{width:400px;}</pre>
+<h3>Main page</h3>
+<p><code>myPage</code> extends <code>page</code>.</p>
+<pre>.myPage{width:1050px;}</pre>
+<h2>Known Issues</h2>
+<ul>
+	<li><strong>Source order</strong> - the right column is before the main content in the source order. This choice was made in order to allow the columns to be completely independent objects and to have one unique template rather than multiple starting points for a site. This speeds and simplifies CMS development and enhances usability for those creating pages within the CMS. Skip to content links and navigational items marked up as lists are strongly encouraged.</li>
+	<li><strong>Overflow</strong> - the containing blocks are made to wrap floats using the <em lang="fr" xml:lang="fr">contexte de formattage</em>; <code>overflow:hidden; _overflow:visible; zoom:1;</code>. This is known to cause printing bugs in older versions of Firefox and can cause absolutely positioned blocks originating in that container to be cropped. Removing floats and overflow via the print stylesheet is a corrective option.</li>
+</ul>
+</body>
+</html>

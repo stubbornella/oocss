@@ -1,0 +1,68 @@
+/*
+TODO: Allow % widths of tabs
+TODO: Abstract skin from tabs
+TODO: clean up selector structure - too much variation in rule strength
+
+*/
+
+.tabs{}
+.tabs .bd{}
+.tabs .hd ul{padding:0; display:table-row;_zoom:1;}
+.tabs .hd li{display:table-cell;*display:inline;vertical-align:middle;}
+.tabs .tabControl a{display:inline-block;text-decoration: none;}
+.tabs .tabControl span{display:inline-block; text-align:center; padding: 5px 20px;}
+.tabs .bd li{display:none;}
+.tabs .bd li li{display:block;}
+.tabs .bd li.current{display:block;}
+
+.tabs .topper{padding:0;}
+
+.tabControl li{border-right:solid 1px #ccc; border-left:solid 1px #fff;}
+.tabControl li:last-child{border-right:none;}
+.tabControl li:first-child{border-left:none;}
+.tabs a{font-weight:normal; color: #333;}
+.tabs .hd .tabControl .current{background-color: #fff;}
+.tabs li a:hover{color:#000;background-color: #fff;}
+.tabs .hd li.current a,.tabs .hd li.current span{cursor: default;}
+.tabs li.current a:hover{color:#333;}
+.tabs .hd li span{cursor:pointer;}
+
+.controls{position:absolute; top:0; right: 0; display: none !important; /* this should move to its' own plugin */}
+.controls a{padding: 10px;}
+
+
+.tabPosLeft .hd .tabControl .current {background-image:none; border-bottom:solid 1px #e2e2e2;border-right:none; margin-right:-1px;}
+.tabPosLeft .tabControl li{border-right:none;}
+.tabPosLeft .hd{border-right: 1px solid #e2e2e2;margin-right:-1px;}
+.tabPosLeft .bd {border-left: 1px solid #e2e2e2; display: table-cell;}
+.tabPosLeft .tabControl a{border-right:1px solid #fff;}
+.tabPosLeft .hd {float:left; width: 33%;}
+.tabPosLeft .tabControl a, .tabPosLeft .tabControl span, .tabPosLeft .tabControl li, .tabPosLeft .hd ul{display:block;text-align: left;}
+.tabPosLeft .tabControl span,.tabPosRight .tabControl span{padding: 5px 10px;}
+
+/* right side tabs */
+
+.tabPosRight .hd .tabControl li{border-left:none; border-right:solid 1px #fff;}
+.tabPosRight .hd .tabControl .current {background-image:none; border-bottom:solid 1px #e2e2e2;border-left:none; margin-left: -1px;}
+.tabPosRight .tabControl a{border-left:1px solid #fff;}
+.tabPosRight .hd {float:right; width: 33%;}
+.tabPosRight .tabControl a, .tabPosRight .tabControl span, .tabPosRight .tabControl li, .tabPosRight .hd ul{display:block;text-align: left;}
+.tabPosRight .hd{border-left: 1px solid #e2e2e2;margin-left:-1px;}
+.tabPosRight .bd {border-right: 1px solid #e2e2e2; display: table-cell;}
+/* bottom side tabs */
+
+
+
+/*.inner:after,.bd:after{clear:both;display:block;visibility:hidden;overflow:hidden;height:0 !important;line-height:0;font-size:xx-large;content:" x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";}
+.inner, .bd{*zoom:1;}*/
+
+
+
+/* debug */
+/*
+.tabs{background-color: brown;}
+.tabs .hd{background-color: black;}
+.tabs .hd ul{background-color: blue;}
+.tabs .hd ul li{background-color: yellow;}
+.tabs .hd ul li a{background-color: orange;}
+*/

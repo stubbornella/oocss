@@ -1,0 +1,112 @@
+/* **************** BLOCK SKINS ***************** */
+/* ====== Contour blocks ====== */
+/* remove background-image:" to default to square corners for IE */
+/* ----- simple (extends mod) ----- */
+.simple .inner {border:1px solid #D7D7D7;-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px;}
+.simple b{background-image:url(skin/simple_corners.png)\9;}
+/* ----- basic (extends mod) ----- */
+.basic .inner {-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px;}
+.basic b{background-image:url(skin/round.png)\9;}
+/* ----- simpleExt (extends mod) ----- */
+.simpleExt,.simpleExt .inner{border:1px solid #c7c7c7;-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px; }
+.simpleExt .inner{border-color:#fff; border-width:4px; background-color:#e2e2e2;}
+.simpleExt b{background-image:url(skin/simple_extended.png)\9;}
+.simpleExt .tl{left:-1px;top:-1px;height:12px; width:12px;}
+.simpleExt .tr{right:-1px;top:-1px;height:12px; width:12px;}
+.simpleExt .bl{left:-1px;bottom:-1px;height:12px; width:12px;margin-top:-12px;}
+.simpleExt .br{right:-1px;bottom:-1px;height:12px; width:12px;margin-top:-12px;}
+/* ----- me (extends mod) use for my comments ----- */
+.me,.me .inner{border:1px solid #909090;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
+.me .inner{border-color:#d76a84;}
+.me b{background-image:url(skin/me.png)\9;}
+.me .tl{left:-1px;top:-1px;}
+.me .tr{right:-1px;top:-1px;}
+.me .bl{left:-1px;bottom:-1px;}
+.me .br{right:-1px;bottom:-1px;}
+/* ----- noted (extends mod) ----- */
+.noted,.noted .inner{border:1px solid #c2c2c2;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
+.noted .inner{border-color:#eded68;}
+.noted b{background-image:url(skin/noted.png)\9;}
+.noted .tl{left:-1px;top:-1px;}
+.noted .tr{right:-1px;top:-1px;}
+.noted .bl{left:-1px;bottom:-1px;}
+.noted .br{right:-1px;bottom:-1px;}
+/* ----- grab (extends mod) ----- */
+.grab .inner{border: 3px solid #00477a; border-bottom-width:10px;}/* can't be done w border radius */
+.grab b{background-image:url(skin/grab.png);}
+/*.grab .tl, .grab .tr{height:10px; width:10px;}*/
+.grab .bl, .grab .br{height:16px;/*if height is set, margin set*/margin-top:-16px;}
+/* ----- faq (extends mod) ----- */
+.faq .inner{border: 3px solid #b20029; border-bottom-width:10px;}/* can't be done w border radius */
+.faq b{background-image:url(skin/faq.png);}
+.faq .bl, .faq .br{height:16px;/*if height is set, margin set*/margin-top:-16px;}
+/* ----- onlinestore (extends mod) ----- */
+.onlinestore .inner{border: 3px solid #9a9800; border-bottom-width:10px;}/* can't be done w border radius */
+.onlinestore b{background-image:url(skin/store.png);}
+.onlinestore .bl, .onlinestore .br{height:16px;/*if height is set, margin set*/margin-top:-16px;}
+/* ----- about (extends mod) ----- */
+.about .inner{border: 3px solid #494949; border-bottom-width:10px;}/* can't be done w border radius */
+.about b{background-image:url(skin/about.png);}
+.about .bl, .about .br{height:16px;/*if height is set, margin set*/margin-top:-16px;}
+/* ----- talk (extends mod) ----- */
+.talk,.talk .inner{border:1px solid #c7c7c7;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
+.talk .inner{border-color:#ededed;}
+.talk b{background-image:url(skin/talk.png)\9;}
+.talk .tl{left:-1px;top:-1px;}
+.talk .tr{right:-1px;top:-1px;}
+.talk .bl{left:-1px;bottom:-1px;}
+.talk .br{right:-1px;bottom:-1px;}
+/* ----- photo (extends complex) ----- */
+.photo .inner{border:solid 10px #fff;margin:0 4px;}/* muck with margins to change how the block will align with other blocks, any value between 0-10px */
+.photo b{background-image:url(skin/photo.png);}
+.photo .tr, .photo .tl{width:20px;}
+.photo .top, .photo .bottom{height:4px;margin-top:0px;}
+.photo .bl, .photo .br{height:16px;margin-top: -12px;}
+/* ----- flow (extends complex) ----- */
+.flow{margin:6px;}
+.flow b{background-image:url(skin/even.png);}
+.flow .inner{padding:0 4px;}
+.flow .top{height:4px;}
+.flow .bottom{height:4px;margin-top:-4px;}
+.flow .br,.flow .bl{margin-top:-6px;}/* margin top = bottom height - corner height */
+/* ----- shadow test (experimental attempt to match "flow" cross browser w no img)----- */
+.boo{-webkit-box-shadow: 0px 0px 1px rgba(0,0,0,33);-moz-box-shadow: black 2px 2px 2px 2px;/*-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;*/border:solid 1px #949494;background:#fff;}
+/* ----- .excerpt (extends complex) ----- */
+.excerpt b{background-image:url(skin/excerpt.png);}
+.excerpt .top{height:1px;}
+.excerpt .bottom{height:6px;margin-top:-6px;}/* margin top equal to - height of bottom */
+.excerpt .br,.excerpt .bl{height:12px;margin-top:-6px;}/* margin top = bottom height - corner height */
+/* ----- sommers (extends pop) ----- */
+.sommers .inner{_border:3px solid #D7D7D7;}/*IE6 backup no alpha transparency */
+.sommers,.sommers .inner,.sommers b{background-image:url(skin/glow_7px.png);_background-image:none;}
+.sommers{margin:3px 20px 20px 3px;}
+/* ----- gonzalo ----- */
+.gonzalo, .gonzalo .inner, .gonzalo b{background-image:url(skin/gc.png);}
+/* ====== Background blocks ====== */
+.sale .inner{background:red none;}
+.nicole .inner{background:#c01c41 none; color:#fff;}
+.nicole *, .login *{ color:#fff;}
+.highlight .inner{background:#e3e36f none;}
+.universe .inner{background:url(skin/universe.png) repeat left top;}
+.foo .inner{background: url(skin/universe_gray.png) repeat left top;}
+.login .inner{background: url(skin/universe_login.png) repeat left top;}
+.comment .inner{background:#e2e2e2 none;}
+/* ====== Block headers and footers ====== */
+/*.hd h1, .hd h2, .hd h3, .hd h4, .hd h5, .hd h6{padding: 5px 10px;}*/
+.section{background: #e9e9e9 url(skin/header.png) repeat-x left bottom; color:#de2c72;font-size:120%;/*padding:5px 10px;*/}
+.section h1,.section h2,.section h3,.section h4,.section h5,.section h6{font-size:100%;color:#de2c72;/*padding:0;*/}
+.act{background-color:#e9e9e9;}
+.topper{background: #fff url(skin/header_gradient_light.png) repeat-x left bottom;color: #4D4D4D;font-size:120%;padding:5px 10px;}
+.topper h1,.topper h2,.topper h3,.topper h4,.topper h5,.topper h6{font-size:100%;color:#4D4D4D;padding:0;}
+.tabPosLeft .topper li,.tabPosRight .topper li{background: #fff url(skin/header_gradient_light.png) repeat-x left bottom;/* belongs in topper */}
+.tabPosBottom .topper{
+  background-image:-webkit-gradient(linear, 0% 0%, 0% 40%, from(#E2E2E2), to(#FFFFFF));
+  background-image:-moz-linear-gradient(0% 8% 270deg, #E2E2E2, #FFFFFF, #FFFFFF 77%);}
+.bam{background: #00477a url(skin/header_glossy.png) repeat-x left top;color: #fff;font-size:120%;padding:5px 10px;}
+.bam h1,.bam h2,.bam h3,.bam h4,.bam h5,.bam h6{font-size:100%;color:#fff;padding:0;}
+.online{background: #9a9400 url(skin/online.png) repeat-x left top;color: #000;font-size:120%;padding:5px 10px;}
+.online h1,.online h2,.online h3,.online h4,.online h5,.online h6{font-size:100%;color:#000;padding:0;}
+.help{background: #b20029 url(skin/help.png) repeat-x left top;color: #fff;font-size:120%;padding:5px 10px;}
+.help h1,.help h2,.help h3,.help h4,.help h5,.help h6{font-size:100%;color:#fff;padding:0;}
+.info{background: #636363 url(skin/info.png) repeat-x left top;color: #fff;font-size:120%;padding:5px 10px;}
+.info h1,.info h2,.info h3,.info h4,.info h5,.info h6{font-size:100%;color:#fff;padding:0;}
