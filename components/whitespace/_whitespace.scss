@@ -1,11 +1,34 @@
-$debug-spacing: false;
+/**
+* @desc         Create spacing classes and default spacing.
+* @name         Whitespace
+* @author       Fiona
+* @tested       Safari, Chrome, Firefox, IE7-9
+* @requires     _variables.scss
+*/
 
- 
+$debugSpacing: false;
 
-/* debug default spacing 
+/* ==========================================================================
+   Default spacing
+   ========================================================================== */
+
+%baseSpacing { 
+  margin-top: $baseSpacing;
+  margin-bottom: $baseSpacing;
+}
+
+table {
+  h1, h2, h3, h4, h5, h6, p, ul, ol, dl, blockquote, .media, pre{
+    margin-top:0; 
+    margin-bottom: 0;
+  }
+}
+
+/* *
+ * debug default spacing 
  * set $debug-spacing to true to visualize spacing and positioning
  */
-@if $debug-spacing {
+@if $debugSpacing {
   h1, h2, h3, h4, h5, h6, ul, ol, dl, p, blockquote, .media, pre, .data {
     outline: 1px solid aqua;
   }
@@ -20,9 +43,11 @@ $debug-spacing: false;
   }
 }
 
+/* ==========================================================================
+   Spacing helpers
+   ========================================================================== */
 
- 
-/** 
+/**
  * Spacing helpers 
  * Should be used to modify the default spacing between objects (not between nodes of the same object)
  * Please use judiciously. You want to be using defaults most of the time, these are exceptions! 
@@ -39,6 +64,10 @@ $whitespace-keys: (p padding, m margin, a '', v -top -bottom, h -left -right, t 
   @each $pair in $whitespace-keys {
     $short: nth($pair, 1);
     $long: nth($pair, 2);
+    // v and h need to pass in 2 parameters
+    @if (length($pair) == 3) {
+      $long: (nth($pair, 2) nth($pair, 3))
+    }
     @if $short == $k {
       @return $long;
     }
@@ -47,85 +76,45 @@ $whitespace-keys: (p padding, m margin, a '', v -top -bottom, h -left -right, t 
   @return $k;
 }
 
-@mixin  whitespace($sizes: (5px, 10px, 20px)){ //for now assume this list is always ascending
-    /* ====== Establish Default Spacing ====== */
-    h1, 
-    h2, 
-    h3, 
-    h4, 
-    h5, 
-    h6, 
-    ul, 
-    ol, 
-    dl, 
-    p, 
-    blockquote, 
-    .media, 
-    pre, 
-    .data, 
-    .line { // should they all @include default spacing instead?
+/*
+ * Can define your own spacing units, or calculate the units based on how many spacing sizes you want
+ * 
+ * @param $units - specific spacing units you want to use. Must go from small to large
+ * e.g. @include whitespace((5px,10px,20px));
+ *
+ * @param $sizes - how many sizes you want. Calculate sizes based on line-height
+ * e.g. @include whitespace((), 4);
+ *
+ */
+@mixin whitespace($units:(), $sizes:4) {
+    $tShirtSizes: (n,s,m,l,xl);
+    $types: (p,m);
+    $locations: (a, v, h, t, r, b, l);
+    $fontHeight: ($baseFontSize/1px) * $baseLineHeight; //calculate font height
 
-        // TODO: put these content based gutters back in for support for IE8-
-        //  @if ($guttersV == $guttersH){
-        //    margin: gutters-h;
-        //  } @else {
-        //    margin: $guttersV $guttersH; 
-        //  }
-        margin-top: $guttersV;
-        margin-bottom: $guttersV;
-        &:first-child {
-            margin-top:0;
-        }
-        &:last-child {
-            margin-bottom:0;
+    //if user didn't define their own spacing units
+    @if length($units) == 0 { 
+        @for $i from 1 through $sizes {
+            $unit: (round($fontHeight/$i))+px; //calculate unit base on fraction of font height
+            $units: join($unit, $units);
         }
     }
-    table {
-        h1, 
-        h2, 
-        h3, 
-        h4, 
-        h5, 
-        h6, 
-        p, 
-        ul, 
-        ol, 
-        dl, 
-        blockquote, 
-        .media, 
-        pre {
-            margin-left:0; 
-            margin-right: 0;
+    $units: join(0, $units);
+
+    // @debug $units;
+
+    @for $i from 1 through length($units) {
+
+        $tShirtSize: nth($tShirtSizes, $i);
+
+        @each $location in $locations {
+            @each $type in $types {
+                .#{$type}#{$location}#{$tShirtSize} {
+                    @each $whitespace-location in expand-whitespace-key($location) {
+                      #{expand-whitespace-key($type)}#{$whitespace-location}: nth($units, $i) !important;
+                    }
+                }
+            }
         }
-    }
-    /* build spacing exceptions */
-  $sizes: join(0, $sizes);
-  $size-names: ();
-  @if (length($sizes) == 1) {
-    $size-names: (n);
-    @warn "One spacing class isn't usually enough. Typically you should choose at least three."
-  } @else if (length($sizes) == 2) {
-    $size-names: (n, s);
-    @warn "Two spacing classes isn't usually enough. Typically you should choose at least three."
-  } @else if (length($sizes) == 3) {
-    $size-names: (n, s, m);
-  } @else if (length($sizes) == 4) {
-    $size-names: (n, s, m, l);
-  } @else if (length($sizes) == 5) {
-    $size-names: (n, s, m, l, xl);
-  } @else if (length($sizes) > 5) {
-    $size-names: (n, xs, s, m, l, xl);
-    @warn "No more than five spacing classes are supported, typically you want to have three."
-  }
-  $types: (p,m);
-  $locations: (a, v, h, t, r, b, l);
-  @each $location in $locations {
-    @each $size-name in $size-names {
-      @each $type in $types {
-        .#{$type}#{$location}#{$size-name}{
-          #{expand-whitespace-key($type)}#{expand-whitespace-key($location)}:nth($sizes, index($size-names, $size-name)) !important;
-        }
-      }
-    }
-  }
+    } 
 }
