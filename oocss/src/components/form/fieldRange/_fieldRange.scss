@@ -1,0 +1,20 @@
+/**
+* @desc         Inline field group
+* @name         fieldGroupInline
+* @author       
+* @tested       
+* @requires    
+*/
+
+.form {
+  .fieldRange {
+    > li {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .rangeLabel {
+      padding: 0 10px;
+    }
+  }
+}

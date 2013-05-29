@@ -1,0 +1,15 @@
+{{!include "../form.handlebars"}}
+{{!include "../label/label.handlebars"}}
+
+{{#registerBlock "ftext" "id" "name" "classname" "fieldSize"}}
+  <span class="fieldItem text{{#if $classname}} {{$classname}}{{/if}}">
+     <input type="text" id="{{$id}}"{{#if $name}} name="{{$name}}"{{/if}}{{#if $content}}value="{{$content}}"{{/if}}{{#if $fieldSize}}class="{{$fieldSize}}"{{/if}}>
+  </span>
+{{/registerBlock}}
+
+{{#formpres}}
+  {{#ffield}}
+    {{#flabel "text1" "fieldLabel"}}Label with input{{/flabel}}
+    {{#ftext "text1"}}{{/ftext}}
+  {{/ffield}}
+{{/formpres}}

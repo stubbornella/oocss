@@ -1,0 +1,27 @@
+/**
+* @name         Media block
+* @desc         Media block - image on left/right, text next to it.
+* @author       
+* @tested       
+* @requires     
+*/
+
+.media {
+  @extend %baseSpacing;
+  @include clearfix-me(micro);
+  > .mediaImg {
+    float: left;
+    margin-right: 10px;
+    > img {
+      display: block;
+    }
+  }
+  > .mediaImgExt {
+    float: right;
+    margin-left: 10px;
+    margin-right: 0;
+  }
+  > .mediaBody {
+    @include clearfix-me(facebook);
+  }
+}

@@ -1,0 +1,10 @@
+/**
+* @desc         Button skins
+* @extends      .btn
+*/
+
+.btnDefault {
+  border: 1px solid $btnDefaultBorder;
+  background: $btnDefaultBg;
+  border-radius: 3px;
+}

@@ -1,0 +1,115 @@
+/* ==========================================================================
+  Compass prefix support
+  ========================================================================== */
+//$support-for-original-webkit-gradients : false;
+
+/* ==========================================================================
+  Common variables
+  ========================================================================== */
+/**
+* 
+* DO NOT use these variables directly in components. 
+* Assign them to component specific variables
+*
+*/
+
+/* Colors */
+$black: #313131;
+$blue: #1d4a83;
+$lightBlue: #8ebaf4;
+$grey: #666;
+$lightGrey: #999;
+
+/* Border radius */
+$borderRadiusDefault: 6px;
+
+/* ==========================================================================
+  Browser support
+  ========================================================================== */
+$ie7: false;
+$ie8: false;
+
+/* ==========================================================================
+  Component specific variables
+  ========================================================================== */
+
+/* Typography
+   ========================================================================== */
+$baseFontSize: 14px;
+// When using baseFontSize variable, must use it with fontSize mixin
+$baseFontFamily: Arial, sans-serif;
+$baseLineHeight: 1.5;
+//must be unitless
+$baseSpacing: $baseLineHeight+em;
+//vertical spacing
+$baseTextColor: $black;
+
+/* Type Color */
+$typeHighlight: $blue;
+$typeLowlight: $lightGrey;
+
+/* Grid
+   ========================================================================== */
+$cols: 12;
+$baseGutter: 20px;
+//horizontal spacing
+
+/* Link
+   ========================================================================== */
+$linkColor: $blue;
+$linkHoverColor: $lightBlue;
+
+/* Background
+   ========================================================================== */
+$bgBasic: #fff;
+
+/* Box
+   ========================================================================== */
+/* Contour */
+$boxBasicBorderRadius: $borderRadiusDefault;
+
+/* Box foot */
+$boxFootDivider: $blue;
+
+/* Divider
+   ========================================================================== */
+$dividerColor: $blue;
+
+/* List
+   ========================================================================== */
+$listInlineDividerBorder: $lightGrey;
+$listBorder: $lightGrey;
+
+/* Table
+   ========================================================================== */
+$tableBorderColor: $blue;
+
+/* Form
+   ========================================================================== */
+$labelLeftWidth: 30%;
+$formFieldBorder: 1px solid $grey;
+$placeholderText: $lightGrey;
+
+/* Button
+   ========================================================================== */
+$btnDefaultBg: #ddd;
+$btnDefaultBorder: $lightGrey;
+
+/* Template
+   ========================================================================== */
+$skipLinkBg: $black;
+$bodyBg: #fff;
+$pageWidth: 997px;
+
+/* header */
+$headerBgStop1: #09456a;
+$headerBgStop2: #02587e;
+$contentBg: #fff;
+$contentWidth: 960px;
+
+/* footer */
+$footerBorder: $lightGrey;
+
+
+
+

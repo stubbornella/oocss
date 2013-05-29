@@ -1,0 +1,25 @@
+/**
+* @desc         Label
+* @name         label
+* @author       
+* @tested       
+* @requires     _variables.scss
+*/
+
+.form {
+  .fieldLabel {
+    margin-bottom: 2px;
+    min-height: 1px;
+    display: block;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  label.labelLeft,
+  .labelLeft .fieldLabel {
+    width: $labelLeftWidth;
+    float: left;
+    padding: 4px 13px 4px 0;
+    text-align: right;
+  }
+}

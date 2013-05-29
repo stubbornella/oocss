@@ -1,0 +1,36 @@
+<h2 id="{{name}}" class="docH2">{{longname}}</h2>
+
+
+<div class="data codeTable">
+  <table>
+    <tr>
+      <th scope="row"><code>btn</code></th>
+      <td>Base class. Required. Skins and subclasses that extend <code>btn</code> should add their classname to this element.</td>
+    </tr>
+    {{#each skins}}
+      {{#if doc}}
+        <tr>
+          <th scope="row"><code>{{className}}</code></th>
+          <td>{{{doc}}}</td>
+        </tr>
+      {{/if}}
+    {{/each}}
+  </table>
+</div>
+
+<div class="line">
+  <div class="col cols4of12">
+    <h3 class="h2">Button with anchor element</h3>
+
+    <p>
+      Sometimes an element might look like a button, but semantically and functionally isn't one. A lot of the times it's an anchor looking like a button. When an element directs the user to another location, use <code>a</code>.
+    </p>
+
+    <a href="#" class="btn">This is an anchor</a>
+  </div>
+  <div class="col colLast">
+    <div>
+      {{#htmlcode}}<a href="#" class="btnLink">This is an anchor</a>{{/htmlcode}}
+    </div>
+  </div>
+</div>

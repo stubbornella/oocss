@@ -1,0 +1,23 @@
+/**
+	* @desc         Base box mixin for grouping content
+	* @name         Box Mixin
+	* @author       mobywhale
+	* @tested       Chrome, Firefox, IE7-9  
+	* @requires     variables.scss
+	*/
+
+.box {
+  @extend %baseSpacing;
+  @include clearfix-me(micro);
+  position: relative;
+
+  .boxHead,
+  .boxFoot {
+    @include clearfix-me(micro);
+    padding: 0 $baseGutter;
+  }
+
+  .boxBody {
+    padding: 0 $baseGutter;
+  }
+}

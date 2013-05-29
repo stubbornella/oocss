@@ -1,0 +1,117 @@
+/**
+	* @desc         Grid
+	* @name         Grid Mixin
+	* @author       mobywhale
+	* @tested       Chrome, Firefox, IE7-9  
+	* @requires     variables.scss
+	*/
+
+$gridsDebug: false;
+$gridsDebugPosition: false;
+//TODO: make params into variables instead, so they can easily be updated w out changing this file.
+//TODO: Take different .cols into account, what if gutters are in rems? ems? percentage?
+//TODO: test in IE6 :(
+@mixin ooGrid($cols: $cols, $gutter: $baseGutter) {
+
+/* ie 7 and earlier need percentage based gutters because they dont do border-box */
+  $iePercentGutter: percentage($gutter/$pageWidth);
+
+  @each $col in $cols {
+    @for $i from 1 through $col {
+      .cols#{$i}of#{$col} {
+        width: percentage($i/$col) !important;
+        // IE7- width = normal width - gutter width
+        @if $ie7 == true {
+          *width: percentage($i/$col)-$iePercentGutter !important;
+        }
+      }
+    }
+  }
+
+  .line {
+    @include clearfix-me(micro);
+    margin-left: -$gutter;
+    .col {
+      // col must take place by default even if it's empty
+      min-height: 1px;
+      float: left;
+      zoom: 1;
+      @if $gutter {
+        @include box-sizing(border-box);
+        padding-left: $gutter;
+      }
+    }
+
+    @if $ie7 == true or $ie8 == true {
+      .lastCol {
+        // <= IE8 needs a class .lastCol on the final column in any line.
+        @include clearfix-me(facebook);
+        float: none;
+        @if $ie7 == true {
+        //IE 7 - new formatting context
+          *display: block;
+          *width: auto !important;
+          *zoom: 1;
+        }
+      }
+    }
+  }
+
+  .colExt {
+    // TODO: handle case where there are two (or more) .colExt in a line.
+    float: right;
+    zoom: 1;
+    @if $gutter {
+      padding: 0 0 0 $gutter;
+    }
+  }
+
+  .col:last-child {
+    //Facebook clearfix for > IE8. IE8 doesn't recognise :last-child and when grouped with other selectors, it causes other selectors to not recognise the rules.
+    @if $ie7 == false and $ie8 == false {
+      float: none;
+    //if <=IE8, the float none will be set in .lastCol class
+    }
+    display: table-cell;
+    vertical-align: top;
+    width: 10000px !important;
+  }
+}
+
+@if $gridsDebug {
+  .line > div:after {
+    content: attr(class);
+    display: block;
+    min-height: 40px;
+    line-height: 40px;
+    background-color: #EEE;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 12px;
+  }
+}
+
+@if $gridsDebugPosition {
+  .line {
+    background-color: #e2e2e2;
+  }
+  .col {
+    background-color: #da0000;
+    border-radius: 7px;
+  }
+  .col:first-child {
+    background-color: green;
+  }
+  .col:first-child, .firs .col {
+    background-color: blue;
+  }
+  .colExt ~ [class*=size]:last-child, .las .col {
+    background-color: purple;
+  }
+  .colExt ~  .colExt {
+    background-color: gray;
+  }
+}
+
+// if gutters were true they would need to be % based, so you would need to know page width
+// e.g. 15px gutters / 960px page width = 0.015625 or 1.5625%

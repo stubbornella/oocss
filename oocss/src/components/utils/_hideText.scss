@@ -1,0 +1,62 @@
+/* ==========================================================================
+   Hide
+   ========================================================================== */
+
+/**
+* @desc         Various techniques for hiding elements. Adapted from HTML5 Boilerplate.
+* @name         hide
+* @author       Fiona
+* @tested       IE6-9, Firefox, Chrome, Safari
+* @requires     N/A
+*/
+
+/* Hide text off screen */
+@mixin ooHideText() {
+  .hideText {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px; /* IE 6/7 fallback */
+  }
+  .hideText:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+  }
+}
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+@mixin ooHideFully {
+  .hideFully {
+    display: none !important;
+    visibility: hidden;
+  }
+}
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+@mixin ooHideVisually {
+  .hideVisually {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+}
+
+/* Extends the .hideVisually class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+@mixin ooHideVisuallyFocusable {
+  .hideVisually.focusable:active,
+  .hideVisually.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+  }
+}

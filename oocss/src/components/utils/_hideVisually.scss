@@ -1,0 +1,33 @@
+/* ==========================================================================
+   Hide Visually
+   ========================================================================== */
+
+/**
+* @desc         Hide element visually but allow screenreaders to read it. Adapted from HTML5 Boilerplate.
+* @name         hide
+* @author       Fiona
+* @tested       IE6-9, Firefox, Chrome, Safari
+* @requires     N/A
+*/
+
+.hideVisually {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* Extends the .hideVisually class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.hideVisually.focusable:active,
+.hideVisually.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}

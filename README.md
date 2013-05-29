@@ -1,20 +1,12 @@
-## To Do
+#OOCSS
 
-* Split module skins   
+##Folders
 
-## Filestructure Conventions
+- [/oocss](oocss)
+- [/vagrant](vagrant)
 
-_Example:_  
+###OOCSS folder
+This folder contains all the handlebars, Sass and JavaScript files for the components and documentation. It also contains the scripts you need for starting and stopping the Vagrant box.
 
-    \-yourplugin/ {plugin-root}  
-    +-yourplugin.css {essential CSS}  
-    +-yourplugin_debug.css {CSS for debugging} 
-    +-yourplugin_doc.html {Examples and Explanation}  
-    +-yourplugin_skins.css {all skins that only require pure css, others via @import}  
-    +-\ skins/ {skins that need more than pure CSS, eg. images}  
-      +-\ photo/ {skin-root}  
-        +-photo_skin.css  
-        +-img/  
-      +-\ flow/ {skin-root}  
-        +-flow_skin.css  
-        +-img/  
+###Vagrant folder
+This folder contains all the vagrant files needed for building a new vagrant box and packaging it.

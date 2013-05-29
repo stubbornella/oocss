@@ -1,0 +1,32 @@
+<h2 id="{{name}}" class="docH2">{{longname}}</h2>
+
+<p>
+  Text presentation of the component icon
+</p>
+
+<div class="data codeTable">
+  <table>
+    <tr>
+      <th scope="row"><code>icon</code></th>
+      <td>Base class. Required. Skins and subclasses that extend icon should add their classname to this element.</td>
+    </tr>
+    {{#each skins}}
+      {{#if doc}}
+        <tr>
+          <th scope="row"><code>{{className}}</code></th>
+          <td>{{{doc}}}</td>
+        </tr>
+      {{/if}}
+    {{/each}}
+  </table>
+</div>
+
+<!-- <ul class="listComponent">
+    {{#each skins}}
+    <li>
+      {{{html}}}
+      {{{htmlcode}}}
+    </li>
+    {{/each}}
+</ul>
+ -->

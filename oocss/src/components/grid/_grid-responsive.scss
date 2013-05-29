@@ -1,0 +1,120 @@
+@import "compass/css3";
+
+// hide, show, collapse?, expand
+
+//TODO: make it work with ems (or any unit?)
+//TODO: stephen doens't think incremental breakpoints are a good idea
+//TODO: allow developers to choose which types of options get outputted (show, hide, expand, collapse, cols, etc)
+@mixin ooGridResponsive($breakpoints: (56.25em, 41em, 25em), $columns: 12, $gutters: (20px, 20px, 20px), $mobile-first: false) {
+  $direction: lt;
+  $min-max: max;
+
+  @if $mobile-first {
+    $direction: gt;
+    $min-max: min;
+  }
+
+// t-shirt sizing
+//TODO: think about what happens if a site needs to *add* breakpoints later, especially in the middle
+//TODO: mobile first scenario
+  $tShirtSizes: ();
+  @if (length($breakpoints) == 1) {
+    $tShirtSizes: (med);
+  } @else if (length($breakpoints) == 2) {
+    $tShirtSizes: (lg, med);
+  } @else if (length($breakpoints) == 3) {
+    $tShirtSizes: (lg, med, sm);
+  } @else if (length($breakpoints) == 4) {
+    $tShirtSizes: (xl, lg, med, sm);
+  } @else if (length($breakpoints) == 5) {
+    $tShirtSizes: (xl, lg, med, sm, xs);
+  } @else if (length($breakpoints) == 6) {
+    $tShirtSizes: (xxl, xl, lg, med, sm, xs);
+  } @else if (length($breakpoints) == 7) {
+    $tShirtSizes: (xxl, xl, lg, med, sm, xs, xxs);
+  } @else if (length($breakpoints) == 8) {
+    $tShirtSizes: (xxxl, xl, lg, med, sm, xs, xxs);
+  } @else if (length($breakpoints) == 9) {
+    $tShirtSizes: (xxl, xl, lg, med, sm, xs, xxs, xxxs);
+  } @else if (length($breakpoints) > 9) {
+    $tShirtSizes: $breakpoints;
+    @warn "T-shirt sizing doesn't work well with more than 9 breakpoints, we'll have to default to using explicit pixel values. This will make your code less maintainable.";
+  }
+
+  .hide {
+    display: none !important;
+  }
+
+  .show {
+    display: inherit !important;
+    //?? Does this work?
+  }
+
+// create breakpoints
+  @for $i from 1 through length($breakpoints) {
+    $break: nth($breakpoints, $i);
+    $tShirtSize: nth($tShirtSizes, $i);
+    $cols: $columns;
+    $gutterResponsive: nth($gutters, $i);
+
+  /*  For each breakpoint that we set, we create a set of classes specific to the breakpoint.
+      E.g. if we only have 1 breakpoint(20em) and not mobile first, it'll generate:
+      @media only screen and (max-width: 20em) {
+        .medHide {
+          display: none !important;
+        }
+
+        ....
+
+        .medCol1of12 {
+          ...
+        }
+      }
+  }
+  */
+    @media only screen and (#{$min-max}-width: $break) {
+      .#{$tShirtSize}Hide {
+        display: none !important;
+      }
+
+      .#{$tShirtSize}Show {
+        display: inherit !important;
+        //?? Does this work?
+      }
+
+    // /* grids tools (can be used on grids, media block, template) */
+      .#{$tShirtSize}Collapse > .col,
+      .#{$tShirtSize}Collapse {
+        width: auto !important;
+        display: block !important;
+        float: none !important;
+      }
+
+      .#{$tShirtSize}Expand > .col {
+        width: auto !important;
+      }
+
+      .#{$tShirtSize}DeepExpand .col {
+        width: auto !important;
+      }
+
+    //TODO: is there a way to not duplicate the code from grid.scss?
+
+      .line {
+        margin-left: -$gutterResponsive;
+
+        .col {
+          padding-left: $gutterResponsive;
+        }
+      }
+
+      @each $col in $cols {
+        @for $i from 1 through $col {
+          .#{$tShirtSize}Cols#{$i}of#{$col} {
+            width: percentage($i/$col) !important;
+          }
+        }
+      }
+    }
+  }
+}
