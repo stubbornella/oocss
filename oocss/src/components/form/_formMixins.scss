@@ -1,0 +1,35 @@
+//Not currently using
+@mixin labelWidth($size) {
+  .labelWidth#{$size} label, label.labelWidth#{$size} {
+    @if($size == Auto) {
+      width: auto;
+    } @else {
+      width: percentage($size/100);
+    }
+  }
+}
+
+//Not currently using
+@mixin elementWidth($size) {
+  .width#{$size} {
+    @if($size == Auto) {
+      width: auto;
+    } @else {
+      width: percentage($size/100);
+    }
+  }
+}
+
+/** label generic width : generate code like this :
+ .labelWidth90 label, label.labelWidth90 {
+  width: 90%;
+}
+ */
+//Not currently using
+@mixin generateLabelsWidth() {
+  $sizes: (10,20,30,40,50,60,70,80,90);
+  @each $size in $sizes {
+    @include labelWidth($size);
+  }
+  @include labelWidth(Auto);
+}

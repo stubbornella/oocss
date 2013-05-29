@@ -1,0 +1,112 @@
+<h2 id="{{name}}" class="docH2">{{longname}}</h2>
+
+<p>The grid uses fluid width, but the responsive grid creates a set of additional classes based on the viewport sizes you set.</p>
+
+<p>Viewport sizes corresponds to t-shirt size:</p>
+<div class="data codeTable">
+  <table>
+    <thead>
+    <tr>
+      <th>No. of breakpoints</th>
+      <th>Sizes</th>
+    </tr>
+    </thead>
+    <tr>
+      <th scope="row">1</th>
+      <td>med</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>lg, med</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>lg, med, sm</td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td>xl, lg, med, sm</td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td>xl, lg, med, sm, xs</td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td>xxl, xl, lg, med, sm, xs</td>
+    </tr>
+    <tr>
+      <th scope="row">7</th>
+      <td>xxl, xl, lg, med, sm, xs, xxs</td>
+    </tr>
+    <tr>
+      <th scope="row">8</th>
+      <td>xxxl, xl, lg, med, sm, xs, xxs</td>
+    </tr>
+    <tr>
+      <th scope="row">9</th>
+      <td>xxl, xl, lg, med, sm, xs, xxs, xxxs</td>
+    </tr>
+  </table>
+</div>
+
+<p>
+  For each breakpoint that we set, we create a set of classes specific to the breakpoint.
+  <br>
+  E.g. if we only have 1 breakpoint(20em), it'll generate:
+<pre data-language="css"><code>
+  @media only screen and (max-width: 20em) {
+  .medHide {
+  display: none !important;
+  }
+
+  ....
+
+  .medCol1of12 {
+  ...
+  }
+  }</code></pre>
+<br>
+The classes only get triggered at the specific breakpoint, giving you full flexibility in creating a responsive site.
+</p>
+
+<div class="data codeTable">
+  <table>
+    <tr>
+      <th scope="row"><code>&lt;tshirtSize&gt;Hide</code></th>
+      <td>Hide element</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>&lt;tshirtSize&gt;Show</code></th>
+      <td>Hide element</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>&lt;tshirtSize&gt;Col</code></th>
+      <td>Float a column left</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>&lt;tshirtSize&gt;ColExt</code></th>
+      <td>Float a column right</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>&lt;tshirtSize&gt;Cols&lt;n&gt;of12</code></th>
+      <td>Column widths</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>&lt;tshirtSize&gt;Expand</code></th>
+      <td>Make element full width. Can be added to &lt;line&gt; in the grid to expand columns</td>
+    </tr>
+  </table>
+</div>
+
+<div class="demo">
+  <h3 class="docH3">Using viewport specific column classes</h3>
+  {{#each skins}}
+    {{{html}}}
+
+  {{! TODO: not feeling like showing a big block of grids code is valuable. Perhaps the pre can be removed? For now, commented. }}
+  {{!<pre class="code"><code>{!html}</code></pre>}}
+
+  {{/each}}
+
+</div>

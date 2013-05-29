@@ -1,0 +1,15 @@
+/**
+* @desc         Textarea
+* @name         textarea
+* @author       
+* @tested       
+* @requires    
+*/
+
+.form {
+  .text textarea {
+    @extend %formFieldStyle;
+    width: 100%;
+    padding: 8px;
+  }
+}

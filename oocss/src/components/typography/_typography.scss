@@ -1,0 +1,90 @@
+/**
+* @desc         Base typography styles.
+* @name         Typography
+* @author       
+* @tested       
+* @requires     variables.scss
+*/
+
+$debugTypography: false;
+// set to true to turn on base line stripes
+
+/* ==========================================================================
+   Base Type
+   ========================================================================== */
+html {
+  font-size: 100%;
+}
+
+body {
+  @include fontSize($baseFontSize);
+  font-family: $baseFontFamily;
+  line-height: $baseLineHeight;
+  color: $baseTextColor;
+}
+
+body,
+input,
+select,
+textarea {
+  font-family: $baseFontFamily;
+}
+
+/* ==========================================================================
+   Headings and paragraph
+   ========================================================================== */
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-style: normal;
+  @extend %baseSpacing;
+}
+
+h1, .h1 {
+  @include fontSize(20px);
+}
+
+h2, .h2 {
+  @include fontSize(17px);
+}
+
+h3, .h3 {
+  @include fontSize(14px);
+}
+
+h4, .h4 {
+  @include fontSize(13px);
+}
+
+h5, .h5 {
+  @include fontSize(13px);
+}
+
+h6, .h6 {
+  @include fontSize(11px);
+}
+
+p {
+  @extend %baseSpacing;
+}
+
+/* ==========================================================================
+   Code
+   ========================================================================== */
+pre,
+code {
+  font-family: Consolas, Monaco, "Lucida Console", monospace;
+}
+
+/* debug */
+@if $debugTypography {
+  body {
+    // thank you lea ;)
+    background-color: #fff;
+    background-image: -webkit-linear-gradient(transparent 50%, rgba(0, 0, 0, .1) 50%);
+    background-size: $baseLineHeight*2 $baseLineHeight*2;
+  }
+}

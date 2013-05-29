@@ -1,0 +1,50 @@
+<h2 id="{{name}}" class="docH2">{{longname}}</h2>
+
+<p>
+  Boxes are a common way of grouping related content.
+  They consist of a wrapper with the class <code>box</code> applied.
+  Inside a box, there are three sections the header, body, and footer.
+  All boxes have a body, but some may not have either a header or footer.
+</p>
+
+<div class="data codeTable">
+  <table>
+    <tr>
+      <th scope="row"><code>box</code></th>
+      <td>Base class. Required. Skins and subclasses that extend box should add their classname to this element.</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>boxHead</code></th>
+      <td>Subnode of box. Creates a box header which generally contains the box title and/or controls. Can be extended via skin classes. Optional.</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>boxBody</code></th>
+      <td>Subnode of box. Creates the main content area of the box. Required. Any other types of objects may be placed inside the body of a box. A box does not control the display of it's content objects.</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>boxFoot</code></th>
+      <td>Subnode of box. Creates the box footer. Any content can go in the footer including buttons, text, etc. Can be extended via a skin class. Optional.</td>
+    </tr>
+    {{#each skins}}
+      {{#if doc}}
+        <tr>
+          <th scope="row"><code>{{className}}</code></th>
+          <td>{{{doc}}}</td>
+        </tr>
+      {{/if}}
+    {{/each}}
+  </table>
+</div>
+
+<h3>Box Contours</h3>
+
+<p>Box contours are the outline of the box. You create different contours by extending the base class <code>.box</code>.</p>
+
+<ul class="listComponent">
+  {{#each skins}}
+    <li>
+      {{{html}}}
+      {{{htmlcode}}}
+    </li>
+  {{/each}}
+</ul>

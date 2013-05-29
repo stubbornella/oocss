@@ -1,0 +1,173 @@
+/**
+* @desc         Library styles
+* @name         Docsumentation
+* @author       Fiona
+* @tested       Chrome
+* @requires     -
+*/
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+#docNavTrigger {
+  text-align: right;
+
+  button {
+    padding: 5px 15px;
+    background: #666;
+    color: #fff;
+    text-align: left;
+    white-space: nowrap;
+  }
+}
+
+#docNavWrapper {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#docNav {
+  overflow: auto;
+  margin-bottom: 10px;
+  margin-right: -15px;
+  padding-right: 15px;
+
+  li {
+    margin-bottom: 3px;
+  }
+}
+
+#docNavInner {
+  display: none;
+  padding: 5px 15px;
+  background: #eee;
+  border-radius: 4px 0 4px 4px;
+  border: 1px solid #666;
+
+  button {
+    margin-bottom: 10px;
+    display: table;
+    margin: 5px auto;
+  }
+}
+
+//When doc is expanded
+.docNavActive {
+  #docNavInner {
+    display: block;
+  }
+}
+
+//Make doc nav sticks to top of viewport
+.docNavFixed #docNavWrapperInner {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+//Uncomment this if you want menu to stick to top of viewport. Need to uncomment code in doc.js as well
+.docNavFixed {
+  z-index: 20;
+  position: fixed;
+  top: 0;
+
+  box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .5);
+}
+
+/* ==========================================================================
+   Headings
+   ========================================================================== */
+
+.docH2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  font-weight: bold;
+  font-size: 34px;
+}
+
+.docSection {
+  margin: 0 0 30px;
+}
+
+/* ==========================================================================
+   Table
+   ========================================================================== */
+
+.codeTable {
+  margin: 16px 0;
+
+  border: 1px solid #eee;
+  border-bottom: 0;
+  border-radius: 4px;
+
+  table {
+    width: 100%;
+  }
+
+  thead tr th:first-child {
+    width: 20%;
+  }
+
+  th,
+  td {
+    padding: 10px 20px;
+
+    border-bottom: 1px solid #eee;
+  }
+
+  thead th,
+  td {
+    border-left: 1px solid #eee;
+  }
+}
+
+/* ==========================================================================
+   Grids
+   ========================================================================== */
+
+/* shows grid lines and sizes in docs */
+.demo .line {
+  margin-top: 21px;
+  margin-bottom: 21px;
+}
+
+.demo .line > div:after {
+  content: attr(class);
+  display: block;
+  min-height: 40px;
+  line-height: 40px;
+  background-color: #EEE;
+  text-align: center;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+.hideCode .docCode,
+.hideDesignNotes .docDesignNotes {
+  display: none !important;
+}
+
+.col > .code {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Swatch
+   ========================================================================== */
+
+.docSwatch {
+  min-height: 218.25px;
+  // kinda lame, find a way to make it equal to width.
+  border: 1px solid #ccc;
+}
+
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+.listDocContainer {
+  padding: 10px;
+}

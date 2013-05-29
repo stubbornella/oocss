@@ -1,0 +1,41 @@
+{{!include "../form.handlebars"}}
+{{!include "../label/label.handlebars"}}
+
+{{! Inline group with radio buttons}}
+{{#formpres}}
+  <h5>List of inline radio buttons</h5>
+  {{#ffield}}
+    {{#flabel "" "fieldLabel"}}Select your options{{/flabel}}
+    {{#fgroup "fieldGroupInline"}}
+      {{#repeat 2 "radiogroupinline"}}
+        {{#fgroupitem "fradio" @indexStr "radioinlinegroup" "" "" "checkboxradio" ""}}{{/fgroupitem}}
+      {{/repeat}}
+    {{/fgroup}}
+  {{/ffield}}
+{{/formpres}}
+
+{{! Inline group with checkboxes}}
+<h5>List of inline checkboxes</h5>
+{{#formpres}}
+  {{#ffield}}
+    {{#flabel "" "fieldLabel"}}Select your options{{/flabel}}
+    {{#fgroup "fieldGroupInline"}}
+      {{#repeat 2 "radioblock"}}
+        {{#fgroupitem "fcheckbox" @indexStr "checkboxinlinegroup" "" "" "checkboxradio" ""}}{{/fgroupitem}}
+      {{/repeat}}
+    {{/fgroup}}
+  {{/ffield}}
+{{/formpres}}
+
+{{! Innline group with text boxes}}
+<h5>List of inline text boxes</h5>
+{{#formpres}}
+  {{#ffield}}
+    {{#flabel "" "fieldLabel"}}Your email address{{/flabel}}
+    {{#fgroup "fieldGroupInline"}}
+      {{#repeat 2 "textboxinline"}}
+        {{#fgroupitem "ftext" @indexStr "" "" "" "" ""}}Email address {{@index}}{{/fgroupitem}}
+      {{/repeat}}
+    {{/fgroup}}
+  {{/ffield}}
+{{/formpres}}

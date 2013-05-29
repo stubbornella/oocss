@@ -1,0 +1,32 @@
+<h2 id="{{name}}" class="docH2">{{longname}}</h2>
+
+<p>Grids may be used to break a page into smaller content areas. They allow you to layout full pages or even content within a box. They are infinitely nestable and stackable and will always retain the correct proportions with regard to the parent container.</p>
+
+<div class="data codeTable">
+  <table>
+    <tr>
+      <th scope="row"><code>line</code></th>
+      <td>Wrapper around one horizontal grouping of columns. This class takes all available width.</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>cols&lt;n&gt;of12</code></th>
+      <td>All columns are a fractional width of the total horizontal space taken up by their parent <code>.line</code> element.</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>lastCol</code></th>
+      <td>For <=IE8 you must include a class <code>lastCol</code> on the final column in each line. This is because IE 7 & 8 do not support the <code>last-child</code> selector.</td>
+    </tr>
+  </table>
+</div>
+
+<p>You should use the cols class to define the relative proportions of the different content areas. For example, if you would like something to take one third of the space available on a line use the class <code>cols4of12</code>. In the examples below we have shown the most commonly used fractional
+  widths, but you may use any value from 1 to 12.</p>
+<div class="demo">
+  {{#each skins}}
+    {{{html}}}
+
+  {{! TODO: not feeling like showing a big block of grids code is valuable. Perhaps the pre can be removed? For now, commented. }}
+  {{!<pre class="code"><code>{!html}</code></pre>}}
+
+  {{/each}}
+</div>

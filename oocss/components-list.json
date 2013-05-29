@@ -1,0 +1,317 @@
+{
+    "components": [
+        {
+            "name": "typography",
+            "longname": "Typography",
+            "path": "components/typography",
+            "skins": [
+                {
+                    "elementType": "h1",
+                    "title": "h1.Heading",
+                    "lorem": "Nunc semper semper ullamcorper. Cras gravida mauris a mauris rhoncus et cursus nibh blandit. Proin ut odio dui. Fusce nibh enim, consectetur ut facilisis euismod, pellentesque fermentum odio. Sed at nulla lorem. Phasellus ut mi risus. "
+                },
+                {
+                    "elementType": "h2",
+                    "title": "h2.Heading",
+                    "lorem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor quam nec nibh adipiscing dictum. Sed auctor tristique ligula, at porttitor velit hendrerit lacinia. Nunc semper semper ullamcorper. Cras gravida mauris a mauris rhoncus et cursus nibh blandit."
+                },
+                {
+                    "elementType": "h3",
+                    "title": "h3.Heading",
+                    "lorem": "Fusce nibh enim, consectetur ut facilisis euismod, pellentesque fermentum odio. Sed at nulla lorem. Phasellus ut mi risus. Fusce nibh enim, consectetur ut facilisis euismod, pellentesque fermentum odio. Sed at nulla lorem. Phasellus ut mi risus."
+                },
+                {
+                    "elementType": "h4",
+                    "title": "h4.Heading",
+                    "lorem": "Nunc semper semper ullamcorper. Cras gravida mauris a mauris rhoncus et cursus nibh blandit. Proin ut odio dui. Fusce nibh enim, consectetur ut facilisis euismod, pellentesque fermentum odio. Sed at nulla lorem. Phasellus ut mi risus. "
+                },
+                {
+                    "elementType": "h5",
+                    "title": "h5.Heading. Small text",
+                    "lorem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor quam nec nibh adipiscing dictum. Sed auctor tristique ligula, at porttitor velit hendrerit lacinia. Nunc semper semper ullamcorper. Cras gravida mauris a mauris rhoncus et cursus nibh blandit."
+                },
+                {
+                    "elementType": "h6",
+                    "title": "h6.Heading. Extra small text",
+                    "lorem": "Fusce nibh enim, consectetur ut facilisis euismod, pellentesque fermentum odio. Sed at nulla lorem. Phasellus ut mi risus. Fusce nibh enim, consectetur ut facilisis euismod, pellentesque fermentum odio. Sed at nulla lorem. Phasellus ut mi risus."
+                },
+                {
+                    "elementType": "h3",
+                    "title": "h5.Heading style on a h3 tag",
+                    "className": "h5",
+                    "lorem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor quam nec nibh adipiscing dictum. Sed auctor tristique ligula, at porttitor velit hendrerit lacinia. Nunc semper semper ullamcorper. Cras gravida mauris a mauris rhoncus et cursus nibh blandit."
+                },
+                {
+                    "elementType": "p",
+                    "title": "Default paragraphy text",
+                    "lorem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor quam nec nibh adipiscing dictum. Sed auctor tristique ligula, at porttitor velit hendrerit lacinia. Nunc semper semper ullamcorper. Cras gravida mauris a mauris rhoncus et cursus nibh blandit."
+                },
+                {
+                    "elementType": "p",
+                    "title": "Type Highlight",
+                    "className": "typeHighlight1",
+                    "doc": "Skin class. Optional. Blue text"
+                },
+                {
+                    "elementType": "p",
+                    "title": "Type Lowlight",
+                    "className": "typeLowlight",
+                    "doc": "Skin class. Optional. Light grey text"
+                },
+                {
+                    "elementType": "p",
+                    "title": "Uppercase",
+                    "className": "typeUpper",
+                    "doc": "Skin class. Optional. All uppser case"
+                },
+                {
+                    "elementType": "strong",
+                    "title": "Bold text using strong tag",
+                    "className": "",
+                    "doc": ""
+                },
+                {
+                    "elementType": "em",
+                    "title": "Emphasis text using em tag",
+                    "className": "",
+                    "doc": ""
+                }
+            ]
+        },
+        {
+            "name": "link",
+            "longname": "Link",
+            "path": "components/link",
+            "skins": [
+                {
+                    "className": "",
+                    "title": "Default link",
+                    "doc": "Default link"
+                }
+            ]
+        },
+        {
+            "name": "box",
+            "longname": "Boxes",
+            "path": "components/box",
+            "skins": [
+                {
+                    "className": "boxBasic backgroundBasic",
+                    "title": "A Basic Box",
+                    "body": "This box has a white background.",
+                    "doc": "this is a doc"
+                }
+            ]
+        },
+        {
+            "name": "boxHead",
+            "longname": "Box Headers",
+            "path": "components/boxHead",
+            "skins": [
+                {
+                    "className": "boxHeadBasic",
+                    "title": "Box header"
+                }
+            ]
+        },
+        {
+            "name": "boxFoot",
+            "longname": "Box Footers",
+            "path": "components/boxFoot",
+            "skins": [
+                {
+                    "className": "boxFootBasic",
+                    "title": "Box footer"
+                }
+            ]
+        },
+        {
+            "name":"grid",
+            "longname":"Grid",
+            "path":"components/grid",
+            "skins":[]
+        },
+        {
+            "name":"grid_responsive",
+            "longname":"Grid - responsive",
+            "path":"components/grid",
+            "skins":[
+                {
+                    "cols":12
+                }
+            ]
+        },
+        {
+            "name":"divider",
+            "longname":"Divider",
+            "path":"components/divider",
+            "skins":[]
+        },
+        {
+            "name":"list",
+            "longname":"List",
+            "path":"components/list",
+            "skins":[
+                {
+                    "tagname": "ol",
+                    "className": "listOrdered",
+                    "title": "Ordered List",
+                    "doc": "Ordered list. Shows an numbered indicator for each list item. Can be extended via skin classes"
+                },
+                {
+                    "tagname": "ul",
+                    "className": "listBulleted",
+                    "title": "Bulleted List",
+                    "doc": "Unordered list. Base class. Skins and subclasses that extend <code>ul</code> should add their classname to this element."
+                },
+                {
+                    "tagname": "ul",
+                    "className": "listUnbulleted",
+                    "title": "Unbulleted list",
+                    "doc": "An unordered list with no bullets and has top and bottom margin."
+                },
+                {
+                    "tagname": "ul",
+                    "className": "listBordered",
+                    "title": "Bordered",
+                    "doc": "List with top border"
+                },
+                {
+                    "tagname": "ul",
+                    "className": "listInline",
+                    "title": "Inline list",
+                    "doc": "Inline list"
+                },
+                {
+                    "tagname": "ul",
+                    "className": "listInlineDivider",
+                    "title": "Inline list with dividers",
+                    "doc": "Inline list with dividers"
+                }
+            ]
+        },
+        {
+            "name": "media",
+            "longname": "Media Block",
+            "path": "components/media",
+            "skins": [
+                {
+                    "className": "",
+                    "imgType": "",
+                    "bodyContent": "Simple text next to a small icon.",
+                    "imgHeight": "21",
+                    "imgWidth": "21",
+                    "imgAltText": "Left aligned image."
+                },
+                {
+                    "className": "",
+                    "imgType": "",
+                    "title": "Right aligned media block",
+                    "bodyContent": "Media block with a right aligned image. Note that the media block expands to fill all the space available.",
+                    "imgAltText": "Left aligned image. ",
+                    "imgExtWidth": "21",
+                    "imgExtHeight": "21",
+                    "imgExtAltText": "Right aligned image."
+                },
+                {
+                    "className": "",
+                    "imgType": "",
+                    "title": "Right and left aligned media block",
+                    "bodyContent": "<p class='mtn'>This media block has an image aligned to the right via the <code>imgExt</code> class applied to the image wrapper. Images can be right, left, or both. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+                    "imgHeight": "64",
+                    "imgWidth": "64",
+                    "imgAltText": "Right aligned image.",
+                    "imgExtWidth": "64",
+                    "imgExtHeight": "64",
+                    "imgExtAltText": "Replace with good alt text"
+                },
+                {
+                    "title": "Nested media block",
+                    "imgHeight": "128",
+                    "imgWidth": "128",
+                    "bodyContent": "<p class='mtn'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n    <div class='media'> \n        <a href='#' class='mediaImg mrs'><img src='http://placehold.it/21x21' alt='nested media block'></a>\n        <div class='mediaBody'>media blocks can be nested.</div>\n    </div>"
+                }
+            ]
+        },
+        {
+            "name": "mediaInline",
+            "longname": "Inline Media Block",
+            "path": "components/mediaInline",
+            "skins": [
+                {
+                    "title": "Left aligned inline media block",
+                    "bodyContent": "Icon on the left",
+                    "imgHeight": "25",
+                    "imgWidth": "25",
+                    "imgAltText": ""
+                },
+                {
+                    "title": "Right aligned inline media block",
+                    "bodyContent": "Icon on the right",
+                    "imgAltText": "Left aligned image. ",
+                    "imgExtWidth": "25",
+                    "imgExtHeight": "25"
+                }
+            ]
+        },
+        {
+            "name": "table",
+            "longname": "Table",
+            "path": "components/table"
+        },
+        {
+            "name":"button",
+            "longname":"Buttons",
+            "path":"components/button",
+            "skins":[
+                {
+                    "className":"btn",
+                    "btnType":"button",
+                    "btnText":"Default button",
+                    "doc":"Base class. Required. Skins and subclasses that extend <code>btn</code> should add their classname to this element."
+                },
+                {
+                    "className":"btnLink",
+                    "btnType":"btnLink",
+                    "btnText":"Default button that use anchor tag",
+                    "doc":"Button that looks like a link"
+                }
+            ]
+        },
+        {
+            "name" : "form",
+            "longname" : "Form",
+            "path" : "components/form"
+        },
+        {
+            "name":"icon",
+            "longname":"Icon",
+            "path":"components/icon",
+            "skins":[
+                {
+                    "className":"iconExt",
+                    "doc":"Skin class. Makes margin on left side instead of right"
+                },
+                {
+                    "className":"iconCompact",
+                    "dock":"Skin class. Turn off margin on both sides"
+                }
+            ]
+        },
+        {
+            "name":"whitespace",
+            "longname":"Whitespace",
+            "path":"components/whitespace",
+            "skins":[
+                {
+                    "className": "pal"
+                }
+            ]
+        },
+        {
+            "name":"utils",
+            "longname":"Utilities",
+            "path":"components/utils"
+        }
+    ]
+}

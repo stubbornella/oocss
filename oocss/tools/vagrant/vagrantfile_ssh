@@ -1,0 +1,66 @@
+require 'log4r'
+
+require 'vagrant/util/file_mode'
+require 'vagrant/util/platform'
+require 'vagrant/util/safe_exec'
+
+module Vagrant
+  # Manages SSH connection information as well as allows opening an
+  # SSH connection.
+  class SSH
+
+    # Connects to the environment's virtual machine, replacing the ruby
+    # process with an SSH process.
+    #
+    # @param [Hash] opts Options hash
+    # @options opts [Boolean] :plain_mode If True, doesn't authenticate with
+    #   the machine, only connects, allowing the user to connect.
+    def exec(opts={})
+      # Get the SSH information and cache it here
+      ssh_info = info
+
+      puts
+      puts "* Using the patched \"ssh.rb\" on Windows...  "
+      puts "  See: http://stackoverflow.com/a/14340824/1579985"
+      puts
+
+      which = Util::Platform.windows? ? "where ssh >NUL 2>&1" : "which ssh >/dev/null 2>&1"
+      raise Errors::SSHUnavailable if !Kernel.system(which)
+
+      # If plain mode is enabled then we don't do any authentication (we don't
+      # set a user or an identity file)
+      plain_mode = opts[:plain_mode]
+
+      options = {}
+      options[:host] = ssh_info[:host]
+      options[:port] = ssh_info[:port]
+      options[:username] = ssh_info[:username]
+      options[:private_key_path] = ssh_info[:private_key_path]
+
+      # Command line options
+      command_options = ["-p"   , options[:port].to_s, "-o", "UserKnownHostsFile=/dev/null",
+                         "-o", "StrictHostKeyChecking=no", "-o", "LogLevel=ERROR"]
+
+      # Solaris/OpenSolaris/Illumos uses SunSSH which doesn't support the IdentitiesOnly option
+      command_options += ["-o", "IdentitiesOnly=yes"] unless Util::Platform.solaris?
+
+      command_options += ["-i", options[:private_key_path]] if !plain_mode
+      command_options += ["-o", "ForwardAgent=yes"] if ssh_info[:forward_agent]
+
+      # If there are extra options, then we append those
+      command_options.concat(opts[:extra_args]) if opts[:extra_args]
+
+      if ssh_info[:forward_x11]
+        # Both are required so that no warnings are shown regarding X11
+        command_options += ["-o", "ForwardX11=yes"]
+        command_options += ["-o", "ForwardX11Trusted=yes"]
+      end
+
+      host_string = options[:host]
+      host_string = "#{options[:username]}@#{host_string}" if !plain_mode
+      command_options << host_string
+      @logger.info("Invoking SSH: #{command_options.inspect}")
+      safe_exec("ssh", *command_options)
+    end
+  end
+end

@@ -1,0 +1,14 @@
+/**
+* @desc         Input text
+* @name         Input
+* @author       
+* @tested       
+* @requires     form.scss
+*/
+
+.form {
+  .text input {
+    width: 100%;
+    @extend %formFieldStyle;
+  }
+}

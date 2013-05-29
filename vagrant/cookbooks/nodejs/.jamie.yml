@@ -1,0 +1,40 @@
+---
+driver_plugin: vagrant
+driver_config:
+  customize:
+    memory: 512
+    cpus: 4
+platforms:
+- name: ubuntu-12.04
+  driver_config:
+    box: opscode-ubuntu-12.04
+    box_url: https://opscode-vm.s3.amazonaws.com/vagrant/boxes/opscode-ubuntu-12.04.box
+  run_list:
+  - recipe[apt]
+- name: ubuntu-10.04
+  driver_config:
+    box: opscode-ubuntu-10.04
+    box_url: https://opscode-vm.s3.amazonaws.com/vagrant/boxes/opscode-ubuntu-10.04.box
+  run_list:
+  - recipe[apt]
+- name: centos-6.3
+  driver_config:
+    box: opscode-centos-6.3
+    box_url: https://opscode-vm.s3.amazonaws.com/vagrant/boxes/opscode-centos-6.3.box
+- name: centos-5.8
+  driver_config:
+    box: opscode-centos-5.8
+    box_url: https://opscode-vm.s3.amazonaws.com/vagrant/boxes/opscode-centos-5.8.box
+suites:
+- name: package
+  run_list:
+  - recipe[nodejs]
+  attributes:
+    nodejs:
+      install_method: package
+- name: source
+  run_list:
+  - recipe[nodejs]
+  attributes:
+    nodejs:
+      install_method: source

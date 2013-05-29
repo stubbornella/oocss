@@ -1,0 +1,131 @@
+<h2 id="{{name}}" class="docH2">{{longname}}</h2>
+
+<p>
+  Tables are used for structuring tabular data. You will need to set the width of the columns yourself.
+</p>
+
+<div class="data codeTable">
+  <table>
+    <tr>
+      <th scope="row"><code>table</code></th>
+      <td>Base class. Required. Skins and subclasses that extend table should add their classname to this element.</td>
+    </tr>
+    {{#each skins}}
+      {{#if className}}
+        <tr>
+          <th scope="row"><code>{{className}}</code></th>
+          <td>{{{doc}}}</td>
+        </tr>
+      {{/if}}
+    {{/each}}
+    <tr>
+      <th scope="row">Positioning helper classes</th>
+      <td>
+        <ul>
+          <li><code>txtL</code> - align the text to the left of the cell (default)</li>
+          <li><code>txtC</code> - horizontally center the text in the cell</li>
+          <li><code>txtR</code> - horizontally align the text to the right of the cell</li>
+          <li><code>txtT</code> - vertically align text to the top of the cell</li>
+          <li><code>txtM</code> - vertically align text to the middle of the cell (default)</li>
+          <li><code>txtB</code> - vertically align text to the bottom of the cell</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<ul class="listComponent">
+  {{#each skins}}
+    <li>
+      <h3>{{title}}</h3>
+      {{{html}}}
+      {{{htmlcode}}}
+    </li>
+  {{/each}}
+</ul>
+
+<h3>Table Spacing</h3>
+
+<p>Table has a set of spacing classes that you can use to alter the spacing between cells. A single class can be applied to the table and all <code>td</code> and <code>th</code> children will be modified.</p>
+
+<p>The classes are constructed by specifying <code>&lt;type&gt;&lt;location&gt;&lt;size&gt;</code>.</p>
+
+<div class="data codeTable">
+  <table>
+    <tr>
+      <th scope="col" colspan="3" class="txtL"><strong>Type:</strong></th>
+    </tr>
+    <tr>
+      <th scope="row"><code>t</code></th>
+      <td>table</td>
+      <td>Space on the inside of each of the <code>td</code> and <code>th</code> children of the element</td>
+    </tr>
+    <tr>
+      <th scope="col" colspan="3" class="txtL"><strong>Location:</strong></th>
+    </tr>
+    <tr>
+      <th scope="row"><code>a</code></th>
+      <td>all</td>
+      <td>Adds spacing to all sides of the children <code>td</code> and <code>th</code>.</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>h</code></th>
+      <td>horizontal</td>
+      <td>Adds spacing to the left and right of the <code>td</code> and <code>th</code>.</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>v</code></th>
+      <td>vertical</td>
+      <td>Adds spacing to the top and bottom of the <code>td</code> and <code>th</code>.</td>
+    </tr>
+    <tr>
+      <th scope="col" colspan="3" class="txtL"><strong>Size:</strong></th>
+    </tr>
+    <tr>
+      <th scope="row"><code>l</code></th>
+      <td>large</td>
+      <td>Adds 20 pixels of space</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>m</code></th>
+      <td>medium</td>
+      <td>Adds 10 pixels of space</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>s</code></th>
+      <td>small</td>
+      <td>Adds 5 pixels of space</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>n</code></th>
+      <td>none</td>
+      <td>Sets any existing space to 0</td>
+    </tr>
+  </table>
+</div>
+
+<h4>Example table with large spacing applied - tal</h4>
+
+<div class="data tal">
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Header 1</th>
+      <th>Header 2</th>
+      <th>Header 3</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Lorem ipsum</td>
+      <td>Lorem ipsum</td>
+      <td>Lorem ipsum</td>
+    </tr>
+    <tr>
+      <td>Lorem ipsum</td>
+      <td>Lorem ipsum</td>
+      <td>Lorem ipsum</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

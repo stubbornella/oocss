@@ -1,0 +1,19 @@
+/**
+* @name         List bordered
+* @desc         Bordered list with top border
+* @author       
+* @tested       
+* @requires     
+*/
+
+.listBordered {
+  @extend %baseSpacing;
+
+  > li {
+    padding: 10px;
+    border-top: 1px solid $listBorder;
+  }
+  > li:first-child {
+    border-top: 1px solid transparent;
+  }
+}

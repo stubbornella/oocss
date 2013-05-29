@@ -1,0 +1,70 @@
+/* 
+ * clearfix     used project wide to clear floats and create a new formatting context
+ * usage      @include clearfix-me(<empty|overflow|facebook|micro|stubborn>)
+ * $clearfix-method sets default method
+ */
+
+// set default clearfix method to overflow
+$clearfix-method: overflow !default;
+// can be one of: overflow,facebook,micro,stubborn
+
+// create stub classes for each of the four clearfix methods 
+
+%clearfix-overflow {
+  overflow: hidden;
+  *overflow: visible;
+  zoom: 1;
+}
+
+%clearfix-facebook {
+  display: table-cell;
+  vertical-align: top;
+  width: 10000px !important;
+  *display: block;
+  //<=IE7
+  *zoom: 1;
+  //<=IE7
+  *width: auto !important;
+  //<=IE7
+}
+
+%clearfix-micro {
+  zoom: 1;
+  //@include has-layout;
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+%clearfix-stubborn {
+  display: table-cell;
+  &:after {
+    clear: both;
+    display: block;
+    visibility: hidden;
+    overflow: hidden;
+    height: 0 !important;
+    line-height: 0;
+    font-size: xx-large;
+    content: "x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x";
+  }
+}
+
+// extends so the output will be smaller
+
+@mixin clearfix-me($method: $clearfix-method) {
+  @if $method != overflow and $method != facebook and $method != micro and $method != stubborn {
+    @warn "The clearfix method #{$method} is unkown";
+    @extend %clearfix-micro;
+  } @else {
+  //@debug "clearfix method recognized:";
+  //@debug $method;
+    @extend %clearfix-#{$method};
+  }
+
+}
