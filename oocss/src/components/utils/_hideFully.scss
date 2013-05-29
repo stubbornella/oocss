@@ -1,0 +1,16 @@
+/* ==========================================================================
+   Hide Fully
+   ========================================================================== */
+
+/**
+* @desc         Hide from both screenreaders and browsers. Adapted from HTML5 Boilerplate. h5bp.com/u
+* @name         hideFully
+* @author       Fiona
+* @tested       IE6-9, Firefox, Chrome, Safari
+* @requires     N/A
+*/
+
+.hideFully {
+  display: none !important;
+  visibility: hidden;
+}

@@ -1,0 +1,121 @@
+/**
+* @desc         Create spacing classes and default spacing.
+* @name         Whitespace
+* @author       Fiona
+* @tested       Safari, Chrome, Firefox, IE7-9
+* @requires     _variables.scss
+*/
+
+$debugSpacing: false;
+
+/* ==========================================================================
+   Default spacing
+   ========================================================================== */
+
+%baseSpacing {
+  margin-top: $baseSpacing;
+  margin-bottom: $baseSpacing;
+}
+
+table {
+  h1, h2, h3, h4, h5, h6, p, ul, ol, dl, blockquote, .media, pre {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+/* *
+ * debug default spacing 
+ * set $debug-spacing to true to visualize spacing and positioning
+ */
+@if $debugSpacing {
+  h1, h2, h3, h4, h5, h6, ul, ol, dl, p, blockquote, .media, pre, .data {
+    outline: 1px solid aqua;
+  }
+  .media {
+    outline: 1px solid magenta;
+  }
+  :first-child {
+    outline: 1px solid yellow;
+  }
+  :last-child {
+    outline: 1px solid green;
+  }
+}
+
+/* ==========================================================================
+   Spacing helpers
+   ========================================================================== */
+
+/**
+ * Spacing helpers 
+ * Should be used to modify the default spacing between objects (not between nodes of the same object)
+ * Please use judiciously. You want to be using defaults most of the time, these are exceptions! 
+ * <type><location><size>
+ *
+ * p,m 				padding,margin
+ * a,t,r,b,l,h,v	all,top,right,bottom,left,horizontal,vertical
+ * s,m,l,n 			small(5px),medium(10px),large(20px),none(0px)
+ */
+
+$whitespace-keys: (p padding, m margin, a '', v -top -bottom, h -left -right, t -top, r -right, b -bottom, l -left);
+@function expand-whitespace-key($k) {
+  @each $pair in $whitespace-keys {
+    $short: nth($pair, 1);
+    $long: nth($pair, 2);
+  // v and h need to pass in 2 parameters
+    @if (length($pair) == 3) {
+      $long: (nth($pair, 2) nth($pair, 3))
+    }
+    @if $short == $k {
+      @return $long;
+    }
+  }
+  @warn "Couldn't expand #{$k}";
+  @return $k;
+}
+
+/*
+ * Can define your own spacing units, or calculate the units based on how many spacing sizes you want
+ * 
+ * @param $units - specific spacing units you want to use. Must go from small to large
+ * e.g. @include whitespace((5px,10px,20px));
+ *
+ * @param $sizes - how many sizes you want. Calculate sizes based on line-height
+ * e.g. @include whitespace((), 4);
+ *
+ */
+@mixin whitespace($units: (), $sizes: 4) {
+  $tShirtSizes: (n,s,m,l,xl);
+  $types: (p,m);
+  $locations: (a, v, h, t, r, b, l);
+  $fontHeight: ($baseFontSize/1px) * $baseLineHeight;
+//calculate font height
+
+//if user didn't define their own spacing units
+  @if length($units) == 0 {
+    @for $i from 1 through $sizes {
+      $unit: (round($fontHeight/$i))+px;
+    //calculate unit base on fraction of font height
+      $units: join($unit, $units);
+    }
+  }
+  $units: join(0, $units);
+
+// @debug $units;
+
+  @for $i from 1 through length($units) {
+
+    $tShirtSize: nth($tShirtSizes, $i);
+
+    @each $location in $locations {
+      @each $type in $types {
+        .#{$type}#{$location}#{$tShirtSize} {
+          @each $whitespace-location in expand-whitespace-key($location) {
+            #{expand-whitespace-key($type)}#{$whitespace-location}: nth($units, $i) !important;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+<h2 id="{{name}}" class="docH2">{{longname}}</h2>
+<p>Media blocks are used to layout images with related content.</p>
+
+<p>The media block is a UI pattern of an image to the left and some text (or really anything) that describes it to the right. The image can be any size. The media block has an optional right region which should also be fixed width.</p>
+
+<p>Use any sized image or flash for the right or left area. Any content in the body including nesting other media blocks. Always set image height and width to avoid unnecessary reflows/repaints.</p>
+
+<!--<p>Use any sized image or flash for the right or left area. Any content in the body including nesting other media blocks.</p>-->
+
+<div class="data codeTable">
+  <table>
+    <tr>
+      <th scope="row"><code>media</code></th>
+      <td>The wrapper class for the media block. Required.</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>mediaBody</code></th>
+      <td>Wrapper of the content region of the media block. Any content or other UI objects, including other media blocks may be nested within the media body.</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>mediaImg</code></th>
+      <td>Applied to an image or wrapper of the image (often a link), that you wish to align left. Optional.</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>mediaImgExt</code></th>
+      <td>Applied to an image or wrapper of the image (often a link), that you wish to align right. Optional.</td>
+    </tr>
+  </table>
+</div>
+
+{{#each skins}}
+  {{#if title}}
+    <h3>{{title}}</h3>
+  {{/if}}
+  {{{html}}}
+  {{{htmlcode}}}
+{{/each}}

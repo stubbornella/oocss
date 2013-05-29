@@ -1,0 +1,11 @@
+/**
+* @desc         Skin class.
+* @name         Box Basic
+* @author       mobywhale
+* @tested       Chrome, Firefox, IE7-9  
+* @requires     variables.scss
+*/
+
+.boxBasic {
+  border-radius: $boxBasicBorderRadius;
+}  

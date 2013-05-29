@@ -1,0 +1,15 @@
+/**
+* @name         Inline media block
+* @desc         Similar to media block, but allows verical alignment.
+* @author       
+* @tested       
+* @requires     
+*/
+
+.mediaInline {
+  vertical-align: middle;
+  > img, > span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

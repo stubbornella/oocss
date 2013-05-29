@@ -1,0 +1,15 @@
+{
+    "name":"oocss",
+    "description":"oocss build package",
+    "version":"1.0.0",
+    "keywords":["oocss"],
+    "homepage":"http://www.oocss.com",
+    "author":"oocss",
+    "devDependencies":{
+        "fs.extra":"1.2.0",
+        "handlebars":"1.0.7",
+        "html":"0.0.7",
+        "path":"0.4.9",
+        "forever":"0.10.6"
+    }
+}

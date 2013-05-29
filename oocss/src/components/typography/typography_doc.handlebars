@@ -1,0 +1,38 @@
+<h2 id="{{name}}" class="docH2">{{longname}}</h2>
+
+<h3 class="h4">Basic typography information</h3>
+<ul>
+  <li>Base font size: <code></code></li>
+  <li>Font family: <code></code></li>
+  <li>Text color: <code></code></li>
+</ul>
+
+<div class="data codeTable">
+  <table>
+    <tr>
+      <th scope="row"><code>h&lt;n&gt;</code></th>
+      <td>Heading classes. Use when you need to make headings into different sizes.</td>
+    </tr>
+    {{#each skins}}
+      {{#if className}}
+        {{#if doc}}
+          <tr>
+            <th scope="row"><code>{{className}}</code></th>
+            <td>{{{doc}}}</td>
+          </tr>
+        {{/if}}
+      {{/if}}
+    {{/each}}
+  </table>
+</div>
+
+{{#each skins}}
+  <div class="line">
+    <div class="col cols4of12">
+      {{{html}}}
+    </div>
+    <div class="col lastCol">
+      {{{htmlcode}}}
+    </div>
+  </div>
+{{/each}}

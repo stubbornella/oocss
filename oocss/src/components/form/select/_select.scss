@@ -1,0 +1,14 @@
+/**
+* @desc         Default Select dropdown
+* @name         Select
+* @author       
+* @tested       
+* @requires     form.scss
+*/
+
+.form {
+  .select select {
+    width: 100%;
+    @extend %formFieldStyle;
+  }
+}
