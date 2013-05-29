@@ -1,0 +1,30 @@
+{
+  "name": "npm",
+  "description": "Installs/Configures npm",
+  "long_description": "# Cookbook for Node Package Manager\nhttp://community.opscode.com/cookbooks/npm\n\n##DESCRIPTION:\nThis cookbook grown up from mdxp's nodejs::npm recipe\nIt provides some LWRP's for simple management of node packages\n\n##REQUIREMENTS:\nThis cookbook depends on https://github.com/mdxp/cookbooks/tree/master/nodejs/\n\n##ATTRIBUTES:\nThe only attribute default['npm']['version'] specifies a version of npm should be installed.\n\n_NOTE:_ this cookbook will not work with npm <= 1.0.0\n\n##USAGE:\nUse recipe['npm'] to install npm it self. \nTo install some packge system-wide use\n\n    npm_package \"foo@0.3.2\"\n\nor\n\n    npm_package \"foo\" do\n      version \"0.3.2\"\n      action :install\n    end \n\nTo install some package under your project root try to:\n\n    npm_package \"foo\" do\n\t  version \"0.3.2\"\n\t  path \"/your/project/path/goes/here\"\n\t  action :install_local\n\tend\n\t\nTo uninstall some package - obviously you can do something like\n\n    npm_package \"bad_one\" do\n\t  version \"0.3.2\"\n\t  action :uninstall\n\tend\n\t\nor\n\n    npm_package \"bad_local_one\" do\n\t  version \"0.3.2\"\n\t  path \"/your/project/path/goes/here\"\n\t  action :uninstall_local\n\tend\n\n## TODO\n- wrap other features of npm to LWRP\n",
+  "maintainer": "Sergey Balbeko",
+  "maintainer_email": "sergey@balbeko.com",
+  "license": "Apache License, Version 2.0",
+  "platforms": {
+  },
+  "dependencies": {
+    "nodejs": ">= 0.0.0"
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+  },
+  "version": "0.1.1"
+}

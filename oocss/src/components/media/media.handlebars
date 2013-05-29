@@ -1,0 +1,11 @@
+<div class="media">{{#if imgWidth}}
+  <a href="http://twitter.com/stubbornella" class="mediaImg {{imgType}}">
+    <img src="http://placehold.it/{{imgWidth}}x{{imgHeight}}" width="{{imgWidth}}" height="{{imgHeight}}" alt="{{imgAltText}}">
+  </a>{{/if}}{{#if imgExtWidth}}
+  <a href="http://twitter.com/stubbornella" class="mediaImg mediaImgExt {{altImgType}}">
+    <img src="http://placehold.it/{{imgExtWidth}}x{{imgExtHeight}}" width="{{imgExtWidth}}" height="{{imgExtHeight}}" alt="{{imgExtAltText}}">
+  </a>{{/if}}
+  <div class="mediaBody">
+    {{{bodyContent}}}
+  </div>
+</div>

@@ -1,0 +1,14 @@
+/**
+* @desc         Basic divider
+* @name         Divider
+* @author       
+* @tested       
+* @requires     variables.scss
+*/
+
+hr {
+  // Remove the default hr border
+  border: none;
+  border-bottom: 1px solid $dividerColor;
+}
+

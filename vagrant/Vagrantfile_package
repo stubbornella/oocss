@@ -1,0 +1,9 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant::Config.run do |config|
+  config.vm.box = "vagrantpackage"
+  #config.vm.box_url = "~/Dropbox/Public/vagrant/package.box"
+  #config.vm.box_url = "https://dl.dropbox.com/u/558452/vagrant/package.box"
+  #config.vm.forward_port 80, 8080
+end

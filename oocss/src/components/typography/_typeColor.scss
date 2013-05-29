@@ -1,0 +1,13 @@
+/**
+* @desc         Various type colors
+* @name         typecolor
+* @author       
+* @tested       
+* @requires     
+*/
+
+@mixin ooTypeColor($name, $color) {
+  .#{$name} {
+    color: $color;
+  }
+}

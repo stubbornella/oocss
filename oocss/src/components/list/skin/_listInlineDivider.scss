@@ -1,0 +1,23 @@
+/**
+* @name         List inline divider
+* @desc         List displayed horizontally with divider
+* @author       
+* @tested       
+* @requires     
+*/
+
+.listInlineDivider {
+  @extend %baseSpacing;
+
+  li {
+    @extend %inlineBlockFix;
+    border-left: solid 2px $listInlineDividerBorder;
+    padding: 0 .4em 0 0.65em;
+    margin: 0;
+  }
+
+  &:first-child {
+    border: none;
+    padding-left: 0;
+  }
+}

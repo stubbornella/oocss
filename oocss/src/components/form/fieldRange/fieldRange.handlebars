@@ -1,0 +1,14 @@
+{{!include "../form.handlebars"}}
+{{!include "../label/label.handlebars"}}
+
+{{#formpres}}
+  {{#ffield}}
+    {{#flabel "range1" "fieldLabel"}}Range inputs{{/flabel}}
+    {{#fgroup "fieldRange"}}
+      <li class="cols6of12">{{#ftext "range1" "" "" ""}}{{/ftext}}</li>
+      <li class="rangeLabel"><label for="range2">to</label></li>
+      <li class="cols6of12">{{#ftext "range2" "" "" ""}}{{/ftext}}</li>
+    {{/fgroup}}
+  {{/ffield}}
+{{/formpres}}
+

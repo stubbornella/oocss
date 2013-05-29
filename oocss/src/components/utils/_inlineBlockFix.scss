@@ -1,0 +1,14 @@
+/** 
+ * Make elements into inline-block with IE7 fix. Use it only when you need to make a
+ * block level element inline-block. Elements that are inline by default won't need the 
+ * IE7 fix.
+ * 
+ * Usage            @extend %nlineBlockFix;
+ * 
+ */
+
+%inlineBlockFix {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}

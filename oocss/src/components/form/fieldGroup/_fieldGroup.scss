@@ -1,0 +1,29 @@
+/**
+* @desc         Textarea
+* @name         textarea
+* @author       
+* @tested       
+* @requires    
+*/
+
+.form {
+  .fieldGroup {
+    margin: 0;
+    @extend %formContext;
+
+    > li {
+      margin: 5px 0;
+
+      > label {
+        display: block;
+        margin-bottom: 2px;
+      }
+    }
+    &:before,
+    &:after {
+      display: table;
+      content: "";
+      clear: both;
+    }
+  }
+}

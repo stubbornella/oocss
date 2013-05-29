@@ -1,0 +1,57 @@
+%formFieldStyle {
+  @include box-sizing(border-box);
+  width: 100%;
+  padding: 4px;
+  border: $formFieldBorder;
+}
+
+%formContext {
+  display: table-cell;
+  width: 10000px;
+  *width: auto;
+  *display: block;
+  *zoom: 1;
+}
+
+// placeholder
+::-webkit-input-placeholder {
+  color: $placeholderText;
+}
+
+:-moz-placeholder {
+  color: $placeholderText;
+}
+
+:-ms-input-placeholder {
+  color: $placeholderText;
+}
+
+.placeholder {
+  color: $placeholderText;
+  //Class added via JS shim for IE7-9
+}
+
+//Form field wrappers and layouts
+.form {
+  @extend %baseSpacing;
+
+  /**
+    Forms Structure
+  */
+  .field {
+    @extend %baseSpacing;
+    @include clearfix-me(micro);
+  }
+  .col {
+    :first-child {
+      margin-top: 0;
+    }
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .fieldItem {
+    @extend %formContext;
+  }
+}

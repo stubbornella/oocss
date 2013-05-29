@@ -1,0 +1,16 @@
+/**
+* @name         Ordered list
+* @desc         Basic list with no bullets and no margins
+* @author       
+* @tested       
+* @requires     
+*/
+
+.listOrdered {
+  @extend %baseSpacing;
+
+  li {
+    margin-left: 1.4em;
+    list-style-type: decimal;
+  }
+}

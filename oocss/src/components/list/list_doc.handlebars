@@ -1,0 +1,162 @@
+<h2 id="{{name}}" class="docH2">{{longname}}</h2>
+<p>
+  Lists are a common way of grouping related content. They consist of an <code>ol</code> (ordered list) or
+  <code>ul</code> (unordered list) element containing <code>li</code> (list item) elements.
+</p>
+
+<div class="data codeTable">
+  <table>
+    {{#each skins}}
+      <tr>
+        <th scope="row"><code>{{className}}</code></th>
+        <td>{{{doc}}}</td>
+      </tr>
+    {{/each}}
+  </table>
+</div>
+
+<ul class="listComponent">
+  {{#each skins}}
+    <li>
+      <h3>{{title}}</h3>
+      {{{html}}}
+      {{{htmlcode}}}
+    </li>
+  {{/each}}
+</ul>
+
+<h3>List Spacing</h3>
+
+<p>Most lists come with built in default spacing that should work for you. However, if you find yourself needing to
+  modify the spacing, you should do that with list spacing classes rather than whitespace classes. A single class can be
+  applied to the list and all direct children will be modified.</p>
+
+<p>The classes are constructed by specifying <code>&lt;type&gt;&lt;location&gt;&lt;size&gt;</code>.</p>
+
+<div class="data codeTable">
+  <table>
+    <tr>
+      <th scope="col" colspan="3" class="txtL"><strong>Type:</strong></th>
+    </tr>
+    <tr>
+      <th scope="row"><code>l</code></th>
+      <td>list</td>
+      <td>Space on the inside of each of the li direct children of the element</td>
+    </tr>
+    <tr>
+      <th scope="col" colspan="3" class="txtL"><strong>Location:</strong></th>
+    </tr>
+    <tr>
+      <th scope="row"><code>h</code></th>
+      <td>horizontal</td>
+      <td>Adds spacing to the left and right of the <code>li</code>.</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>v</code></th>
+      <td>vertical</td>
+      <td>Adds spacing to the top and bottom of the <code>li</code>.</td>
+    </tr>
+    <tr>
+      <th scope="col" colspan="3" class="txtL"><strong>Size:</strong></th>
+    </tr>
+    <tr>
+      <th scope="row"><code>l</code></th>
+      <td>large</td>
+      <td>Adds 21 pixels of space</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>m</code></th>
+      <td>medium</td>
+      <td>Adds 10 pixels of space</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>s</code></th>
+      <td>small</td>
+      <td>Adds 5 pixels of space</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>n</code></th>
+      <td>none</td>
+      <td>Sets any existing space to 0</td>
+    </tr>
+  </table>
+</div>
+
+<h3>Vertical spacing options</h3>
+
+<div class="line">
+  <div class="col cols6of12">
+    <h4>No spacing - lvn</h4>
+    {{#registerBlock "listSpacingV"}}
+      <ul class="listBulleted lvn">
+        <li>List item 1. Lorem ipsum Et.</li>
+        <li>List item 2. Lorem ipsum Et exercitation ut fugiat.</li>
+        <li>List item 3. Laboris ad laborum incididunt.</li>
+      </ul>
+    {{/registerBlock}}
+
+    {{#listSpacingV}}{{/listSpacingV}}
+    {{#htmlcode}}{{#listSpacingV}}{{/listSpacingV}}{{/htmlcode}}
+  </div>
+  <div class="col cols6of12 colLast">
+    <h4>Small spacing - lvs</h4>
+    <ul class="listBulleted lvs">
+      <li>List item 1. Lorem ipsum Et.</li>
+      <li>List item 2. Lorem ipsum Et exercitation ut fugiat.</li>
+      <li>List item 3. Laboris ad laborum incididunt.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="line">
+  <div class="col cols6of12">
+    <h4>Medium spacing - lvm</h4>
+    <ul class="listBulleted lvm">
+      <li>List item 1. Lorem ipsum Et.</li>
+      <li>List item 2. Lorem ipsum Et exercitation ut fugiat.</li>
+      <li>List item 3. Laboris ad laborum incididunt.</li>
+    </ul>
+  </div>
+  <div class="col cols6of12 colLast">
+    <h4>Large spacing - lvl</h4>
+    <ul class="listBulleted lvl">
+      <li>List item 1. Lorem ipsum Et.</li>
+      <li>List item 2. Lorem ipsum Et exercitation ut fugiat.</li>
+      <li>List item 3. Laboris ad laborum incididunt.</li>
+    </ul>
+  </div>
+</div>
+
+<h3>Horizontal spacing options</h3>
+<h4>No spacing - lhn</h4>
+{{#registerBlock "listSpacingH"}}
+  <ul class="listInlineDivider lhn">
+    <li>List item 1. Lorem ipsum Et.</li>
+    <li>List item 2. Lorem ipsum Et exercitation ut fugiat.</li>
+    <li>List item 3. Laboris ad laborum incididunt.</li>
+  </ul>
+{{/registerBlock}}
+
+{{#listSpacingH}}{{/listSpacingH}}
+{{#htmlcode}}{{#listSpacingH}}{{/listSpacingH}}{{/htmlcode}}
+
+<h4>Small spacing - lhs</h4>
+<ul class="listInlineDivider lhs">
+  <li>List item 1. Lorem ipsum Et.</li>
+  <li>List item 2. Lorem ipsum Et exercitation ut fugiat.</li>
+  <li>List item 3. Laboris ad laborum incididunt.</li>
+</ul>
+
+<h4>Medium spacing - lhm</h4>
+<ul class="listInlineDivider lhm">
+  <li>List item 1. Lorem ipsum Et.</li>
+  <li>List item 2. Lorem ipsum Et exercitation ut fugiat.</li>
+  <li>List item 3. Laboris ad laborum incididunt.</li>
+</ul>
+
+<h4>Large spacing - lhl</h4>
+<ul class="listInlineDivider lhl">
+  <li>List item 1. Lorem ipsum Et.</li>
+  <li>List item 2. Lorem ipsum Et exercitation ut fugiat.</li>
+  <li>List item 3. Laboris ad laborum incididunt.</li>
+</ul>

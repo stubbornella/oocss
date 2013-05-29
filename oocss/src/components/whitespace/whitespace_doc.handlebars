@@ -1,0 +1,95 @@
+<h2 id="{{name}}" class="docH2">{{longname}}</h2>
+
+<p>Most elements will have the correct spacing by default, so in most cases, spacing classes will not be needed. However, if you need to tweak elements by using margin or padding, use the following classes rather than adding to the CSS file.</p>
+
+<p>Please use these to tweak existing elements rather than use these classes when building legos.</p>
+
+<p>The classes are constructed by specifying <code>&lt;type&gt;&lt;location&gt;&lt;size&gt;</code>.</p>
+
+<div class="data codeTable">
+  <table>
+    <tr>
+      <th scope="col" colspan="3" class="txtL"><strong>Type:</strong></th>
+    </tr>
+    <tr>
+      <th scope="row"><code>p</code></th>
+      <td>padding</td>
+      <td>Space on the inside of the element</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>m</code></th>
+      <td>margin</td>
+      <td>Space on the outside of the element</td>
+    </tr>
+    <tr>
+      <th scope="col" colspan="3" class="txtL"><strong>Location:</strong></th>
+    </tr>
+    <tr>
+      <th scope="row"><code>a</code></th>
+      <td>all</td>
+      <td>Adds spacing on all sides of the element</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>t</code></th>
+      <td>top</td>
+      <td>Adds spacing to the top of the element</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>r</code></th>
+      <td>right</td>
+      <td>Adds spacing to the right of the element</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>b</code></th>
+      <td>bottom</td>
+      <td>Adds spacing to the bottom of the element</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>l</code></th>
+      <td>left</td>
+      <td>Adds spacing to the left of the element</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>h</code></th>
+      <td>horizontal</td>
+      <td>Adds spacing to the left and right of the element</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>v</code></th>
+      <td>vertical</td>
+      <td>Adds spacing to the top and bottom of the element</td>
+    </tr>
+    <tr>
+      <th scope="col" colspan="3" class="txtL"><strong>Size:</strong></th>
+    </tr>
+    <tr>
+      <th scope="row"><code>l</code></th>
+      <td>large</td>
+      <td>Adds 21 pixels of space</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>m</code></th>
+      <td>medium</td>
+      <td>Adds 10 pixels of space</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>s</code></th>
+      <td>small</td>
+      <td>Adds 5 pixels of space</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>n</code></th>
+      <td>none</td>
+      <td>Sets any existing space to 0</td>
+    </tr>
+  </table>
+</div>
+
+<ul class="listComponent">
+  {{#each skins}}
+    <li>
+      {{{html}}}
+      {{{htmlcode}}}
+    </li>
+  {{/each}}
+</ul>
