@@ -1,0 +1,34 @@
+{{!include "../form.handlebars"}}
+{{!include "../label/label.handlebars"}}
+
+{{#registerBlock "fradio" "id" "name" "classname"}}
+  <span class="fieldItem radio{{#if $classname}} {{$classname}}{{/if}}">
+    <input type="radio" id="{{$id}}"{{#if $name}} name="{{$name}}"{{/if}}>
+    <label for="{{$id}}">
+      Label for radio button
+    </label>
+</span>
+{{/registerBlock}}
+
+{{#registerBlock "fcheckbox" "id" "name" "classname"}}
+  <span class="fieldItem checkbox{{#if $classname}} {{$classname}}{{/if}}">
+    <input type="checkbox" id="{{$id}}"{{#if $name}} name="{{$name}}"{{/if}}>
+    <label for="{{$id}}">
+      Label for checkbox
+    </label>
+  </span>
+{{/registerBlock}}
+
+<h3>Checkbox</h3>
+{{#formpres "" "" "htmlcode"}}
+  {{#ffield}}
+    {{#fcheckbox "checkbox1-1" "checkbox1"}}{{/fcheckbox}}
+  {{/ffield}}
+{{/formpres}}
+
+<h3>Radio</h3>
+{{#formpres "" "" "htmlcode"}}
+  {{#ffield}}
+    {{#fradio "radio1-1" "radio1"}}{{/fradio}}
+  {{/ffield}}
+{{/formpres}}

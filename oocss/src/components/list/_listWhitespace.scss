@@ -1,0 +1,70 @@
+/**
+* @name         List
+* @desc         Basic list with no bullets and no margins
+* @author       
+* @tested       
+* @requires     
+*/
+
+$whitespace-keys: (l padding, a '', v -top -bottom, h -left -right);
+@function expand-whitespace-key($k) {
+  @each $pair in $whitespace-keys {
+    $short: nth($pair, 1);
+    $long: nth($pair, 2);
+    // v and h need to pass in 2 parameters
+    @if (length($pair) == 3) {
+      $long: (nth($pair, 2) nth($pair, 3))
+    }
+    @if $short == $k {
+      @return $long;
+    }
+  }
+  @warn "Couldn't expand #{$k}";
+  @return $k;
+}
+
+/*
+ * Define your own spacing classes for lists
+ * 
+ * @param $units - specific spacing units you want to use. Must go from small to large
+ * e.g. @include ooListWhitespace((5px,10px,20px));
+ *
+ */
+
+@mixin ooListWhitespace($sizes: (5px, 10px, 20px)) {
+//for now assume this list is always ascending
+/* build list spacing exceptions */
+  $sizes: join(0, $sizes);
+  $size-names: ();
+  @if (length($sizes) == 1) {
+    $size-names: (n);
+    @warn "One spacing class isn't usually enough. Typically you should choose at least three.";
+  } @else if (length($sizes) == 2) {
+    $size-names: (n, s);
+    @warn "Two spacing classes isn't usually enough. Typically you should choose at least three.";
+  } @else if (length($sizes) == 3) {
+    $size-names: (n, s, m);
+  } @else if (length($sizes) == 4) {
+    $size-names: (n, s, m, l);
+  } @else if (length($sizes) == 5) {
+    $size-names: (n, s, m, l, xl);
+  } @else if (length($sizes) < 5){
+    $size-names: (n, xs, s, m, l, xl);
+    @warn "No more than five spacing classes are supported, typically you want to have three.";
+  }
+
+  $types: (l);
+  $locations: (v, h);
+  @each $location in $locations {
+    @each $size-name in $size-names {
+      @each $type in $types {
+        .#{$type}#{$location}#{$size-name} > li {
+          //get returned list of locations. Can't assign to variable as it turns into 1 item in the list, not multiple items
+          @each $whitespace-location in expand-whitespace-key($location) {
+            #{expand-whitespace-key($type)}#{$whitespace-location}: nth($sizes, index($size-names, $size-name)) !important;
+          }
+        }
+      }
+    }
+  }
+}

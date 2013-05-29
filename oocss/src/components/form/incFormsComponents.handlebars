@@ -1,0 +1,84 @@
+{{! ======== the differents form components ======== }}
+{{#registerBlock "ftext" "id" "name" "classname" "fieldSize"}}
+  <span class="fieldItem text{{#if $classname}} {{$classname}}{{/if}}">
+     <input type="text" id="{{$id}}"{{#if $name}} name="{{$name}}"{{/if}}{{#if $content}}value="{{$content}}"{{/if}}{{#if $fieldSize}}class="{{$fieldSize}}"{{/if}}>
+  </span>
+{{/registerBlock}}
+
+{{#registerBlock "ftextarea" "id" "name" "classname" "fieldSize"}}
+  <span class="fieldItem text{{#if $classname}} {{$classname}}{{/if}}">
+     <textarea id="{{$id}}"{{#if $name}} name="{{$name}}"{{/if}}{{#if $fieldSize}}class="{{$fieldSize}}"{{/if}} rows="4">{{$content}}</textarea>
+  </span>
+{{/registerBlock}}
+
+{{#registerBlock "fradio" "id" "name" "classname"}}
+  <span class="fieldItem radio{{#if $classname}} {{$classname}}{{/if}}">
+    <input type="radio" id="{{$id}}"{{#if $name}} name="{{$name}}"{{/if}}>
+    <label for="{{$id}}">
+      Label for radio button
+    </label>
+  </span>
+{{/registerBlock}}
+
+{{#registerBlock "fcheckbox" "id" "name" "classname"}}
+  <span class="fieldItem checkbox{{#if $classname}} {{$classname}}{{/if}}">
+    <input type="checkbox" id="{{$id}}"{{#if $name}} name="{{$name}}"{{/if}}>
+    <label for="{{$id}}">
+      Label for checkbox
+    </label>
+  </span>
+{{/registerBlock}}
+
+
+{{! ======== the containers ========}}
+{{#registerBlock "flabel" "for" "classname"}}
+  <label {{#if $for}} for="{{$for}}"{{/if}}{{#if $classname}} class="{{$classname}}"{{/if}}>{{$content}}</label>
+{{/registerBlock}}
+
+{{#registerBlock "ffield" "classname"}}
+  <div class="field{{#if $classname}} {{$classname}}{{/if}}">
+    {{{$content}}}
+  </div>
+{{/registerBlock}}
+
+{{#registerBlock "fgroup" "type"}}
+  <ul class="fieldGroup{{#if $type}} {{$type}}{{/if}}">
+    {{{$content}}}
+  </ul>
+{{/registerBlock}}
+
+{{#registerBlock "fgroupitem" "blockName" "id" "name" "classname" "labelright" "checkboxradio" "repeat"}}
+  <li {{#if $classname}}class="{{$classname}}"{{/if}}>
+    {{! label on left }}
+    {{#if $labelright}}
+    {{else}}
+      {{#if $checkboxradio}}
+        {{{$content}}}
+      {{else}}
+        {{#flabel $id $name}}{{{$content}}}{{/flabel}}
+      {{/if}}
+    {{/if}}
+    {{#block $blockName $id $name "" $repeat}}{{/block}}
+    {{! label on right }}
+    {{#if $labelright}}
+      {{#flabel $id $name}}{{{$content}}}{{/flabel}}
+    {{/if}}
+  </li>
+{{/registerBlock}}
+
+
+{{#registerBlock "formpres" "title" "description"}}
+  {{#if $title}}<h4>{{$title}}</h4>{{/if}}
+  {{#if $description}}<p>{{$description}}</p>{{/if}}
+
+  {{#format}}{{{$content}}}{{/format}}
+  {{#htmlcode "html"}}{{{$content}}}{{/htmlcode}}
+{{/registerBlock}}
+
+{{#registerBlock "ffieldwrap" "colsize"}}
+  <div class="line">
+    <div class="col {{#if $colsize}}{{$colsize}}{{else}}cols24of24{{/if}}">
+      {{{$content}}}
+    </div>
+  </div>
+{{/registerBlock}}

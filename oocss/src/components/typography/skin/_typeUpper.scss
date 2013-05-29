@@ -1,0 +1,13 @@
+/**
+* @desc         Uppercase type
+* @name         typeUpper   
+* @author       Fiona   
+* @tested       
+* @requires     --
+*/
+
+@mixin ooTypeUpper {
+  .typeUpper {
+    text-transform: uppercase;
+  }
+}

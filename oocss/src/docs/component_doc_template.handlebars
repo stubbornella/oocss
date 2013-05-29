@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html class="noJS">
+<head>
+  {{!include "../includes/_headTemplate.handlebars"}}
+  {{!include "../includes/_headDoc.handlebars"}}
+</head>
+
+<body>
+  {{!include "../includes/_header.handlebars"}}
+
+<div class="docContent content">
+  <div class="docContainer container">
+    <div class="main docMain" role="main" id="main">
+      <div class="contentInner">
+        <div class="docSection">
+          {{{content}}}
+        </div>
+      </div>
+    </div>
+    <!-- //main -->
+  </div>
+</div>
+<!-- //content -->
+
+  {{!include "../includes/_footer.handlebars"}}
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,16 @@
+/**
+* @desc         Link
+* @name         link
+* @author       
+* @tested       
+* @requires     variables.scss
+*/
+
+a {
+  color: $linkColor;
+
+  &:hover,
+  &:focus {
+    color: $linkHoverColor;
+  }
+}

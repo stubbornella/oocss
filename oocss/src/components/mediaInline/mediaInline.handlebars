@@ -1,0 +1,9 @@
+<a class="mediaInline" href="/">
+  {{#if imgWidth}}
+    <img src="http://placehold.it/{{imgWidth}}x{{imgHeight}}" width="{{imgWidth}}" height="{{imgHeight}}" alt="{{imgAltText}}">
+  {{/if}}
+  <span>{{{bodyContent}}}</span>
+  {{#if imgExtWidth}}
+    <img src="http://placehold.it/{{imgExtWidth}}x{{imgExtHeight}}" width="{{imgExtWidth}}" height="{{imgExtHeight}}" alt="{{imgExtAltText}}">
+  {{/if}}
+</a>

@@ -1,0 +1,49 @@
+/**
+* @desc         Inline field group
+* @name         fieldGroupInline
+* @author       
+* @tested       
+* @requires    
+*/
+
+.form {
+  .fieldGroupInline {
+    @extend %formContext;
+
+    > li {
+      margin-left: 13px;
+      float: none;
+      @extend %inlineBlockFix;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      > label {
+        display: inline-block;
+        margin: 0;
+      }
+    }
+
+    label,
+    .fieldItem {
+      vertical-align: middle;
+      float: none;
+      display: inline-block;
+      width: auto;
+    }
+
+    .radio,
+    .checkbox {
+      input {
+        top: auto;
+        float: none;
+        vertical-align: middle;
+      }
+
+      label {
+        padding-left: 0;
+      }
+    }
+  }
+}

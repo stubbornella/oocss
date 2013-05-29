@@ -1,0 +1,11 @@
+{{#compare btnType "==" "button"}}
+  <button class="btn {{className}}" {{#if disabled}}disabled="disabled"{{/if}}>{{btnText}}</button>
+{{/compare}}
+
+{{#compare btnType "==" "link"}}
+  <a href="/" class="btn {{className}}">{{btnText}}</a>
+{{/compare}}
+
+{{#compare btnType "==" "btnLink"}}
+  <a href="/" class="{{className}}">{{btnText}}</a>
+{{/compare}}

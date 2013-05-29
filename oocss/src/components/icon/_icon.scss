@@ -1,0 +1,20 @@
+/**
+* @desc         Base class for icon
+* @name         Icon
+* @author       Fiona
+* @tested       -
+* @requires     -
+*/
+
+// used for icons that are actually images
+.icon {
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+$icon-sprite-dimensions: true;
+//$<folder name>-sprite-dimensions
+
+@import "icon/*.png";
+@include all-icon-sprites;
