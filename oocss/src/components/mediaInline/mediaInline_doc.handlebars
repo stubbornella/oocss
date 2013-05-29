@@ -1,0 +1,34 @@
+<h2 id="{{name}}" class="docH2">{{longname}}</h2>
+<p>
+  Occasionally, you may need a media block that aligns vertically. In this case you should use the <code>mediaInline</code>. It only works with a single line of text, so use it judiciously. All <code>mediaInline</code> classes may be extended with vertical alignment utils <code>txtT</code>, <code>txtM</code>,
+  and <code>txtB</code> to set the vertical alignment of that element to top, middle, or bottom respectively.
+</p>
+
+<div class="data codeTable">
+  <table>
+    <tr>
+      <th scope="row"><code>mediaInline</code></th>
+      <td>The wrapper class for the inline media block. Required.</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>mediaInlineBody</code></th>
+      <td>Wrapper of the content region of the inline media block. It can only contain a single line of text. If you need more than that, use a regular media block.</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>mediaInlineImg</code></th>
+      <td>Applied to an image or wrapper of the image (often a link), that you wish to align left. Optional.</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>mediaInlineImgExt</code></th>
+      <td>Applied to an image or wrapper of the image (often a link), that you wish to align right. Optional.</td>
+    </tr>
+  </table>
+</div>
+
+{{#each skins}}
+  {{#if title}}
+    <h3>{{title}}</h3>
+  {{/if}}
+  {{{html}}}
+  {{{htmlcode}}}
+{{/each}}

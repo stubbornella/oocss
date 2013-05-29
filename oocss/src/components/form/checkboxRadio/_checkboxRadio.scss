@@ -1,0 +1,50 @@
+/**
+* @desc         Checkbox & radio buttons
+* @name         checkboxRadio
+* @author       
+* @tested       
+* @requires    
+*/
+
+.form {
+  .radio,
+  .checkbox {
+    position: relative;
+
+    label {
+      display: block;
+      width: auto;
+      padding-left: 1.4em;
+      *zoom: 1;
+      *padding-left: 0;
+      vertical-align: middle;
+    }
+    input {
+      margin-right: 5px;
+      padding: 0;
+      float: left;
+      position: relative;
+      top: 4px;
+      border: 0;
+      line-height: 1.5em;
+      vertical-align: middle;
+    }
+    input[type="radio"] {
+      top: 4px;
+    }
+  }
+
+  /** webkit fix */
+
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    .radio, .checkbox {
+      input {
+        top: 0.35em;
+      }
+      input[type="radio"] {
+        // small bug in chrome because 1px of the radio is hidden, don't know why
+        left: 1px;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+/**
+* @name         List
+* @desc         Basic list with no bullets and no margins
+* @author       
+* @tested       
+* @requires     
+*/
+
+ol,
+ul {
+  list-style-type: none;
+
+  > li {
+    margin: .2em 0;
+  }
+}

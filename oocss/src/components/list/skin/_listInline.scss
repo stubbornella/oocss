@@ -1,0 +1,17 @@
+/**
+* @name         List inline
+* @desc         List displayed horizontally
+* @author       
+* @tested       
+* @requires     
+*/
+
+.listInline {
+  @extend %baseSpacing;
+
+  > li {
+    vertical-align: middle;
+    padding-right: 10px;
+    @extend %inlineBlockFix;
+  }
+}

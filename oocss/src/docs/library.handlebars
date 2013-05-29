@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="noJS">
+<head>
+  {{!include "../includes/_headTemplate.handlebars"}}
+  {{!include "../includes/_headDoc.handlebars"}}
+</head>
+
+<body>
+  {{!include "../includes/_header.handlebars"}}
+
+<div class="docContent content">
+  <div class="docContainer container">
+
+    <div id="docNavWrapper">
+      <div id="docNavWrapperInner">
+        <div id="docNavTrigger">
+          <button type="button">&#9776; Menu</button>
+        </div>
+        <div id="docNavInner">
+          <ul id="docNav"></ul>
+          <button type="button" class="btn btnDefault" id="toggleCode">Toggle code</button>
+          <button type="button" class="btn btnDefault" id="toggleDesignNotes">Toggle design notes</button>
+        </div>
+      </div>
+    </div>
+    <!-- //docNavWrapper -->
+
+    <div class="main docMain" role="main" id="main">
+      <div class="contentInner">
+        {{#each components}}
+          <div class="docSection">
+            {{{this}}}
+          </div>
+        {{/each}}
+      </div>
+    </div>
+    <!-- //main -->
+  </div>
+</div>
+<!-- //content -->
+
+  {{!include "../includes/_footer.handlebars"}}
+  {{!include "_scripts_doc.handlebars"}}
+</body>
+</html>
+

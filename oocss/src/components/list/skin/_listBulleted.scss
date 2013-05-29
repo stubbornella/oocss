@@ -1,0 +1,16 @@
+/**
+* @name         List bulleted
+* @desc         Bulleted list of unordered list
+* @author       
+* @tested       
+* @requires     
+*/
+
+.listBulleted {
+  @extend %baseSpacing;
+
+  > li {
+    list-style-type: disc;
+    margin-left: 1.3em;
+  }
+}
