@@ -15,7 +15,7 @@
   $list: ();
 
   @each $value in $values {
-    @if ($value == 0) {
+    @if ($value == 0 or $value == auto) {
       $list: append($list, $value);
     } @else {
       $emValue: ($value/$elFontSize)+em;
