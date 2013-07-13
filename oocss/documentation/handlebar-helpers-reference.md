@@ -119,3 +119,72 @@ Type    |Description
      {{/format}}
 
 ***
+####htmlcode (codeLang, options)
+
+>Adds &lt;pre&gt;&lt;code&gt; tags around code placed inside the {{code}} place holder
+
+|Param       |Type    |Description
+|------------|--------|--------------
+|codeLang    |{String}|[optional] The code language. Default is html.
+|options     |{Object}|[optional] Object passed through handlebars
+
+>**Return:**
+
+Type     |Description
+|--------|-----------
+|{String}|formatted html code placed inside pre and code tags
+
+>**Usage:**
+
+     {{#htmcode}}
+          html here
+     {{/htmlcode}}
+     
+     or with params
+     
+     {{#htmcode "html"}}
+          html here
+     {{/htmlcode}}
+     
+***
+####debug (outputText)
+>debug helper which writes the contents of the *this* object to the console.
+
+|Param       |Type    |Description
+|------------|--------|--------------
+|outputText  |{String}|[optional] Text you want to be logged to the console
+
+>**Return:**
+
+none
+
+>**Usage:**
+
+     {{debug}} 
+     
+     or 
+     
+     {{debug "this is text printed in the console" }}
+
+***
+####partial (name, options)
+>Allows you to create re-usable String templates or compiled template functions.
+>[More info](https://github.com/wycats/handlebars.js/#partials)
+
+|Param    |Type    |Description
+|---------|--------|--------------
+|name     |{String}|Name of the partial
+|options  |{Object}|[optional] Object passed through handlebars
+
+
+>**Return:**
+
+none
+
+>**Declaration:**
+
+     {#partial "myPartialName"}} Home {{/partial}}
+
+>**Usage:**
+     
+     {{> myPartialName}}
