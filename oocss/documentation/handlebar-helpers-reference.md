@@ -10,14 +10,14 @@
 |rightValue|{Object}|Right value to compare|
 |options   |{Object}|[optional] Object passed through handlebars|
 
-return:
+>**Return**:
 
 Type    |Description
 |-------|-----------
 {bool}  |The result of the comparison
 
 
-usage:
+>**Usage:**
 
      {{#compare unicorns "<" ponies}}
        I knew it, unicorns are just low-quality ponies!
@@ -44,26 +44,30 @@ usage:
 |varName   |{String}|The name of the variable you want to create|
 |options   |{Object}|[optional] Object passed through handlebars|
 
-return:
+>**Return:**
 
 Type    |Description
 |-------|-----------
 {String}|formatted html
 
-usage:
+>**Usage:**
      
 Declare the var :
 
-    <code>{{#createvar "myvar"}}content of {{prop of object}}{{/createvar}}</code>
+     {{#createvar "myvar"}}content of {{prop of object}}{{/createvar}}
 
 Use the var :
 as a normal property inside the template
 
-    <code>{{$myvar}}</code>
+     <p>{{$myvar}}</p>
     
 as a var in helpers
 
-    <code>{{#if $myvar}}do stuff{{/if}}</code>
+     {{#if $myvar}}
+          
+          <p>do stuff here</p>
+          
+     {{/if}}
 
 ***
 ####repeat (repeatCount, indexPrefix, options)
@@ -74,9 +78,11 @@ as a var in helpers
 |indexPrefix|{String}|prefix that will be used for the var @indexStr
 |options    |{Object}|[optional] Object passed through handlebars|
 
-return: none
+>**Return:**
 
-usage:
+none
+
+>**Usage:**
 
      <ul>
           {{#repeat 2 "myPrefix"}}
@@ -90,5 +96,26 @@ usage:
           <li>myPrefix0</li>
           <li>myPrefix1</li>
      </ul>
+
+***
+####format (options)
+
+>Format HTML code by using html prettyPrint 
+
+|Param      |Type    |Description
+|-----------|--------|--------------
+|options    |{Object}|[optional] Object passed through handlebars
+
+>**Return:**
+
+Type    |Description
+|-------|-----------
+{String}|formatted html
+
+>**Usage:**
+     
+     {{#format}}
+          <ul><li>code</li></ul>
+     {{/format}}
 
 ***
