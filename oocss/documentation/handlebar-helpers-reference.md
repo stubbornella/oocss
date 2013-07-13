@@ -23,3 +23,10 @@ usage:
      The value is lower than 10
      {{/compare}}
 
+#####nl2br (text)
+
+|Param     |Description
+|----------|------------|
+|text      |Text which you want to replace a new line (\n\r) to a &lt;br /&gt;
+
+
