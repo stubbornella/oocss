@@ -1,7 +1,7 @@
 #Registered Handlebar Helpers Reference
 
 
-####compare (leftValue, operator, rightValue, options)
+####compare (leftValue, operator, rightValue, [options])
 
 |Param     |Type    |Description
 |----------|--------|--------------
@@ -37,7 +37,7 @@ Type    |Description
 |text      |{String}|Text which you want to replace a new line (\n\r) to a &lt;br /&gt;
 
 ***
-####createvar (varName, options)
+####createvar (varName, [options])
 
 |Param     |Type    |Description
 |----------|--------|--------------
@@ -70,7 +70,7 @@ as a var in helpers
      {{/if}}
 
 ***
-####repeat (repeatCount, indexPrefix, options)
+####repeat (repeatCount, indexPrefix, [options])
 
 |Param      |Type    |Description
 |-----------|--------|--------------
@@ -98,7 +98,7 @@ none
      </ul>
 
 ***
-####format (options)
+####format ([options])
 
 >Format HTML code by using html prettyPrint 
 
@@ -119,7 +119,7 @@ Type    |Description
      {{/format}}
 
 ***
-####htmlcode (codeLang, options)
+####htmlcode ([codeLang], [options])
 
 >Adds &lt;pre&gt;&lt;code&gt; tags around code placed inside the {{code}} place holder
 
@@ -147,7 +147,7 @@ Type     |Description
      {{/htmlcode}}
      
 ***
-####debug (outputText)
+####debug ([outputText])
 >debug helper which writes the contents of the *this* object to the console.
 
 |Param       |Type    |Description
@@ -167,7 +167,7 @@ none
      {{debug "this is text printed in the console" }}
 
 ***
-####partial (name, options)
+####partial (name, [options])
 >Allows you to create re-usable String templates or compiled template functions.
 >[More info](https://github.com/wycats/handlebars.js/#partials)
 
@@ -188,3 +188,64 @@ none
 >**Usage:**
      
      {{> myPartialName}}
+
+***
+####registerBlock (blockname, [varParams[...]], [options])
+>Allows you to register your own handlebar place holders
+
+|Param    |Type    |Description
+|---------|--------|--------------
+|blockname|{String}|Name of the block you want to register
+|varParams|{Object}|[optional] User definable params. i.e. "var1", "var2", "var3" and so on
+|options  |{Object}|[optional] Object passed through handlebars
+
+>**Return:**
+
+none
+
+>**Declaration:**
+     
+     {{#registerBlock "myBlock" "var1" "var2" }}
+          <div class="{{$var1}}">
+               {{$var2}}
+          </div>
+          {{#if $content}}<div class="text">$content</div>{{/if}}
+     {{/registerBlock}}
+     
+>**Usage:**
+     
+     {{#myBlock "paragraph1" "my var2"}}
+          <div class="{{$var1}}">
+               {{$var2}}
+          </div>
+          content of the block that is sent to $content
+     {{/myBlock}}
+     
+     outputs:
+     
+     <div class="paragraph1">
+          my var2
+     </div>
+     <div class="text">content of the block that is sent to $content</div>
+     
+***
+####block (blockname, [varParams[...]], [options])
+>this method is useful for calling another block
+
+|Param    |Type    |Description
+|---------|--------|--------------
+|blockname|{String}|Name of the block you want to call
+|varParams|{Object}|[optional] params sent to the block your calling. i.e. "var1", "var2", "var3" and so on
+|options  |{Object}|[optional] Object passed through handlebars
+
+>**Return:**
+
+Returns the result from the block being called
+
+>**Usage:**
+
+     {{block myblockname "var1" "var2" "var3"}}....
+
+***
+
+
