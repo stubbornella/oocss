@@ -66,4 +66,29 @@ as a var in helpers
     <code>{{#if $myvar}}do stuff{{/if}}</code>
 
 ***
+####repeat (repeatCount, indexPrefix, options)
 
+|Param      |Type    |Description
+|-----------|--------|--------------
+|repeatCount|{Number}|The number of repeats
+|indexPrefix|{String}|prefix that will be used for the var @indexStr
+|options    |{Object}|[optional] Object passed through handlebars|
+
+return: none
+
+usage:
+
+     <ul>
+          {{#repeat 2 "myPrefix"}}
+               <li>{{@indexStr}}</li>
+          {{/repeat}}
+     </ul>
+     
+     would output
+     
+     <ul>
+          <li>myPrefix0</li>
+          <li>myPrefix1</li>
+     </ul>
+
+***
