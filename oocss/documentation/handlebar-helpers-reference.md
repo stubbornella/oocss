@@ -1,14 +1,20 @@
-﻿#Registered Handlebar Helpers Reference
+#Registered Handlebar Helpers Reference
 
 
-##### compare (leftValue, operator, rightValue, options)
+####compare (leftValue, operator, rightValue, options)
 
-|Param     |Description
-|----------|-----------------------------------------------------------|
-|leftValue |Left value to compare                                      |
-|operator  |The operator, must be between quotes ">", "=", "<=", etc...|
-|rightValue|Right value to compare                                     |
-|options   |Option object sent by handlebars                           |
+|Param     |Type    |Description
+|----------|--------|--------------
+|leftValue |{Object}|Left value to compare|
+|operator  |{String}|The operator, must be between quotes ">", "=", "<=", etc...|
+|rightValue|{Object}|Right value to compare|
+|options   |{Object}|[optional] Object passed through handlebars|
+
+return:
+
+Type    |Description
+|-------|-----------
+{bool}  |The result of the comparison
 
 
 usage:
@@ -23,10 +29,41 @@ usage:
      The value is lower than 10
      {{/compare}}
 
-#####nl2br (text)
+***
+####nl2br (text)
 
-|Param     |Description
-|----------|------------|
-|text      |Text which you want to replace a new line (\n\r) to a &lt;br /&gt;
+|Param     |Type    |Description
+|----------|--------|--------------
+|text      |{String}|Text which you want to replace a new line (\n\r) to a &lt;br /&gt;
 
+***
+####createvar (varName, options)
+
+|Param     |Type    |Description
+|----------|--------|--------------
+|varName   |{String}|The name of the variable you want to create|
+|options   |{Object}|[optional] Object passed through handlebars|
+
+return:
+
+Type    |Description
+|-------|-----------
+{String}|formatted html
+
+usage:
+     
+Declare the var :
+
+    <code>{{#createvar "myvar"}}content of {{prop of object}}{{/createvar}}</code>
+
+Use the var :
+as a normal property inside the template
+
+    <code>{{$myvar}}</code>
+    
+as a var in helpers
+
+    <code>{{#if $myvar}}do stuff{{/if}}</code>
+
+***
 
