@@ -140,7 +140,8 @@ var Handlebars,
             max = max*1; // parseint
             for (var i = start; i <= max; i++) {
                 data.index = i;
-                data.indexStr = indexPrefix;
+                 /* appends index to the indexStr so it's unique */
+                data.indexStr = indexPrefix + i;
                 str.push(options.fn(this, {data: data}));
             }
             return str.join('');
