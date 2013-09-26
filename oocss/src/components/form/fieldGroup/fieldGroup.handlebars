@@ -59,7 +59,7 @@
   {{#ffield}}
     {{#flabel "" "fieldLabel"}}Your email addresses{{/flabel}}
     {{#fgroup}}
-      {{#repeat 2 "inputblock"}}
+      {{#repeat 2 "emailInputblock"}}
         {{#fgroupitem "ftext" @indexStr "" ""}}Email address {{@index}}{{/fgroupitem}}
       {{/repeat}}
     {{/fgroup}}
@@ -72,7 +72,7 @@
   {{#ffield}}
     {{#flabel "" "fieldLabel"}}Select your options{{/flabel}}
     {{#fgroup}}
-      {{#repeat 2 "inputblock"}}
+      {{#repeat 2 "selectInputblock"}}
         {{#fgroupitem "fselect" @indexStr "" "" "" "" "" 2}}Option {{@index}}{{/fgroupitem}}
       {{/repeat}}
     {{/fgroup}}
