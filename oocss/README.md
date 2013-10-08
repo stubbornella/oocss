@@ -113,7 +113,7 @@ Some common commands you'll need:
 
 * `make build` - Creates the style guide and all the JavaScript, HTML, and CSS files required for it.
 * `make watch` -  Watches JavaScript, handlebars, and Sass files When any changes are saved, it automatically rebuilds the project so you can see the latest changes.
-* `make bw` - Runs `make buil`d and `make watch` at the same time.
+* `make bw` - Runs `make build` and `make watch` at the same time.
 * `make component -name [component name]` - Create a new component with the name you specify. E.g. `make component -name button`. This will automatically create the component folder, Sass, handlebar and JavaScript files.
 
 ## <a id="test"></a>Test the project in a browser
