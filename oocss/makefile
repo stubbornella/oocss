@@ -16,7 +16,7 @@ build: clean
 	@mkdir ${BUILDDIR}
 	@echo "\n${HR}"
 	@mkdir build/css
-#	@cd tools/config; compass compile
+	@cd tools/config; compass compile
 	@echo "Building CSS Files with Sass..."
 	@echo "\n${HR}"
 	@echo "Building Documentation..."
