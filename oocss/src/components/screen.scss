@@ -24,6 +24,7 @@
 @import "utils/hideText";
 @import "utils/hideVisually";
 @import "utils/hideFully";
+@import "utils/arrows";
 /* ==========================================================================
    Typography
    ========================================================================== */
@@ -53,6 +54,14 @@
 @import "box/box";
 
 @import "box/skin/boxBasic";
+
+
+/* ==========================================================================
+   Caption Bubble
+   ========================================================================== */
+@import "captionBubble/captionBubble";
+
+@import "captionBubble/skin/captionBubbleDefault";
 
 /* ==========================================================================
    Divider

@@ -126,6 +126,31 @@
             ]
         },
         {
+            "name": "captionBubble",
+            "longname": "Caption Bubbles",
+            "path":"components/captionBubble",
+            "skins": [
+              {
+                    "className": "",
+                    "arrowClass": "arrowAbove",
+                    "body": "Sed fringilla purus vitae bibendum malesuada. Donec eget mollis elit. Vivamus iaculis urna leo, nec tempor mauris sodales eu. Praesent sollicitudin pharetra felis, vitae interdum risus pulvinar sit amet. Nullam ac justo quis sapien lacinia cursus. Integer interdum eget nisl vitae luctus. In hac habitasse platea dictumst."
+              },
+              {
+                    "body": "Sed fringilla purus vitae bibendum malesuada. Donec eget mollis elit. Vivamus iaculis urna leo, nec tempor mauris sodales eu. Praesent sollicitudin pharetra felis, vitae interdum risus pulvinar sit amet. Nullam ac justo quis sapien lacinia cursus. Integer interdum eget nisl vitae luctus. In hac habitasse platea dictumst."
+              },
+              {
+                    "className": "",
+                    "arrowClass": "arrowLeft",
+                    "body": "Sed fringilla purus vitae bibendum malesuada. Donec eget mollis elit. Vivamus iaculis urna leo, nec tempor mauris sodales eu. Praesent sollicitudin pharetra felis, vitae interdum risus pulvinar sit amet. Nullam ac justo quis sapien lacinia cursus. Integer interdum eget nisl vitae luctus. In hac habitasse platea dictumst."
+              },
+              {
+                    "className": "",
+                    "arrowClass": "arrowRight",
+                    "body": "Sed fringilla purus vitae bibendum malesuada. Donec eget mollis elit. Vivamus iaculis urna leo, nec tempor mauris sodales eu. Praesent sollicitudin pharetra felis, vitae interdum risus pulvinar sit amet. Nullam ac justo quis sapien lacinia cursus. Integer interdum eget nisl vitae luctus. In hac habitasse platea dictumst."
+              }
+            ]
+        },
+        {
             "name":"grid",
             "longname":"Grid",
             "path":"components/grid",

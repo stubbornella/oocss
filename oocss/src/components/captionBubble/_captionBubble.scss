@@ -1,0 +1,19 @@
+/**
+	* @desc         Structure Class.
+	* @name         Caption Bubble
+	* @author       pflannery
+	* @tested       Chrome, Firefox, IE7-11
+	* @requires     variables.scss
+*/
+
+.captionBubble {
+
+	margin: $captionBubbleArrowSize;
+
+	/* arrowStruct(placement, arroawSize, arrowOffset, alignPercent) */
+	@include arrowStruct('above', $captionBubbleArrowSize, (-$captionBubbleArrowSize - $captionBubbleBorderSize), 50%);
+	@include arrowStruct('below', $captionBubbleArrowSize, (-$captionBubbleArrowSize - $captionBubbleBorderSize), 50%);
+	@include arrowStruct('left', $captionBubbleArrowSize, (-$captionBubbleArrowSize - $captionBubbleBorderSize), 50%);
+	@include arrowStruct('right', $captionBubbleArrowSize, (-$captionBubbleArrowSize - $captionBubbleBorderSize), 50%);
+
+}

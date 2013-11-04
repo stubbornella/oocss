@@ -1,0 +1,17 @@
+﻿/**
+* @desc         Skin class.
+* @name         Box Bubble
+* @author       pflannery
+* @tested       Chrome, Firefox, IE7-11  
+* @requires     variables.scss
+*/
+
+.captionBubble {
+	border-radius: $boxBasicBorderRadius;
+	border: $captionBubbleBorderSize solid $captionBubbleBorderColor;
+
+	@include arrowSkin('above', $captionBubbleArrowColor);
+	@include arrowSkin('below', $captionBubbleArrowColor);
+	@include arrowSkin('left', $captionBubbleArrowColor);
+	@include arrowSkin('right', $captionBubbleArrowColor);
+}

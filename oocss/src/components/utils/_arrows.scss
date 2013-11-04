@@ -1,0 +1,122 @@
+﻿/**
+* @desc         Adds arrows to components
+* @name         Arrows
+* @author       pflannery
+* @tested       IE7-11, Firefox, Chrome, Safari
+* @requires     N/A
+*/
+
+.arrow {
+	width: 0px;
+	height: 0px;
+	position: absolute;
+}
+
+/**
+ * Inserts an arrow's struct class
+ *
+ * @param $arrowPlacement - can be above, below, left or right
+ *
+ * @param $arrowSize - the size of the arrow
+ *
+ * @param $arrowOffset - used to align against parent elements. i.e. we could push the arrow out of the box by negating the arrow-size and it's parents border-width
+ * 
+ * @param $arrowAlignPc - percent position along it's placement boundary. 
+ * i.e. above middle would be 50%, or above and left would be 0% or above and right would be 100%
+ */
+@mixin arrowStruct($arrowPlacement, $arrowSize, $arrowOffset, $arrowAlignPc: 50%) {
+
+	@if ($arrowPlacement == 'above') {
+		.arrowAbove {
+			top: $arrowOffset;
+			left: $arrowAlignPc;
+			border-right: $arrowSize solid transparent;
+			border-left: $arrowSize solid transparent;
+			border-bottom-style: solid;
+			border-bottom-width: $arrowSize;
+		}
+	}
+
+	@if ($arrowPlacement == 'below') {
+		.arrowBelow {
+			bottom: $arrowOffset;
+			left: $arrowAlignPc;
+
+			border-right: $arrowSize solid transparent;
+			border-left: $arrowSize solid transparent;
+			border-top-style: solid;
+			border-top-width: $arrowSize;
+		}
+	}
+
+	@if ($arrowPlacement == 'right') {
+		.arrowRight {
+			right: $arrowOffset;
+			top: $arrowAlignPc;
+			margin-top: -$arrowSize;
+
+			border-top: $arrowSize solid transparent;
+			border-bottom: $arrowSize solid transparent;
+			border-left-style: solid;
+			border-left-width: $arrowSize;
+		}
+	}
+
+	@if ($arrowPlacement == 'left') {
+		.arrowLeft {
+			left: $arrowOffset;
+			top: $arrowAlignPc;
+			margin-top: -$arrowSize;
+
+			border-top: $arrowSize solid transparent;
+			border-bottom: $arrowSize solid transparent;
+			border-right-style: solid;
+			border-right-width: $arrowSize;
+		}
+	}
+
+}
+
+@mixin arrowSkin($arrowPlacement, $arrowColor) {
+
+	@if ($arrowPlacement == 'above') {
+		.arrowAbove {
+			border-bottom-color: $arrowColor;
+		}
+	}
+
+	@if ($arrowPlacement == 'below') {
+		.arrowBelow {
+			border-top-color: $arrowColor;
+		}
+	}
+
+	@if ($arrowPlacement == 'right') {
+		.arrowRight {
+			border-left-color: $arrowColor;
+		}
+	}
+
+	@if ($arrowPlacement == 'left') {
+		.arrowLeft {
+			border-right-color: $arrowColor;
+		}
+	}
+
+}
+
+
+
+/*
+	$triBorderSize: 2px;
+	$TriInnerSize: $captionBubbleArrowSize - $triBorderSize;
+	&:after {
+		border-right: $TriInnerSize solid transparent;
+		border-left: $TriInnerSize solid transparent;
+		border-bottom: $TriInnerSize solid $bodyBg;
+		position: absolute;
+		left: -$TriInnerSize;
+		top: $triBorderSize;
+		content: "";
+	}
+*/
