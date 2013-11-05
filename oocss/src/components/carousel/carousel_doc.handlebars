@@ -1,0 +1,137 @@
+<script src="script/carousel.js"></script>
+<script src="script/carousel-doc-code.js"></script>
+<h2 id="{{name}}" class="docH2">{{longname}}</h2>
+<ul class="listComponent">
+  {{#each skins}}
+    <li>
+      <h3>{{description}}</h3>
+      {{{html}}}
+      {{{htmlcode}}}
+      
+    {{#if basic}}
+
+      {{#htmlcode "javascript"}}
+<script>
+// Basic example Code
+$("#carouselBtn1").click(function() {
+    oocss.carousel.select("#basicCarousel", 0);
+});
+$("#carouselBtn2").click(function() {
+    oocss.carousel.select("#basicCarousel", 1);
+});
+$("#carouselBtn3").click(function() {
+    oocss.carousel.select("#basicCarousel", 2);
+});
+
+$("#basicCarousel").change(function(event, index) {
+    $(".carouselBtn").css("background-color","white");
+    $("#carouselBtn" + (index+1)).css("background-color","lightGray");
+});
+</script>
+    {{/htmlcode}}
+
+    {{else}}
+
+    {{#htmlcode "javascript"}}
+<script>
+// Advanced Example Code
+$(".arrowLeft").click(function() {
+    oocss.carousel.prev($(this).parent(), 'slideInRight', 'slideOutLeft');
+});
+$(".arrowRight").click(function() {
+    oocss.carousel.next($(this).parent(), 'slideInLeft', 'slideOutRight');
+});
+$(".arrowAbove").click(function() {
+    oocss.carousel.prev($(this).parent(), 'slideInUp', 'slideOutUp');
+});
+$(".arrowBelow").click(function() {
+    oocss.carousel.next($(this).parent(), 'slideInDown', 'slideOutDown');
+});
+</script>
+    {{/htmlcode}}
+      
+    {{/if}}
+      
+    </li>
+  {{/each}}
+</ul>
+
+<h3>Carousel Options</h3>
+<div class="data codeTable">
+  <table>
+    <tr>
+      <th scope="row"><code>data-interval</code></th>
+      <td>Optional.<br />How many milliseconds the carousel will wait to change to the next slide<br />Defaults: 4000</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>data-transition-in</code></th>
+      <td>Optional.<br />Can be one of the following: <ul class="listBulleted"><li>fadeIn<li>slideInLeft<li>slideInRight<li>slideInDown<li>slideInUp</ul>Case Sensitive.<br />Defaults: fadeIn</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>data-transition-out</code></th>
+      <td>Optional.<br />Can be one of the following: <ul class="listBulleted"><li>fadeOut<li>slideOutLeft<li>slideOutRight<li>slideOutDown<li>slideOutUp</ul>Case Sensitive.<br />Defaults: fadeOut</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>data-transition-duration</code></th>
+      <td>Optional.<br />How long in milliseconds it takes for both in and out transition animations to complete.<br />Defaults: 1000</td>
+    </tr>
+      <tr>
+          <th scope="row">
+              <code>data-animating</code>
+          </th>
+          <td>
+              Generated.<br />A boolean status that tell us if the carousel is currenly in a state of animating a transition.
+          </td>
+      </tr>
+      <tr>
+          <th scope="row">
+              <code>data-selected</code>
+          </th>
+          <td>
+              Generated.<br />An integer that tell us the currently selected slide index.
+          </td>
+      </tr>
+    <!--
+    <tr>
+      <th scope="row"><code>data-transition-duration-in</code></th>
+      <td>How long in milliseconds it takes for the in transition animation to complete. Optional. Defaults: data-transition-duration</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>data-transition-duration-out</code></th>
+      <td>How long in milliseconds it takes for the out transition animation to complete. Optional. Defaults: data-transition-duration</td>
+    </tr>
+    -->
+  </table>
+</div>
+
+<h3>Carousel Slide Options</h3>
+<div class="data codeTable">
+  <table>
+    <tr>
+      <th scope="row"><code>data-next-slide</code></th>
+      <td>Optional.<br />Specifies the next slide index. Index starts from 0 to (slideCount-1)<br />Defaults: Sequential order</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>data-transition-in</code></th>
+      <td>Optional.<br />Can be one of the following: <ul class="listBulleted"><li>fadeIn<li>slideInLeft<li>slideInRight<li>slideInDown<li>slideInUp</ul>Case Sensitive.<br />Defaults: Carousel data-transition-in</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>data-transition-out</code></th>
+      <td>Optional.<br />Can be one of the following: <ul class="listBulleted"><li>fadeOut<li>slideOutLeft<li>slideOutRight<li>slideOutDown<li>slideOutUp</ul>Case Sensitive.<br />Defaults: Carousel data-transition-out</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>data-transition-duration</code></th>
+      <td>Optional.<br />How long in milliseconds it takes for both in and out transition animations to complete.<br />Defaults: Carousel data-transition-duration</td>
+    </tr>
+    <!--
+    <tr>
+      <th scope="row"><code>data-transition-duration-in</code></th>
+      <td>How long in milliseconds it takes for the in transition animation to complete. Optional. Defaults: Carousel data-transition-duration-in</td>
+    </tr>
+    <tr>
+      <th scope="row"><code>data-transition-duration-out</code></th>
+      <td>How long in milliseconds it takes for the out transition animation to complete. Optional. Defaults: Carousel data-transition-duration-out</td>
+    </tr>
+    -->
+  </table>
+</div>

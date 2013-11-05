@@ -1,0 +1,39 @@
+<div id="basicCarousel" class="carousel" data-transition-in="{{transitionIn}}" data-transition-out="{{transitionOut}}">
+{{#if basic}}
+    {{#each slides}}
+    <div class="carouselSlide {{className}}">
+        <p class="mvn">{{body}}</p>
+    </div>
+    {{/each}}
+    <div class="txtC mvm">
+        <button id="carouselBtn1" class="btn btnDefault carouselBtn" style="background-color: lightGray">1</button>
+        <button id="carouselBtn2" class="btn btnDefault carouselBtn" style="background-color: white">2</button>
+        <button id="carouselBtn3" class="btn btnDefault carouselBtn" style="background-color: white">3</button>
+    </div>
+
+{{else}}
+    <div class="arrow arrowLeft"></div>
+    <div class="arrow arrowRight"></div>
+    <div class="arrow arrowAbove"></div>
+    <div class="arrow arrowBelow"></div>
+    
+    {{#each slides}}
+    <div class="carouselSlide {{className}}" 
+            data-transition-in="{{transitionIn}}" 
+            data-transition-out="{{transitionOut}}" 
+            data-next-slide="{{next-slide}}">
+
+        <div class="media mvn">
+            <a href="#" class="mediaImg">
+                <img src="http://placehold.it/128x128" width="128" height="128" alt="Left aligned image.">
+            </a>
+            <div class="mediaBody">
+                <p class="mvn">{{body}}</p>
+            </div>
+        </div>
+    </div>
+    
+    {{/each}}
+        
+{{/if}}
+</div>
