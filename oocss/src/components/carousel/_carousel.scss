@@ -1,0 +1,35 @@
+/**
+	* @desc         Structure Class.
+	* @name         Carousel
+	* @author       pflannery
+	* @tested       Chrome, Firefox, IE7-11
+	* @requires     variables.scss, utils/arrows.scss
+*/
+
+.carousel {
+	position: relative;
+	overflow: hidden;
+
+	.carouselSlide {
+		display: none;
+		position: relative;
+		left: 0;
+		bottom: 0;
+		margin: $carouselArrowSize + 10;
+	}
+
+	.carouselSlideActive {
+		display: block;
+	}
+
+	@include arrowStruct('left', $carouselArrowSize, -$carouselBorderSize, 50%);
+	@include arrowStruct('right', $carouselArrowSize, -$carouselBorderSize, 50%);
+	@include arrowStruct('above', $carouselArrowSize, -$carouselBorderSize, 50%);
+	@include arrowStruct('below', $carouselArrowSize, -$carouselBorderSize, 50%);
+
+	.arrow {
+		cursor: pointer;
+		z-index: 1;
+	}
+
+}

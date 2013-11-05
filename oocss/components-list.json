@@ -151,6 +151,62 @@
             ]
         },
         {
+            "name": "carousel",
+            "longname": "Carousel",
+            "path":"components/carousel",
+            "skins": [
+                {
+                    "interval": "4000",
+                    "transitionIn": "slideInLeft",
+                    "transitionOut": "slideOutRight",
+                    "className": "",
+                    "basic": true,
+                    "description": "A basic carousel which slides in from the left and slides out to the right",
+                    "slides": [
+                        {
+                            "className": "carouselSlideActive",
+                            "body": "1. Sed fringilla purus vitae bibendum malesuada. Donec eget mollis elit. Vivamus iaculis urna leo, nec tempor mauris sodales eu. Praesent sollicitudin pharetra felis, vitae interdum risus pulvinar sit amet. Nullam ac justo quis sapien lacinia cursus. Integer interdum eget nisl vitae luctus. In hac habitasse platea dictumst."
+                        },
+                        {
+                            "body": "2. Sed fringilla purus vitae bibendum malesuada. Donec eget mollis elit. Vivamus iaculis urna leo, nec tempor mauris sodales eu. Praesent sollicitudin pharetra felis, vitae interdum risus pulvinar sit amet. Nullam ac justo quis sapien lacinia cursus. Integer interdum eget nisl vitae luctus. In hac habitasse platea dictumst."
+                        },
+                        {
+                            "body": "3. Sed fringilla purus vitae bibendum malesuada. Donec eget mollis elit. Vivamus iaculis urna leo, nec tempor mauris sodales eu. Praesent sollicitudin pharetra felis, vitae interdum risus pulvinar sit amet. Nullam ac justo quis sapien lacinia cursus. Integer interdum eget nisl vitae luctus. In hac habitasse platea dictumst."
+                        }
+                    ]
+                },
+                {
+                    "interval": "4000",
+                    "transitionIn": "slideInUp",
+                    "transitionOut": "slideOutDown",
+                    "className": "",
+                    "basic": false,
+                    "description": "An advanced carousel which has its transition and order specified for each slide and contains arrow buttons for manual sliding",
+                    "slides": [
+                        {
+                            "className": "carouselSlideActive",
+                            "body": "1. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla facilisi. Suspendisse vestibulum pharetra sapien, tincidunt tincidunt turpis pharetra nec. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque mollis dolor sed commodo mollis. Maecenas vehicula arcu vel gravida elementum. In hac habitasse platea dictumst. Aenean libero risus, porta eu enim at, varius porta mi. Phasellus tempus ultricies quam, ac vehicula felis scelerisque sit amet. Quisque ac nibh hendrerit augue adipiscing pretium. Integer eu imperdiet enim. Sed lacinia auctor porttitor.",
+                            "next-slide": "2",
+                            "transitionIn": "fadeIn",
+                            "transitionOut": "slideOutLeft"
+                        },
+                        {
+                            "body": "2. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla facilisi. Suspendisse vestibulum pharetra sapien, tincidunt tincidunt turpis pharetra nec. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque mollis dolor sed commodo mollis. Maecenas vehicula arcu vel gravida elementum. In hac habitasse platea dictumst. Aenean libero risus, porta eu enim at, varius porta mi. Phasellus tempus ultricies quam, ac vehicula felis scelerisque sit amet. Quisque ac nibh hendrerit augue adipiscing pretium. Integer eu imperdiet enim. Sed lacinia auctor porttitor.",
+                            "next-slide": "0",
+                            "transitionIn": "slideInRight",
+                            "transitionOut": "fadeOut"
+                        },
+                        {
+                            "body": "3. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla facilisi. Suspendisse vestibulum pharetra sapien, tincidunt tincidunt turpis pharetra nec. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque mollis dolor sed commodo mollis. Maecenas vehicula arcu vel gravida elementum. In hac habitasse platea dictumst. Aenean libero risus, porta eu enim at, varius porta mi. Phasellus tempus ultricies quam, ac vehicula felis scelerisque sit amet. Quisque ac nibh hendrerit augue adipiscing pretium. Integer eu imperdiet enim. Sed lacinia auctor porttitor.",
+                            "next-slide": "1",
+                            "transitionIn": "slideInDown",
+                            "transitionOut": "slideOutUp"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "name":"grid",
             "longname":"Grid",
             "path":"components/grid",
