@@ -27,7 +27,7 @@ The standard module format is based on the <a href="http://developer.yahoo.com/y
 	</tr>
 	<tr class="odd">
 		<th scope="row"><code>ft</code></th>
-		<td>The module footer is an object. <code>ft</code> provides basic structure and it can be extended via skin classes.</td>
+		<td>The module footer is an object. <code>ft</code> provides basic sructure and it can be extended via skin classes.</td>
 	</tr>
 	</tbody>
 </table>

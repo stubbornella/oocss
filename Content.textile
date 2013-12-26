@@ -1,0 +1,117 @@
+Some parts of content are ready for alpha testing, however, it isn't ready to be used in production projects. 
+
+<h2>Media Object </h2>
+The media object allows you to have an image/flash or other fixed width media to the left or right with some content that describes it in the center. 
+
+* Status: ready for alpha testing
+
+<h3>Base Classes</h3>
+<div class="data">
+<table>
+	<thead>
+		<tr>
+			<th>Property</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+	<tr class="odd">
+		<th scope="row"><code>media</code></th>
+		<td>Wrapper for the media object</td>
+	</tr>
+	<tr class="even">
+		<th scope="row"><code>img</code></th>
+		<td>Child node of the media object. Generally a link, image, or flash wrapper. Will appear to the left of the <code>.bd</code>. Optional region.</td>
+	</tr>
+	<tr class="odd">
+		<th scope="row"><code>bd</code></th>
+		<td>Main content area for the media object, can contain any other objects. Protected. Required region.</td>
+	</tr>
+	<tr class="even">
+		<th scope="row"><code>imgExt</code></th>
+		<td>Child node of the media object. Generally a link, image, or flash wrapper. Will appear to the right of the <code>.bd</code>. Optional region.</td>
+	</tr>
+	</tbody>
+</table>
+</div>
+<h3>HTML</h3>
+<pre>
+<div class="media">
+	<a href="http://twitter.com/stubbornella" class="img">
+		<img src="http://a3.twimg.com/profile_images/72157651/tattoo_pink_bkg_square_mini.jpg" alt="Stubbornella" />
+	</a>
+	<div class="bd">
+		<a href="http://twitter.com/stubbornella">@Stubbornella</a> <span class="detail">14 miniutes ago</span>
+	</div>
+</div>
+</pre>
+
+
+<h2>Data Table</h2>
+
+It can sometimes be convenient to be able to format a data table to align correctly for particular kinds of data (e.g. currency aligns right). Creating new classes for each kind of data can quickly bloat a file because ideally you want to be able to align the data with a class on the table, tr, td, or th, and have the class *closest to the data* win in case of conflict. This can be done, but it isn't how CSS automatically works, so to keep file size down, generic classes that support alignment can be used in conjunction with more semantic classes or microformats. 
+
+* Status: ready for alpha testing
+
+<h3>Base Classes</h3>
+<div class="data">
+  <table>
+    <thead>
+      <tr>
+        <th>Property</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="odd">
+        <th scope="row"><code>data</code></th>
+        <td>Div wrapper for the data table</td>
+      </tr>
+      <tr class="even">
+        <th scope="row"><code>txtL</code></th>
+        <td>Aligns left, default alignment, can be applied to table, tr, td, or th.</td>
+      </tr>
+      <tr class="odd">
+        <th scope="row"><code>txtR</code></th>
+        <td>Aligns right, can be applied to table, tr, td, or th.</td>
+      </tr>
+      <tr class="even">
+        <th scope="row"><code>txtC</code></th>
+        <td>Aligns center (horizontally), can be applied to table, tr, td, or th.</td>
+      </tr>
+      <tr class="odd">
+        <th scope="row"><code>txtT</code></th>
+        <td>Aligns top, can be applied to table, tr, td, or th.</td>
+      </tr>
+      <tr class="even">
+        <th scope="row"><code>txtB</code></th>
+        <td>Aligns bottom, can be applied to table, tr, td, or th.</td>
+      </tr>
+      <tr class="odd">
+        <th scope="row"><code>txtM</code></th>
+        <td>Aligns middle (vertically), can be applied to table, tr, td, or th.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3>HTML</h3>
+<pre>
+<div class="data">
+  <table class="txtC"><!--table alignment set to center -->
+    <tr class="odd txtL">
+      <th scope="row" class="txtR">Right aligned</th>
+      <td>Left aligned</td>
+    </tr>
+    <tr class="even">
+      <th scope="row">center aligned</th>
+      <td>center aligned</td>
+    </tr>
+  </table>
+</div>
+</pre>
+
+
+<h2>Files</h2>
+
+* /css/content.css

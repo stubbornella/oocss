@@ -38,7 +38,7 @@ On a single page, the more CSS rules are reused, the less time the rendering eng
 
 <h2 id="idForStyle">Should I use IDs to style my content?</h2>
 
-There are two reasons for not using IDs to style content:
+There are two reasons for not using ID's to style content:
 
 <ol>
 <li>They mess up specificity because they are too strong (the most important reason)</li>
