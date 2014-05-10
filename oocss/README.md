@@ -107,9 +107,12 @@ These are the essential commands you'll be interested in:
 
 ## <a id="build"></a>Build the project
 
-If you will be doing development on the project, you'll need to know a bit more about the build system. If not, you can happily skip this section. We use Make to create the style guide and the rest of the build directory.
+<!-- commenting because my experience was that the project did not build automatically upon running the mac-start.command and I had to run make bw -->
+<!-- If you will be doing development on the project, you'll need to know a bit more about the build system. If not, you can happily skip this section. -->
+We use Make to create the style guide and the rest of the build directory. When building the project for the first time, run:
+> `make bw`
 
-Some common commands you'll need:
+If you will be making changes to the project, here are some common commands you'll need:
 
 * `make build` - Creates the style guide and all the JavaScript, HTML, and CSS files required for it.
 * `make watch` -  Watches JavaScript, handlebars, and Sass files When any changes are saved, it automatically rebuilds the project so you can see the latest changes.
