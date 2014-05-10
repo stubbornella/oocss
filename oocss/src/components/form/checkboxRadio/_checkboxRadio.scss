@@ -14,11 +14,15 @@
     label {
       display: block;
       width: auto;
-      padding-left: 1.4em;
+      padding-left: 0;
       *zoom: 1;
-      *padding-left: 0;
       vertical-align: middle;
     }
+    //for labels and/or other adjacent text that spans more than one line
+    .hangingIndent {
+      padding-left: 1.4em;
+    }
+
     input {
       margin-right: 5px;
       padding: 0;
