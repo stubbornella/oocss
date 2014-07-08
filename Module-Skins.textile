@@ -1,0 +1,34 @@
+Each of the three module types needs to be skinned differently.  Abstracting all the heavy lifting to the <code>mod</code>, <code>complex</code>, and <code>pop</code> classes means that all of the values in the skins are predictable. In fact, I'll show you how they can be easily calculated.
+
+<h2>Extending mod</h2>
+
+Let's create a simple grey rounded corner box.
+
+<pre>
+<div class="mod simple"> 
+	<b class="top"><b class="tl"></b><b class="tr"></b></b> 
+	<div class="inner">
+		<div class="hd">
+			<h3>simple</h3>
+		</div>
+		<div class="bd">
+			<p>Body</p>
+		</div>
+	</div>
+	<b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+</div>
+</pre>
+<pre>
+/* ----- simple (extends mod) ----- */
+.simple .inner {border:1px solid #D7D7D7;-moz-border-radius: 7px;-webkit-border-radius: 7px;border-radius: 7px;}
+.simple b{*background-image:url(skin/mod/simple_corners.png);}
+</pre>
+
+# We define the border to be one pixel solid gray. Anytime only one border is used it should be placed on <code>inner</code> rather than the module itself (to simplify the skin). 
+# We then tell browsers that the module should have rounded corners.
+# Internet Explorer 5.5, 6, 7, 8 do not support rounded corners. Line two provides an image backup to generate these corners. The star hack is used so that better browsers that natively support rounded corners do not download the extra image unnecessarily.  You may also choose to omit this line and provide a square corner fallback for IE depending on how much market share they have amongst your visitors.
+
+<h2>complex</h2>
+
+
+</h2>pop</h2>

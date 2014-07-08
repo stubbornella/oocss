@@ -1,0 +1,258 @@
+Whoa, you have lots of questions! I'd better start recording the answers if I want to scale better.
+
+
+<h2 id="whatIsAnObject">What is meant by an "object" in OOCSS?</h2>
+
+In keeping with the OO metaphor, an object is analogous with an instance of Java or PHP class, for example (though the "granularity is different!":http://www.stubbornella.org/content/2010/06/21/css-granularity-architecture/)
+
+A CSS object consists of four things:
+# HTML, which can be one or more nodes of the DOM,
+# CSS declarations about the style of those nodes all of which begin with the class name of the wrapper node
+# Components like background images and sprites required for display, and
+# JavaScript behaviors, listeners, or methods associated with the object.
+
+This can be confusing because each CSS class is not necessarily an object in its own right, but can be a property of a wrapper class.
+
+For example:
+
+<pre><code><div class="mod">
+        <div class="inner">
+                <div class="hd">Block Head</div>
+                <div class="bd">Block Body</div>
+                <div class="ft">Block Foot</div>
+        </div>
+</div></code></pre>
+
+The object is a module, indicated by the class mod. It contains four property nodes (which cannot live independently from the module, including two required regions, inner and body, and two optional regions, head and foot.
+
+
+<h2 id="howDoesItImprovePerformance">How does OOCSS improve performance?</h2>
+
+The performance benefits of OOCSS are twofold:
+# Heavy reuse of CSS code, so less CSS code needed, which means:
+** Smaller files, hence faster transfers
+** A bigger percentage of the CSS code needed on most pages of your site is likely to be reused and possibly cached by the browser
+# To a lesser degree, fewer repaints and layout calculations on the part of the browser.  
+On a single page, the more CSS rules are reused, the less time the rendering engine spends calculating "computed values"
+
+
+<h2 id="idForStyle">Should I use IDs to style my content?</h2>
+
+There are two reasons for not using ID's to style content:
+
+<ol>
+<li>They mess up specificity because they are too strong (the most important reason)</li>
+<li>They are unique identifiers, which makes components built with them something like singletons, not reusable on the same page</li>
+</ol>
+
+When you reuse an object in the same page (or on the same site if the cache is working properly), it is a performance "freebie".  Styling using IDs makes it impossible to use the same element twice on the same page. @cgriego (twitter) compared it to singletons, which sounds accurate to me.  There may be cases where you want to style using an ID, like header menus that are very specific, in this case you can use an ID to sandbox the particular element and be sure that the code written for it doesn't impact the rest of the site. Think carefully before you choose an ID over a class, it is <em>really hard to predict</em> what people will do with HTML built from your CSS as the site evolves. If you have a choice, leave things as flexible as possible.
+
+I removed the ids from head, body, and foot in my template. Someone could have multiple main content areas.  Multiple site headers and footers are more difficult to imagine, but I bet there is a designer who can dream up something like that, so the IDs needed to disappear. 
+
+On the other hand, <em>IDs are great for linking and JS hooks</em>.  Put them in the HTML, just don't use them for styles.
+
+<h2 id="designersCan">Designers can't code OOCSS, can they?</h2>
+
+Yes, designers instinctively understand objects, it is much more concrete than the way most people are currently coding CSS --layers of exceptions (think, there was an old lady who swallowed a fly). In fact, they love OOCSS for two reasons.  
+
+# It allows them to ramp up a lot faster when creating complex high traffic sites. They don't have to bother with understanding the structures until they are reasonably competent and comfortable with basic syntax.
+# When learning CSS, they never have to create the ugly "hello world!" website.  Designers care very much that their work is beautiful.  If they have to make something ugly, even for the sake of learning, they will very quickly get frustrated and annoyed.  OO-CSS allows their work to be beautiful at each stage of the learning process. 
+
+Designers are <strong>smart</strong>.  We need to give them credit. They may speak a different, non-engineering language, but often geeky language excludes people in a way that is kind of ugly. We can do better than that.
+
+<h2 id="learn">I'm a Front-end Architect, how do I teach this to my team?</h2>
+
+As the architect, you should write the structure object; set up how the rounded corner box is created, positions all the presentational elems for corners or other features, and deals with browser differences. Newbies write the skins for these modules (borders, colors, background images, etc).
+
+I built large scale sites (1000s of pages, millions of visitors) using the OO-CSS method. It scales well and, when done correctly, it means that the individual components a newbie would be working on are relatively predictable. Code review is easy because there are clear rules about acceptable ways to extend objects. This kind of feedback makes new developers productive really quickly.
+
+I managed a team of front end developers at FullSIX (a web marketing agency in France) who are among the most talented people I’ve ever worked with. At some point our success meant that we had far more work than we could handle. It is very hard to hire front-end experts (there is no school for this stuff!), so I started an <a href="http://www.slideshare.net/stubbornella/object-oriented-css/57">internal internship program where designers who were interested in exploring code</a> (but had little to no previous experience) could come work as junior members of our team for one month.
+
+* Week 1: They learned about semantics and built html from existing CSS. Learning to build new pages without writing more CSS, HTML syntax, multiple classes, validation, semantics, intro to code review, etc.
+* Week 2: They built simple content objects (headings, lists, etc) for a week. Learning CSS syntax, how to extend objects, colors, % sizes for text, etc.
+* Week 3: they were building block skins. Borders, colors, background images, basic positioning, sprites. They worked with an amazing senior developer who answered a ton of questions and really helped them scale the learning curve. He also happens to be a very talented code reviewer.
+* Week 4: they were productive members of my team building skins that were production ready.
+
+Their code is live on a client website. It is as good as anything written by the senior developers, maybe better because they didn’t have to un-learn bad habits. :) 
+
+<h2 id="GettingStarted">Getting Started: How do I work with these files?</h2>
+
+Three files, libraries.css (reset and fonts from yui), grids.css and template.css are ready, the others are still extremely unstable. 
+
+# <a href="http://github.com/stubbornella/oocss/downloads">Download the whole project</a> via the download button
+# Open template.html and save it as a new file.
+# Adapt the number and width of the columns by extending those objects. You only need one template for your site, even if you have pages with different columns, because the columns are objects like anything else. You can think of them as optional regions, you may have 0-n left columns.  See template docs for more information.
+# Use grids to break up any of the content areas into smaller chunks. See grids docs for more information.
+# Add content.  Hint: This should also be OO.
+# Copy and paste modules and talk bubbles, add content there too
+# Build new module styles based on "mod_skins.css"
+
+<h2 id="deploy">How do I deploy this on a live site?</h2>
+
+Keep in mind that the CSS is still evolving, I may change things based on feedback I'm receiving.
+
+I've broken up the CSS files into modules like grids and template. On a real site you should remove unnecessary comments and reduce HTTP requests, or the site will be super slow.  This means you need to combine CSS files into one larger file.  I use nested comments, to keep the CSS organized.  Finally, run a CSS minifier as a part of the push/deployment process to remove stray comments.
+
+<h2 id="editOverwrite">Should I edit these files, or overwrite them with my own stylesheet?</h2>
+
+I wouldn't edit grids, template, or libraries.  A lot of testing has gone into getting those just right.  If you want to customize, think about <a href="#extend">extending the basic objects</a> instead.  
+
+<h2 id="contentStyles">Pink is not my color! What do I do with content.css?</h2>
+
+You may well want to edit content.css. Go ahead, change colors, font sizes, capitalization.  Just keep in mind that this file is rapidly evolving and I don't have any docs yet to show you how to do it correctly.  I'm working on it, I promise.
+
+<h2 id="moreHeadings">I need more than six (h1-h6) headings on my site. How do I add more?</h2>
+
+If you want more than six heading styles, extend the heading objects by adding a new class.
+
+<pre>
+.category{
+  font-size:108%;
+  font-weight:normal;
+  font-style: normal;
+  text-transform:uppercase;
+  color: #333;
+}
+</pre>
+
+What <strong>not</strong> to do:
+
+<pre>
+#mySaleModule h2, 
+#mySaleModule .h2{
+  font-size:108%; 
+  font-weight:normal;
+  font-style: normal;
+  text-transform:uppercase;
+  color: #333;
+}
+</pre>
+
+<h2 id="extend">How do I extend an object?</h2>
+
+If you want to extend an object, for example a 160px left column, rather than the default, you should add an additional class to the column.
+
+<pre>
+<div class="leftCol gMail"> ... </div>
+</pre>
+
+If the default and extended widths of columns or pages don't match your site, you can extend the column to allow a custom width. 
+
+<h3>Columns</h3>
+<p><code>myColumn</code> extends column objects to allow for custom column widths.</p>
+
+<pre>.myColumn{width:400px;}</pre>
+
+And the HTML
+
+<pre>
+<div class="leftCol myColumn"> ... </div>
+</pre>
+
+Don't think of this as overwriting my classes, but rather <em>extending</em> the objects provided by the framework.  I give you columns, headings, and other objects.  You can extend those objects by adding another class that only specifies the differences between my base object and your implementation of the same. Mixins may be a good analogy here. 
+
+What <strong>not</strong> to do (because it will make it harder for you to upgrade to newer versions of my framework):
+<pre>
+.leftCol{... custom css here ...}
+</pre>
+
+<h2 id="unusedStyles">Unused Styles. My site will never have a 160px gmail-style column, is it ok to remove it?</h2>
+
+Sure.  Removing objects or extensions to those objects is perfectly reasonable. Just keep in mind that it is hard to imagine what HTML someone might build with your CSS when a site is still evolving. Premature optimization is a danger. 
+
+<h2 id="singleTemplate">Why have a single template?</h2>
+
+In object oriented CSS, an important goal is to have a single template from which all pages are built.  This eases CMS development because by having a single starting point all pages can be made into any other page. Users of the CMS do not have traps in which a page they have built cannot be morphed into a different page type.  Another goal of an OO template is to have each section (column, header, etc) control its own destiny.  Practically, that means that if you want to add a left column to the template, the only required action should be actually adding the column to the HTML.  You never want to write CSS in such a way that changes are required higher in the DOM tree in order to make child elements behave properly.  Looping through the dom is costly for CMS development. 
+
+<h2>Is this semantic? Will I end up with classes like <code>.formYellow</code> or <code>tinyBlueH2</code>?</h2>
+
+OOCSS can be written in a semantic or non-semantic way, it is up to you to create modules like <code>errorMod</code> rather than <code>bigRedModule</code>. I've chosen class names with a few goals in mind (in no particular order).
+
+* Brevity - every byte counts, so I kept classes as short as possible
+* Clarity - expected behavior/style should be immediately obvious
+* Semantic - what an object <em>is</em> matters more than what it <em>looks like</em>. How will it be used in the site?
+* Generic - the name should be true for most sites. Overly specific names reduce the number of use cases or cause semantic classes to be used in a non-semantic way.  
+* Screen - Different views might be provided by mobile or print stylesheets, however they override the default screen view, so the classes chosen are screen specific when there was a conflict. This simplifies development.
+
+The code and docs are a framework, an example of OOCSS. I can't predict what you are going to put in leftCol. I could call it navigation, but that may not be true for your site. Sometimes these <strong>important goals are in opposition to one another</strong>.  In those cases I've fallen back on pragmatism and made a judgement call. Nothing can replace a clever developer making the right choice in a given situation.
+
+<h2 id="yui">What about other libraries/frameworks? Does this only work with YUI?</h2>
+
+In an ecosystem with a lot of frameworks and libraries, YUI stands out as an example of professionalism and scalability. I compare myself to them because I am continually impressed by the quality of their code and documentation. OOCSS isn't really a framework, though I'm creating one here as an example, but a way of writing scalable, sane, maintainable CSS. Maybe the best analogy is a new language. Ultimately, it is JavaScript library agnostic and I hope to contribute code back to YUI and other frameworks.
+
+<h2 id="aFrameworkForCSS">A framework for CSS is overkill! Shouldn't we code everything from scratch?</h2>
+
+Do you rewrite the math class every time you need a random number generated? 
+
+CSS is hard, "not because it is broken":http://www.stubbornella.org/content/2009/02/12/css-doesn’t-suck-you’re-just-doing-it-wrong/ , but because it is a legitimate technology requiring expertise to architect correctly. It would be foolish to reinvent the wheel for every site.
+
+<h2 id="sourceOrder">The right column comes before the main column in the source order, will this impact accessibility? SEO?</h2>
+
+Early sites I worked on had a more normal template structure with an uber class on the body that showed or hid left and right columns based on the template. Users of the custom CMS got really frustrated when they would build a page in a three column layout, realize it needed to be two columns and find they had to start from scratch because there were multiple templates / starting points. You probably noticed that main is a liquid column, it expands to take all the room left over after the left and right columns have been rendered.
+
+I prefer tab order to match visual order (because it is weird if tab order varies from that), but I also want a single template. As often happens in web development, two important goals came into conflict, and I made a judgement call about how to resolve it. In this case tab order matches visual order for everything except the right column. In the current code, the only requirement to create a left or right column is to put it in the HTML, no costly changes to make elsewhere in the dom.
+
+Screen reader users have two options: 
+
+# Skip links 
+# Navigation menus are always marked up as a list of links, or nested list of links. This is interesting because it allows screen reader users to skip the whole list via screen reader specific controls. 
+
+Two ways to get past menus is sufficient IMO. 
+
+Everyone seems to have an opinion re: SEO, and they are all different, and even opposed to one another.  :)  Given that climate, I'm inclined to think that, especially for navigation menus with a reasonable number of links, it just doesn't matter that much.  Once I did see the 
+nav links being indexed in the content part of the search results, but that was years ago.  Search bots are pretty smart, I'm ready to assume that if I mark up my content in a semantic, clean way, and I'm not filling it out with a bunch of spam links, the bot should figure it 
+out. 
+
+Markup navigation menus as lists, which will allow screen reader users to skip them, and provide "skip to content" links. This provides a double fallback for accessibility. 
+
+<h2 id="hacks">You have used the _ hack, why? Can I put this code in a separate file? Or add and IE specific class?</h2>
+
+Obviously, the first consideration is keeping hacks as few and far between as possible.
+
+# Adding a separate stylesheet would add an additional HTTP request and increase total file size for a browser that already struggles with performance.
+# I like to keep all the code for any one object in one place. I think it helps minimize the number of hacks used especially as a project evolves over time.
+# Dev tools for IE6 and earlier are extremely primitive, which makes having hacks and normal code side by side even more important. I want to be able to figure out quickly when I have an IE bug which properties are coming into play. Again, I think this helps minimize hacks.
+# The spec indicates that properties which are not understood should be ignored by the browser. Given that the _ behavior of IE6 and earlier is very well known, I can reasonably expect that good browsers will always ignore this property.
+# Using conditional comments means that each html page has to contain a link to the IE specific stylesheet. One day (I can’t wait!) when IE6 market share drops to the minimal levels of IE5, I will turn off this code, but the last thing I want to do is touch 100s or 1000s of HTML pages. I’d rather have only CSS dependence on CSS hacks, rather than pushing this into the HTML. Unfortunately, IMHO the end of IE6 compatibility is farther off than we would like because quirksmode behavior in IE often falls back to an IE5.5 type model.
+
+I think my choice helps minimize the total number of hacks, improves performance, and has little future risk. On the other hand, if seeing the _ in your code makes you feel nauseous, you can absolutely move that to a separate file.
+
+<h2 id="b">The container objects use empty <code><b></code> tags to add presentational effects such as borders, won't this be a problem for screen reader users?</h2>
+
+Nope, luckily screen readers ignore empty b tags. I take advantage of this presentational fluff tag (b means bold) to apply presentational fluff. This markup should be included via a server-side script so that the day full css borders and drop shadows are supported we can turn off the script and have nice, clean, semantic html.
+
+
+<h2 id="descendentSelectors">The OOCSS approach says avoid location-dependent styles. Does that mean I shouldn't use descendent selectors like .myModule .title?</h2>
+
+No--descendant selectors are not discouraged, but putting them too high in the DOM tree is. Avoid putting a wide-net class or id way up on the body or outermost divs of a page, and then writing lots of styles to generate variants of objects. It's not reusable, and it slows down page rendering. Instead, make a more "local" variant by adding a class directly onto the object (and add descendent styles to its children).
+
+A good rule of thumb is that anything within the body of a container is clearly a separate object.
+
+This is questionable because the UL is clearly a separate object:
+
+<pre>#sidebar ul { ... }</pre>
+
+so is this, because a carousel is clearly not part of the body object: 
+
+<pre>body.browseProducts .carousel </pre> 
+
+This is appropriate use of the cascade because the sub-node is really part of the larger parent object. <strong>b (corners)</strong> and <strong>inner</strong> clearly belong to the module, they can't exist on their own.:
+
+<pre>
+.myModule { ... }
+.myModule b { ... }
+.myModule .inner { ... }
+</pre>
+
+<h2 id="leafNode">What is a Leaf Node?</h2>
+
+A <strong>leaf node</strong> is an element that <em>doesn't</em> contain other elements, e.g. <code><strong></code> or sometimes <code><p></code>, *not* sidebar or <code><article></code>.
+
+<h2 id="codeReview">Do you have an example of a website built with OOCSS?</h2>
+
+There is a in-depth code review of a website made with OOCSS in the OOCSS Google Group. The *link to the demo has moved* to <a href="http://waltschmidt.com/v2">http://waltschmidt.com/v2</a>. You can also <a href="http://groups.google.com/group/object-oriented-css/browse_thread/thread/be6cab782afa2fcf">read the full thread</a> (including the code review). Thanks to Walt for his permission to use his "first stab" as an example.
+
+<h2 id="getInvolved">How can I help?</h2>
+
+The best way to get involved is to start using the code (libraries, grids, fonts) and <a href="http://stubbornella.lighthouseapp.com/projects/26663-object-oriented-css/tickets">submit bug reports and feature requests</a>.  I also started a <a href="http://groups.google.com/group/object-oriented-css">OOCSS google group</a> to facilitate discussion that is more complex than 140 twitter chars allows.
+

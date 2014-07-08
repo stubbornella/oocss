@@ -1,0 +1,138 @@
+<h1>Modules - Container Objects</h1>
+<p class="intro">Modules are based on the <a href="standard-module-format">Standard Module Format</a>. They provide a simple, predictable way to skin container objects while maintaining accessibility and performance. Contour skins are separate from background skins, headers, and footers. I suggest you name skins in a way that indicates how that skin should be used (semantically). The module skin should not change the display of objects within its open editable zones. Features include: </p>
+
+* Less than 2K! (structures)
+* Simple to skin
+* One image per module
+* Height and width agnostic
+* Accessibility and performance baked-in
+* Separates semantic markup from presentational fluff
+
+<h2>Base Classes</h2>
+<table>
+	<thead>
+		<tr>
+			<th>Property</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+	<tr class="odd">
+		<th scope="row"><code>mod</code></th>
+		<td>Base class for all container modules. Use <code>mod</code> unless you specifically need one of the other structure objects. Mod is transparent on the inside, corners overlay content, it can therefore be used with any content. Allows infinite height and width as borders are generated via skin objects that define borders on <code>mod</code> and <code>inner</code>.</td>
+	</tr>
+	<tr class="even">
+		<th scope="row"><code>complex</code></th>
+		<td>Extends <code>mod</code>. Allows full image borders for cases where the desired look and feel cannot be generated via borders on <code>mod</code> and <code>inner</code>. <code>complex</code> is transparent on the inside, corners overlay content, thus it can be used with any content.</td>
+	</tr>
+	<tr class="odd">
+		<th scope="row"><code>pop</code></th>
+		<td>Extends <code>mod</code>. Allows transparent outside, such as drop shadows. Use in cases where the module overlays an image, text, or other variable background. <code>pop</code> is transparent on the outside, content overlays background, thus it cannot be used with any content</td>
+	</tr>
+	<tr class="even">
+		<th scope="row"><code>top</code></th>
+		<td>A presentational element which wraps the top corners. It is used by <code>complex</code> to display the upper edge of the block. In other block structures it has no height. This empty, non-semantic element should be inserted via a serverside script or JavaScript, the former is preferable.</td>
+	</tr>
+	<tr class="odd">
+		<th scope="row"><code>bottom</code></th>
+		<td>A presentational element which wraps the bottom corners. It is used by <code>complex</code> to display the lower edge of the block. In other block structures it has no height. This empty, non-semantic element should be inserted via a serverside script or JavaScript, the former is preferable.</td>
+	</tr>
+	<tr class="even">
+		<th scope="row"><code>tl</code></th>
+		<td>A presentational element used to display the top left corner of a block, and in <code>complex</code> the left edge of the block. This empty, non-semantic element should be inserted via a serverside script or JavaScript, the former is preferable.</td>
+	</tr>
+	<tr class="odd">
+		<th scope="row"><code>tr</code></th>
+		<td>A presentational element used to display the top right corner of a block, and in <code>complex</code> the right edge of the block. This empty, non-semantic element should be inserted via a serverside script or JavaScript, the former is preferable.</td>
+	</tr>
+	<tr class="even">
+		<th scope="row"><code>bl</code></th>
+		<td>A presentational element used to display the bottom left corner of a block. This empty, non-semantic element should be inserted via a serverside script or JavaScript, the former is preferable.</td>
+	</tr>
+	<tr class="odd">
+		<th scope="row"><code>br</code></th>
+		<td>A presentational element used to display the bottom right corner of a block. This empty, non-semantic element should be inserted via a serverside script or JavaScript, the former is preferable.</td>
+	</tr>
+	</tbody>
+</table>
+<h2>The Markup</h2>
+
+<h3>Module</h3>
+
+
+Mod is the basic container, all other containers inherit from this one. This is the high performance container that should be used unless you specifically need another type.
+
+* One tiny image
+* Expands to any height or width
+* Compatible with any content
+* Choose for any container object that doesn't require outside transparency or complex borders.
+
+
+<pre>
+<div class="mod"> 
+        <b class="top"><b class="tl"></b><b class="tr"></b></b>
+	<div class="inner">
+		<div class="bd">
+			<p>Lorem ipsum.</p>
+		</div>
+	</div>
+	<b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+</div>
+</pre>
+<h3>Complex</h3>
+
+Complex should be used in cases where you require images for borders because borders or drop shadows are too complex to be simulated via borders on mod and/or inner.
+
+* One image
+* Height and width limited by image size
+* Compatible with any content
+* Choose when you require complex borders which cannot be simulated via css borders on mod and inner.
+
+Inspired by a conversation with Arnaud.
+
+<pre>
+<div class="mod complex"> 
+        <b class="top"><b class="tl"></b><b class="tr"></b></b>
+	<div class="inner">
+		<div class="bd">
+			<p>Lorem ipsum.</p>
+		</div>
+	</div>
+	<b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+</div>
+</pre>
+<h3>Popup</h3>
+
+Use for popups and other containers that need outside transparency.
+
+* One image
+* Height and width limited by image size
+* Compatible with any container, but not any content
+* Choose when you require outside transparency which cannot be simulated. (do i need to make this work with clip rather than bkg position?)
+
+Inspired by Leslie Sommers mojo blocks.
+
+<pre>
+<div class="mod pop"> 
+        <b class="top"><b class="tl"></b><b class="tr"></b></b>
+	<div class="inner">
+		<div class="bd">
+			<p>Lorem ipsum.</p>
+		</div>
+	</div>
+	<b class="bottom"><b class="bl"></b><b class="br"></b></b> 
+</div>
+</pre>
+
+<h2>Skinning suggestions</h2>
+<p>The contour and the background can be used to define the intersection of two parameters. For example you cross product status with product type. E.g. <code>sale</code>, <code>normal</code>, and <code>featured</code> backgrounds with <code>motorcycle</code>, <code>helmet</code>, and <code>clothing</code> contours. In so far as possible, keep your classes as abstract as they can reasonably be. For example choose <code>motorcycle</code> over <code>ducati</code>, <code>ducatiMonster</code>, or <code>NicolesDucatiMonster620dark</code> -- unless you really mean to exclude all other uses! </p>
+
+<p>Be careful not to choose classes linked to the display of the object (e.g. big blue borders).  The client *will* change their mind, you'll have classes which no longer correlate to actual display.</p>
+
+<h2>How to decide when to use Modules</h2>
+<p>Deciding when to use Modules can be confusing. As a rule of thumb, if you are marking up an element on the page that conveys relevant information to the user by itself (e.g. breadcrumbs), you do not need a module. This is a good example for a content object. However, if you are marking up a container that conveys *no relevant information on its own* (e.g. tabs) and would only make sense to use when you place content objects in it, then you could mark it up as a module.</p>
+
+<p>So you could ask "_Is this element conveying any relevant information to the user?_". A container is never useful information to the user on its own; only the content elements within it convey reasonable information to the user. So if your answer to the question is "_No_", you could use a module.</p>
+
+<h2>Thanks</h2>
+<p>Great feedback, bug reports,etc. Chris Griego, Jordan LaMons, Arnaud Gueras (as usual), Ryan Grove, Nicholas Zakas, Peter Ellenhauge, Chris Eppstein, Vinod Kerkar, Carsten, Dan H, Cindy Li, etc.</p>

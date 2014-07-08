@@ -1,0 +1,44 @@
+The standard module format is based on the <a href="http://developer.yahoo.com/yui/examples/container/module.html">YUI module control</a>.  I hope to include input from microformats and HTML5 communities to inform the choice of class names.
+
+<div class="data">
+<table>
+	<thead>
+		<tr>
+			<th>Property</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+	<tr class="odd">
+		<th scope="row"><code>mod</code></th>
+		<td>Module is the wrapper for every container object. It provides basic structure for a transparent inside module. It can be extended by <code>mojo</code> or <code>ag</code> to provide for transparent outside and complex borders respectively.</td>
+	</tr>
+	<tr class="even">
+		<th scope="row"><code>inner</code></th>
+		<td>Inner exists for two reasons. First, it solves a bug (Opera prior to version 8.5) in which position relative and overflow hidden cannot exist on the same element. Second, it allows for two elements on which borders can be placed to extend the number of blocks that can be built without using image based borders.</td>
+	</tr>
+	<tr class="odd">
+		<th scope="row"><code>hd</code></th>
+		<td>The module header generally contains a heading, but may also contain buttons, links, tabs, etc. <code>hd</code> provides basic structure and can be extended via skin classes. A module can have 0-1 (should this be 0-n?) <code>hd</code>. </td>
+	</tr>
+	<tr class="even">
+		<th scope="row"><code>bd</code></th>
+		<td>The body is the main open editable region of the module. It is an obligatory region, the module may contain 1-n bodies.  </td>
+	</tr>
+	<tr class="odd">
+		<th scope="row"><code>ft</code></th>
+		<td>The module footer is an object. <code>ft</code> provides basic sructure and it can be extended via skin classes.</td>
+	</tr>
+	</tbody>
+</table>
+</div>
+
+<pre>
+<div class="mod">
+	<div class="inner">
+		<div class="hd">head</div>
+		<div class="bd">body</div>
+		<div class="ft">foot</div>
+	</div>
+</div>
+</pre>

@@ -1,0 +1,63 @@
+Talk bubbles were created to give context specific help, however they may be used for other purposes like blog comments, cartoon-style talk bubbles, etc. 
+
+<a href="http://www.flickr.com/photos/nicole_hugo/3897449437/" title="Talk Bubbles by Stubbornella (aka Nicole), on Flickr"><img src="http://farm4.static.flickr.com/3506/3897449437_6b0fe48b29_o.png" width="322" height="196" alt="Talk Bubbles" /></a>
+
+* No images required
+* Secondary elements in place to allow for borders (just make the lower b a bit larger and set the border color)
+* Easy to adapt the size of the arrow
+* Compatible with border-radius generated rounded corners
+* Base CSS objects are 1K
+* IE6 uses page background color for the transparent bits because it doesn't support the color keyword "transparent"
+* Allows eight different arrow positions
+
+<a href="http://www.flickr.com/photos/nicole_hugo/3898006763/" title="Speech Bubble Pointer positions by Stubbornella (aka Nicole), on Flickr"><img src="http://farm3.static.flickr.com/2452/3898006763_07e964665b_o.png" width="472" height="187" alt="Speech Bubble Pointer positions" /></a>
+
+<h2>Base Classes</h2>
+<div class="data">
+<table>
+	<thead>
+		<tr>
+			<th>Property</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+	<tr class="odd">
+		<th scope="row"><code>bubble</code></th>
+		<td>Applied to the mod wrapper, this is the base class for all talk bubbles. To change the size of the pointer edit this class (margin and border width should always be equal). </td>
+	</tr>
+	<tr class="even">
+		<th scope="row"><code>bubbleTop</code></th>
+		<td>Structural class that extends <code>.bubble</code>, positions the pointer at the top of the module.</td>
+	</tr>
+	<tr class="odd">
+		<th scope="row"><code>bubbleRight</code></th>
+		<td>Structural class that extends <code>.bubble</code>, positions the pointer at the right of the module.</td>
+	</tr>
+	<tr class="even">
+		<th scope="row"><code>bubbleBottom</code></th>
+		<td>Structural class that extends <code>.bubble</code>, positions the pointer at the bottom of the module.</td>
+	</tr>
+        <tr class="odd">
+		<th scope="row"><code>bubbleLeft</code></th>
+		<td>Structural class that extends <code>.bubble</code>, positions the pointer at the left of the module.</td>
+	</tr>
+	<tr class="even">
+		<th scope="row"><code>bubbleHorizontalExt</code></th>
+		<td>A class which can be used in conjunction with <code>.bubbleLeft</code> or <code>.bubbleRight</code> to move the talk pointer to the bottom portion of the left or right sides</td>
+	</tr>
+        <tr class="odd">
+		<th scope="row"><code>bubbleVerticalExt</code></th>
+		<td>A class which can be used in conjunction with <code>.bubbleTop</code> or <code>.bubbleBottom</code> to move the talk pointer to the right edge of the top or bottom sides</td>
+	</tr>
+	</tbody>
+</table>
+</div>
+
+h2. Files
+
+* talk.html
+* /css/talk.css
+* /css/talk_skins.css
+
+Unless you are building a complex application or interactive site it is unlikely that you will need all of the code for the different positions of the talk-nub. Keep the ones you need to make the stylesheet even smaller.
