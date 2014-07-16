@@ -19,7 +19,7 @@
 ## <a id="overview"></a>Project overview
 The project uses a custom environment that automatically installs most of the tools you'll need to get started. We're trying to make the setup as painless as possible, so any feedback is very welcome. If you just want to see what's going on, but you don't want to do development yourself, you won't need to worry about the rest of this section. You can skip to Required Tools, and start getting things set up. 
 
-If you'll be doing development with us, we'll write SASS, handlebars, JavaScript, and JSON, all of which can be found in the /src/ directory. This will compile to CSS, HTML, and concatenated JavaScript in the /build/ directory. We use watchers which pole for changes to all of these files so you don't need to manually recreate the build directory each time you make modifications. 
+If you'll be doing development with us, we'll write SASS, handlebars, JavaScript, and JSON, all of which can be found in the /src/ directory. This will compile to CSS, HTML, and concatenated JavaScript in the /build/ directory. We use watchers which poll for changes to all of these files so you don't need to manually recreate the build directory each time you make modifications. 
 
 After we've done the basic setup, we'll guide you through making a new button skin so you can see how all the pieces play together.
 
