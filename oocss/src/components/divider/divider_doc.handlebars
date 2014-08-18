@@ -1,0 +1,25 @@
+<h2 id="{{name}}" class="docH2">{{longname}}</h2>
+
+<p>
+  The divider component is for separating vertical content.
+</p>
+
+<div class="data codeTable">
+  <table>
+    <tr>
+      <th scope="row"><code>&lt;hr&gt;</code></th>
+      <td>An <code>hr</code> element creates a horizontal divider.</td>
+    </tr>
+    {{#each skins}}
+      <tr>
+        <th scope="row"><code>{{className}}</code></th>
+        <td>{{{doc}}}</td>
+      </tr>
+    {{/each}}
+  </table>
+</div>
+
+{{#each skins}}
+  {{{html}}}
+  {{{htmlcode}}}
+{{/each}}

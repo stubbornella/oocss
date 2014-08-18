@@ -1,0 +1,15 @@
+{{!include "../form.handlebars"}}
+{{!include "../label/label.handlebars"}}
+
+{{#registerBlock "ftextarea" "id" "name" "classname" "fieldSize"}}
+  <span class="fieldItem text{{#if $classname}} {{$classname}}{{/if}}">
+     <textarea id="{{$id}}"{{#if $name}} name="{{$name}}"{{/if}}{{#if $fieldSize}}class="{{$fieldSize}}"{{/if}} rows="4">{{$content}}</textarea>
+  </span>
+{{/registerBlock}}
+
+{{#formpres}}
+  {{#ffield}}
+    {{#flabel "textarea" "fieldLabel"}}Label with textarea{{/flabel}}
+    {{#ftextarea "textarea"}}{{/ftextarea}}
+  {{/ffield}}
+{{/formpres}}

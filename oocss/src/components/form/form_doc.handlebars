@@ -1,0 +1,108 @@
+<h2 id="{{name}}" class="docH2">{{longname}}</h2>
+
+<p>
+  Form component is composed with some components
+</p>
+
+<form class="form">
+  <h3>Form containers</h3>
+
+  <p>Forms need to have class <code>form</code>.</p>
+  <pre class="docCode"><code data-language="html">
+    <div class="form">...your form fields</div>
+  </code></pre>
+
+  <p>Each group form field is wrapped by <code>field</code>, usually consisting of a labek and a type of form field.</p>
+
+  <p>The form field is wrapped by class <code>fieldItem</code> plus the type of form field: <code>text</code>, <code>select</code>, <code>radio</code> and <code>checkbox</code>.</p>
+
+  {{! ======================
+      Subcomponents
+      ====================== }}
+
+  <ul class="listComponents">
+    {{#each subComponents}}
+      <li>
+        {{{html}}}
+      </li>
+    {{/each}}
+  </ul>
+
+  {{! ======================
+      Layout
+      ====================== }}
+
+  <h3>Layout</h3>
+  <h4>Columns</h4>
+
+  <p>You can use the grid to create column layouts within your form.</p>
+  {{#formpres "" "" "htmlcode"}}
+    <div class="line">
+      <div class="col cols6of12">
+        {{#ffield}}
+          {{#flabel "" "fieldLabel"}}Select your option set 1{{/flabel}}
+          {{#fgroup}}
+            {{#repeat 2 "checkboxgroupcol"}}
+              {{#fgroupitem "fcheckbox" @indexStr "checkboxgroupcol" "" "" "checkboxradio" ""}}
+              {{/fgroupitem}}
+            {{/repeat}}
+          {{/fgroup}}
+        {{/ffield}}
+      </div>
+      <div class="col lastCol">
+        {{#ffield}}
+          {{#flabel "" "fieldLabel"}}Select your option set 2{{/flabel}}
+          {{#fgroup}}
+            {{#repeat 2 "checkboxgroupcol2"}}
+              {{#fgroupitem "fcheckbox" @indexStr "checkboxgroupcol2" "" "" "checkboxradio" ""}}
+              {{/fgroupitem}}
+            {{/repeat}}
+          {{/fgroup}}
+        {{/ffield}}
+      </div>
+    </div>
+  {{/formpres}}
+
+  <h4>Label on the left</h4>
+  <h5>Single field with label on left</h5>
+
+  <p>Add class <code>labelLeft</code> to <code>label</code>.</p>
+  {{#formpres "" "" "htmlcode"}}
+    {{#ffield}}
+      {{#flabel "singleLabelText1" "labelLeft fieldLabel"}}Label on the left{{/flabel}}
+      {{#ftext "singleLabelText1"}}{{/ftext}}
+    {{/ffield}}
+  {{/formpres}}
+  <h5>Multiple fields with label on left</h5>
+
+  <p>Add class <code>labelLeft</code> to parent container.</p>
+  {{#formpres "" "" "htmlcode"}}
+    <div class="labelLeft">
+      {{#ffield}}
+        {{#flabel "text111" "fieldLabel"}}Label on the left{{/flabel}}
+        {{#ftext "text111"}}{{/ftext}}
+      {{/ffield}}
+
+      {{#ffield}}
+        {{#flabel "text222" "fieldLabel"}}Label on the left{{/flabel}}
+        {{#ftext "text222"}}{{/ftext}}
+      {{/ffield}}
+    </div>
+  {{/formpres}}
+
+  {{! ======================
+      Sizing
+      ====================== }}
+
+  <h3>Sizing</h3>
+
+  <p>You can use <code>cols&lt;n&gt;of24</code> to give labels form fields different sizing</p>
+
+  {{#formpres "" "" "htmlcode"}}
+    {{#ffield}}
+      {{#flabel "text234" "labelLeft"}}Label with input{{/flabel}}
+      {{#ftext "text234" "" "" "cols6of24"}}{{/ftext}}
+    {{/ffield}}
+  {{/formpres}}
+
+</form>

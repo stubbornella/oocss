@@ -1,0 +1,13 @@
+{{#registerBlock "formpres" "title" "description" "htmlcode"}}
+  {{#if $title}}<h4>{{$title}}</h4>{{/if}}
+  {{#if $description}}<p>{{$description}}</p>{{/if}}
+
+  {{#format}}{{{$content}}}{{/format}}
+  {{#if $htmlcode}}{{#htmlcode "html"}}{{{$content}}}{{/htmlcode}}{{/if}}
+{{/registerBlock}}
+
+{{#registerBlock "ffield" "classname"}}
+  <div class="field{{#if $classname}} {{$classname}}{{/if}}">
+    {{{$content}}}
+  </div>
+{{/registerBlock}}

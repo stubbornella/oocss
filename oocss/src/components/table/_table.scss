@@ -1,0 +1,46 @@
+/**
+  * @desc         Base table mixin that provides helper classes for aligning table content
+  * @name         Table Mixin
+  * @author       mobywhale
+  * @tested       chrome, firefox
+  * @requires     ---
+  */
+
+.table {
+  @extend %baseSpacing;
+  width: 100%;
+  thead {
+    th {
+      @include fontSize($baseFontSize);
+      font-weight: bold;
+      color: $baseTextColor;
+    }
+  }
+
+  th,
+  td {
+    padding: 8px;
+  }
+
+  /* horizontal alignment */
+  table .txtC, table tr .txtC {
+    @extend .txtC;
+  }
+  table .txtL, table tr .txtL {
+    @extend .txtL;
+  }
+  table .txtR, table tr .txtR {
+    @extend .txtR;
+  }
+
+  /* vertical alignment */
+  table .txtT, table tr .txtT {
+    @extend .txtT;
+  }
+  table .txtB, table tr .txtB {
+    @extend .txtB;
+  }
+  table .txtM, table tr .txtM {
+    @extend .txtM;
+  }
+}

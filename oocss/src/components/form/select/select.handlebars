@@ -1,0 +1,31 @@
+{{!include "../form.handlebars"}}
+{{!include "../label/label.handlebars"}}
+
+{{! resuable <select> tag, do not use directly }}
+{{#registerBlock "baseSelect" "id" "name" "classname" "multiple" "repeat" "fieldSize"}}
+  <select id="{{$id}}"{{#if $name}} name="{{$name}}"{{/if}}{{#if $multiple}} multiple{{/if}}>
+    {{#if $content}}
+      {{$content}}
+    {{else}}
+      <option value="">Any</option>
+      {{#createvar "optionrepeat"}}{{#if $repeat}}{{$repeat}}{{else}}3{{/if}}{{/createvar}}
+      {{#repeat $optionrepeat}}
+        <option value="{{@index}}">Option {{@index}}</option>
+      {{/repeat}}
+    {{/if}}
+  </select>
+{{/registerBlock}}
+
+{{! Simple Select }}
+{{#registerBlock "fselect" "id" "name" "classname" "repeat"}}
+  <span class="fieldItem select{{#if $classname}} {{$classname}}{{/if}}">
+    {{#baseSelect $id $name "" "" $repeat}}{{/baseSelect}}
+  </span>
+{{/registerBlock}}
+
+{{#formpres}}
+  {{#ffield}}
+    {{#flabel "select" "fieldLabel"}}Label with select{{/flabel}}
+    {{#fselect "select"}}{{/fselect}}
+  {{/ffield}}
+{{/formpres}}

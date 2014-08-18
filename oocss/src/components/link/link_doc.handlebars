@@ -1,0 +1,24 @@
+<h2 id="{{name}}" class="docH2">{{longname}}</h2>
+
+<div class="data codeTable">
+  <table>
+    {{#each skins}}
+      {{#if className}}
+        <tr>
+          <th scope="row"><code>{{className}}</code></th>
+          <td>{{{doc}}}</td>
+        </tr>
+      {{/if}}
+    {{/each}}
+  </table>
+</div>
+
+<ul class="listComponent">
+  {{#each skins}}
+    <li>
+      <h3>{{title}}</h3>
+      {{{html}}}
+      {{{htmlcode}}}
+    </li>
+  {{/each}}
+</ul>

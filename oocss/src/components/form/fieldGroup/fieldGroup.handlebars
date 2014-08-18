@@ -1,0 +1,81 @@
+{{!include "../form.handlebars"}}
+{{!include "../label/label.handlebars"}}
+
+{{#registerBlock "fgroup" "type"}}
+  <ul class="fieldGroup{{#if $type}} {{$type}}{{/if}}">
+    {{{$content}}}
+  </ul>
+{{/registerBlock}}
+
+{{#registerBlock "fgroupitem" "blockName" "id" "name" "classname" "labelright" "checkboxradio" "repeat"}}
+  <li {{#if $classname}}class="{{$classname}}"{{/if}}>
+    {{! label on left }}
+    {{#if $labelright}}
+    {{else}}
+      {{#if $checkboxradio}}
+        {{{$content}}}
+      {{else}}
+        {{#flabel $id $name}}{{{$content}}}{{/flabel}}
+      {{/if}}
+    {{/if}}
+    {{#block $blockName $id $name "" $repeat}}{{/block}}
+    {{! label on right }}
+    {{#if $labelright}}
+      {{#flabel $id $name}}{{{$content}}}{{/flabel}}
+    {{/if}}
+  </li>
+{{/registerBlock}}
+
+{{! Default field group with radio buttons }}
+<h5>List of radio buttons</h5>
+{{#formpres "" "" "htmlcode"}}
+  {{#ffield}}
+    {{#flabel "" "fieldLabel"}}Select your options{{/flabel}}
+    {{#fgroup}}
+      {{#repeat 2 "radiogroup2"}}
+        {{#fgroupitem "fradio" @indexStr "radiogroup" "" "" "checkboxradio" ""}}{{/fgroupitem}}
+      {{/repeat}}
+    {{/fgroup}}
+  {{/ffield}}
+{{/formpres}}
+
+{{! Default field group with checkboxes }}
+<h5>List of checkboxes</h5>
+{{#formpres "" "" "htmlcode"}}
+  {{#ffield}}
+    {{#flabel "" "fieldLabel"}}Select your option{{/flabel}}
+    {{#fgroup}}
+      {{#repeat 2 "checkboxgroup2"}}
+        {{#fgroupitem "fcheckbox" @indexStr "checkboxgroup" "" "" "checkboxradio" ""}}
+        {{/fgroupitem}}
+      {{/repeat}}
+    {{/fgroup}}
+  {{/ffield}}
+{{/formpres}}
+
+{{! Default field group with text input}}
+<h5>List of inputs</h5>
+{{#formpres "" "" "htmlcode"}}
+  {{#ffield}}
+    {{#flabel "" "fieldLabel"}}Your email addresses{{/flabel}}
+    {{#fgroup}}
+      {{#repeat 2 "emailInputblock"}}
+        {{#fgroupitem "ftext" @indexStr "" ""}}Email address {{@index}}{{/fgroupitem}}
+      {{/repeat}}
+    {{/fgroup}}
+  {{/ffield}}
+{{/formpres}}
+
+{{! Default field group with select }}
+{{#formpres "" "" "htmlcode"}}
+  <h5>List of selects</h5>
+  {{#ffield}}
+    {{#flabel "" "fieldLabel"}}Select your options{{/flabel}}
+    {{#fgroup}}
+      {{#repeat 2 "selectInputblock"}}
+        {{#fgroupitem "fselect" @indexStr "" "" "" "" "" 2}}Option {{@index}}{{/fgroupitem}}
+      {{/repeat}}
+    {{/fgroup}}
+  {{/ffield}}
+{{/formpres}}
+
