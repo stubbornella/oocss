@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Grid Plus</title>
+<link rel="stylesheet" type="text/css" media="all"  href="../../core/libraries.css" />
+<link rel="stylesheet" type="text/css" media="all"  href="../../core/content.css" />
+<link rel="stylesheet" type="text/css" media="all"  href="../../core/heading/heading.css" />
+<link rel="stylesheet" type="text/css" media="all"  href="gridplus.css" />
+<link rel="stylesheet" type="text/css" media="all"  href="preview.css" />
+</head>
+
+<body>
+	<h1>Grid Plus</h1>
+
+	<ol class="listDefault">
+		<li>Classes <code>.lastUnit</code> and <code>.unitRight</code> were removed</li>
+		<li>Predefined space classes like <code>.unitSpace</code> and <code>.lineSpace</code> help to create nested layouts as needed</li>
+		<li>Another approach of <code>.clearFix</code> was used</li>
+		<li>IE6 support was dropped</li>
+	</ol>
+
+
+	<h2>.unit</h2>
+
+	<div class="clearFix">
+			<div class="unit size1of2">
+					<p>size1of2</p>
+			</div>
+			<div class="unit size1of2">
+					<p>size1of2</p>
+			</div>
+	</div>
+
+	<div class="clearFix">
+			<div class="unit size1of3">
+					<p>size1of3</p>
+			</div>
+			<div class="unit size2of3">
+					<p>size2of3</p>
+			</div>
+	</div>
+
+
+	<h2>.unitSpace</h2>
+
+	<div class="clearFix">
+			<div class="unitSpace size1of2">
+					<p>size1of2</p>
+			</div>
+			<div class="unitSpace size1of2">
+					<p>size1of2</p>
+			</div>
+	</div>
+
+	<div class="clearFix">
+			<div class="unitSpace size1of3">
+					<p>size1of3</p>
+			</div>
+			<div class="unitSpace size2of3">
+					<p>size2of3</p>
+			</div>
+	</div>
+
+
+	<h2>.line &gt; .unit</h2>
+
+	<div class="line clearFix">
+			<div class="unit size1of2">
+					<p>size1of2</p>
+			</div>
+			<div class="unit size1of2">
+					<p>size1of2</p>
+			</div>
+	</div>
+
+	<div class="line clearFix">
+			<div class="unit size1of3">
+					<p>size1of3</p>
+			</div>
+			<div class="unit size2of3">
+					<p>size2of3</p>
+			</div>
+	</div>
+
+
+	<h2>.line &gt; .unitSpace</h2>
+
+	<div class="line clearFix">
+			<div class="unitSpace size1of2">
+					<p>size1of2</p>
+			</div>
+			<div class="unitSpace size1of2">
+					<p>size1of2</p>
+			</div>
+	</div>
+
+	<div class="line clearFix">
+			<div class="unitSpace size1of3">
+					<p>size1of3</p>
+			</div>
+			<div class="unitSpace size2of3">
+					<p>size2of3</p>
+			</div>
+	</div>
+
+
+	<h2>.lineSpace &gt; .unitSpace</h2>
+
+	<div class="lineSpace clearFix">
+			<div class="unitSpace size1of2">
+					<p>size1of2</p>
+			</div>
+			<div class="unitSpace size1of2">
+					<p>size1of2</p>
+			</div>
+	</div>
+
+	<div class="lineSpace clearFix">
+			<div class="unitSpace size1of3">
+					<p>size1of3</p>
+			</div>
+			<div class="unitSpace size2of3">
+					<p>size2of3</p>
+			</div>
+	</div>
+
+
+	<h2>.lineSpace &gt; .unit &gt; .unitSpace</h2>
+
+	<div class="lineSpace clearFix">
+			<div class="unit size1of3">
+					<div class="clearFix">
+							<div class="unitSpace size1of3">
+									<p>size1of3</p>
+							</div>
+							<div class="unitSpace size2of3">
+									<p>size2of3</p>
+							</div>
+					</div>
+			</div>
+			<div class="unitSpace size2of3">
+					<p>size2of3</p>
+			</div>
+	</div>
+
+	<div class="lineSpace clearFix">
+			<div class="unit size1of3">
+					<div class="clearFix">
+							<div class="unitSpace size1of2">
+									<p>size1of2</p>
+							</div>
+							<div class="unitSpace size1of2">
+									<p>size1of2</p>
+							</div>
+					</div>
+			</div>
+			<div class="unit size2of3">
+					<div class="clearFix">
+							<div class="unitSpace size1of3">
+									<p>size1of3</p>
+							</div>
+							<div class="unitSpace size1of3">
+									<p>size1of3</p>
+							</div>
+							<div class="unitSpace size1of3">
+									<p>size1of3</p>
+							</div>
+					</div>
+			</div>
+	</div>
+
+
+	<h2>Grid Sizes</h2>
+
+	<div class="lineSpace clearFix">
+		<div class="unitSpace size1of1">
+			<p>size1of1</p>
+		</div>
+	</div>
+
+	<div class="lineSpace clearFix">
+		<div class="unitSpace size1of2">
+			<p>size1of2</p>
+		</div>
+		<div class="unitSpace size1of2">
+			<p>size1of2</p>
+		</div>
+	</div>
+
+	<div class="lineSpace clearFix">
+		<div class="unitSpace size1of3">
+			<p>size1of3</p>
+		</div>
+		<div class="unitSpace size2of3">
+			<p>size2of3</p>
+		</div>
+	</div>
+
+	<div class="lineSpace clearFix">
+		<div class="unitSpace size1of3">
+			<p>size1of3</p>
+		</div>
+		<div class="unitSpace size1of3">
+			<p>size1of3</p>
+		</div>
+		<div class="unitSpace size1of3">
+			<p>size1of3</p>
+		</div>
+	</div>
+
+	<div class="lineSpace clearFix">
+		<div class="unitSpace size1of4">
+			<p>size1of4</p>
+		</div>
+		<div class="unitSpace size3of4">
+			<p>size3of4</p>
+		</div>
+	</div>
+
+	<div class="lineSpace clearFix">
+		<div class="unitSpace size1of5">
+			<p>size1of5</p>
+		</div>
+		<div class="unitSpace size4of5">
+			<p>size4of5</p>
+		</div>
+	</div>
+
+	<div class="lineSpace clearFix">
+		<div class="unitSpace size1of5">
+			<p>size1of5</p>
+		</div>
+		<div class="unitSpace size1of5">
+			<p>size1of5</p>
+		</div>
+		<div class="unitSpace size3of5">
+			<p>size3of5</p>
+		</div>
+	</div>
+
+	<div class="lineSpace clearFix">
+		<div class="unitSpace size1of5">
+			<p>size1of5</p>
+		</div>
+		<div class="unitSpace size1of5">
+			<p>size1of5</p>
+		</div>
+		<div class="unitSpace size1of5">
+			<p>size1of5</p>
+		</div>
+		<div class="unitSpace size2of5">
+			<p>size2of5</p>
+		</div>
+	</div>
+
+	<div class="lineSpace clearFix">
+		<div class="unitSpace size1of5">
+			<p>size1of5</p>
+		</div>
+		<div class="unitSpace size1of5">
+			<p>size1of5</p>
+		</div>
+		<div class="unitSpace size1of5">
+			<p>size1of5</p>
+		</div>
+		<div class="unitSpace size1of5">
+			<p>size1of5</p>
+		</div>
+		<div class="unitSpace size1of5">
+			<p>size1of5</p>
+		</div>
+	</div>
+</body>
+</html>
